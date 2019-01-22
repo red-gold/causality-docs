@@ -2,6 +2,6 @@
 
 causality document page for demo and APIs
 
-##demos
+## demos
 - mnist
-##APIs (wip)
+## APIs (wip)
