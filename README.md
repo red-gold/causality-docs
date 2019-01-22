@@ -1,6 +1,6 @@
 # causality-docs
 
-causality document page for demo and APIs
+causality document page for demos and APIs
 
 ## demos
 - mnist
