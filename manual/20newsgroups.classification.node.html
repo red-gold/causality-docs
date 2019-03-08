@@ -2,14 +2,14 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <base data-ice="baseUrl" href="./">
+  <base data-ice="baseUrl" href="../">
   <title data-ice="title">Manual | causal-net</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
   <script src="script/manual.js"></script>
 </head>
-<body class="layout-container manual-root manual-index" data-ice="rootContainer">
+<body class="layout-container manual-root" data-ice="rootContainer">
 
 <header>
   <a href="./">Home</a>
@@ -50,29 +50,7 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><div class="github-markdown">
-  <div class="manual-user-index" data-ice="manualUserIndex"><p>index</p>
-</div>
-
-  
-
-  <div class="manual-cards">
-    
-  <div class="manual-card-wrap" data-ice="cards">
-      <div class="manual-card">
-        <div data-ice="card"><h1>introduction</h1></div>
-        <a data-ice="link" href="manual/introduction.html"></a>
-      </div>
-    </div>
-<div class="manual-card-wrap" data-ice="cards">
-      <div class="manual-card">
-        <div data-ice="card"><h1>install</h1></div>
-        <a data-ice="link" href="manual/installation.html"></a>
-      </div>
-    </div>
-<div class="manual-card-wrap" data-ice="cards">
-      <div class="manual-card">
-        <div data-ice="card"><h1>tutorials</h1><h2>20 group text classification</h2><pre><code class="lang-javascript"><code class="source-code prettyprint">import * as Utils from &apos;causal-net.utils&apos;;
+<div class="content" data-ice="content"><div class="github-markdown" data-ice="content"><h1 id="tutorials">tutorials</h1><h2 id="20-group-text-classification">20 group text classification</h2><pre><code class="lang-javascript"><code class="source-code prettyprint">import * as Utils from &apos;causal-net.utils&apos;;
 import * as Log from &apos;causal-net.log&apos;;
 import * as Preprocessing from &apos;causal-net.preprocessing&apos;;
 import { causalNetCore } from &apos;causal-net.core&apos;;
@@ -93,11 +71,14 @@ var { causalNetSampling } = Sampling;
 var { CSV, Fetch } = Utils;
 var { SentenceEncode, causalNetWordVec } = Representation;
 var optimizers = causalNetSGDOptimizer;</code>
-</code></pre><pre><code><code class="source-code prettyprint">&apos;use strict&apos;</code>
+</code></pre>
+<pre><code><code class="source-code prettyprint">&apos;use strict&apos;</code>
 </code></pre><pre><code class="lang-javascript"><code class="source-code prettyprint"></code>
-</code></pre><pre><code class="lang-javascript"><code class="source-code prettyprint">var inputData = JSON.parse(fs.readFileSync(&apos;./sentenceEmbedd.json&apos;));
+</code></pre>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">var inputData = JSON.parse(fs.readFileSync(&apos;./sentenceEmbedd.json&apos;));
 inputData.length;</code>
-</code></pre><pre><code><code class="source-code prettyprint">11314</code>
+</code></pre>
+<pre><code><code class="source-code prettyprint">11314</code>
 </code></pre><pre><code class="lang-javascript"><code class="source-code prettyprint">var data;
 (async ()=&gt;{
     data = await new Promise((resolve, reject)=&gt;{
@@ -113,11 +94,13 @@ inputData.length;</code>
     });
 // console.log([data.samples.length, data.labels.length]);
 })();</code>
-</code></pre><pre><code class="lang-javascript"><code class="source-code prettyprint">// var label2int = R.compose(R.fromPairs, R.addIndex(R.map)((label, idx)=&gt;[label, idx]), R.uniq)(data.labels);
+</code></pre>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">// var label2int = R.compose(R.fromPairs, R.addIndex(R.map)((label, idx)=&gt;[label, idx]), R.uniq)(data.labels);
 // var int2label = R.compose(R.fromPairs, R.addIndex(R.map)((label, idx)=&gt;[idx, label]), R.uniq)(data.labels);
 // var labels = data.labels.map(l=&gt;label2int[l]);
 // var preprocessingData = inputData.map((d,i)=&gt;[Array.from(d),labels[i]]);</code>
-</code></pre><pre><code><code class="source-code prettyprint">&apos;use strict&apos;</code>
+</code></pre>
+<pre><code><code class="source-code prettyprint">&apos;use strict&apos;</code>
 </code></pre><pre><code class="lang-javascript"><code class="source-code prettyprint">import TSNE from &apos;tsne-js&apos;;
 
 var model = new TSNE({
@@ -131,7 +114,8 @@ var model = new TSNE({
 model.on(&apos;progressStatus&apos;, (d)=&gt;{
     console.log(d);
 });</code>
-</code></pre><pre><code><code class="source-code prettyprint">TSNE {
+</code></pre>
+<pre><code><code class="source-code prettyprint">TSNE {
   _events: [Object: null prototype] { progressStatus: [Function] },
   _eventsCount: 1,
   _maxListeners: undefined,
@@ -150,11 +134,13 @@ model.init({
   data: inputData,
   type: &apos;dense&apos;
 });</code>
-</code></pre><pre><code class="lang-javascript"><code class="source-code prettyprint">// `error`,  `iter`: final error and iteration number
+</code></pre>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">// `error`,  `iter`: final error and iteration number
 // note: computation-heavy action happens here
 var [error, iter] = model.run();
 console.log({error, iter}); </code>
-</code></pre><pre><code><code class="source-code prettyprint">Calculating pairwise distances
+</code></pre>
+<pre><code><code class="source-code prettyprint">Calculating pairwise distances
 Calculating joint probabilities
 Early exaggeration with momentum 0.5
 Early exaggeration with momentum 0.8
@@ -170,7 +156,8 @@ Optimization end
 // `outputScaled` is `output` scaled to a range of [-1, 1]
 var outputScaled = model.getOutputScaled();
 console.log({outputScaled});</code>
-</code></pre><pre><code><code class="source-code prettyprint">{ outputScaled:
+</code></pre>
+<pre><code><code class="source-code prettyprint">{ outputScaled:
    [ [ 0.25597409654565, -0.04056887670985123 ],
      [ -0.05170156736476558, 0.021286714931931697 ],
      [ 0.04074567747699668, 0.0017369462049392926 ],
@@ -273,7 +260,8 @@ console.log({outputScaled});</code>
      [ 0.0373939232579398, -0.008504616596718952 ],
      ... 11214 more items ] }</code>
 </code></pre><pre><code class="lang-javascript"><code class="source-code prettyprint">fs.writeFileSync(&apos;./outputScaled.json&apos;,JSON.stringify(outputScaled))</code>
-</code></pre><pre><code class="lang-javascript"><code class="source-code prettyprint">var data = outputScaled.map((v,i)=&gt;[...v, data.labels[i]]);
+</code></pre>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">var data = outputScaled.map((v,i)=&gt;[...v, data.labels[i]]);
 // var data = [[1,1,&apos;A1&apos;],
 //             [1,2,&apos;b&apos;],
 //             [3,1,&apos;b&apos;],
@@ -281,7 +269,8 @@ console.log({outputScaled});</code>
 //             [1,5,&apos;1&apos;],
 //             [4,0,&apos;b&apos;],
 //             [1,1,&apos;c&apos;],]</code>
-</code></pre><pre><code><code class="source-code prettyprint">evalmachine.&lt;anonymous&gt;:3
+</code></pre>
+<pre><code><code class="source-code prettyprint">evalmachine.&lt;anonymous&gt;:3
 
 var data = outputScaled.map((v, i) =&gt; [...v, data.labels[i]]); // var data = [[1,1,&apos;A1&apos;],
 
@@ -311,7 +300,8 @@ TypeError: Cannot read property &apos;0&apos; of undefined
 
     at emit (internal/child_process.js:828:12)</code>
 </code></pre><pre><code class="lang-javascript"><code class="source-code prettyprint">data[0]</code>
-</code></pre><pre><code><code class="source-code prettyprint">[ 0.25597409654565, -0.04056887670985123, &apos;rec.autos&apos; ]</code>
+</code></pre>
+<pre><code><code class="source-code prettyprint">[ 0.25597409654565, -0.04056887670985123, &apos;rec.autos&apos; ]</code>
 </code></pre><pre><code class="lang-javascript"><code class="source-code prettyprint">import { default as genBasePlot } from &apos;./plot.base&apos;;
 import { default as export2png } from &apos;./plot.export2png&apos;;
 import * as d3 from &apos;d3&apos;;
@@ -347,7 +337,9 @@ plot.style = `body {font: 10px sans-serif;}
                 fill: none; stroke: #000; shape-rendering: crispEdges; }
             .dot { stroke: #000; }`;
 export2png(&apos;./test.png&apos;, plot);</code>
-</code></pre><p><img src="./manual/./test.png?123152322221"></p><pre><code class="lang-javascript"><code class="source-code prettyprint">var data = d3.range(1000).map(d3.randomBates(10));
+</code></pre>
+<p><img src="./manual/./test.png?123152322221"></p>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">var data = d3.range(1000).map(d3.randomBates(10));
 data = data.map(d=&gt;d+1);
 var formatCount = d3.format(&quot;,.0f&quot;);
 var margin = {top: 10, right: 30, bottom: 30, left: 30},
@@ -387,14 +379,21 @@ svg.append(&quot;g&quot;)
       .call(d3.axisBottom(x));
 
 output(&apos;../pie-canvas2&apos;, d3n).catch( err =&gt; console.error({err}) );</code>
-</code></pre><p><img src="./manual/../pie-canvas2.png"></p><p><img src="./manual/../datasets/MNIST_dataset/data-chunk-90.png?1213"></p><pre><code class="lang-javascript"><code class="source-code prettyprint"></code>
-</code></pre><pre><code class="lang-javascript"><code class="source-code prettyprint"></code>
-</code></pre><pre><code class="lang-javascript"><code class="source-code prettyprint"></code>
-</code></pre><pre><code class="lang-javascript"><code class="source-code prettyprint">var model;
+</code></pre>
+<p><img src="./manual/../pie-canvas2.png"></p>
+<p><img src="./manual/../datasets/MNIST_dataset/data-chunk-90.png?1213"></p>
+<pre><code class="lang-javascript"><code class="source-code prettyprint"></code>
+</code></pre>
+<pre><code class="lang-javascript"><code class="source-code prettyprint"></code>
+</code></pre>
+<pre><code class="lang-javascript"><code class="source-code prettyprint"></code>
+</code></pre>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">var model;
 (async ()=&gt;{
     model = await SentenceEncode.load();
 })();</code>
-</code></pre><pre><code class="lang-javascript"><code class="source-code prettyprint">// // Load the model.
+</code></pre>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">// // Load the model.
 // var fetch = Fetch.fetch;
 // var sentenceEmbed = [];
 // (async ()=&gt;{
@@ -408,16 +407,21 @@ output(&apos;../pie-canvas2&apos;, d3n).catch( err =&gt; console.error({err}) );
 //         docTensor.dispose();
 //     }
 // })();</code>
-</code></pre><pre><code class="lang-javascript"><code class="source-code prettyprint">var uniqlabels = R.uniq(labels)
+</code></pre>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">var uniqlabels = R.uniq(labels)
 var targets = labels.map(l=&gt;Array.from(T.oneHot(l, 20).dataSync()))</code>
-</code></pre><pre><code><code class="source-code prettyprint">&apos;use strict&apos;</code>
+</code></pre>
+<pre><code><code class="source-code prettyprint">&apos;use strict&apos;</code>
 </code></pre><pre><code class="lang-javascript"><code class="source-code prettyprint">var preprocessingData = inputData.map((o,i)=&gt;[o, targets[i]])</code>
-</code></pre><pre><code><code class="source-code prettyprint">&apos;use strict&apos;</code>
+</code></pre>
+<pre><code><code class="source-code prettyprint">&apos;use strict&apos;</code>
 </code></pre><pre><code class="lang-javascript"><code class="source-code prettyprint">var [trainSet, testSet] = R.splitAt(10314, preprocessingData)
 console.log([trainSet.length, testSet.length])</code>
-</code></pre><pre><code><code class="source-code prettyprint">[ 10314, 1000 ]</code>
+</code></pre>
+<pre><code><code class="source-code prettyprint">[ 10314, 1000 ]</code>
 </code></pre><pre><code class="lang-javascript"><code class="source-code prettyprint">trainSet[0]</code>
-</code></pre><pre><code><code class="source-code prettyprint">[ [ 0.028369115665555,
+</code></pre>
+<pre><code><code class="source-code prettyprint">[ [ 0.028369115665555,
     0.03054637648165226,
     0.06017296761274338,
     -0.007304872386157513,
@@ -520,7 +524,8 @@ console.log([trainSet.length, testSet.length])</code>
     ... 412 more items ],
   [ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ]</code>
 </code></pre><pre><code class="lang-javascript"><code class="source-code prettyprint">// import CausalNet from &apos;causal-net&apos;;</code>
-</code></pre><pre><code><code class="source-code prettyprint">&apos;use strict&apos;</code>
+</code></pre>
+<pre><code><code class="source-code prettyprint">&apos;use strict&apos;</code>
 </code></pre><pre><code class="lang-javascript"><code class="source-code prettyprint">var _NetConfig = {
     HyperParameters: {SampleSize:400},
     Classes: 2,
@@ -536,7 +541,8 @@ console.log([trainSet.length, testSet.length])</code>
     ] };
 var parameters = {};
 var causalNet = new cau(_NetConfig, parameters);</code>
-</code></pre><pre><code><code class="source-code prettyprint">evalmachine.&lt;anonymous&gt;:34
+</code></pre>
+<pre><code><code class="source-code prettyprint">evalmachine.&lt;anonymous&gt;:34
 
 var causalNet = new SimpleNet(_NetConfig, parameters);
 
@@ -581,7 +587,8 @@ ReferenceError: SimpleNet is not defined
 })().catch(err=&gt;{
     console.error({err});
 });</code>
-</code></pre><pre><code class="lang-javascript"><code class="source-code prettyprint">(async ()=&gt;{
+</code></pre>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">(async ()=&gt;{
     const DoBatchTrainSampleGenerator = (epochIdx)=&gt;([{idx:0, batchSize:4, data: [inputs, targets]}]);
     let logTrain = await causalNet.train(DoBatchTrainSampleGenerator, 20);
     termLogger.log(logTrain);
@@ -599,11 +606,7 @@ ReferenceError: SimpleNet is not defined
 })().catch(err=&gt;{
     console.error({err});
 });</code>
-</code></pre></div>
-        <a data-ice="link" href="manual/20newsgroups.classification.node.html"></a>
-      </div>
-    </div>
-</div>
+</code></pre>
 </div>
 </div>
 
