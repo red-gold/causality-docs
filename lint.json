@@ -1,26 +1,66 @@
 [
   {
-    "name": "CSVFileMixins#writeCSVFile",
-    "filePath": "causality/packages/causality-storage/src/CSVFileMixins.js",
+    "name": "WordEmbeddingMixins#sentenceEncode",
+    "filePath": "causality/packages/causality-representation/src/wordEmbedding.mixins.js",
     "lines": [
       {
-        "lineNumber": 7,
+        "lineNumber": 9,
         "line": "    /**"
       },
       {
-        "lineNumber": 8,
-        "line": "     * @param  {} filePath"
-      },
-      {
-        "lineNumber": 9,
-        "line": "     * @param  {} data"
-      },
-      {
         "lineNumber": 10,
-        "line": "     */"
+        "line": "     * return the vectors of tokenized sentences"
       },
       {
         "lineNumber": 11,
+        "line": "     * This function require sentence to be tokenized via preprocessing"
+      },
+      {
+        "lineNumber": 12,
+        "line": "     * @param { Array } tokens - array of string tokens of sentence"
+      },
+      {
+        "lineNumber": 13,
+        "line": "     * @returns { Tensor } encoded sentences"
+      },
+      {
+        "lineNumber": 14,
+        "line": "     */"
+      },
+      {
+        "lineNumber": 15,
+        "line": "    async sentenceEncode(sentences){"
+      }
+    ],
+    "codeParams": [
+      "sentences"
+    ],
+    "docParams": [
+      "tokens"
+    ]
+  },
+  {
+    "name": "CSVFileMixins#writeCSVFile",
+    "filePath": "causality/packages/causality-storage/src/CSVFile.mixins.js",
+    "lines": [
+      {
+        "lineNumber": 16,
+        "line": "    /**"
+      },
+      {
+        "lineNumber": 17,
+        "line": "     * @param  {} filePath"
+      },
+      {
+        "lineNumber": 18,
+        "line": "     * @param  {} data"
+      },
+      {
+        "lineNumber": 19,
+        "line": "     */"
+      },
+      {
+        "lineNumber": 20,
         "line": "    async writeCSVFile(filePath, parsedData){"
       }
     ],
@@ -31,58 +71,137 @@
     "docParams": []
   },
   {
-    "name": "PNGFileMixins#writePNGFile",
-    "filePath": "causality/packages/causality-storage/src/PNGFileMixins.js",
+    "name": "IndexDBStorage#setItem",
+    "filePath": "causality/packages/causality-storage/src/indexDBStorage.js",
     "lines": [
       {
-        "lineNumber": 7,
-        "line": "    /**"
+        "lineNumber": 84,
+        "line": "     * Delete item given key"
       },
       {
-        "lineNumber": 8,
-        "line": "     * @param  {} filePath"
+        "lineNumber": 85,
+        "line": "     * @param { String } key"
       },
       {
-        "lineNumber": 9,
-        "line": "     * @param  {} data"
+        "lineNumber": 86,
+        "line": "     * @returns { Promise } key promise"
       },
       {
-        "lineNumber": 10,
+        "lineNumber": 87,
+        "line": "     * @memberof IndexDBStorage"
+      },
+      {
+        "lineNumber": 88,
         "line": "     */"
       },
       {
-        "lineNumber": 11,
-        "line": "    async writePNGFile(filePath, imgBuffer){"
+        "lineNumber": 89,
+        "line": "    async delItem(key){"
+      },
+      {
+        "lineNumber": 90,
+        "line": "        return new Promise((resolve, reject)=>{"
+      },
+      {
+        "lineNumber": 91,
+        "line": "            key = this.reformateName(key);"
       }
     ],
     "codeParams": [
-      "filePath",
-      "imgBuffer"
+      "key",
+      "data"
     ],
-    "docParams": []
+    "docParams": [
+      "key",
+      "value"
+    ]
+  },
+  {
+    "name": "IndexDBStorage#batch",
+    "filePath": "causality/packages/causality-storage/src/indexDBStorage.js",
+    "lines": [
+      {
+        "lineNumber": 127,
+        "line": "        });"
+      },
+      {
+        "lineNumber": 128,
+        "line": "    }"
+      },
+      {
+        "lineNumber": 129,
+        "line": ""
+      },
+      {
+        "lineNumber": 130,
+        "line": "    /**"
+      },
+      {
+        "lineNumber": 131,
+        "line": "     * Delete item by the given file path, reject with error if not existed"
+      },
+      {
+        "lineNumber": 132,
+        "line": "     * @param { String } filePath"
+      },
+      {
+        "lineNumber": 133,
+        "line": "     * @returns { Promise } filePath promise"
+      },
+      {
+        "lineNumber": 134,
+        "line": "     * @memberof IndexDBStorage"
+      },
+      {
+        "lineNumber": 135,
+        "line": "     */"
+      },
+      {
+        "lineNumber": 136,
+        "line": "    async deleteItem(filePath){"
+      },
+      {
+        "lineNumber": 137,
+        "line": "        return new Promise((resolve, reject)=>{"
+      },
+      {
+        "lineNumber": 138,
+        "line": "            this.storage.del(filePath, (err)=>{"
+      },
+      {
+        "lineNumber": 139,
+        "line": "                if(err){"
+      }
+    ],
+    "codeParams": [
+      "ops"
+    ],
+    "docParams": [
+      "key"
+    ]
   },
   {
     "name": "TextFileMixins#readFile",
     "filePath": "causality/packages/causality-storage/src/textFile.mixins.js",
     "lines": [
       {
-        "lineNumber": 2,
+        "lineNumber": 3,
         "line": "    /**"
       },
       {
-        "lineNumber": 3,
+        "lineNumber": 4,
         "line": "     * @async"
       },
       {
-        "lineNumber": 4,
+        "lineNumber": 5,
         "line": "     * @param  {} filePath"
       },
       {
-        "lineNumber": 5,
+        "lineNumber": 6,
         "line": "     */"
       },
       {
-        "lineNumber": 6,
+        "lineNumber": 7,
         "line": "    async readFile(filePath){"
       }
     ],
@@ -96,23 +215,23 @@
     "filePath": "causality/packages/causality-storage/src/textFile.mixins.js",
     "lines": [
       {
-        "lineNumber": 10,
+        "lineNumber": 11,
         "line": "    /**"
       },
       {
-        "lineNumber": 11,
+        "lineNumber": 12,
         "line": "     * @param  {} filePath"
       },
       {
-        "lineNumber": 12,
+        "lineNumber": 13,
         "line": "     * @param  {} data"
       },
       {
-        "lineNumber": 13,
+        "lineNumber": 14,
         "line": "     */"
       },
       {
-        "lineNumber": 14,
+        "lineNumber": 15,
         "line": "    async writeFile(filePath, data){"
       }
     ],
@@ -121,5 +240,136 @@
       "data"
     ],
     "docParams": []
+  },
+  {
+    "name": "JsonUtils#writeJSON",
+    "filePath": "causality/packages/causality-utils/src/json.js",
+    "lines": [
+      {
+        "lineNumber": 31,
+        "line": "    /**"
+      },
+      {
+        "lineNumber": 32,
+        "line": "     * write json content from given content"
+      },
+      {
+        "lineNumber": 33,
+        "line": "     * @todo enhance reject case"
+      },
+      {
+        "lineNumber": 34,
+        "line": "     * @param { URL } url - url for csv content"
+      },
+      {
+        "lineNumber": 35,
+        "line": "     * @returns { Promise } - data promise with data if success"
+      },
+      {
+        "lineNumber": 36,
+        "line": "     * @memberof JsonUtils"
+      },
+      {
+        "lineNumber": 37,
+        "line": "     */"
+      },
+      {
+        "lineNumber": 38,
+        "line": "    async writeJSON(data, filePath){"
+      }
+    ],
+    "codeParams": [
+      "data",
+      "filePath"
+    ],
+    "docParams": [
+      "url"
+    ]
+  },
+  {
+    "name": "JsonUtils#readJSON",
+    "filePath": "causality/packages/causality-utils/src/json.js",
+    "lines": [
+      {
+        "lineNumber": 55,
+        "line": "    /**"
+      },
+      {
+        "lineNumber": 56,
+        "line": "     * Fetch json content from given url"
+      },
+      {
+        "lineNumber": 57,
+        "line": "     * @todo enhance reject case"
+      },
+      {
+        "lineNumber": 58,
+        "line": "     * @param { URL } url - url for csv content"
+      },
+      {
+        "lineNumber": 59,
+        "line": "     * @returns { Promise } - data promise with data if success"
+      },
+      {
+        "lineNumber": 60,
+        "line": "     * @memberof JsonUtils"
+      },
+      {
+        "lineNumber": 61,
+        "line": "     */"
+      },
+      {
+        "lineNumber": 62,
+        "line": "    readJSON(filePath){"
+      }
+    ],
+    "codeParams": [
+      "filePath"
+    ],
+    "docParams": [
+      "url"
+    ]
+  },
+  {
+    "name": "PNGUtils#writePNG",
+    "filePath": "causality/packages/causality-utils/src/png.js",
+    "lines": [
+      {
+        "lineNumber": 40,
+        "line": "    /**"
+      },
+      {
+        "lineNumber": 41,
+        "line": "     * write and tranform png file to raw array from filepath"
+      },
+      {
+        "lineNumber": 42,
+        "line": "     * @param { URL } url - url for PNG file"
+      },
+      {
+        "lineNumber": 43,
+        "line": "     * @returns { Promise } data promise - return Array if success or reject with error message"
+      },
+      {
+        "lineNumber": 44,
+        "line": "     * @memberof PNGUtils"
+      },
+      {
+        "lineNumber": 45,
+        "line": "     */"
+      },
+      {
+        "lineNumber": 46,
+        "line": "    writePNG(data, size, filePath){"
+      }
+    ],
+    "codeParams": [
+      "data",
+      "size",
+      "filePath"
+    ],
+    "docParams": [
+      "url"
+    ]
   }
 ]

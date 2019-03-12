@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 205,
+  "end": 214,
   "loc": {
     "start": {
       "line": 1,
@@ -9,13 +9,13 @@
     },
     "end": {
       "line": 3,
-      "column": 61
+      "column": 69
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 205,
+    "end": 214,
     "loc": {
       "start": {
         "line": 1,
@@ -23,7 +23,7 @@
       },
       "end": {
         "line": 3,
-        "column": 61
+        "column": 69
       }
     },
     "sourceType": "module",
@@ -118,7 +118,7 @@
       {
         "type": "ExportNamedDeclaration",
         "start": 75,
-        "end": 143,
+        "end": 144,
         "loc": {
           "start": {
             "line": 2,
@@ -126,7 +126,7 @@
           },
           "end": {
             "line": 2,
-            "column": 68
+            "column": 69
           }
         },
         "declaration": null,
@@ -134,7 +134,7 @@
           {
             "type": "ExportSpecifier",
             "start": 84,
-            "end": 111,
+            "end": 113,
             "loc": {
               "start": {
                 "line": 2,
@@ -142,7 +142,7 @@
               },
               "end": {
                 "line": 2,
-                "column": 36
+                "column": 38
               }
             },
             "local": {
@@ -165,7 +165,7 @@
             "exported": {
               "type": "Identifier",
               "start": 95,
-              "end": 111,
+              "end": 113,
               "loc": {
                 "start": {
                   "line": 2,
@@ -173,39 +173,39 @@
                 },
                 "end": {
                   "line": 2,
-                  "column": 36
+                  "column": 38
                 },
-                "identifierName": "causalNetWordVec"
+                "identifierName": "causalNetEmbedding"
               },
-              "name": "causalNetWordVec"
+              "name": "causalNetEmbedding"
             }
           }
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 119,
-          "end": 142,
+          "start": 121,
+          "end": 143,
           "loc": {
             "start": {
               "line": 2,
-              "column": 44
+              "column": 46
             },
             "end": {
               "line": 2,
-              "column": 67
+              "column": 68
             }
           },
           "extra": {
-            "rawValue": "./WordEmbedding/index",
-            "raw": "'./WordEmbedding/index'"
+            "rawValue": "./causalNetEmbedding",
+            "raw": "'./causalNetEmbedding'"
           },
-          "value": "./WordEmbedding/index"
+          "value": "./causalNetEmbedding"
         }
       },
       {
         "type": "ExportNamedDeclaration",
-        "start": 144,
-        "end": 205,
+        "start": 145,
+        "end": 214,
         "loc": {
           "start": {
             "line": 3,
@@ -213,15 +213,15 @@
           },
           "end": {
             "line": 3,
-            "column": 61
+            "column": 69
           }
         },
         "declaration": null,
         "specifiers": [
           {
             "type": "ExportSpecifier",
-            "start": 153,
-            "end": 178,
+            "start": 154,
+            "end": 183,
             "loc": {
               "start": {
                 "line": 3,
@@ -229,13 +229,13 @@
               },
               "end": {
                 "line": 3,
-                "column": 34
+                "column": 38
               }
             },
             "local": {
               "type": "Identifier",
-              "start": 153,
-              "end": 160,
+              "start": 154,
+              "end": 161,
               "loc": {
                 "start": {
                   "line": 3,
@@ -251,8 +251,8 @@
             },
             "exported": {
               "type": "Identifier",
-              "start": 164,
-              "end": 178,
+              "start": 165,
+              "end": 183,
               "loc": {
                 "start": {
                   "line": 3,
@@ -260,33 +260,33 @@
                 },
                 "end": {
                   "line": 3,
-                  "column": 34
+                  "column": 38
                 },
-                "identifierName": "SentenceEncode"
+                "identifierName": "universalEmbedding"
               },
-              "name": "SentenceEncode"
+              "name": "universalEmbedding"
             }
           }
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 186,
-          "end": 204,
+          "start": 191,
+          "end": 213,
           "loc": {
             "start": {
               "line": 3,
-              "column": 42
+              "column": 46
             },
             "end": {
               "line": 3,
-              "column": 60
+              "column": 68
             }
           },
           "extra": {
-            "rawValue": "./sentenceEncode",
-            "raw": "'./sentenceEncode'"
+            "rawValue": "./universalEmbedding",
+            "raw": "'./universalEmbedding'"
           },
-          "value": "./sentenceEncode"
+          "value": "./universalEmbedding"
         }
       }
     ],
@@ -650,9 +650,9 @@
         "postfix": false,
         "binop": null
       },
-      "value": "causalNetWordVec",
+      "value": "causalNetEmbedding",
       "start": 95,
-      "end": 111,
+      "end": 113,
       "loc": {
         "start": {
           "line": 2,
@@ -660,7 +660,7 @@
         },
         "end": {
           "line": 2,
-          "column": 36
+          "column": 38
         }
       }
     },
@@ -676,16 +676,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 112,
-      "end": 113,
+      "start": 114,
+      "end": 115,
       "loc": {
         "start": {
           "line": 2,
-          "column": 37
+          "column": 39
         },
         "end": {
           "line": 2,
-          "column": 38
+          "column": 40
         }
       }
     },
@@ -702,16 +702,16 @@
         "binop": null
       },
       "value": "from",
-      "start": 114,
-      "end": 118,
+      "start": 116,
+      "end": 120,
       "loc": {
         "start": {
           "line": 2,
-          "column": 39
+          "column": 41
         },
         "end": {
           "line": 2,
-          "column": 43
+          "column": 45
         }
       }
     },
@@ -728,17 +728,17 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "./WordEmbedding/index",
-      "start": 119,
-      "end": 142,
+      "value": "./causalNetEmbedding",
+      "start": 121,
+      "end": 143,
       "loc": {
         "start": {
           "line": 2,
-          "column": 44
+          "column": 46
         },
         "end": {
           "line": 2,
-          "column": 67
+          "column": 68
         }
       }
     },
@@ -755,16 +755,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 142,
-      "end": 143,
+      "start": 143,
+      "end": 144,
       "loc": {
         "start": {
           "line": 2,
-          "column": 67
+          "column": 68
         },
         "end": {
           "line": 2,
-          "column": 68
+          "column": 69
         }
       }
     },
@@ -783,8 +783,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 144,
-      "end": 150,
+      "start": 145,
+      "end": 151,
       "loc": {
         "start": {
           "line": 3,
@@ -808,8 +808,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 151,
-      "end": 152,
+      "start": 152,
+      "end": 153,
       "loc": {
         "start": {
           "line": 3,
@@ -836,8 +836,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 153,
-      "end": 160,
+      "start": 154,
+      "end": 161,
       "loc": {
         "start": {
           "line": 3,
@@ -862,8 +862,8 @@
         "binop": null
       },
       "value": "as",
-      "start": 161,
-      "end": 163,
+      "start": 162,
+      "end": 164,
       "loc": {
         "start": {
           "line": 3,
@@ -887,9 +887,9 @@
         "postfix": false,
         "binop": null
       },
-      "value": "SentenceEncode",
-      "start": 164,
-      "end": 178,
+      "value": "universalEmbedding",
+      "start": 165,
+      "end": 183,
       "loc": {
         "start": {
           "line": 3,
@@ -897,7 +897,7 @@
         },
         "end": {
           "line": 3,
-          "column": 34
+          "column": 38
         }
       }
     },
@@ -913,16 +913,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 179,
-      "end": 180,
+      "start": 184,
+      "end": 185,
       "loc": {
         "start": {
           "line": 3,
-          "column": 35
+          "column": 39
         },
         "end": {
           "line": 3,
-          "column": 36
+          "column": 40
         }
       }
     },
@@ -939,16 +939,16 @@
         "binop": null
       },
       "value": "from",
-      "start": 181,
-      "end": 185,
+      "start": 186,
+      "end": 190,
       "loc": {
         "start": {
           "line": 3,
-          "column": 37
+          "column": 41
         },
         "end": {
           "line": 3,
-          "column": 41
+          "column": 45
         }
       }
     },
@@ -965,17 +965,17 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "./sentenceEncode",
-      "start": 186,
-      "end": 204,
+      "value": "./universalEmbedding",
+      "start": 191,
+      "end": 213,
       "loc": {
         "start": {
           "line": 3,
-          "column": 42
+          "column": 46
         },
         "end": {
           "line": 3,
-          "column": 60
+          "column": 68
         }
       }
     },
@@ -992,16 +992,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 204,
-      "end": 205,
+      "start": 213,
+      "end": 214,
       "loc": {
         "start": {
           "line": 3,
-          "column": 60
+          "column": 68
         },
         "end": {
           "line": 3,
-          "column": 61
+          "column": 69
         }
       }
     },
@@ -1018,16 +1018,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 205,
-      "end": 205,
+      "start": 214,
+      "end": 214,
       "loc": {
         "start": {
           "line": 3,
-          "column": 61
+          "column": 69
         },
         "end": {
           "line": 3,
-          "column": 61
+          "column": 69
         }
       }
     }

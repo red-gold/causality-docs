@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../../">
+  <title data-ice="title">UniversialEmbedding | causal-net</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<link rel="stylesheet" href="./inject/css/0-causal-style.css"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-core-src">packages/causality-core/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-core/src/function.js~Function.html">Function</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-core/src/tensor.js~Tensor.html">Tensor</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-causalNetCore">causalNetCore</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-datasets-src">packages/causality-datasets/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-datasets/src/MNIST.ImgDataset.js~MnistDataset.html">MnistDataset</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-datasets/src/baseImgDataset.js~BaseImgDataset.html">BaseImgDataset</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-datasets/src/function.js~Function.html">Function</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-datasets/src/function.mixins.js~FunctionMixins.html">FunctionMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-datasets/src/imageDatasetFetch.mixins.js~ImageDatasetFetchMixins.html">ImageDatasetFetchMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-datasets/src/imageDatasetGenerator.mixins.js~ImageDatasetGeneratorMixins.html">ImageDatasetGeneratorMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-datasets/src/imageDatasetPreprocessing.mixins.js~ImageDatasetPreprocessingMixins.html">ImageDatasetPreprocessingMixins</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-layer-src">packages/causality-layer/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-layer/src/causalNetLayer.js~CausalNetLayer.html">CausalNetLayer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-layer/src/function.js~Function.html">Function</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-layer/src/layer.mixins.js~LayerMixins.html">LayerMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-causalNetLayer">causalNetLayer</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-layer-src-layers">packages/causality-layer/src/layers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-layer/src/layers/dense.mixins.js~DenseLayerMixins.html">DenseLayerMixins</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-log-src">packages/causality-log/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-log/src/baseLog.js~BaseLog.html">BaseLog</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-log/src/function.js~Function.html">Function</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-log/src/logger.mixins.js~LoggerMixins.html">LoggerMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-log/src/prettyJson.js~JsonView.html">JsonView</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-log/src/termLog.js~TermLog.html">TermLog</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-log/src/termLog.mixins.node.js~LogNodeMixins.html">LogNodeMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-log/src/termLog.mixins.web.js~WebNodeMixins.html">WebNodeMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-termLog">termLog</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-memcache-src">packages/causality-memcache/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-memcache/src/baseMemCache.js~BaseMemCache.html">BaseMemCache</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-memcache/src/function.js~Function.html">Function</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-memcache/src/memcache.mixins.js~MemCacheMixins.html">MemCacheMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-memcache/src/memdownCache.js~MemoryCache.html">MemoryCache</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-memcache/src/memorizing.mixins.js~MemorizingMixins.html">MemorizingMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-memoryCache">memoryCache</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-memory-src">packages/causality-memory/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-memory/src/causalNetMemory.js~CausalNetMemory.html">CausalNetMemory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-causalNetMemory">causalNetMemory</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-models-src">packages/causality-models/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-models/src/causalNetModels.js~CausalNetModels.html">CausalNetModels</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-models/src/function.js~Function.html">Function</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-models/src/supervisedModels.mixins.js~SupervisedModelsMixins.html">SupervisedModelsMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-models/src/unSupervisedModels.mixins.js~UnSupervisedModelsMixins.html">UnSupervisedModelsMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-causalNetModels">causalNetModels</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-models-src-supervisedmodels">packages/causality-models/src/SupervisedModels</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SequenceLabelsMixins">SequenceLabelsMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SingleLabelMixins">SingleLabelMixins</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-models-src-unsupervisedmodels">packages/causality-models/src/UnSupervisedModels</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-WordContextModelMixins">WordContextModelMixins</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-optimizers-src">packages/causality-optimizers/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-optimizers/src/trainer.mixins.js~TrainerMixins.html">TrainerMixins</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-optimizers-src-stochasticgradientdescent">packages/causality-optimizers/src/StochasticGradientDescent</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-optimizers/src/StochasticGradientDescent/SGDFitParams.mixins.js~SGDFitParamsMixins.html">SGDFitParamsMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-optimizers/src/StochasticGradientDescent/adamOptimizer.js~AdamOptimizer.html">AdamOptimizer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-causalNetSGDOptimizer">causalNetSGDOptimizer</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-preprocessing-src">packages/causality-preprocessing/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-preprocessing/src/imagePreprocessing.js~ImagePreprocessing.html">ImagePreprocessing</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-preprocessing/src/nlpPreprocessing.js~NLPPreprocessing.html">NLPPreprocessing</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-preprocessing/src/preprocessing.mixins.js~PreprocessingMixins.html">PreprocessingMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-preprocessing/src/tabularPreprocessing.js~TabularPreprocessing.html">TabularPreprocessing</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-TokenizerEN">TokenizerEN</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-imagePreprocessing">imagePreprocessing</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-nLPPreprocessing">nLPPreprocessing</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-tabularPreprocessing">tabularPreprocessing</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-preprocessing-src-image">packages/causality-preprocessing/src/Image</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-preprocessing/src/Image/colorTransforming.mixins.js~ColorTransformingMixins.html">ColorTransformingMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-preprocessing/src/Image/imageSplitting.mixins.js~ImageSplittingMixins.html">ImageSplittingMixins</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-preprocessing-src-nlp">packages/causality-preprocessing/src/NLP</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-preprocessing/src/NLP/tokenTransforming.mixins.js~TokenTransformingMixins.html">TokenTransformingMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-preprocessing/src/NLP/tokenizing.mixins.js~TokenizingMixins.html">TokenizingMixins</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-preprocessing-src-tabular">packages/causality-preprocessing/src/Tabular</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-preprocessing/src/Tabular/itemNormalizing.mixins.js~ItemNormalizingMixins.html">ItemNormalizingMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-preprocessing/src/Tabular/nullItemReplacing.mixins.js~NullItemReplacingMixins.html">NullItemReplacingMixins</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-representation-src">packages/causality-representation/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-representation/src/causalNetEmbedding.js~CausalNetEmbedding.html">CausalNetEmbedding</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-representation/src/function.js~Function.html">Function</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-representation/src/representation.mixins.js~RepresentationMixins.html">RepresentationMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-representation/src/universalEmbedding.js~UniversialEmbedding.html">UniversialEmbedding</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-representation/src/wordEmbedding.mixins.js~WordEmbeddingMixins.html">WordEmbeddingMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-representation/src/wordEmbeddingFunction.mixins.js~WordEmbeddingFunctionMixins.html">WordEmbeddingFunctionMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-causalNetEmbedding">causalNetEmbedding</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-universialEmbedding">universialEmbedding</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-representation-src-lookup">packages/causality-representation/src/Lookup</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-representation/src/Lookup/chunkLookup.mixins.js~ChunkLookupMixins.html">ChunkLookupMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-representation/src/Lookup/tokenLookup.mixins.js~TokenLookUpMixins.html">TokenLookUpMixins</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-sampling-src">packages/causality-sampling/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-sampling/src/causalNetSampling.js~CausalNetSampling.html">CausalNetSampling</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-sampling/src/negSampling.mixins.js~NegativeSamplingMixins.html">NegativeSamplingMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-sampling/src/sampling.mixins.js~SamplingMixins.html">SamplingMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-sampling/src/subSampling.mixins.js~SubSamplingMixins.html">SubSamplingMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-causalNetSampling">causalNetSampling</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-storage-src">packages/causality-storage/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-storage/src/CSVFile.mixins.js~CSVFileMixins.html">CSVFileMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-storage/src/PNGFile.mixins.js~PNGFileMixins.html">PNGFileMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-storage/src/baseStorage.js~BaseStorage.html">BaseStorage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-storage/src/function.js~Function.html">Function</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-storage/src/indexDBStorage.js~IndexDBStorage.html">IndexDBStorage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-storage/src/indexDBStorage.mixins.node.js~LevelDownMixins.html">LevelDownMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-storage/src/indexDBStorage.mixins.web.js~LevelJSMixins.html">LevelJSMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-storage/src/storage.mixins.js~StorageMixins.html">StorageMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-storage/src/textFile.mixins.js~TextFileMixins.html">TextFileMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-indexDBStorage">indexDBStorage</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-utils-src">packages/causality-utils/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-utils/src/assert.js~Assert.html">Assert</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-utils/src/csv.js~CSVUtils.html">CSVUtils</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-utils/src/fetch.js~Fetch.html">Fetch</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-utils/src/fetchStreamMixins.node.js~NodeStreamMixins.html">NodeStreamMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-utils/src/fetchStreamMixins.web.js~WebStreamMixins.html">WebStreamMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-utils/src/json.js~JsonUtils.html">JsonUtils</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-utils/src/platform.js~Platform.html">Platform</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-utils/src/png.js~PNGUtils.html">PNGUtils</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-utils/src/stream.js~Stream.html">Stream</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-assert">assert</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-cSVUtils">cSVUtils</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-fetch">fetch</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-jsonUtils">jsonUtils</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-platform">platform</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-pNGUtils">pNGUtils</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-stream">stream</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#src">src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/src/causality.js~CausalNet.html">CausalNet</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/src/function.js~Function.html">Function</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#src-pipeline">src/pipeline</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/src/pipeline/function.js~Function.html">Function</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/src/pipeline/pipeLineEmbedding.mixins.js~PipelineEmbeddingMixins.html">PipelineEmbeddingMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/src/pipeline/pipelineBase.mixins.js~PipelineBaseMixins.html">PipelineBaseMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/src/pipeline/pipelineEnsembleEvaluating.mixins.js~PipelineEnsembleEvaluatingMixins.html">PipelineEnsembleEvaluatingMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/src/pipeline/pipelineEnsemblePredicting.mixins.js~PipelineEnsemblePredictMixins.html">PipelineEnsemblePredictMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/src/pipeline/pipelineEnsembleTraining.mixins.js~PipelineEnsembleTrainingMixins.html">PipelineEnsembleTrainingMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/src/pipeline/pipelineEvaluating.mixins.js~PipelineEvaluatingMixins.html">PipelineEvaluatingMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/src/pipeline/pipelineFunction.mixins.js~PipelineFunctionMixins.html">PipelineFunctionMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/src/pipeline/pipelineHyperParameters.mixins.js~PipelineHyperParametersMixins.html">PipelineHyperParametersMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/src/pipeline/pipelineParameters.mixins.js~PipelineParametersMixins.html">PipelineParametersMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/src/pipeline/pipelinePredicting.mixins.js~PipelinePredictMixins.html">PipelinePredictMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/src/pipeline/pipelineRunner.mixins.js~PipelineRunnerMixins.html">PipelineRunnerMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/src/pipeline/pipelineTraining.mixins.js~PipelineTrainingMixins.html">PipelineTrainingMixins</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div class="header-notice">
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode"></code></pre></div>
+  <span data-ice="access">public</span>
+  <span data-ice="kind">class</span>
+  
+  
+  
+  <span data-ice="source">| <span><a href="file/causality/packages/causality-representation/src/universalEmbedding.js.html#lineNumber4">source</a></span></span>
+</div>
+
+<div class="self-detail detail">
+  <h1 data-ice="name">UniversialEmbedding</h1>
+
+  <div data-ice="instanceDocs" class="instance-docs">
+    <span>You can directly use an instance of this class.</span>
+    
+  <span data-ice="instanceDoc"><span><a href="variable/index.html#static-variable-universialEmbedding">universialEmbedding</a></span></span>
+</div>
+
+  <div class="expression-extends" data-ice="expressionExtends"><h4>Expression Extends:</h4><pre class="prettyprint"><code data-ice="expressionExtendsCode">class UniversialEmbedding extends <span><a href="class/causality/packages/causality-utils/src/platform.js~Platform.html">Platform</a></span>.mix<span>With</span>(<span><a href="class/causality/packages/causality-core/src/tensor.js~Tensor.html">Tensor</a></span>, [])</code></pre></div>
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+</div>
+
+
+
+<div data-ice="constructorSummary"><h2>Constructor Summary</h2><table class="summary" data-ice="summary">
+  <thead><tr><td data-ice="title" colspan="3">Public Constructor</td></tr></thead>
+  <tbody>
+  
+  <tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/causality/packages/causality-representation/src/universalEmbedding.js~UniversialEmbedding.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">()</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+<div data-ice="memberSummary"><h2>Member Summary</h2><table class="summary" data-ice="summary">
+  <thead><tr><td data-ice="title" colspan="3">Public Members</td></tr></thead>
+  <tbody>
+  
+  <tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/causality/packages/causality-representation/src/universalEmbedding.js~UniversialEmbedding.html#instance-member-model">model</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+</tbody>
+</table>
+<table class="summary" data-ice="summary">
+  <thead><tr><td data-ice="title" colspan="3">Private Members</td></tr></thead>
+  <tbody>
+  
+  <tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">private</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/causality/packages/causality-representation/src/universalEmbedding.js~UniversialEmbedding.html#instance-member-use">use</a></span></span><span class="code" data-ice="signature">: <span>*</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+<div data-ice="methodSummary"><h2>Method Summary</h2><table class="summary" data-ice="summary">
+  <thead><tr><td data-ice="title" colspan="3">Public Methods</td></tr></thead>
+  <tbody>
+  
+  <tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          <span data-ice="async">async</span>
+          
+          <span class="code" data-ice="name"><span><a href="class/causality/packages/causality-representation/src/universalEmbedding.js~UniversialEmbedding.html#instance-method-connect">connect</a></span></span><span class="code" data-ice="signature">(): <span>*</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          <span data-ice="async">async</span>
+          
+          <span class="code" data-ice="name"><span><a href="class/causality/packages/causality-representation/src/universalEmbedding.js~UniversialEmbedding.html#instance-method-sentenceEncode">sentenceEncode</a></span></span><span class="code" data-ice="signature">(sentences: <span>*</span>): <span>*</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+
+
+
+
+<div data-ice="constructorDetails"><h2 data-ice="title">Public Constructors</h2>
+
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-constructor-constructor">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">()</span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/causality/packages/causality-representation/src/universalEmbedding.js.html#lineNumber6">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+</div>
+<div data-ice="memberDetails"><h2 data-ice="title">Public Members</h2>
+
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-member-model">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">model</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/causality/packages/causality-representation/src/universalEmbedding.js.html#lineNumber12">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<h2 data-ice="title">Private Members</h2>
+
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-member-use">
+    <span class="access" data-ice="access">private</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">use</span><span class="code" data-ice="signature">: <span>*</span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/causality/packages/causality-representation/src/universalEmbedding.js.html#lineNumber11">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+</div>
+<div data-ice="methodDetails"><h2 data-ice="title">Public Methods</h2>
+
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-connect">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    <span data-ice="async">async</span>
+    
+    <span class="code" data-ice="name">connect</span><span class="code" data-ice="signature">(): <span>*</span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/causality/packages/causality-representation/src/universalEmbedding.js.html#lineNumber15">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-sentenceEncode">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    <span data-ice="async">async</span>
+    
+    <span class="code" data-ice="name">sentenceEncode</span><span class="code" data-ice="signature">(sentences: <span>*</span>): <span>*</span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/causality/packages/causality-representation/src/universalEmbedding.js.html#lineNumber22">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">sentences</td>
+      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"></td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>
