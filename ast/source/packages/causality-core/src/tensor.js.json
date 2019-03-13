@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 566,
+  "end": 564,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 566,
+    "end": 564,
     "loc": {
       "start": {
         "line": 1,
@@ -268,9 +268,9 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * class Function is the primitive class for composing higher class.\n * This class wrap [tensorflowjs](https://www.tensorflow.org/js) for providing tensor calculation\n * @class Tensor\n ",
+            "value": "*\n * class Tensor is the primitive class for composing higher class.\n * This class wrap [tensorflowjs](https://www.tensorflow.org/js) for providing tensor calculation\n * @class Tensor\n ",
             "start": 108,
-            "end": 299,
+            "end": 297,
             "loc": {
               "start": {
                 "line": 4,
@@ -286,8 +286,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 300,
-        "end": 566,
+        "start": 298,
+        "end": 564,
         "loc": {
           "start": {
             "line": 9,
@@ -300,8 +300,8 @@
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 315,
-          "end": 566,
+          "start": 313,
+          "end": 564,
           "loc": {
             "start": {
               "line": 9,
@@ -314,8 +314,8 @@
           },
           "id": {
             "type": "Identifier",
-            "start": 321,
-            "end": 327,
+            "start": 319,
+            "end": 325,
             "loc": {
               "start": {
                 "line": 9,
@@ -333,8 +333,8 @@
           "superClass": null,
           "body": {
             "type": "ClassBody",
-            "start": 327,
-            "end": 566,
+            "start": 325,
+            "end": 564,
             "loc": {
               "start": {
                 "line": 9,
@@ -348,8 +348,8 @@
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 333,
-                "end": 405,
+                "start": 331,
+                "end": 403,
                 "loc": {
                   "start": {
                     "line": 10,
@@ -364,8 +364,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 333,
-                  "end": 344,
+                  "start": 331,
+                  "end": 342,
                   "loc": {
                     "start": {
                       "line": 10,
@@ -387,8 +387,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 346,
-                  "end": 405,
+                  "start": 344,
+                  "end": 403,
                   "loc": {
                     "start": {
                       "line": 10,
@@ -402,8 +402,8 @@
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 356,
-                      "end": 368,
+                      "start": 354,
+                      "end": 366,
                       "loc": {
                         "start": {
                           "line": 11,
@@ -416,8 +416,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 356,
-                        "end": 367,
+                        "start": 354,
+                        "end": 365,
                         "loc": {
                           "start": {
                             "line": 11,
@@ -431,8 +431,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 356,
-                          "end": 362,
+                          "start": 354,
+                          "end": 360,
                           "loc": {
                             "start": {
                               "line": 11,
@@ -445,8 +445,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 356,
-                            "end": 360,
+                            "start": 354,
+                            "end": 358,
                             "loc": {
                               "start": {
                                 "line": 11,
@@ -460,8 +460,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 361,
-                            "end": 362,
+                            "start": 359,
+                            "end": 360,
                             "loc": {
                               "start": {
                                 "line": 11,
@@ -479,8 +479,8 @@
                         },
                         "right": {
                           "type": "Identifier",
-                          "start": 365,
-                          "end": 367,
+                          "start": 363,
+                          "end": 365,
                           "loc": {
                             "start": {
                               "line": 11,
@@ -498,8 +498,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 377,
-                      "end": 399,
+                      "start": 375,
+                      "end": 397,
                       "loc": {
                         "start": {
                           "line": 12,
@@ -512,8 +512,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 377,
-                        "end": 398,
+                        "start": 375,
+                        "end": 396,
                         "loc": {
                           "start": {
                             "line": 12,
@@ -527,8 +527,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 377,
-                          "end": 388,
+                          "start": 375,
+                          "end": 386,
                           "loc": {
                             "start": {
                               "line": 12,
@@ -541,8 +541,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 377,
-                            "end": 381,
+                            "start": 375,
+                            "end": 379,
                             "loc": {
                               "start": {
                                 "line": 12,
@@ -556,8 +556,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 382,
-                            "end": 388,
+                            "start": 380,
+                            "end": 386,
                             "loc": {
                               "start": {
                                 "line": 12,
@@ -575,8 +575,8 @@
                         },
                         "right": {
                           "type": "Identifier",
-                          "start": 391,
-                          "end": 398,
+                          "start": 389,
+                          "end": 396,
                           "loc": {
                             "start": {
                               "line": 12,
@@ -600,8 +600,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n     * This method return the core tensor instance\n     * @readonly\n     * @memberof Tensor\n     ",
-                    "start": 410,
-                    "end": 513,
+                    "start": 408,
+                    "end": 511,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -617,8 +617,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 518,
-                "end": 564,
+                "start": 516,
+                "end": 562,
                 "loc": {
                   "start": {
                     "line": 19,
@@ -633,8 +633,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 522,
-                  "end": 532,
+                  "start": 520,
+                  "end": 530,
                   "loc": {
                     "start": {
                       "line": 19,
@@ -656,8 +656,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 534,
-                  "end": 564,
+                  "start": 532,
+                  "end": 562,
                   "loc": {
                     "start": {
                       "line": 19,
@@ -671,8 +671,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 544,
-                      "end": 558,
+                      "start": 542,
+                      "end": 556,
                       "loc": {
                         "start": {
                           "line": 20,
@@ -685,8 +685,8 @@
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 551,
-                        "end": 557,
+                        "start": 549,
+                        "end": 555,
                         "loc": {
                           "start": {
                             "line": 20,
@@ -699,8 +699,8 @@
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 551,
-                          "end": 555,
+                          "start": 549,
+                          "end": 553,
                           "loc": {
                             "start": {
                               "line": 20,
@@ -714,8 +714,8 @@
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 556,
-                          "end": 557,
+                          "start": 554,
+                          "end": 555,
                           "loc": {
                             "start": {
                               "line": 20,
@@ -739,8 +739,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n     * This method return the core tensor instance\n     * @readonly\n     * @memberof Tensor\n     ",
-                    "start": 410,
-                    "end": 513,
+                    "start": 408,
+                    "end": 511,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -759,9 +759,9 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * class Function is the primitive class for composing higher class.\n * This class wrap [tensorflowjs](https://www.tensorflow.org/js) for providing tensor calculation\n * @class Tensor\n ",
+              "value": "*\n * class Tensor is the primitive class for composing higher class.\n * This class wrap [tensorflowjs](https://www.tensorflow.org/js) for providing tensor calculation\n * @class Tensor\n ",
               "start": 108,
-              "end": 299,
+              "end": 297,
               "loc": {
                 "start": {
                   "line": 4,
@@ -779,9 +779,9 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * class Function is the primitive class for composing higher class.\n * This class wrap [tensorflowjs](https://www.tensorflow.org/js) for providing tensor calculation\n * @class Tensor\n ",
+            "value": "*\n * class Tensor is the primitive class for composing higher class.\n * This class wrap [tensorflowjs](https://www.tensorflow.org/js) for providing tensor calculation\n * @class Tensor\n ",
             "start": 108,
-            "end": 299,
+            "end": 297,
             "loc": {
               "start": {
                 "line": 4,
@@ -801,9 +801,9 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * class Function is the primitive class for composing higher class.\n * This class wrap [tensorflowjs](https://www.tensorflow.org/js) for providing tensor calculation\n * @class Tensor\n ",
+      "value": "*\n * class Tensor is the primitive class for composing higher class.\n * This class wrap [tensorflowjs](https://www.tensorflow.org/js) for providing tensor calculation\n * @class Tensor\n ",
       "start": 108,
-      "end": 299,
+      "end": 297,
       "loc": {
         "start": {
           "line": 4,
@@ -818,8 +818,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * This method return the core tensor instance\n     * @readonly\n     * @memberof Tensor\n     ",
-      "start": 410,
-      "end": 513,
+      "start": 408,
+      "end": 511,
       "loc": {
         "start": {
           "line": 14,
@@ -1307,9 +1307,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * class Function is the primitive class for composing higher class.\n * This class wrap [tensorflowjs](https://www.tensorflow.org/js) for providing tensor calculation\n * @class Tensor\n ",
+      "value": "*\n * class Tensor is the primitive class for composing higher class.\n * This class wrap [tensorflowjs](https://www.tensorflow.org/js) for providing tensor calculation\n * @class Tensor\n ",
       "start": 108,
-      "end": 299,
+      "end": 297,
       "loc": {
         "start": {
           "line": 4,
@@ -1336,8 +1336,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 300,
-      "end": 306,
+      "start": 298,
+      "end": 304,
       "loc": {
         "start": {
           "line": 9,
@@ -1364,8 +1364,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 307,
-      "end": 314,
+      "start": 305,
+      "end": 312,
       "loc": {
         "start": {
           "line": 9,
@@ -1392,8 +1392,8 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 315,
-      "end": 320,
+      "start": 313,
+      "end": 318,
       "loc": {
         "start": {
           "line": 9,
@@ -1418,8 +1418,8 @@
         "binop": null
       },
       "value": "Tensor",
-      "start": 321,
-      "end": 327,
+      "start": 319,
+      "end": 325,
       "loc": {
         "start": {
           "line": 9,
@@ -1443,8 +1443,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 327,
-      "end": 328,
+      "start": 325,
+      "end": 326,
       "loc": {
         "start": {
           "line": 9,
@@ -1469,8 +1469,8 @@
         "binop": null
       },
       "value": "constructor",
-      "start": 333,
-      "end": 344,
+      "start": 331,
+      "end": 342,
       "loc": {
         "start": {
           "line": 10,
@@ -1494,8 +1494,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 344,
-      "end": 345,
+      "start": 342,
+      "end": 343,
       "loc": {
         "start": {
           "line": 10,
@@ -1519,8 +1519,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 345,
-      "end": 346,
+      "start": 343,
+      "end": 344,
       "loc": {
         "start": {
           "line": 10,
@@ -1544,8 +1544,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 346,
-      "end": 347,
+      "start": 344,
+      "end": 345,
       "loc": {
         "start": {
           "line": 10,
@@ -1572,8 +1572,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 356,
-      "end": 360,
+      "start": 354,
+      "end": 358,
       "loc": {
         "start": {
           "line": 11,
@@ -1598,8 +1598,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 360,
-      "end": 361,
+      "start": 358,
+      "end": 359,
       "loc": {
         "start": {
           "line": 11,
@@ -1624,8 +1624,8 @@
         "binop": null
       },
       "value": "T",
-      "start": 361,
-      "end": 362,
+      "start": 359,
+      "end": 360,
       "loc": {
         "start": {
           "line": 11,
@@ -1651,8 +1651,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 363,
-      "end": 364,
+      "start": 361,
+      "end": 362,
       "loc": {
         "start": {
           "line": 11,
@@ -1677,8 +1677,8 @@
         "binop": null
       },
       "value": "tf",
-      "start": 365,
-      "end": 367,
+      "start": 363,
+      "end": 365,
       "loc": {
         "start": {
           "line": 11,
@@ -1703,8 +1703,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 367,
-      "end": 368,
+      "start": 365,
+      "end": 366,
       "loc": {
         "start": {
           "line": 11,
@@ -1731,8 +1731,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 377,
-      "end": 381,
+      "start": 375,
+      "end": 379,
       "loc": {
         "start": {
           "line": 12,
@@ -1757,8 +1757,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 381,
-      "end": 382,
+      "start": 379,
+      "end": 380,
       "loc": {
         "start": {
           "line": 12,
@@ -1783,8 +1783,8 @@
         "binop": null
       },
       "value": "logger",
-      "start": 382,
-      "end": 388,
+      "start": 380,
+      "end": 386,
       "loc": {
         "start": {
           "line": 12,
@@ -1810,8 +1810,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 389,
-      "end": 390,
+      "start": 387,
+      "end": 388,
       "loc": {
         "start": {
           "line": 12,
@@ -1836,8 +1836,8 @@
         "binop": null
       },
       "value": "console",
-      "start": 391,
-      "end": 398,
+      "start": 389,
+      "end": 396,
       "loc": {
         "start": {
           "line": 12,
@@ -1862,8 +1862,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 398,
-      "end": 399,
+      "start": 396,
+      "end": 397,
       "loc": {
         "start": {
           "line": 12,
@@ -1887,8 +1887,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 404,
-      "end": 405,
+      "start": 402,
+      "end": 403,
       "loc": {
         "start": {
           "line": 13,
@@ -1903,8 +1903,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * This method return the core tensor instance\n     * @readonly\n     * @memberof Tensor\n     ",
-      "start": 410,
-      "end": 513,
+      "start": 408,
+      "end": 511,
       "loc": {
         "start": {
           "line": 14,
@@ -1929,8 +1929,8 @@
         "binop": null
       },
       "value": "get",
-      "start": 518,
-      "end": 521,
+      "start": 516,
+      "end": 519,
       "loc": {
         "start": {
           "line": 19,
@@ -1955,8 +1955,8 @@
         "binop": null
       },
       "value": "CoreTensor",
-      "start": 522,
-      "end": 532,
+      "start": 520,
+      "end": 530,
       "loc": {
         "start": {
           "line": 19,
@@ -1980,8 +1980,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 532,
-      "end": 533,
+      "start": 530,
+      "end": 531,
       "loc": {
         "start": {
           "line": 19,
@@ -2005,8 +2005,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 533,
-      "end": 534,
+      "start": 531,
+      "end": 532,
       "loc": {
         "start": {
           "line": 19,
@@ -2030,8 +2030,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 534,
-      "end": 535,
+      "start": 532,
+      "end": 533,
       "loc": {
         "start": {
           "line": 19,
@@ -2058,8 +2058,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 544,
-      "end": 550,
+      "start": 542,
+      "end": 548,
       "loc": {
         "start": {
           "line": 20,
@@ -2086,8 +2086,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 551,
-      "end": 555,
+      "start": 549,
+      "end": 553,
       "loc": {
         "start": {
           "line": 20,
@@ -2112,8 +2112,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 555,
-      "end": 556,
+      "start": 553,
+      "end": 554,
       "loc": {
         "start": {
           "line": 20,
@@ -2138,8 +2138,8 @@
         "binop": null
       },
       "value": "T",
-      "start": 556,
-      "end": 557,
+      "start": 554,
+      "end": 555,
       "loc": {
         "start": {
           "line": 20,
@@ -2164,8 +2164,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 557,
-      "end": 558,
+      "start": 555,
+      "end": 556,
       "loc": {
         "start": {
           "line": 20,
@@ -2189,8 +2189,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 563,
-      "end": 564,
+      "start": 561,
+      "end": 562,
       "loc": {
         "start": {
           "line": 21,
@@ -2214,8 +2214,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 565,
-      "end": 566,
+      "start": 563,
+      "end": 564,
       "loc": {
         "start": {
           "line": 22,
@@ -2240,8 +2240,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 566,
-      "end": 566,
+      "start": 564,
+      "end": 564,
       "loc": {
         "start": {
           "line": 22,

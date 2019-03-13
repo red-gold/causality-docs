@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 145,
+  "end": 79,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 2,
+      "line": 1,
       "column": 79
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 145,
+    "end": 79,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 2,
+        "line": 1,
         "column": 79
       }
     },
@@ -31,7 +31,7 @@
       {
         "type": "ExportNamedDeclaration",
         "start": 0,
-        "end": 65,
+        "end": 79,
         "loc": {
           "start": {
             "line": 1,
@@ -39,7 +39,7 @@
           },
           "end": {
             "line": 1,
-            "column": 65
+            "column": 79
           }
         },
         "declaration": null,
@@ -47,7 +47,7 @@
           {
             "type": "ExportSpecifier",
             "start": 8,
-            "end": 35,
+            "end": 42,
             "loc": {
               "start": {
                 "line": 1,
@@ -55,7 +55,7 @@
               },
               "end": {
                 "line": 1,
-                "column": 35
+                "column": 42
               }
             },
             "local": {
@@ -78,7 +78,7 @@
             "exported": {
               "type": "Identifier",
               "start": 19,
-              "end": 35,
+              "end": 42,
               "loc": {
                 "start": {
                   "line": 1,
@@ -86,93 +86,6 @@
                 },
                 "end": {
                   "line": 1,
-                  "column": 35
-                },
-                "identifierName": "TokenizingMixins"
-              },
-              "name": "TokenizingMixins"
-            }
-          }
-        ],
-        "source": {
-          "type": "StringLiteral",
-          "start": 43,
-          "end": 64,
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 43
-            },
-            "end": {
-              "line": 1,
-              "column": 64
-            }
-          },
-          "extra": {
-            "rawValue": "./tokenizing.mixins",
-            "raw": "'./tokenizing.mixins'"
-          },
-          "value": "./tokenizing.mixins"
-        }
-      },
-      {
-        "type": "ExportNamedDeclaration",
-        "start": 66,
-        "end": 145,
-        "loc": {
-          "start": {
-            "line": 2,
-            "column": 0
-          },
-          "end": {
-            "line": 2,
-            "column": 79
-          }
-        },
-        "declaration": null,
-        "specifiers": [
-          {
-            "type": "ExportSpecifier",
-            "start": 74,
-            "end": 108,
-            "loc": {
-              "start": {
-                "line": 2,
-                "column": 8
-              },
-              "end": {
-                "line": 2,
-                "column": 42
-              }
-            },
-            "local": {
-              "type": "Identifier",
-              "start": 74,
-              "end": 81,
-              "loc": {
-                "start": {
-                  "line": 2,
-                  "column": 8
-                },
-                "end": {
-                  "line": 2,
-                  "column": 15
-                },
-                "identifierName": "default"
-              },
-              "name": "default"
-            },
-            "exported": {
-              "type": "Identifier",
-              "start": 85,
-              "end": 108,
-              "loc": {
-                "start": {
-                  "line": 2,
-                  "column": 19
-                },
-                "end": {
-                  "line": 2,
                   "column": 42
                 },
                 "identifierName": "TokenTransformingMixins"
@@ -183,15 +96,15 @@
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 116,
-          "end": 144,
+          "start": 50,
+          "end": 78,
           "loc": {
             "start": {
-              "line": 2,
+              "line": 1,
               "column": 50
             },
             "end": {
-              "line": 2,
+              "line": 1,
               "column": 78
             }
           },
@@ -326,253 +239,16 @@
         "postfix": false,
         "binop": null
       },
-      "value": "TokenizingMixins",
+      "value": "TokenTransformingMixins",
       "start": 19,
-      "end": 35,
-      "loc": {
-        "start": {
-          "line": 1,
-          "column": 19
-        },
-        "end": {
-          "line": 1,
-          "column": 35
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "}",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 36,
-      "end": 37,
-      "loc": {
-        "start": {
-          "line": 1,
-          "column": 36
-        },
-        "end": {
-          "line": 1,
-          "column": 37
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "from",
-      "start": 38,
       "end": 42,
       "loc": {
         "start": {
           "line": 1,
-          "column": 38
-        },
-        "end": {
-          "line": 1,
-          "column": 42
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "./tokenizing.mixins",
-      "start": 43,
-      "end": 64,
-      "loc": {
-        "start": {
-          "line": 1,
-          "column": 43
-        },
-        "end": {
-          "line": 1,
-          "column": 64
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ";",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 64,
-      "end": 65,
-      "loc": {
-        "start": {
-          "line": 1,
-          "column": 64
-        },
-        "end": {
-          "line": 1,
-          "column": 65
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "export",
-        "keyword": "export",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "export",
-      "start": 66,
-      "end": 72,
-      "loc": {
-        "start": {
-          "line": 2,
-          "column": 0
-        },
-        "end": {
-          "line": 2,
-          "column": 6
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "{",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 73,
-      "end": 74,
-      "loc": {
-        "start": {
-          "line": 2,
-          "column": 7
-        },
-        "end": {
-          "line": 2,
-          "column": 8
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "default",
-        "keyword": "default",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "default",
-      "start": 74,
-      "end": 81,
-      "loc": {
-        "start": {
-          "line": 2,
-          "column": 8
-        },
-        "end": {
-          "line": 2,
-          "column": 15
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "as",
-      "start": 82,
-      "end": 84,
-      "loc": {
-        "start": {
-          "line": 2,
-          "column": 16
-        },
-        "end": {
-          "line": 2,
-          "column": 18
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "TokenTransformingMixins",
-      "start": 85,
-      "end": 108,
-      "loc": {
-        "start": {
-          "line": 2,
           "column": 19
         },
         "end": {
-          "line": 2,
+          "line": 1,
           "column": 42
         }
       }
@@ -589,15 +265,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 109,
-      "end": 110,
+      "start": 43,
+      "end": 44,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 1,
           "column": 43
         },
         "end": {
-          "line": 2,
+          "line": 1,
           "column": 44
         }
       }
@@ -615,15 +291,15 @@
         "binop": null
       },
       "value": "from",
-      "start": 111,
-      "end": 115,
+      "start": 45,
+      "end": 49,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 1,
           "column": 45
         },
         "end": {
-          "line": 2,
+          "line": 1,
           "column": 49
         }
       }
@@ -642,15 +318,15 @@
         "updateContext": null
       },
       "value": "./tokenTransforming.mixins",
-      "start": 116,
-      "end": 144,
+      "start": 50,
+      "end": 78,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 1,
           "column": 50
         },
         "end": {
-          "line": 2,
+          "line": 1,
           "column": 78
         }
       }
@@ -668,15 +344,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 144,
-      "end": 145,
+      "start": 78,
+      "end": 79,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 1,
           "column": 78
         },
         "end": {
-          "line": 2,
+          "line": 1,
           "column": 79
         }
       }
@@ -694,15 +370,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 145,
-      "end": 145,
+      "start": 79,
+      "end": 79,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 1,
           "column": 79
         },
         "end": {
-          "line": 2,
+          "line": 1,
           "column": 79
         }
       }

@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 395,
+  "end": 697,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 12,
+      "line": 23,
       "column": 38
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 395,
+    "end": 697,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 12,
+        "line": 23,
         "column": 38
       }
     },
@@ -333,78 +333,97 @@
             "raw": "'./Image/index'"
           },
           "value": "./Image/index"
-        }
+        },
+        "trailingComments": [
+          {
+            "type": "CommentBlock",
+            "value": "*\n * This ImagePreprocessing provide methods for preprocessing image data\n * { MixWith: [\n *         ColorTransformingMixins, ImageSplittingMixins\n *     ] }\n * @class ImagePreprocessing\n * @extends BaseFunction\n * @example\n * [EXAMPLE  ERROR! ../examples/imagePreprocessing.babel.node.js]\n ",
+            "start": 185,
+            "end": 480,
+            "loc": {
+              "start": {
+                "line": 5,
+                "column": 0
+              },
+              "end": {
+                "line": 14,
+                "column": 3
+              }
+            }
+          }
+        ]
       },
       {
         "type": "Identifier",
-        "start": 184,
-        "end": 355,
+        "start": 481,
+        "end": 657,
         "loc": {
           "start": {
-            "line": 4,
+            "line": 15,
             "column": 0
           },
           "end": {
-            "line": 10,
+            "line": 21,
             "column": 1
           }
         },
         "id": {
           "type": "Identifier",
-          "start": 190,
-          "end": 208,
+          "start": 487,
+          "end": 505,
           "loc": {
             "start": {
-              "line": 4,
+              "line": 15,
               "column": 6
             },
             "end": {
-              "line": 4,
+              "line": 15,
               "column": 24
             },
             "identifierName": "ImagePreprocessing"
           },
-          "name": "ImagePreprocessing"
+          "name": "ImagePreprocessing",
+          "leadingComments": null
         },
         "superClass": {
           "type": "CallExpression",
-          "start": 217,
-          "end": 310,
+          "start": 514,
+          "end": 612,
           "loc": {
             "start": {
-              "line": 4,
+              "line": 15,
               "column": 33
             },
             "end": {
-              "line": 6,
-              "column": 6
+              "line": 17,
+              "column": 31
             }
           },
           "callee": {
             "type": "MemberExpression",
-            "start": 217,
-            "end": 233,
+            "start": 514,
+            "end": 530,
             "loc": {
               "start": {
-                "line": 4,
+                "line": 15,
                 "column": 33
               },
               "end": {
-                "line": 4,
+                "line": 15,
                 "column": 49
               }
             },
             "object": {
               "type": "Identifier",
-              "start": 217,
-              "end": 225,
+              "start": 514,
+              "end": 522,
               "loc": {
                 "start": {
-                  "line": 4,
+                  "line": 15,
                   "column": 33
                 },
                 "end": {
-                  "line": 4,
+                  "line": 15,
                   "column": 41
                 },
                 "identifierName": "Platform"
@@ -413,15 +432,15 @@
             },
             "property": {
               "type": "Identifier",
-              "start": 226,
-              "end": 233,
+              "start": 523,
+              "end": 530,
               "loc": {
                 "start": {
-                  "line": 4,
+                  "line": 15,
                   "column": 42
                 },
                 "end": {
-                  "line": 4,
+                  "line": 15,
                   "column": 49
                 },
                 "identifierName": "mixWith"
@@ -433,15 +452,15 @@
           "arguments": [
             {
               "type": "Identifier",
-              "start": 234,
-              "end": 246,
+              "start": 531,
+              "end": 543,
               "loc": {
                 "start": {
-                  "line": 4,
+                  "line": 15,
                   "column": 50
                 },
                 "end": {
-                  "line": 4,
+                  "line": 15,
                   "column": 62
                 },
                 "identifierName": "BaseFunction"
@@ -450,30 +469,30 @@
             },
             {
               "type": "ArrayExpression",
-              "start": 248,
-              "end": 309,
+              "start": 545,
+              "end": 611,
               "loc": {
                 "start": {
-                  "line": 4,
+                  "line": 15,
                   "column": 64
                 },
                 "end": {
-                  "line": 6,
-                  "column": 5
+                  "line": 17,
+                  "column": 30
                 }
               },
               "elements": [
                 {
                   "type": "Identifier",
-                  "start": 258,
-                  "end": 281,
+                  "start": 555,
+                  "end": 578,
                   "loc": {
                     "start": {
-                      "line": 5,
+                      "line": 16,
                       "column": 8
                     },
                     "end": {
-                      "line": 5,
+                      "line": 16,
                       "column": 31
                     },
                     "identifierName": "ColorTransformingMixins"
@@ -482,16 +501,16 @@
                 },
                 {
                   "type": "Identifier",
-                  "start": 283,
-                  "end": 303,
+                  "start": 589,
+                  "end": 609,
                   "loc": {
                     "start": {
-                      "line": 5,
-                      "column": 33
+                      "line": 17,
+                      "column": 8
                     },
                     "end": {
-                      "line": 5,
-                      "column": 53
+                      "line": 17,
+                      "column": 28
                     },
                     "identifierName": "ImageSplittingMixins"
                   },
@@ -503,30 +522,30 @@
         },
         "body": {
           "type": "ClassBody",
-          "start": 310,
-          "end": 355,
+          "start": 612,
+          "end": 657,
           "loc": {
             "start": {
-              "line": 6,
-              "column": 6
+              "line": 17,
+              "column": 31
             },
             "end": {
-              "line": 10,
+              "line": 21,
               "column": 1
             }
           },
           "body": [
             {
               "type": "ClassMethod",
-              "start": 316,
-              "end": 353,
+              "start": 618,
+              "end": 655,
               "loc": {
                 "start": {
-                  "line": 7,
+                  "line": 18,
                   "column": 4
                 },
                 "end": {
-                  "line": 9,
+                  "line": 20,
                   "column": 5
                 }
               },
@@ -534,15 +553,15 @@
               "computed": false,
               "key": {
                 "type": "Identifier",
-                "start": 316,
-                "end": 327,
+                "start": 618,
+                "end": 629,
                 "loc": {
                   "start": {
-                    "line": 7,
+                    "line": 18,
                     "column": 4
                   },
                   "end": {
-                    "line": 7,
+                    "line": 18,
                     "column": 15
                   },
                   "identifierName": "constructor"
@@ -557,58 +576,58 @@
               "params": [],
               "body": {
                 "type": "BlockStatement",
-                "start": 329,
-                "end": 353,
+                "start": 631,
+                "end": 655,
                 "loc": {
                   "start": {
-                    "line": 7,
+                    "line": 18,
                     "column": 17
                   },
                   "end": {
-                    "line": 9,
+                    "line": 20,
                     "column": 5
                   }
                 },
                 "body": [
                   {
                     "type": "ExpressionStatement",
-                    "start": 339,
-                    "end": 347,
+                    "start": 641,
+                    "end": 649,
                     "loc": {
                       "start": {
-                        "line": 8,
+                        "line": 19,
                         "column": 8
                       },
                       "end": {
-                        "line": 8,
+                        "line": 19,
                         "column": 16
                       }
                     },
                     "expression": {
                       "type": "CallExpression",
-                      "start": 339,
-                      "end": 346,
+                      "start": 641,
+                      "end": 648,
                       "loc": {
                         "start": {
-                          "line": 8,
+                          "line": 19,
                           "column": 8
                         },
                         "end": {
-                          "line": 8,
+                          "line": 19,
                           "column": 15
                         }
                       },
                       "callee": {
                         "type": "Super",
-                        "start": 339,
-                        "end": 344,
+                        "start": 641,
+                        "end": 646,
                         "loc": {
                           "start": {
-                            "line": 8,
+                            "line": 19,
                             "column": 8
                           },
                           "end": {
-                            "line": 8,
+                            "line": 19,
                             "column": 13
                           }
                         }
@@ -622,49 +641,49 @@
             }
           ]
         },
-        "name": "_",
         "leadingComments": [],
+        "name": "_",
         "trailingComments": []
       },
       {
         "type": "Identifier",
-        "start": 357,
-        "end": 395,
+        "start": 659,
+        "end": 697,
         "loc": {
           "start": {
-            "line": 12,
+            "line": 23,
             "column": 0
           },
           "end": {
-            "line": 12,
+            "line": 23,
             "column": 38
           }
         },
         "declaration": {
           "type": "NewExpression",
-          "start": 372,
-          "end": 394,
+          "start": 674,
+          "end": 696,
           "loc": {
             "start": {
-              "line": 12,
+              "line": 23,
               "column": 15
             },
             "end": {
-              "line": 12,
+              "line": 23,
               "column": 37
             }
           },
           "callee": {
             "type": "Identifier",
-            "start": 376,
-            "end": 394,
+            "start": 678,
+            "end": 696,
             "loc": {
               "start": {
-                "line": 12,
+                "line": 23,
                 "column": 19
               },
               "end": {
-                "line": 12,
+                "line": 23,
                 "column": 37
               },
               "identifierName": "ImagePreprocessing"
@@ -679,88 +698,89 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 357,
-        "end": 395,
+        "start": 659,
+        "end": 697,
         "loc": {
           "start": {
-            "line": 12,
+            "line": 23,
             "column": 0
           },
           "end": {
-            "line": 12,
+            "line": 23,
             "column": 38
           }
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 184,
-          "end": 355,
+          "start": 481,
+          "end": 657,
           "loc": {
             "start": {
-              "line": 4,
+              "line": 15,
               "column": 0
             },
             "end": {
-              "line": 10,
+              "line": 21,
               "column": 1
             }
           },
           "id": {
             "type": "Identifier",
-            "start": 190,
-            "end": 208,
+            "start": 487,
+            "end": 505,
             "loc": {
               "start": {
-                "line": 4,
+                "line": 15,
                 "column": 6
               },
               "end": {
-                "line": 4,
+                "line": 15,
                 "column": 24
               },
               "identifierName": "ImagePreprocessing"
             },
-            "name": "ImagePreprocessing"
+            "name": "ImagePreprocessing",
+            "leadingComments": null
           },
           "superClass": {
             "type": "CallExpression",
-            "start": 217,
-            "end": 310,
+            "start": 514,
+            "end": 612,
             "loc": {
               "start": {
-                "line": 4,
+                "line": 15,
                 "column": 33
               },
               "end": {
-                "line": 6,
-                "column": 6
+                "line": 17,
+                "column": 31
               }
             },
             "callee": {
               "type": "MemberExpression",
-              "start": 217,
-              "end": 233,
+              "start": 514,
+              "end": 530,
               "loc": {
                 "start": {
-                  "line": 4,
+                  "line": 15,
                   "column": 33
                 },
                 "end": {
-                  "line": 4,
+                  "line": 15,
                   "column": 49
                 }
               },
               "object": {
                 "type": "Identifier",
-                "start": 217,
-                "end": 225,
+                "start": 514,
+                "end": 522,
                 "loc": {
                   "start": {
-                    "line": 4,
+                    "line": 15,
                     "column": 33
                   },
                   "end": {
-                    "line": 4,
+                    "line": 15,
                     "column": 41
                   },
                   "identifierName": "Platform"
@@ -769,15 +789,15 @@
               },
               "property": {
                 "type": "Identifier",
-                "start": 226,
-                "end": 233,
+                "start": 523,
+                "end": 530,
                 "loc": {
                   "start": {
-                    "line": 4,
+                    "line": 15,
                     "column": 42
                   },
                   "end": {
-                    "line": 4,
+                    "line": 15,
                     "column": 49
                   },
                   "identifierName": "mixWith"
@@ -789,15 +809,15 @@
             "arguments": [
               {
                 "type": "Identifier",
-                "start": 234,
-                "end": 246,
+                "start": 531,
+                "end": 543,
                 "loc": {
                   "start": {
-                    "line": 4,
+                    "line": 15,
                     "column": 50
                   },
                   "end": {
-                    "line": 4,
+                    "line": 15,
                     "column": 62
                   },
                   "identifierName": "BaseFunction"
@@ -806,30 +826,30 @@
               },
               {
                 "type": "ArrayExpression",
-                "start": 248,
-                "end": 309,
+                "start": 545,
+                "end": 611,
                 "loc": {
                   "start": {
-                    "line": 4,
+                    "line": 15,
                     "column": 64
                   },
                   "end": {
-                    "line": 6,
-                    "column": 5
+                    "line": 17,
+                    "column": 30
                   }
                 },
                 "elements": [
                   {
                     "type": "Identifier",
-                    "start": 258,
-                    "end": 281,
+                    "start": 555,
+                    "end": 578,
                     "loc": {
                       "start": {
-                        "line": 5,
+                        "line": 16,
                         "column": 8
                       },
                       "end": {
-                        "line": 5,
+                        "line": 16,
                         "column": 31
                       },
                       "identifierName": "ColorTransformingMixins"
@@ -838,16 +858,16 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 283,
-                    "end": 303,
+                    "start": 589,
+                    "end": 609,
                     "loc": {
                       "start": {
-                        "line": 5,
-                        "column": 33
+                        "line": 17,
+                        "column": 8
                       },
                       "end": {
-                        "line": 5,
-                        "column": 53
+                        "line": 17,
+                        "column": 28
                       },
                       "identifierName": "ImageSplittingMixins"
                     },
@@ -859,30 +879,30 @@
           },
           "body": {
             "type": "ClassBody",
-            "start": 310,
-            "end": 355,
+            "start": 612,
+            "end": 657,
             "loc": {
               "start": {
-                "line": 6,
-                "column": 6
+                "line": 17,
+                "column": 31
               },
               "end": {
-                "line": 10,
+                "line": 21,
                 "column": 1
               }
             },
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 316,
-                "end": 353,
+                "start": 618,
+                "end": 655,
                 "loc": {
                   "start": {
-                    "line": 7,
+                    "line": 18,
                     "column": 4
                   },
                   "end": {
-                    "line": 9,
+                    "line": 20,
                     "column": 5
                   }
                 },
@@ -890,15 +910,15 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 316,
-                  "end": 327,
+                  "start": 618,
+                  "end": 629,
                   "loc": {
                     "start": {
-                      "line": 7,
+                      "line": 18,
                       "column": 4
                     },
                     "end": {
-                      "line": 7,
+                      "line": 18,
                       "column": 15
                     },
                     "identifierName": "constructor"
@@ -913,58 +933,58 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 329,
-                  "end": 353,
+                  "start": 631,
+                  "end": 655,
                   "loc": {
                     "start": {
-                      "line": 7,
+                      "line": 18,
                       "column": 17
                     },
                     "end": {
-                      "line": 9,
+                      "line": 20,
                       "column": 5
                     }
                   },
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 339,
-                      "end": 347,
+                      "start": 641,
+                      "end": 649,
                       "loc": {
                         "start": {
-                          "line": 8,
+                          "line": 19,
                           "column": 8
                         },
                         "end": {
-                          "line": 8,
+                          "line": 19,
                           "column": 16
                         }
                       },
                       "expression": {
                         "type": "CallExpression",
-                        "start": 339,
-                        "end": 346,
+                        "start": 641,
+                        "end": 648,
                         "loc": {
                           "start": {
-                            "line": 8,
+                            "line": 19,
                             "column": 8
                           },
                           "end": {
-                            "line": 8,
+                            "line": 19,
                             "column": 15
                           }
                         },
                         "callee": {
                           "type": "Super",
-                          "start": 339,
-                          "end": 344,
+                          "start": 641,
+                          "end": 646,
                           "loc": {
                             "start": {
-                              "line": 8,
+                              "line": 19,
                               "column": 8
                             },
                             "end": {
-                              "line": 8,
+                              "line": 19,
                               "column": 13
                             }
                           }
@@ -978,23 +998,40 @@
               }
             ]
           },
+          "leadingComments": [
+            {
+              "type": "CommentBlock",
+              "value": "*\n * This ImagePreprocessing provide methods for preprocessing image data\n * { MixWith: [\n *         ColorTransformingMixins, ImageSplittingMixins\n *     ] }\n * @class ImagePreprocessing\n * @extends BaseFunction\n * @example\n * [EXAMPLE  ERROR! ../examples/imagePreprocessing.babel.node.js]\n ",
+              "start": 185,
+              "end": 480,
+              "loc": {
+                "start": {
+                  "line": 5,
+                  "column": 0
+                },
+                "end": {
+                  "line": 14,
+                  "column": 3
+                }
+              }
+            }
+          ],
           "__PseudoExport__": true,
-          "leadingComments": [],
           "trailingComments": []
         },
         "leadingComments": null
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 357,
-        "end": 395,
+        "start": 659,
+        "end": 697,
         "loc": {
           "start": {
-            "line": 12,
+            "line": 23,
             "column": 0
           },
           "end": {
-            "line": 12,
+            "line": 23,
             "column": 38
           }
         },
@@ -1003,11 +1040,11 @@
           "kind": "let",
           "loc": {
             "start": {
-              "line": 12,
+              "line": 23,
               "column": 0
             },
             "end": {
-              "line": 12,
+              "line": 23,
               "column": 38
             }
           },
@@ -1034,7 +1071,24 @@
     ],
     "directives": []
   },
-  "comments": [],
+  "comments": [
+    {
+      "type": "CommentBlock",
+      "value": "*\n * This ImagePreprocessing provide methods for preprocessing image data\n * { MixWith: [\n *         ColorTransformingMixins, ImageSplittingMixins\n *     ] }\n * @class ImagePreprocessing\n * @extends BaseFunction\n * @example\n * [EXAMPLE  ERROR! ../examples/imagePreprocessing.babel.node.js]\n ",
+      "start": 185,
+      "end": 480,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 0
+        },
+        "end": {
+          "line": 14,
+          "column": 3
+        }
+      }
+    }
+  ],
   "tokens": [
     {
       "type": {
@@ -1690,6 +1744,22 @@
       }
     },
     {
+      "type": "CommentBlock",
+      "value": "*\n * This ImagePreprocessing provide methods for preprocessing image data\n * { MixWith: [\n *         ColorTransformingMixins, ImageSplittingMixins\n *     ] }\n * @class ImagePreprocessing\n * @extends BaseFunction\n * @example\n * [EXAMPLE  ERROR! ../examples/imagePreprocessing.babel.node.js]\n ",
+      "start": 185,
+      "end": 480,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 0
+        },
+        "end": {
+          "line": 14,
+          "column": 3
+        }
+      }
+    },
+    {
       "type": {
         "label": "class",
         "keyword": "class",
@@ -1704,15 +1774,15 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 184,
-      "end": 189,
+      "start": 481,
+      "end": 486,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 15,
           "column": 0
         },
         "end": {
-          "line": 4,
+          "line": 15,
           "column": 5
         }
       }
@@ -1730,15 +1800,15 @@
         "binop": null
       },
       "value": "ImagePreprocessing",
-      "start": 190,
-      "end": 208,
+      "start": 487,
+      "end": 505,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 15,
           "column": 6
         },
         "end": {
-          "line": 4,
+          "line": 15,
           "column": 24
         }
       }
@@ -1758,15 +1828,15 @@
         "updateContext": null
       },
       "value": "extends",
-      "start": 209,
-      "end": 216,
+      "start": 506,
+      "end": 513,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 15,
           "column": 25
         },
         "end": {
-          "line": 4,
+          "line": 15,
           "column": 32
         }
       }
@@ -1784,15 +1854,15 @@
         "binop": null
       },
       "value": "Platform",
-      "start": 217,
-      "end": 225,
+      "start": 514,
+      "end": 522,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 15,
           "column": 33
         },
         "end": {
-          "line": 4,
+          "line": 15,
           "column": 41
         }
       }
@@ -1810,15 +1880,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 225,
-      "end": 226,
+      "start": 522,
+      "end": 523,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 15,
           "column": 41
         },
         "end": {
-          "line": 4,
+          "line": 15,
           "column": 42
         }
       }
@@ -1836,15 +1906,15 @@
         "binop": null
       },
       "value": "mixWith",
-      "start": 226,
-      "end": 233,
+      "start": 523,
+      "end": 530,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 15,
           "column": 42
         },
         "end": {
-          "line": 4,
+          "line": 15,
           "column": 49
         }
       }
@@ -1861,15 +1931,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 233,
-      "end": 234,
+      "start": 530,
+      "end": 531,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 15,
           "column": 49
         },
         "end": {
-          "line": 4,
+          "line": 15,
           "column": 50
         }
       }
@@ -1887,15 +1957,15 @@
         "binop": null
       },
       "value": "BaseFunction",
-      "start": 234,
-      "end": 246,
+      "start": 531,
+      "end": 543,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 15,
           "column": 50
         },
         "end": {
-          "line": 4,
+          "line": 15,
           "column": 62
         }
       }
@@ -1913,15 +1983,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 246,
-      "end": 247,
+      "start": 543,
+      "end": 544,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 15,
           "column": 62
         },
         "end": {
-          "line": 4,
+          "line": 15,
           "column": 63
         }
       }
@@ -1939,15 +2009,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 248,
-      "end": 249,
+      "start": 545,
+      "end": 546,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 15,
           "column": 64
         },
         "end": {
-          "line": 4,
+          "line": 15,
           "column": 65
         }
       }
@@ -1965,15 +2035,15 @@
         "binop": null
       },
       "value": "ColorTransformingMixins",
-      "start": 258,
-      "end": 281,
+      "start": 555,
+      "end": 578,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 16,
           "column": 8
         },
         "end": {
-          "line": 5,
+          "line": 16,
           "column": 31
         }
       }
@@ -1991,15 +2061,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 281,
-      "end": 282,
+      "start": 578,
+      "end": 579,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 16,
           "column": 31
         },
         "end": {
-          "line": 5,
+          "line": 16,
           "column": 32
         }
       }
@@ -2017,16 +2087,16 @@
         "binop": null
       },
       "value": "ImageSplittingMixins",
-      "start": 283,
-      "end": 303,
+      "start": 589,
+      "end": 609,
       "loc": {
         "start": {
-          "line": 5,
-          "column": 33
+          "line": 17,
+          "column": 8
         },
         "end": {
-          "line": 5,
-          "column": 53
+          "line": 17,
+          "column": 28
         }
       }
     },
@@ -2043,16 +2113,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 308,
-      "end": 309,
+      "start": 610,
+      "end": 611,
       "loc": {
         "start": {
-          "line": 6,
-          "column": 4
+          "line": 17,
+          "column": 29
         },
         "end": {
-          "line": 6,
-          "column": 5
+          "line": 17,
+          "column": 30
         }
       }
     },
@@ -2068,16 +2138,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 309,
-      "end": 310,
+      "start": 611,
+      "end": 612,
       "loc": {
         "start": {
-          "line": 6,
-          "column": 5
+          "line": 17,
+          "column": 30
         },
         "end": {
-          "line": 6,
-          "column": 6
+          "line": 17,
+          "column": 31
         }
       }
     },
@@ -2093,16 +2163,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 310,
-      "end": 311,
+      "start": 612,
+      "end": 613,
       "loc": {
         "start": {
-          "line": 6,
-          "column": 6
+          "line": 17,
+          "column": 31
         },
         "end": {
-          "line": 6,
-          "column": 7
+          "line": 17,
+          "column": 32
         }
       }
     },
@@ -2119,15 +2189,15 @@
         "binop": null
       },
       "value": "constructor",
-      "start": 316,
-      "end": 327,
+      "start": 618,
+      "end": 629,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 18,
           "column": 4
         },
         "end": {
-          "line": 7,
+          "line": 18,
           "column": 15
         }
       }
@@ -2144,15 +2214,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 327,
-      "end": 328,
+      "start": 629,
+      "end": 630,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 18,
           "column": 15
         },
         "end": {
-          "line": 7,
+          "line": 18,
           "column": 16
         }
       }
@@ -2169,15 +2239,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 328,
-      "end": 329,
+      "start": 630,
+      "end": 631,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 18,
           "column": 16
         },
         "end": {
-          "line": 7,
+          "line": 18,
           "column": 17
         }
       }
@@ -2194,15 +2264,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 329,
-      "end": 330,
+      "start": 631,
+      "end": 632,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 18,
           "column": 17
         },
         "end": {
-          "line": 7,
+          "line": 18,
           "column": 18
         }
       }
@@ -2222,15 +2292,15 @@
         "updateContext": null
       },
       "value": "super",
-      "start": 339,
-      "end": 344,
+      "start": 641,
+      "end": 646,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 19,
           "column": 8
         },
         "end": {
-          "line": 8,
+          "line": 19,
           "column": 13
         }
       }
@@ -2247,15 +2317,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 344,
-      "end": 345,
+      "start": 646,
+      "end": 647,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 19,
           "column": 13
         },
         "end": {
-          "line": 8,
+          "line": 19,
           "column": 14
         }
       }
@@ -2272,15 +2342,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 345,
-      "end": 346,
+      "start": 647,
+      "end": 648,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 19,
           "column": 14
         },
         "end": {
-          "line": 8,
+          "line": 19,
           "column": 15
         }
       }
@@ -2298,15 +2368,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 346,
-      "end": 347,
+      "start": 648,
+      "end": 649,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 19,
           "column": 15
         },
         "end": {
-          "line": 8,
+          "line": 19,
           "column": 16
         }
       }
@@ -2323,15 +2393,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 352,
-      "end": 353,
+      "start": 654,
+      "end": 655,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 20,
           "column": 4
         },
         "end": {
-          "line": 9,
+          "line": 20,
           "column": 5
         }
       }
@@ -2348,15 +2418,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 354,
-      "end": 355,
+      "start": 656,
+      "end": 657,
       "loc": {
         "start": {
-          "line": 10,
+          "line": 21,
           "column": 0
         },
         "end": {
-          "line": 10,
+          "line": 21,
           "column": 1
         }
       }
@@ -2376,15 +2446,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 357,
-      "end": 363,
+      "start": 659,
+      "end": 665,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 23,
           "column": 0
         },
         "end": {
-          "line": 12,
+          "line": 23,
           "column": 6
         }
       }
@@ -2404,15 +2474,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 364,
-      "end": 371,
+      "start": 666,
+      "end": 673,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 23,
           "column": 7
         },
         "end": {
-          "line": 12,
+          "line": 23,
           "column": 14
         }
       }
@@ -2432,15 +2502,15 @@
         "updateContext": null
       },
       "value": "new",
-      "start": 372,
-      "end": 375,
+      "start": 674,
+      "end": 677,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 23,
           "column": 15
         },
         "end": {
-          "line": 12,
+          "line": 23,
           "column": 18
         }
       }
@@ -2458,15 +2528,15 @@
         "binop": null
       },
       "value": "ImagePreprocessing",
-      "start": 376,
-      "end": 394,
+      "start": 678,
+      "end": 696,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 23,
           "column": 19
         },
         "end": {
-          "line": 12,
+          "line": 23,
           "column": 37
         }
       }
@@ -2484,15 +2554,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 394,
-      "end": 395,
+      "start": 696,
+      "end": 697,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 23,
           "column": 37
         },
         "end": {
-          "line": 12,
+          "line": 23,
           "column": 38
         }
       }
@@ -2510,15 +2580,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 395,
-      "end": 395,
+      "start": 697,
+      "end": 697,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 23,
           "column": 38
         },
         "end": {
-          "line": 12,
+          "line": 23,
           "column": 38
         }
       }

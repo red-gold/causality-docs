@@ -1,34 +1,81 @@
 [
   {
+    "name": "RepresentationMixins#connect",
+    "filePath": "causality/packages/causality-representation/src/representation.mixins.js",
+    "lines": [
+      {
+        "lineNumber": 44,
+        "line": "     * set embedding for pipeline"
+      },
+      {
+        "lineNumber": 45,
+        "line": "     * @param { Object } netConfig - contain Embedding instance and Embedding configure"
+      },
+      {
+        "lineNumber": 46,
+        "line": "     * @memberof RepresentationMixins"
+      },
+      {
+        "lineNumber": 47,
+        "line": "     */"
+      },
+      {
+        "lineNumber": 48,
+        "line": "    setRepresentationByConfig(netConfig){"
+      },
+      {
+        "lineNumber": 49,
+        "line": "        let { EmbeddingConfig, Embedding } = netConfig.Representation;"
+      },
+      {
+        "lineNumber": 50,
+        "line": "        Assert.beInstanceOf(EmbeddingConfig, String);"
+      },
+      {
+        "lineNumber": 51,
+        "line": "        this.Representation = Embedding;"
+      },
+      {
+        "lineNumber": 52,
+        "line": "        this.embeddingConfig = EmbeddingConfig;"
+      }
+    ],
+    "codeParams": [],
+    "docParams": [
+      "link",
+      "refresh"
+    ]
+  },
+  {
     "name": "WordEmbeddingMixins#sentenceEncode",
     "filePath": "causality/packages/causality-representation/src/wordEmbedding.mixins.js",
     "lines": [
       {
-        "lineNumber": 9,
+        "lineNumber": 14,
         "line": "    /**"
       },
       {
-        "lineNumber": 10,
+        "lineNumber": 15,
         "line": "     * return the vectors of tokenized sentences"
       },
       {
-        "lineNumber": 11,
+        "lineNumber": 16,
         "line": "     * This function require sentence to be tokenized via preprocessing"
       },
       {
-        "lineNumber": 12,
+        "lineNumber": 17,
         "line": "     * @param { Array } tokens - array of string tokens of sentence"
       },
       {
-        "lineNumber": 13,
+        "lineNumber": 18,
         "line": "     * @returns { Tensor } encoded sentences"
       },
       {
-        "lineNumber": 14,
+        "lineNumber": 19,
         "line": "     */"
       },
       {
-        "lineNumber": 15,
+        "lineNumber": 20,
         "line": "    async sentenceEncode(sentences){"
       }
     ],

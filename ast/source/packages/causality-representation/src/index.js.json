@@ -1,29 +1,29 @@
 {
   "type": "File",
   "start": 0,
-  "end": 214,
+  "end": 441,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 3,
-      "column": 69
+      "line": 6,
+      "column": 88
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 214,
+    "end": 441,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 3,
-        "column": 69
+        "line": 6,
+        "column": 88
       }
     },
     "sourceType": "module",
@@ -287,6 +287,316 @@
             "raw": "'./universalEmbedding'"
           },
           "value": "./universalEmbedding"
+        }
+      },
+      {
+        "type": "ExportNamedDeclaration",
+        "start": 215,
+        "end": 287,
+        "loc": {
+          "start": {
+            "line": 4,
+            "column": 0
+          },
+          "end": {
+            "line": 4,
+            "column": 72
+          }
+        },
+        "declaration": null,
+        "specifiers": [
+          {
+            "type": "ExportSpecifier",
+            "start": 224,
+            "end": 254,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 9
+              },
+              "end": {
+                "line": 4,
+                "column": 39
+              }
+            },
+            "local": {
+              "type": "Identifier",
+              "start": 224,
+              "end": 231,
+              "loc": {
+                "start": {
+                  "line": 4,
+                  "column": 9
+                },
+                "end": {
+                  "line": 4,
+                  "column": 16
+                },
+                "identifierName": "default"
+              },
+              "name": "default"
+            },
+            "exported": {
+              "type": "Identifier",
+              "start": 235,
+              "end": 254,
+              "loc": {
+                "start": {
+                  "line": 4,
+                  "column": 20
+                },
+                "end": {
+                  "line": 4,
+                  "column": 39
+                },
+                "identifierName": "WordEmbeddingMixins"
+              },
+              "name": "WordEmbeddingMixins"
+            }
+          }
+        ],
+        "source": {
+          "type": "StringLiteral",
+          "start": 262,
+          "end": 286,
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 47
+            },
+            "end": {
+              "line": 4,
+              "column": 71
+            }
+          },
+          "extra": {
+            "rawValue": "./wordEmbedding.mixins",
+            "raw": "'./wordEmbedding.mixins'"
+          },
+          "value": "./wordEmbedding.mixins"
+        }
+      },
+      {
+        "type": "ExportNamedDeclaration",
+        "start": 288,
+        "end": 352,
+        "loc": {
+          "start": {
+            "line": 5,
+            "column": 0
+          },
+          "end": {
+            "line": 5,
+            "column": 64
+          }
+        },
+        "declaration": null,
+        "specifiers": [
+          {
+            "type": "ExportSpecifier",
+            "start": 297,
+            "end": 314,
+            "loc": {
+              "start": {
+                "line": 5,
+                "column": 9
+              },
+              "end": {
+                "line": 5,
+                "column": 26
+              }
+            },
+            "local": {
+              "type": "Identifier",
+              "start": 297,
+              "end": 314,
+              "loc": {
+                "start": {
+                  "line": 5,
+                  "column": 9
+                },
+                "end": {
+                  "line": 5,
+                  "column": 26
+                },
+                "identifierName": "ChunkLookupMixins"
+              },
+              "name": "ChunkLookupMixins"
+            },
+            "exported": {
+              "type": "Identifier",
+              "start": 297,
+              "end": 314,
+              "loc": {
+                "start": {
+                  "line": 5,
+                  "column": 9
+                },
+                "end": {
+                  "line": 5,
+                  "column": 26
+                },
+                "identifierName": "ChunkLookupMixins"
+              },
+              "name": "ChunkLookupMixins"
+            }
+          },
+          {
+            "type": "ExportSpecifier",
+            "start": 316,
+            "end": 333,
+            "loc": {
+              "start": {
+                "line": 5,
+                "column": 28
+              },
+              "end": {
+                "line": 5,
+                "column": 45
+              }
+            },
+            "local": {
+              "type": "Identifier",
+              "start": 316,
+              "end": 333,
+              "loc": {
+                "start": {
+                  "line": 5,
+                  "column": 28
+                },
+                "end": {
+                  "line": 5,
+                  "column": 45
+                },
+                "identifierName": "TokenLookUpMixins"
+              },
+              "name": "TokenLookUpMixins"
+            },
+            "exported": {
+              "type": "Identifier",
+              "start": 316,
+              "end": 333,
+              "loc": {
+                "start": {
+                  "line": 5,
+                  "column": 28
+                },
+                "end": {
+                  "line": 5,
+                  "column": 45
+                },
+                "identifierName": "TokenLookUpMixins"
+              },
+              "name": "TokenLookUpMixins"
+            }
+          }
+        ],
+        "source": {
+          "type": "StringLiteral",
+          "start": 341,
+          "end": 351,
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 53
+            },
+            "end": {
+              "line": 5,
+              "column": 63
+            }
+          },
+          "extra": {
+            "rawValue": "./Lookup",
+            "raw": "'./Lookup'"
+          },
+          "value": "./Lookup"
+        }
+      },
+      {
+        "type": "ExportNamedDeclaration",
+        "start": 353,
+        "end": 441,
+        "loc": {
+          "start": {
+            "line": 6,
+            "column": 0
+          },
+          "end": {
+            "line": 6,
+            "column": 88
+          }
+        },
+        "declaration": null,
+        "specifiers": [
+          {
+            "type": "ExportSpecifier",
+            "start": 362,
+            "end": 400,
+            "loc": {
+              "start": {
+                "line": 6,
+                "column": 9
+              },
+              "end": {
+                "line": 6,
+                "column": 47
+              }
+            },
+            "local": {
+              "type": "Identifier",
+              "start": 362,
+              "end": 369,
+              "loc": {
+                "start": {
+                  "line": 6,
+                  "column": 9
+                },
+                "end": {
+                  "line": 6,
+                  "column": 16
+                },
+                "identifierName": "default"
+              },
+              "name": "default"
+            },
+            "exported": {
+              "type": "Identifier",
+              "start": 373,
+              "end": 400,
+              "loc": {
+                "start": {
+                  "line": 6,
+                  "column": 20
+                },
+                "end": {
+                  "line": 6,
+                  "column": 47
+                },
+                "identifierName": "WordEmbeddingFunctionMixins"
+              },
+              "name": "WordEmbeddingFunctionMixins"
+            }
+          }
+        ],
+        "source": {
+          "type": "StringLiteral",
+          "start": 408,
+          "end": 440,
+          "loc": {
+            "start": {
+              "line": 6,
+              "column": 55
+            },
+            "end": {
+              "line": 6,
+              "column": 87
+            }
+          },
+          "extra": {
+            "rawValue": "./wordEmbeddingFunction.mixins",
+            "raw": "'./wordEmbeddingFunction.mixins'"
+          },
+          "value": "./wordEmbeddingFunction.mixins"
         }
       }
     ],
@@ -1007,6 +1317,715 @@
     },
     {
       "type": {
+        "label": "export",
+        "keyword": "export",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "export",
+      "start": 215,
+      "end": 221,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 222,
+      "end": 223,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 7
+        },
+        "end": {
+          "line": 4,
+          "column": 8
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "default",
+        "keyword": "default",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "default",
+      "start": 224,
+      "end": 231,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 9
+        },
+        "end": {
+          "line": 4,
+          "column": 16
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "as",
+      "start": 232,
+      "end": 234,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 17
+        },
+        "end": {
+          "line": 4,
+          "column": 19
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "WordEmbeddingMixins",
+      "start": 235,
+      "end": 254,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 20
+        },
+        "end": {
+          "line": 4,
+          "column": 39
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 255,
+      "end": 256,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 40
+        },
+        "end": {
+          "line": 4,
+          "column": 41
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "from",
+      "start": 257,
+      "end": 261,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 42
+        },
+        "end": {
+          "line": 4,
+          "column": 46
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "./wordEmbedding.mixins",
+      "start": 262,
+      "end": 286,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 47
+        },
+        "end": {
+          "line": 4,
+          "column": 71
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ";",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 286,
+      "end": 287,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 71
+        },
+        "end": {
+          "line": 4,
+          "column": 72
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "export",
+        "keyword": "export",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "export",
+      "start": 288,
+      "end": 294,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 0
+        },
+        "end": {
+          "line": 5,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 295,
+      "end": 296,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 7
+        },
+        "end": {
+          "line": 5,
+          "column": 8
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "ChunkLookupMixins",
+      "start": 297,
+      "end": 314,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 9
+        },
+        "end": {
+          "line": 5,
+          "column": 26
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 314,
+      "end": 315,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 26
+        },
+        "end": {
+          "line": 5,
+          "column": 27
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "TokenLookUpMixins",
+      "start": 316,
+      "end": 333,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 28
+        },
+        "end": {
+          "line": 5,
+          "column": 45
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 334,
+      "end": 335,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 46
+        },
+        "end": {
+          "line": 5,
+          "column": 47
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "from",
+      "start": 336,
+      "end": 340,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 48
+        },
+        "end": {
+          "line": 5,
+          "column": 52
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "./Lookup",
+      "start": 341,
+      "end": 351,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 53
+        },
+        "end": {
+          "line": 5,
+          "column": 63
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ";",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 351,
+      "end": 352,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 63
+        },
+        "end": {
+          "line": 5,
+          "column": 64
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "export",
+        "keyword": "export",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "export",
+      "start": 353,
+      "end": 359,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 0
+        },
+        "end": {
+          "line": 6,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 360,
+      "end": 361,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 7
+        },
+        "end": {
+          "line": 6,
+          "column": 8
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "default",
+        "keyword": "default",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "default",
+      "start": 362,
+      "end": 369,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 9
+        },
+        "end": {
+          "line": 6,
+          "column": 16
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "as",
+      "start": 370,
+      "end": 372,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 17
+        },
+        "end": {
+          "line": 6,
+          "column": 19
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "WordEmbeddingFunctionMixins",
+      "start": 373,
+      "end": 400,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 20
+        },
+        "end": {
+          "line": 6,
+          "column": 47
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 401,
+      "end": 402,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 48
+        },
+        "end": {
+          "line": 6,
+          "column": 49
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "from",
+      "start": 403,
+      "end": 407,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 50
+        },
+        "end": {
+          "line": 6,
+          "column": 54
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "./wordEmbeddingFunction.mixins",
+      "start": 408,
+      "end": 440,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 55
+        },
+        "end": {
+          "line": 6,
+          "column": 87
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ";",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 440,
+      "end": 441,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 87
+        },
+        "end": {
+          "line": 6,
+          "column": 88
+        }
+      }
+    },
+    {
+      "type": {
         "label": "eof",
         "beforeExpr": false,
         "startsExpr": false,
@@ -1018,16 +2037,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 214,
-      "end": 214,
+      "start": 441,
+      "end": 441,
       "loc": {
         "start": {
-          "line": 3,
-          "column": 69
+          "line": 6,
+          "column": 88
         },
         "end": {
-          "line": 3,
-          "column": 69
+          "line": 6,
+          "column": 88
         }
       }
     }
