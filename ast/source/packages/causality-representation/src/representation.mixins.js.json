@@ -156,9 +156,9 @@
                   "line": 2,
                   "column": 15
                 },
-                "identifierName": "Assert"
+                "identifierName": "assert"
               },
-              "name": "Assert"
+              "name": "assert"
             },
             "local": {
               "type": "Identifier",
@@ -173,9 +173,9 @@
                   "line": 2,
                   "column": 15
                 },
-                "identifierName": "Assert"
+                "identifierName": "assert"
               },
-              "name": "Assert"
+              "name": "assert"
             }
           }
         ],
@@ -202,7 +202,7 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * This RepresentationMixins provide mixins for composing pipeline with representation transform for text\n * @class RepresentationMixins\n * @extends  BasePipelineClass\n * @example\n * import { RepresentationMixins, causalNetEmbedding } from 'causal-net.representation';\n * import { Platform } from 'causal-net.utils';\n * import { Tensor } from 'causal-net.core';\n * const PipeLineConfigure = {\n *     Representation: {\n *         Embedding: causalNetEmbedding,\n *         EmbeddingConfig: '../../datasets/WordVec_EN/',\n *     }\n * }\n * class SimplePipeline extends Platform.mixWith(Tensor, [RepresentationMixins]){\n *     constructor(configure){\n *         super();\n *         this.setRepresentationByConfig(configure);\n *     }\n * }\n * let pipeline = new SimplePipeline(PipeLineConfigure);\n * pipeline.connect();\n * console.log(pipeline.Representation);\n ",
+            "value": "*\n * This RepresentationMixins provide mixins for composing pipeline with representation transform for text\n * @class RepresentationMixins\n * @extends  BasePipelineClass\n * @example\n * import { RepresentationMixins, causalNetEmbedding } from 'causal-net.representation';\n * import { platform } from 'causal-net.utils';\n * import { Tensor } from 'causal-net.core';\n * const PipeLineConfigure = {\n *     Representation: {\n *         Embedding: causalNetEmbedding,\n *         EmbeddingConfig: '../../datasets/WordVec_EN/',\n *     }\n * }\n * class SimplePipeline extends platform.mixWith(Tensor, [RepresentationMixins]){\n *     constructor(configure){\n *         super();\n *         this.setRepresentationByConfig(configure);\n *     }\n * }\n * let pipeline = new SimplePipeline(PipeLineConfigure);\n * pipeline.connect();\n * console.log(pipeline.Representation);\n ",
             "start": 86,
             "end": 947,
             "loc": {
@@ -719,9 +719,9 @@
                               "line": 42,
                               "column": 14
                             },
-                            "identifierName": "Assert"
+                            "identifierName": "assert"
                           },
-                          "name": "Assert"
+                          "name": "assert"
                         },
                         "property": {
                           "type": "Identifier",
@@ -1925,9 +1925,9 @@
                               "line": 68,
                               "column": 14
                             },
-                            "identifierName": "Assert"
+                            "identifierName": "assert"
                           },
-                          "name": "Assert"
+                          "name": "assert"
                         },
                         "property": {
                           "type": "Identifier",
@@ -2771,9 +2771,9 @@
                                 "line": 42,
                                 "column": 14
                               },
-                              "identifierName": "Assert"
+                              "identifierName": "assert"
                             },
-                            "name": "Assert"
+                            "name": "assert"
                           },
                           "property": {
                             "type": "Identifier",
@@ -3977,9 +3977,9 @@
                                 "line": 68,
                                 "column": 14
                               },
-                              "identifierName": "Assert"
+                              "identifierName": "assert"
                             },
-                            "name": "Assert"
+                            "name": "assert"
                           },
                           "property": {
                             "type": "Identifier",
@@ -4257,7 +4257,7 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * This RepresentationMixins provide mixins for composing pipeline with representation transform for text\n * @class RepresentationMixins\n * @extends  BasePipelineClass\n * @example\n * import { RepresentationMixins, causalNetEmbedding } from 'causal-net.representation';\n * import { Platform } from 'causal-net.utils';\n * import { Tensor } from 'causal-net.core';\n * const PipeLineConfigure = {\n *     Representation: {\n *         Embedding: causalNetEmbedding,\n *         EmbeddingConfig: '../../datasets/WordVec_EN/',\n *     }\n * }\n * class SimplePipeline extends Platform.mixWith(Tensor, [RepresentationMixins]){\n *     constructor(configure){\n *         super();\n *         this.setRepresentationByConfig(configure);\n *     }\n * }\n * let pipeline = new SimplePipeline(PipeLineConfigure);\n * pipeline.connect();\n * console.log(pipeline.Representation);\n ",
+              "value": "*\n * This RepresentationMixins provide mixins for composing pipeline with representation transform for text\n * @class RepresentationMixins\n * @extends  BasePipelineClass\n * @example\n * import { RepresentationMixins, causalNetEmbedding } from 'causal-net.representation';\n * import { platform } from 'causal-net.utils';\n * import { Tensor } from 'causal-net.core';\n * const PipeLineConfigure = {\n *     Representation: {\n *         Embedding: causalNetEmbedding,\n *         EmbeddingConfig: '../../datasets/WordVec_EN/',\n *     }\n * }\n * class SimplePipeline extends platform.mixWith(Tensor, [RepresentationMixins]){\n *     constructor(configure){\n *         super();\n *         this.setRepresentationByConfig(configure);\n *     }\n * }\n * let pipeline = new SimplePipeline(PipeLineConfigure);\n * pipeline.connect();\n * console.log(pipeline.Representation);\n ",
               "start": 86,
               "end": 947,
               "loc": {
@@ -4283,7 +4283,7 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * This RepresentationMixins provide mixins for composing pipeline with representation transform for text\n * @class RepresentationMixins\n * @extends  BasePipelineClass\n * @example\n * import { RepresentationMixins, causalNetEmbedding } from 'causal-net.representation';\n * import { Platform } from 'causal-net.utils';\n * import { Tensor } from 'causal-net.core';\n * const PipeLineConfigure = {\n *     Representation: {\n *         Embedding: causalNetEmbedding,\n *         EmbeddingConfig: '../../datasets/WordVec_EN/',\n *     }\n * }\n * class SimplePipeline extends Platform.mixWith(Tensor, [RepresentationMixins]){\n *     constructor(configure){\n *         super();\n *         this.setRepresentationByConfig(configure);\n *     }\n * }\n * let pipeline = new SimplePipeline(PipeLineConfigure);\n * pipeline.connect();\n * console.log(pipeline.Representation);\n ",
+      "value": "*\n * This RepresentationMixins provide mixins for composing pipeline with representation transform for text\n * @class RepresentationMixins\n * @extends  BasePipelineClass\n * @example\n * import { RepresentationMixins, causalNetEmbedding } from 'causal-net.representation';\n * import { platform } from 'causal-net.utils';\n * import { Tensor } from 'causal-net.core';\n * const PipeLineConfigure = {\n *     Representation: {\n *         Embedding: causalNetEmbedding,\n *         EmbeddingConfig: '../../datasets/WordVec_EN/',\n *     }\n * }\n * class SimplePipeline extends platform.mixWith(Tensor, [RepresentationMixins]){\n *     constructor(configure){\n *         super();\n *         this.setRepresentationByConfig(configure);\n *     }\n * }\n * let pipeline = new SimplePipeline(PipeLineConfigure);\n * pipeline.connect();\n * console.log(pipeline.Representation);\n ",
       "start": 86,
       "end": 947,
       "loc": {
@@ -4595,7 +4595,7 @@
         "postfix": false,
         "binop": null
       },
-      "value": "Assert",
+      "value": "assert",
       "start": 52,
       "end": 58,
       "loc": {
@@ -4715,7 +4715,7 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * This RepresentationMixins provide mixins for composing pipeline with representation transform for text\n * @class RepresentationMixins\n * @extends  BasePipelineClass\n * @example\n * import { RepresentationMixins, causalNetEmbedding } from 'causal-net.representation';\n * import { Platform } from 'causal-net.utils';\n * import { Tensor } from 'causal-net.core';\n * const PipeLineConfigure = {\n *     Representation: {\n *         Embedding: causalNetEmbedding,\n *         EmbeddingConfig: '../../datasets/WordVec_EN/',\n *     }\n * }\n * class SimplePipeline extends Platform.mixWith(Tensor, [RepresentationMixins]){\n *     constructor(configure){\n *         super();\n *         this.setRepresentationByConfig(configure);\n *     }\n * }\n * let pipeline = new SimplePipeline(PipeLineConfigure);\n * pipeline.connect();\n * console.log(pipeline.Representation);\n ",
+      "value": "*\n * This RepresentationMixins provide mixins for composing pipeline with representation transform for text\n * @class RepresentationMixins\n * @extends  BasePipelineClass\n * @example\n * import { RepresentationMixins, causalNetEmbedding } from 'causal-net.representation';\n * import { platform } from 'causal-net.utils';\n * import { Tensor } from 'causal-net.core';\n * const PipeLineConfigure = {\n *     Representation: {\n *         Embedding: causalNetEmbedding,\n *         EmbeddingConfig: '../../datasets/WordVec_EN/',\n *     }\n * }\n * class SimplePipeline extends platform.mixWith(Tensor, [RepresentationMixins]){\n *     constructor(configure){\n *         super();\n *         this.setRepresentationByConfig(configure);\n *     }\n * }\n * let pipeline = new SimplePipeline(PipeLineConfigure);\n * pipeline.connect();\n * console.log(pipeline.Representation);\n ",
       "start": 86,
       "end": 947,
       "loc": {
@@ -5721,7 +5721,7 @@
         "postfix": false,
         "binop": null
       },
-      "value": "Assert",
+      "value": "assert",
       "start": 1334,
       "end": 1340,
       "loc": {
@@ -7934,7 +7934,7 @@
         "postfix": false,
         "binop": null
       },
-      "value": "Assert",
+      "value": "assert",
       "start": 2356,
       "end": 2362,
       "loc": {

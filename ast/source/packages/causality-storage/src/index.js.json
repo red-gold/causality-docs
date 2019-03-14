@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 368,
+  "end": 312,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 11,
+      "line": 10,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 368,
+    "end": 312,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 11,
+        "line": 10,
         "column": 0
       }
     },
@@ -205,7 +205,7 @@
       {
         "type": "ExportNamedDeclaration",
         "start": 124,
-        "end": 179,
+        "end": 184,
         "loc": {
           "start": {
             "line": 4,
@@ -213,7 +213,7 @@
           },
           "end": {
             "line": 4,
-            "column": 55
+            "column": 60
           }
         },
         "declaration": null,
@@ -221,7 +221,7 @@
           {
             "type": "ExportSpecifier",
             "start": 133,
-            "end": 155,
+            "end": 157,
             "loc": {
               "start": {
                 "line": 4,
@@ -229,7 +229,7 @@
               },
               "end": {
                 "line": 4,
-                "column": 31
+                "column": 33
               }
             },
             "local": {
@@ -252,7 +252,7 @@
             "exported": {
               "type": "Identifier",
               "start": 144,
-              "end": 155,
+              "end": 157,
               "loc": {
                 "start": {
                   "line": 4,
@@ -260,93 +260,6 @@
                 },
                 "end": {
                   "line": 4,
-                  "column": 31
-                },
-                "identifierName": "BaseStorage"
-              },
-              "name": "BaseStorage"
-            }
-          }
-        ],
-        "source": {
-          "type": "StringLiteral",
-          "start": 163,
-          "end": 178,
-          "loc": {
-            "start": {
-              "line": 4,
-              "column": 39
-            },
-            "end": {
-              "line": 4,
-              "column": 54
-            }
-          },
-          "extra": {
-            "rawValue": "./baseStorage",
-            "raw": "'./baseStorage'"
-          },
-          "value": "./baseStorage"
-        }
-      },
-      {
-        "type": "ExportNamedDeclaration",
-        "start": 180,
-        "end": 240,
-        "loc": {
-          "start": {
-            "line": 5,
-            "column": 0
-          },
-          "end": {
-            "line": 5,
-            "column": 60
-          }
-        },
-        "declaration": null,
-        "specifiers": [
-          {
-            "type": "ExportSpecifier",
-            "start": 189,
-            "end": 213,
-            "loc": {
-              "start": {
-                "line": 5,
-                "column": 9
-              },
-              "end": {
-                "line": 5,
-                "column": 33
-              }
-            },
-            "local": {
-              "type": "Identifier",
-              "start": 189,
-              "end": 196,
-              "loc": {
-                "start": {
-                  "line": 5,
-                  "column": 9
-                },
-                "end": {
-                  "line": 5,
-                  "column": 16
-                },
-                "identifierName": "default"
-              },
-              "name": "default"
-            },
-            "exported": {
-              "type": "Identifier",
-              "start": 200,
-              "end": 213,
-              "loc": {
-                "start": {
-                  "line": 5,
-                  "column": 20
-                },
-                "end": {
-                  "line": 5,
                   "column": 33
                 },
                 "identifierName": "PNGFileMixins"
@@ -357,15 +270,15 @@
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 221,
-          "end": 239,
+          "start": 165,
+          "end": 183,
           "loc": {
             "start": {
-              "line": 5,
+              "line": 4,
               "column": 41
             },
             "end": {
-              "line": 5,
+              "line": 4,
               "column": 59
             }
           },
@@ -378,15 +291,15 @@
       },
       {
         "type": "ExportNamedDeclaration",
-        "start": 241,
-        "end": 301,
+        "start": 185,
+        "end": 245,
         "loc": {
           "start": {
-            "line": 6,
+            "line": 5,
             "column": 0
           },
           "end": {
-            "line": 6,
+            "line": 5,
             "column": 60
           }
         },
@@ -394,29 +307,29 @@
         "specifiers": [
           {
             "type": "ExportSpecifier",
-            "start": 250,
-            "end": 274,
+            "start": 194,
+            "end": 218,
             "loc": {
               "start": {
-                "line": 6,
+                "line": 5,
                 "column": 9
               },
               "end": {
-                "line": 6,
+                "line": 5,
                 "column": 33
               }
             },
             "local": {
               "type": "Identifier",
-              "start": 250,
-              "end": 257,
+              "start": 194,
+              "end": 201,
               "loc": {
                 "start": {
-                  "line": 6,
+                  "line": 5,
                   "column": 9
                 },
                 "end": {
-                  "line": 6,
+                  "line": 5,
                   "column": 16
                 },
                 "identifierName": "default"
@@ -425,15 +338,15 @@
             },
             "exported": {
               "type": "Identifier",
-              "start": 261,
-              "end": 274,
+              "start": 205,
+              "end": 218,
               "loc": {
                 "start": {
-                  "line": 6,
+                  "line": 5,
                   "column": 20
                 },
                 "end": {
-                  "line": 6,
+                  "line": 5,
                   "column": 33
                 },
                 "identifierName": "CSVFileMixins"
@@ -444,15 +357,15 @@
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 282,
-          "end": 300,
+          "start": 226,
+          "end": 244,
           "loc": {
             "start": {
-              "line": 6,
+              "line": 5,
               "column": 41
             },
             "end": {
-              "line": 6,
+              "line": 5,
               "column": 59
             }
           },
@@ -465,15 +378,15 @@
       },
       {
         "type": "ExportNamedDeclaration",
-        "start": 302,
-        "end": 364,
+        "start": 246,
+        "end": 308,
         "loc": {
           "start": {
-            "line": 7,
+            "line": 6,
             "column": 0
           },
           "end": {
-            "line": 7,
+            "line": 6,
             "column": 62
           }
         },
@@ -481,29 +394,29 @@
         "specifiers": [
           {
             "type": "ExportSpecifier",
-            "start": 311,
-            "end": 336,
+            "start": 255,
+            "end": 280,
             "loc": {
               "start": {
-                "line": 7,
+                "line": 6,
                 "column": 9
               },
               "end": {
-                "line": 7,
+                "line": 6,
                 "column": 34
               }
             },
             "local": {
               "type": "Identifier",
-              "start": 311,
-              "end": 318,
+              "start": 255,
+              "end": 262,
               "loc": {
                 "start": {
-                  "line": 7,
+                  "line": 6,
                   "column": 9
                 },
                 "end": {
-                  "line": 7,
+                  "line": 6,
                   "column": 16
                 },
                 "identifierName": "default"
@@ -512,15 +425,15 @@
             },
             "exported": {
               "type": "Identifier",
-              "start": 322,
-              "end": 336,
+              "start": 266,
+              "end": 280,
               "loc": {
                 "start": {
-                  "line": 7,
+                  "line": 6,
                   "column": 20
                 },
                 "end": {
-                  "line": 7,
+                  "line": 6,
                   "column": 34
                 },
                 "identifierName": "TextFileMixins"
@@ -531,15 +444,15 @@
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 344,
-          "end": 363,
+          "start": 288,
+          "end": 307,
           "loc": {
             "start": {
-              "line": 7,
+              "line": 6,
               "column": 42
             },
             "end": {
-              "line": 7,
+              "line": 6,
               "column": 61
             }
           },
@@ -1148,253 +1061,16 @@
         "postfix": false,
         "binop": null
       },
-      "value": "BaseStorage",
+      "value": "PNGFileMixins",
       "start": 144,
-      "end": 155,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 20
-        },
-        "end": {
-          "line": 4,
-          "column": 31
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "}",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 156,
       "end": 157,
       "loc": {
         "start": {
           "line": 4,
-          "column": 32
-        },
-        "end": {
-          "line": 4,
-          "column": 33
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "from",
-      "start": 158,
-      "end": 162,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 34
-        },
-        "end": {
-          "line": 4,
-          "column": 38
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "./baseStorage",
-      "start": 163,
-      "end": 178,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 39
-        },
-        "end": {
-          "line": 4,
-          "column": 54
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ";",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 178,
-      "end": 179,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 54
-        },
-        "end": {
-          "line": 4,
-          "column": 55
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "export",
-        "keyword": "export",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "export",
-      "start": 180,
-      "end": 186,
-      "loc": {
-        "start": {
-          "line": 5,
-          "column": 0
-        },
-        "end": {
-          "line": 5,
-          "column": 6
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "{",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 187,
-      "end": 188,
-      "loc": {
-        "start": {
-          "line": 5,
-          "column": 7
-        },
-        "end": {
-          "line": 5,
-          "column": 8
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "default",
-        "keyword": "default",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "default",
-      "start": 189,
-      "end": 196,
-      "loc": {
-        "start": {
-          "line": 5,
-          "column": 9
-        },
-        "end": {
-          "line": 5,
-          "column": 16
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "as",
-      "start": 197,
-      "end": 199,
-      "loc": {
-        "start": {
-          "line": 5,
-          "column": 17
-        },
-        "end": {
-          "line": 5,
-          "column": 19
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "PNGFileMixins",
-      "start": 200,
-      "end": 213,
-      "loc": {
-        "start": {
-          "line": 5,
           "column": 20
         },
         "end": {
-          "line": 5,
+          "line": 4,
           "column": 33
         }
       }
@@ -1411,15 +1087,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 214,
-      "end": 215,
+      "start": 158,
+      "end": 159,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 4,
           "column": 34
         },
         "end": {
-          "line": 5,
+          "line": 4,
           "column": 35
         }
       }
@@ -1437,15 +1113,15 @@
         "binop": null
       },
       "value": "from",
-      "start": 216,
-      "end": 220,
+      "start": 160,
+      "end": 164,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 4,
           "column": 36
         },
         "end": {
-          "line": 5,
+          "line": 4,
           "column": 40
         }
       }
@@ -1464,15 +1140,15 @@
         "updateContext": null
       },
       "value": "./PNGFile.mixins",
-      "start": 221,
-      "end": 239,
+      "start": 165,
+      "end": 183,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 4,
           "column": 41
         },
         "end": {
-          "line": 5,
+          "line": 4,
           "column": 59
         }
       }
@@ -1490,15 +1166,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 239,
-      "end": 240,
+      "start": 183,
+      "end": 184,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 4,
           "column": 59
         },
         "end": {
-          "line": 5,
+          "line": 4,
           "column": 60
         }
       }
@@ -1518,15 +1194,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 241,
-      "end": 247,
+      "start": 185,
+      "end": 191,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 5,
           "column": 0
         },
         "end": {
-          "line": 6,
+          "line": 5,
           "column": 6
         }
       }
@@ -1543,15 +1219,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 248,
-      "end": 249,
+      "start": 192,
+      "end": 193,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 5,
           "column": 7
         },
         "end": {
-          "line": 6,
+          "line": 5,
           "column": 8
         }
       }
@@ -1571,15 +1247,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 250,
-      "end": 257,
+      "start": 194,
+      "end": 201,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 5,
           "column": 9
         },
         "end": {
-          "line": 6,
+          "line": 5,
           "column": 16
         }
       }
@@ -1597,15 +1273,15 @@
         "binop": null
       },
       "value": "as",
-      "start": 258,
-      "end": 260,
+      "start": 202,
+      "end": 204,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 5,
           "column": 17
         },
         "end": {
-          "line": 6,
+          "line": 5,
           "column": 19
         }
       }
@@ -1623,15 +1299,15 @@
         "binop": null
       },
       "value": "CSVFileMixins",
-      "start": 261,
-      "end": 274,
+      "start": 205,
+      "end": 218,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 5,
           "column": 20
         },
         "end": {
-          "line": 6,
+          "line": 5,
           "column": 33
         }
       }
@@ -1648,15 +1324,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 275,
-      "end": 276,
+      "start": 219,
+      "end": 220,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 5,
           "column": 34
         },
         "end": {
-          "line": 6,
+          "line": 5,
           "column": 35
         }
       }
@@ -1674,15 +1350,15 @@
         "binop": null
       },
       "value": "from",
-      "start": 277,
-      "end": 281,
+      "start": 221,
+      "end": 225,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 5,
           "column": 36
         },
         "end": {
-          "line": 6,
+          "line": 5,
           "column": 40
         }
       }
@@ -1701,15 +1377,15 @@
         "updateContext": null
       },
       "value": "./CSVFile.mixins",
-      "start": 282,
-      "end": 300,
+      "start": 226,
+      "end": 244,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 5,
           "column": 41
         },
         "end": {
-          "line": 6,
+          "line": 5,
           "column": 59
         }
       }
@@ -1727,15 +1403,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 300,
-      "end": 301,
+      "start": 244,
+      "end": 245,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 5,
           "column": 59
         },
         "end": {
-          "line": 6,
+          "line": 5,
           "column": 60
         }
       }
@@ -1755,15 +1431,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 302,
-      "end": 308,
+      "start": 246,
+      "end": 252,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 6,
           "column": 0
         },
         "end": {
-          "line": 7,
+          "line": 6,
           "column": 6
         }
       }
@@ -1780,15 +1456,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 309,
-      "end": 310,
+      "start": 253,
+      "end": 254,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 6,
           "column": 7
         },
         "end": {
-          "line": 7,
+          "line": 6,
           "column": 8
         }
       }
@@ -1808,15 +1484,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 311,
-      "end": 318,
+      "start": 255,
+      "end": 262,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 6,
           "column": 9
         },
         "end": {
-          "line": 7,
+          "line": 6,
           "column": 16
         }
       }
@@ -1834,15 +1510,15 @@
         "binop": null
       },
       "value": "as",
-      "start": 319,
-      "end": 321,
+      "start": 263,
+      "end": 265,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 6,
           "column": 17
         },
         "end": {
-          "line": 7,
+          "line": 6,
           "column": 19
         }
       }
@@ -1860,15 +1536,15 @@
         "binop": null
       },
       "value": "TextFileMixins",
-      "start": 322,
-      "end": 336,
+      "start": 266,
+      "end": 280,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 6,
           "column": 20
         },
         "end": {
-          "line": 7,
+          "line": 6,
           "column": 34
         }
       }
@@ -1885,15 +1561,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 337,
-      "end": 338,
+      "start": 281,
+      "end": 282,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 6,
           "column": 35
         },
         "end": {
-          "line": 7,
+          "line": 6,
           "column": 36
         }
       }
@@ -1911,15 +1587,15 @@
         "binop": null
       },
       "value": "from",
-      "start": 339,
-      "end": 343,
+      "start": 283,
+      "end": 287,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 6,
           "column": 37
         },
         "end": {
-          "line": 7,
+          "line": 6,
           "column": 41
         }
       }
@@ -1938,15 +1614,15 @@
         "updateContext": null
       },
       "value": "./textFile.mixins",
-      "start": 344,
-      "end": 363,
+      "start": 288,
+      "end": 307,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 6,
           "column": 42
         },
         "end": {
-          "line": 7,
+          "line": 6,
           "column": 61
         }
       }
@@ -1964,15 +1640,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 363,
-      "end": 364,
+      "start": 307,
+      "end": 308,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 6,
           "column": 61
         },
         "end": {
-          "line": 7,
+          "line": 6,
           "column": 62
         }
       }
@@ -1990,15 +1666,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 368,
-      "end": 368,
+      "start": 312,
+      "end": 312,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 10,
           "column": 0
         },
         "end": {
-          "line": 11,
+          "line": 10,
           "column": 0
         }
       }

@@ -237,7 +237,7 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * This Assert class provides asserting methods based on builtin \n * [generate-schema](https://www.npmjs.com/package/generate-schema), \n * and schema checking [ajv](https://www.npmjs.com/package/ajv) \n *\n * @class Assert\n * @example\n * import { Assert } from 'causal-net.utils';\n * Assert.seemMatchSample([2,2,3], [1,2,3], 'validate sample');\n * Assert.seemMatchSample('sample text', 'pattern text', 'validate sample');\n * Assert.seemMatchSample( { 'text' : 'pattern text 1', 'number' : 1123 }, \n *                         { 'text' : 'pattern text', 'number' : 1123 } , 'validate sample');\n * try{\n *     Assert.seemMatchSample(['2',2,3], [1,2,3], 'validate sample');\n * }\n * catch(err){\n *     //error due to mismatch schema\n *     console.log(err.message);\n * };\n * class A{};\n * let a = new A();\n * Assert.beInstanceOf(a, A);\n * try{\n *     Assert.beInstanceOf('1', A);\n * }\n * catch(err){\n *     console.log(err.message);\n * }\n * \n ",
+            "value": "*\n * This Assert class provides asserting methods based on builtin \n * [generate-schema](https://www.npmjs.com/package/generate-schema), \n * and schema checking [ajv](https://www.npmjs.com/package/ajv) \n *\n * @class Assert\n * @example\n * import { assert } from 'causal-net.utils';\n * assert.seemMatchSample([2,2,3], [1,2,3], 'validate sample');\n * assert.seemMatchSample('sample text', 'pattern text', 'validate sample');\n * assert.seemMatchSample( { 'text' : 'pattern text 1', 'number' : 1123 }, \n *                         { 'text' : 'pattern text', 'number' : 1123 } , 'validate sample');\n * try{\n *     assert.seemMatchSample(['2',2,3], [1,2,3], 'validate sample');\n * }\n * catch(err){\n *     //error due to mismatch schema\n *     console.log(err.message);\n * };\n * class A{};\n * let a = new A();\n * assert.beInstanceOf(a, A);\n * try{\n *     assert.beInstanceOf('1', A);\n * }\n * catch(err){\n *     console.log(err.message);\n * }\n * \n ",
             "start": 114,
             "end": 1056,
             "loc": {
@@ -480,7 +480,7 @@
               "leadingComments": [
                 {
                   "type": "CommentBlock",
-                  "value": "*\n     *Creates an instance of Assert.\n     * @memberof Assert\n     ",
+                  "value": "*\n     *Creates an instance of assert.\n     * @memberof assert\n     ",
                   "start": 1075,
                   "end": 1147,
                   "loc": {
@@ -498,7 +498,7 @@
               "trailingComments": [
                 {
                   "type": "CommentBlock",
-                  "value": "*\n     * Try to check if the sample pattern matchs with input value pattern. \n     * Since the auto-learnt sample pattern could be incompleted, \n     * this function usage should follow the examples.\n     * @param { Any } value - input value\n     * @param { Any } sample - sample value pattern\n     * @param { String } [name='sample'] - value name\n     * @memberof Assert\n     ",
+                  "value": "*\n     * Try to check if the sample pattern matchs with input value pattern. \n     * Since the auto-learnt sample pattern could be incompleted, \n     * this function usage should follow the examples.\n     * @param { Any } value - input value\n     * @param { Any } sample - sample value pattern\n     * @param { String } [name='sample'] - value name\n     * @memberof assert\n     ",
                   "start": 1287,
                   "end": 1668,
                   "loc": {
@@ -1584,7 +1584,7 @@
               "leadingComments": [
                 {
                   "type": "CommentBlock",
-                  "value": "*\n     * Try to check if the sample pattern matchs with input value pattern. \n     * Since the auto-learnt sample pattern could be incompleted, \n     * this function usage should follow the examples.\n     * @param { Any } value - input value\n     * @param { Any } sample - sample value pattern\n     * @param { String } [name='sample'] - value name\n     * @memberof Assert\n     ",
+                  "value": "*\n     * Try to check if the sample pattern matchs with input value pattern. \n     * Since the auto-learnt sample pattern could be incompleted, \n     * this function usage should follow the examples.\n     * @param { Any } value - input value\n     * @param { Any } sample - sample value pattern\n     * @param { String } [name='sample'] - value name\n     * @memberof assert\n     ",
                   "start": 1287,
                   "end": 1668,
                   "loc": {
@@ -1602,7 +1602,7 @@
               "trailingComments": [
                 {
                   "type": "CommentBlock",
-                  "value": "*\n     * Assert object to be instance of class\n     * @param { Object } instance\n     * @param { Class } targetClass\n     * @memberof Assert\n     ",
+                  "value": "*\n     * assert object to be instance of class\n     * @param { Object } instance\n     * @param { Class } targetClass\n     * @memberof assert\n     ",
                   "start": 2071,
                   "end": 2221,
                   "loc": {
@@ -2997,7 +2997,7 @@
               "leadingComments": [
                 {
                   "type": "CommentBlock",
-                  "value": "*\n     * Assert object to be instance of class\n     * @param { Object } instance\n     * @param { Class } targetClass\n     * @memberof Assert\n     ",
+                  "value": "*\n     * assert object to be instance of class\n     * @param { Object } instance\n     * @param { Class } targetClass\n     * @memberof assert\n     ",
                   "start": 2071,
                   "end": 2221,
                   "loc": {
@@ -3311,7 +3311,7 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n     *Creates an instance of Assert.\n     * @memberof Assert\n     ",
+                    "value": "*\n     *Creates an instance of assert.\n     * @memberof assert\n     ",
                     "start": 1075,
                     "end": 1147,
                     "loc": {
@@ -3329,7 +3329,7 @@
                 "trailingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n     * Try to check if the sample pattern matchs with input value pattern. \n     * Since the auto-learnt sample pattern could be incompleted, \n     * this function usage should follow the examples.\n     * @param { Any } value - input value\n     * @param { Any } sample - sample value pattern\n     * @param { String } [name='sample'] - value name\n     * @memberof Assert\n     ",
+                    "value": "*\n     * Try to check if the sample pattern matchs with input value pattern. \n     * Since the auto-learnt sample pattern could be incompleted, \n     * this function usage should follow the examples.\n     * @param { Any } value - input value\n     * @param { Any } sample - sample value pattern\n     * @param { String } [name='sample'] - value name\n     * @memberof assert\n     ",
                     "start": 1287,
                     "end": 1668,
                     "loc": {
@@ -4415,7 +4415,7 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n     * Try to check if the sample pattern matchs with input value pattern. \n     * Since the auto-learnt sample pattern could be incompleted, \n     * this function usage should follow the examples.\n     * @param { Any } value - input value\n     * @param { Any } sample - sample value pattern\n     * @param { String } [name='sample'] - value name\n     * @memberof Assert\n     ",
+                    "value": "*\n     * Try to check if the sample pattern matchs with input value pattern. \n     * Since the auto-learnt sample pattern could be incompleted, \n     * this function usage should follow the examples.\n     * @param { Any } value - input value\n     * @param { Any } sample - sample value pattern\n     * @param { String } [name='sample'] - value name\n     * @memberof assert\n     ",
                     "start": 1287,
                     "end": 1668,
                     "loc": {
@@ -4433,7 +4433,7 @@
                 "trailingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n     * Assert object to be instance of class\n     * @param { Object } instance\n     * @param { Class } targetClass\n     * @memberof Assert\n     ",
+                    "value": "*\n     * assert object to be instance of class\n     * @param { Object } instance\n     * @param { Class } targetClass\n     * @memberof assert\n     ",
                     "start": 2071,
                     "end": 2221,
                     "loc": {
@@ -5828,7 +5828,7 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n     * Assert object to be instance of class\n     * @param { Object } instance\n     * @param { Class } targetClass\n     * @memberof Assert\n     ",
+                    "value": "*\n     * assert object to be instance of class\n     * @param { Object } instance\n     * @param { Class } targetClass\n     * @memberof assert\n     ",
                     "start": 2071,
                     "end": 2221,
                     "loc": {
@@ -5849,7 +5849,7 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * This Assert class provides asserting methods based on builtin \n * [generate-schema](https://www.npmjs.com/package/generate-schema), \n * and schema checking [ajv](https://www.npmjs.com/package/ajv) \n *\n * @class Assert\n * @example\n * import { Assert } from 'causal-net.utils';\n * Assert.seemMatchSample([2,2,3], [1,2,3], 'validate sample');\n * Assert.seemMatchSample('sample text', 'pattern text', 'validate sample');\n * Assert.seemMatchSample( { 'text' : 'pattern text 1', 'number' : 1123 }, \n *                         { 'text' : 'pattern text', 'number' : 1123 } , 'validate sample');\n * try{\n *     Assert.seemMatchSample(['2',2,3], [1,2,3], 'validate sample');\n * }\n * catch(err){\n *     //error due to mismatch schema\n *     console.log(err.message);\n * };\n * class A{};\n * let a = new A();\n * Assert.beInstanceOf(a, A);\n * try{\n *     Assert.beInstanceOf('1', A);\n * }\n * catch(err){\n *     console.log(err.message);\n * }\n * \n ",
+              "value": "*\n * This Assert class provides asserting methods based on builtin \n * [generate-schema](https://www.npmjs.com/package/generate-schema), \n * and schema checking [ajv](https://www.npmjs.com/package/ajv) \n *\n * @class Assert\n * @example\n * import { assert } from 'causal-net.utils';\n * assert.seemMatchSample([2,2,3], [1,2,3], 'validate sample');\n * assert.seemMatchSample('sample text', 'pattern text', 'validate sample');\n * assert.seemMatchSample( { 'text' : 'pattern text 1', 'number' : 1123 }, \n *                         { 'text' : 'pattern text', 'number' : 1123 } , 'validate sample');\n * try{\n *     assert.seemMatchSample(['2',2,3], [1,2,3], 'validate sample');\n * }\n * catch(err){\n *     //error due to mismatch schema\n *     console.log(err.message);\n * };\n * class A{};\n * let a = new A();\n * assert.beInstanceOf(a, A);\n * try{\n *     assert.beInstanceOf('1', A);\n * }\n * catch(err){\n *     console.log(err.message);\n * }\n * \n ",
               "start": 114,
               "end": 1056,
               "loc": {
@@ -5922,7 +5922,7 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * This Assert class provides asserting methods based on builtin \n * [generate-schema](https://www.npmjs.com/package/generate-schema), \n * and schema checking [ajv](https://www.npmjs.com/package/ajv) \n *\n * @class Assert\n * @example\n * import { Assert } from 'causal-net.utils';\n * Assert.seemMatchSample([2,2,3], [1,2,3], 'validate sample');\n * Assert.seemMatchSample('sample text', 'pattern text', 'validate sample');\n * Assert.seemMatchSample( { 'text' : 'pattern text 1', 'number' : 1123 }, \n *                         { 'text' : 'pattern text', 'number' : 1123 } , 'validate sample');\n * try{\n *     Assert.seemMatchSample(['2',2,3], [1,2,3], 'validate sample');\n * }\n * catch(err){\n *     //error due to mismatch schema\n *     console.log(err.message);\n * };\n * class A{};\n * let a = new A();\n * Assert.beInstanceOf(a, A);\n * try{\n *     Assert.beInstanceOf('1', A);\n * }\n * catch(err){\n *     console.log(err.message);\n * }\n * \n ",
+      "value": "*\n * This Assert class provides asserting methods based on builtin \n * [generate-schema](https://www.npmjs.com/package/generate-schema), \n * and schema checking [ajv](https://www.npmjs.com/package/ajv) \n *\n * @class Assert\n * @example\n * import { assert } from 'causal-net.utils';\n * assert.seemMatchSample([2,2,3], [1,2,3], 'validate sample');\n * assert.seemMatchSample('sample text', 'pattern text', 'validate sample');\n * assert.seemMatchSample( { 'text' : 'pattern text 1', 'number' : 1123 }, \n *                         { 'text' : 'pattern text', 'number' : 1123 } , 'validate sample');\n * try{\n *     assert.seemMatchSample(['2',2,3], [1,2,3], 'validate sample');\n * }\n * catch(err){\n *     //error due to mismatch schema\n *     console.log(err.message);\n * };\n * class A{};\n * let a = new A();\n * assert.beInstanceOf(a, A);\n * try{\n *     assert.beInstanceOf('1', A);\n * }\n * catch(err){\n *     console.log(err.message);\n * }\n * \n ",
       "start": 114,
       "end": 1056,
       "loc": {
@@ -5938,7 +5938,7 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     *Creates an instance of Assert.\n     * @memberof Assert\n     ",
+      "value": "*\n     *Creates an instance of assert.\n     * @memberof assert\n     ",
       "start": 1075,
       "end": 1147,
       "loc": {
@@ -5970,7 +5970,7 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * Try to check if the sample pattern matchs with input value pattern. \n     * Since the auto-learnt sample pattern could be incompleted, \n     * this function usage should follow the examples.\n     * @param { Any } value - input value\n     * @param { Any } sample - sample value pattern\n     * @param { String } [name='sample'] - value name\n     * @memberof Assert\n     ",
+      "value": "*\n     * Try to check if the sample pattern matchs with input value pattern. \n     * Since the auto-learnt sample pattern could be incompleted, \n     * this function usage should follow the examples.\n     * @param { Any } value - input value\n     * @param { Any } sample - sample value pattern\n     * @param { String } [name='sample'] - value name\n     * @memberof assert\n     ",
       "start": 1287,
       "end": 1668,
       "loc": {
@@ -5986,7 +5986,7 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * Assert object to be instance of class\n     * @param { Object } instance\n     * @param { Class } targetClass\n     * @memberof Assert\n     ",
+      "value": "*\n     * assert object to be instance of class\n     * @param { Object } instance\n     * @param { Class } targetClass\n     * @memberof assert\n     ",
       "start": 2071,
       "end": 2221,
       "loc": {
@@ -6509,7 +6509,7 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * This Assert class provides asserting methods based on builtin \n * [generate-schema](https://www.npmjs.com/package/generate-schema), \n * and schema checking [ajv](https://www.npmjs.com/package/ajv) \n *\n * @class Assert\n * @example\n * import { Assert } from 'causal-net.utils';\n * Assert.seemMatchSample([2,2,3], [1,2,3], 'validate sample');\n * Assert.seemMatchSample('sample text', 'pattern text', 'validate sample');\n * Assert.seemMatchSample( { 'text' : 'pattern text 1', 'number' : 1123 }, \n *                         { 'text' : 'pattern text', 'number' : 1123 } , 'validate sample');\n * try{\n *     Assert.seemMatchSample(['2',2,3], [1,2,3], 'validate sample');\n * }\n * catch(err){\n *     //error due to mismatch schema\n *     console.log(err.message);\n * };\n * class A{};\n * let a = new A();\n * Assert.beInstanceOf(a, A);\n * try{\n *     Assert.beInstanceOf('1', A);\n * }\n * catch(err){\n *     console.log(err.message);\n * }\n * \n ",
+      "value": "*\n * This Assert class provides asserting methods based on builtin \n * [generate-schema](https://www.npmjs.com/package/generate-schema), \n * and schema checking [ajv](https://www.npmjs.com/package/ajv) \n *\n * @class Assert\n * @example\n * import { assert } from 'causal-net.utils';\n * assert.seemMatchSample([2,2,3], [1,2,3], 'validate sample');\n * assert.seemMatchSample('sample text', 'pattern text', 'validate sample');\n * assert.seemMatchSample( { 'text' : 'pattern text 1', 'number' : 1123 }, \n *                         { 'text' : 'pattern text', 'number' : 1123 } , 'validate sample');\n * try{\n *     assert.seemMatchSample(['2',2,3], [1,2,3], 'validate sample');\n * }\n * catch(err){\n *     //error due to mismatch schema\n *     console.log(err.message);\n * };\n * class A{};\n * let a = new A();\n * assert.beInstanceOf(a, A);\n * try{\n *     assert.beInstanceOf('1', A);\n * }\n * catch(err){\n *     console.log(err.message);\n * }\n * \n ",
       "start": 114,
       "end": 1056,
       "loc": {
@@ -6604,7 +6604,7 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     *Creates an instance of Assert.\n     * @memberof Assert\n     ",
+      "value": "*\n     *Creates an instance of assert.\n     * @memberof assert\n     ",
       "start": 1075,
       "end": 1147,
       "loc": {
@@ -6921,7 +6921,7 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * Try to check if the sample pattern matchs with input value pattern. \n     * Since the auto-learnt sample pattern could be incompleted, \n     * this function usage should follow the examples.\n     * @param { Any } value - input value\n     * @param { Any } sample - sample value pattern\n     * @param { String } [name='sample'] - value name\n     * @memberof Assert\n     ",
+      "value": "*\n     * Try to check if the sample pattern matchs with input value pattern. \n     * Since the auto-learnt sample pattern could be incompleted, \n     * this function usage should follow the examples.\n     * @param { Any } value - input value\n     * @param { Any } sample - sample value pattern\n     * @param { String } [name='sample'] - value name\n     * @memberof assert\n     ",
       "start": 1287,
       "end": 1668,
       "loc": {
@@ -9246,7 +9246,7 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * Assert object to be instance of class\n     * @param { Object } instance\n     * @param { Class } targetClass\n     * @memberof Assert\n     ",
+      "value": "*\n     * assert object to be instance of class\n     * @param { Object } instance\n     * @param { Class } targetClass\n     * @memberof assert\n     ",
       "start": 2071,
       "end": 2221,
       "loc": {

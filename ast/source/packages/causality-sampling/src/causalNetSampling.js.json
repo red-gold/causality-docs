@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 1161,
+  "end": 1182,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 1161,
+    "end": 1182,
     "loc": {
       "start": {
         "line": 1,
@@ -31,7 +31,7 @@
       {
         "type": "ImportDeclaration",
         "start": 0,
-        "end": 43,
+        "end": 59,
         "loc": {
           "start": {
             "line": 1,
@@ -39,14 +39,14 @@
           },
           "end": {
             "line": 1,
-            "column": 43
+            "column": 59
           }
         },
         "specifiers": [
           {
             "type": "ImportSpecifier",
             "start": 9,
-            "end": 17,
+            "end": 33,
             "loc": {
               "start": {
                 "line": 1,
@@ -54,7 +54,7 @@
               },
               "end": {
                 "line": 1,
-                "column": 17
+                "column": 33
               }
             },
             "imported": {
@@ -76,35 +76,35 @@
             },
             "local": {
               "type": "Identifier",
-              "start": 9,
-              "end": 17,
+              "start": 21,
+              "end": 33,
               "loc": {
                 "start": {
                   "line": 1,
-                  "column": 9
+                  "column": 21
                 },
                 "end": {
                   "line": 1,
-                  "column": 17
+                  "column": 33
                 },
-                "identifierName": "Function"
+                "identifierName": "BaseFunction"
               },
-              "name": "Function"
+              "name": "BaseFunction"
             }
           }
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 25,
-          "end": 42,
+          "start": 41,
+          "end": 58,
           "loc": {
             "start": {
               "line": 1,
-              "column": 25
+              "column": 41
             },
             "end": {
               "line": 1,
-              "column": 42
+              "column": 58
             }
           },
           "extra": {
@@ -116,8 +116,8 @@
       },
       {
         "type": "ImportDeclaration",
-        "start": 44,
-        "end": 88,
+        "start": 60,
+        "end": 104,
         "loc": {
           "start": {
             "line": 2,
@@ -131,8 +131,8 @@
         "specifiers": [
           {
             "type": "ImportSpecifier",
-            "start": 53,
-            "end": 61,
+            "start": 69,
+            "end": 77,
             "loc": {
               "start": {
                 "line": 2,
@@ -145,8 +145,8 @@
             },
             "imported": {
               "type": "Identifier",
-              "start": 53,
-              "end": 61,
+              "start": 69,
+              "end": 77,
               "loc": {
                 "start": {
                   "line": 2,
@@ -156,14 +156,14 @@
                   "line": 2,
                   "column": 17
                 },
-                "identifierName": "Platform"
+                "identifierName": "platform"
               },
-              "name": "Platform"
+              "name": "platform"
             },
             "local": {
               "type": "Identifier",
-              "start": 53,
-              "end": 61,
+              "start": 69,
+              "end": 77,
               "loc": {
                 "start": {
                   "line": 2,
@@ -173,16 +173,16 @@
                   "line": 2,
                   "column": 17
                 },
-                "identifierName": "Platform"
+                "identifierName": "platform"
               },
-              "name": "Platform"
+              "name": "platform"
             }
           }
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 69,
-          "end": 87,
+          "start": 85,
+          "end": 103,
           "loc": {
             "start": {
               "line": 2,
@@ -202,8 +202,8 @@
       },
       {
         "type": "ImportDeclaration",
-        "start": 89,
-        "end": 117,
+        "start": 105,
+        "end": 133,
         "loc": {
           "start": {
             "line": 3,
@@ -217,8 +217,8 @@
         "specifiers": [
           {
             "type": "ImportDefaultSpecifier",
-            "start": 96,
-            "end": 102,
+            "start": 112,
+            "end": 118,
             "loc": {
               "start": {
                 "line": 3,
@@ -231,8 +231,8 @@
             },
             "local": {
               "type": "Identifier",
-              "start": 96,
-              "end": 102,
+              "start": 112,
+              "end": 118,
               "loc": {
                 "start": {
                   "line": 3,
@@ -250,8 +250,8 @@
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 108,
-          "end": 116,
+          "start": 124,
+          "end": 132,
           "loc": {
             "start": {
               "line": 3,
@@ -271,8 +271,8 @@
       },
       {
         "type": "ImportDeclaration",
-        "start": 118,
-        "end": 186,
+        "start": 134,
+        "end": 202,
         "loc": {
           "start": {
             "line": 4,
@@ -286,8 +286,8 @@
         "specifiers": [
           {
             "type": "ImportSpecifier",
-            "start": 127,
-            "end": 155,
+            "start": 143,
+            "end": 171,
             "loc": {
               "start": {
                 "line": 4,
@@ -300,8 +300,8 @@
             },
             "imported": {
               "type": "Identifier",
-              "start": 127,
-              "end": 134,
+              "start": 143,
+              "end": 150,
               "loc": {
                 "start": {
                   "line": 4,
@@ -317,8 +317,8 @@
             },
             "local": {
               "type": "Identifier",
-              "start": 138,
-              "end": 155,
+              "start": 154,
+              "end": 171,
               "loc": {
                 "start": {
                   "line": 4,
@@ -336,8 +336,8 @@
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 163,
-          "end": 185,
+          "start": 179,
+          "end": 201,
           "loc": {
             "start": {
               "line": 4,
@@ -357,8 +357,8 @@
       },
       {
         "type": "ImportDeclaration",
-        "start": 187,
-        "end": 255,
+        "start": 203,
+        "end": 271,
         "loc": {
           "start": {
             "line": 5,
@@ -372,8 +372,8 @@
         "specifiers": [
           {
             "type": "ImportSpecifier",
-            "start": 196,
-            "end": 224,
+            "start": 212,
+            "end": 240,
             "loc": {
               "start": {
                 "line": 5,
@@ -386,8 +386,8 @@
             },
             "imported": {
               "type": "Identifier",
-              "start": 196,
-              "end": 203,
+              "start": 212,
+              "end": 219,
               "loc": {
                 "start": {
                   "line": 5,
@@ -403,8 +403,8 @@
             },
             "local": {
               "type": "Identifier",
-              "start": 207,
-              "end": 224,
+              "start": 223,
+              "end": 240,
               "loc": {
                 "start": {
                   "line": 5,
@@ -422,8 +422,8 @@
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 232,
-          "end": 254,
+          "start": 248,
+          "end": 270,
           "loc": {
             "start": {
               "line": 5,
@@ -444,8 +444,8 @@
           {
             "type": "CommentBlock",
             "value": "*\n * This CausalNetSampling class provides sampling methods\n * mixwith:\n * [ SubSamplingMixins, NegSamplingMixins ]\n * @class CausalNetSampling\n * @extends Function\n * @example\n * import { causalNetSampling } from 'causal-net.sampling';\n * import {termLogger as Logger} from 'causal-net.log';\n * let numSamples = 4;\n * let idSize = 10;//id list: [0,1,2,3,4,5,6,7,8,9]\n * Logger.log(causalNetSampling.subSampling(numSamples, idSize));\n * \n * numSamples = 4;\n * let positiveSampleId = [0, 1];\n * //ids: [0, 1, 2, 3];\n * let probIds = [0.9, 0.9, 0.3, 0.7];\n * let samples = causalNetSampling.negSampling(numSamples, positiveSampleId, probIds);\n * termLogger.log({ samples });\n ",
-            "start": 257,
-            "end": 935,
+            "start": 273,
+            "end": 951,
             "loc": {
               "start": {
                 "line": 7,
@@ -461,8 +461,8 @@
       },
       {
         "type": "Identifier",
-        "start": 936,
-        "end": 1120,
+        "start": 952,
+        "end": 1141,
         "loc": {
           "start": {
             "line": 27,
@@ -475,8 +475,8 @@
         },
         "id": {
           "type": "Identifier",
-          "start": 942,
-          "end": 959,
+          "start": 958,
+          "end": 975,
           "loc": {
             "start": {
               "line": 27,
@@ -493,8 +493,8 @@
         },
         "superClass": {
           "type": "CallExpression",
-          "start": 968,
-          "end": 1041,
+          "start": 984,
+          "end": 1062,
           "loc": {
             "start": {
               "line": 27,
@@ -507,8 +507,8 @@
           },
           "callee": {
             "type": "MemberExpression",
-            "start": 968,
-            "end": 984,
+            "start": 984,
+            "end": 1000,
             "loc": {
               "start": {
                 "line": 27,
@@ -521,8 +521,8 @@
             },
             "object": {
               "type": "Identifier",
-              "start": 968,
-              "end": 976,
+              "start": 984,
+              "end": 992,
               "loc": {
                 "start": {
                   "line": 27,
@@ -532,14 +532,14 @@
                   "line": 27,
                   "column": 40
                 },
-                "identifierName": "Platform"
+                "identifierName": "platform"
               },
-              "name": "Platform"
+              "name": "platform"
             },
             "property": {
               "type": "Identifier",
-              "start": 977,
-              "end": 984,
+              "start": 993,
+              "end": 1000,
               "loc": {
                 "start": {
                   "line": 27,
@@ -558,25 +558,25 @@
           "arguments": [
             {
               "type": "Identifier",
-              "start": 985,
-              "end": 993,
+              "start": 1002,
+              "end": 1014,
               "loc": {
                 "start": {
                   "line": 27,
-                  "column": 49
+                  "column": 50
                 },
                 "end": {
                   "line": 27,
-                  "column": 57
+                  "column": 62
                 },
-                "identifierName": "Function"
+                "identifierName": "BaseFunction"
               },
-              "name": "Function"
+              "name": "BaseFunction"
             },
             {
               "type": "ArrayExpression",
-              "start": 1000,
-              "end": 1040,
+              "start": 1021,
+              "end": 1061,
               "loc": {
                 "start": {
                   "line": 28,
@@ -590,8 +590,8 @@
               "elements": [
                 {
                   "type": "Identifier",
-                  "start": 1002,
-                  "end": 1019,
+                  "start": 1023,
+                  "end": 1040,
                   "loc": {
                     "start": {
                       "line": 28,
@@ -607,8 +607,8 @@
                 },
                 {
                   "type": "Identifier",
-                  "start": 1021,
-                  "end": 1038,
+                  "start": 1042,
+                  "end": 1059,
                   "loc": {
                     "start": {
                       "line": 28,
@@ -628,8 +628,8 @@
         },
         "body": {
           "type": "ClassBody",
-          "start": 1041,
-          "end": 1120,
+          "start": 1062,
+          "end": 1141,
           "loc": {
             "start": {
               "line": 28,
@@ -643,8 +643,8 @@
           "body": [
             {
               "type": "ClassMethod",
-              "start": 1047,
-              "end": 1118,
+              "start": 1068,
+              "end": 1139,
               "loc": {
                 "start": {
                   "line": 29,
@@ -659,8 +659,8 @@
               "computed": false,
               "key": {
                 "type": "Identifier",
-                "start": 1047,
-                "end": 1058,
+                "start": 1068,
+                "end": 1079,
                 "loc": {
                   "start": {
                     "line": 29,
@@ -682,8 +682,8 @@
               "params": [],
               "body": {
                 "type": "BlockStatement",
-                "start": 1060,
-                "end": 1118,
+                "start": 1081,
+                "end": 1139,
                 "loc": {
                   "start": {
                     "line": 29,
@@ -697,8 +697,8 @@
                 "body": [
                   {
                     "type": "ExpressionStatement",
-                    "start": 1070,
-                    "end": 1078,
+                    "start": 1091,
+                    "end": 1099,
                     "loc": {
                       "start": {
                         "line": 30,
@@ -711,8 +711,8 @@
                     },
                     "expression": {
                       "type": "CallExpression",
-                      "start": 1070,
-                      "end": 1077,
+                      "start": 1091,
+                      "end": 1098,
                       "loc": {
                         "start": {
                           "line": 30,
@@ -725,8 +725,8 @@
                       },
                       "callee": {
                         "type": "Super",
-                        "start": 1070,
-                        "end": 1075,
+                        "start": 1091,
+                        "end": 1096,
                         "loc": {
                           "start": {
                             "line": 30,
@@ -743,8 +743,8 @@
                   },
                   {
                     "type": "ExpressionStatement",
-                    "start": 1087,
-                    "end": 1108,
+                    "start": 1108,
+                    "end": 1129,
                     "loc": {
                       "start": {
                         "line": 31,
@@ -757,8 +757,8 @@
                     },
                     "expression": {
                       "type": "AssignmentExpression",
-                      "start": 1087,
-                      "end": 1107,
+                      "start": 1108,
+                      "end": 1128,
                       "loc": {
                         "start": {
                           "line": 31,
@@ -772,8 +772,8 @@
                       "operator": "=",
                       "left": {
                         "type": "MemberExpression",
-                        "start": 1087,
-                        "end": 1098,
+                        "start": 1108,
+                        "end": 1119,
                         "loc": {
                           "start": {
                             "line": 31,
@@ -786,8 +786,8 @@
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 1087,
-                          "end": 1091,
+                          "start": 1108,
+                          "end": 1112,
                           "loc": {
                             "start": {
                               "line": 31,
@@ -801,8 +801,8 @@
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 1092,
-                          "end": 1098,
+                          "start": 1113,
+                          "end": 1119,
                           "loc": {
                             "start": {
                               "line": 31,
@@ -820,8 +820,8 @@
                       },
                       "right": {
                         "type": "Identifier",
-                        "start": 1101,
-                        "end": 1107,
+                        "start": 1122,
+                        "end": 1128,
                         "loc": {
                           "start": {
                             "line": 31,
@@ -849,8 +849,8 @@
       },
       {
         "type": "Identifier",
-        "start": 1122,
-        "end": 1161,
+        "start": 1143,
+        "end": 1182,
         "loc": {
           "start": {
             "line": 35,
@@ -863,8 +863,8 @@
         },
         "declaration": {
           "type": "NewExpression",
-          "start": 1137,
-          "end": 1160,
+          "start": 1158,
+          "end": 1181,
           "loc": {
             "start": {
               "line": 35,
@@ -877,8 +877,8 @@
           },
           "callee": {
             "type": "Identifier",
-            "start": 1141,
-            "end": 1158,
+            "start": 1162,
+            "end": 1179,
             "loc": {
               "start": {
                 "line": 35,
@@ -900,8 +900,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 1122,
-        "end": 1161,
+        "start": 1143,
+        "end": 1182,
         "loc": {
           "start": {
             "line": 35,
@@ -914,8 +914,8 @@
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 936,
-          "end": 1120,
+          "start": 952,
+          "end": 1141,
           "loc": {
             "start": {
               "line": 27,
@@ -928,8 +928,8 @@
           },
           "id": {
             "type": "Identifier",
-            "start": 942,
-            "end": 959,
+            "start": 958,
+            "end": 975,
             "loc": {
               "start": {
                 "line": 27,
@@ -946,8 +946,8 @@
           },
           "superClass": {
             "type": "CallExpression",
-            "start": 968,
-            "end": 1041,
+            "start": 984,
+            "end": 1062,
             "loc": {
               "start": {
                 "line": 27,
@@ -960,8 +960,8 @@
             },
             "callee": {
               "type": "MemberExpression",
-              "start": 968,
-              "end": 984,
+              "start": 984,
+              "end": 1000,
               "loc": {
                 "start": {
                   "line": 27,
@@ -974,8 +974,8 @@
               },
               "object": {
                 "type": "Identifier",
-                "start": 968,
-                "end": 976,
+                "start": 984,
+                "end": 992,
                 "loc": {
                   "start": {
                     "line": 27,
@@ -985,14 +985,14 @@
                     "line": 27,
                     "column": 40
                   },
-                  "identifierName": "Platform"
+                  "identifierName": "platform"
                 },
-                "name": "Platform"
+                "name": "platform"
               },
               "property": {
                 "type": "Identifier",
-                "start": 977,
-                "end": 984,
+                "start": 993,
+                "end": 1000,
                 "loc": {
                   "start": {
                     "line": 27,
@@ -1011,25 +1011,25 @@
             "arguments": [
               {
                 "type": "Identifier",
-                "start": 985,
-                "end": 993,
+                "start": 1002,
+                "end": 1014,
                 "loc": {
                   "start": {
                     "line": 27,
-                    "column": 49
+                    "column": 50
                   },
                   "end": {
                     "line": 27,
-                    "column": 57
+                    "column": 62
                   },
-                  "identifierName": "Function"
+                  "identifierName": "BaseFunction"
                 },
-                "name": "Function"
+                "name": "BaseFunction"
               },
               {
                 "type": "ArrayExpression",
-                "start": 1000,
-                "end": 1040,
+                "start": 1021,
+                "end": 1061,
                 "loc": {
                   "start": {
                     "line": 28,
@@ -1043,8 +1043,8 @@
                 "elements": [
                   {
                     "type": "Identifier",
-                    "start": 1002,
-                    "end": 1019,
+                    "start": 1023,
+                    "end": 1040,
                     "loc": {
                       "start": {
                         "line": 28,
@@ -1060,8 +1060,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 1021,
-                    "end": 1038,
+                    "start": 1042,
+                    "end": 1059,
                     "loc": {
                       "start": {
                         "line": 28,
@@ -1081,8 +1081,8 @@
           },
           "body": {
             "type": "ClassBody",
-            "start": 1041,
-            "end": 1120,
+            "start": 1062,
+            "end": 1141,
             "loc": {
               "start": {
                 "line": 28,
@@ -1096,8 +1096,8 @@
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 1047,
-                "end": 1118,
+                "start": 1068,
+                "end": 1139,
                 "loc": {
                   "start": {
                     "line": 29,
@@ -1112,8 +1112,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 1047,
-                  "end": 1058,
+                  "start": 1068,
+                  "end": 1079,
                   "loc": {
                     "start": {
                       "line": 29,
@@ -1135,8 +1135,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 1060,
-                  "end": 1118,
+                  "start": 1081,
+                  "end": 1139,
                   "loc": {
                     "start": {
                       "line": 29,
@@ -1150,8 +1150,8 @@
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 1070,
-                      "end": 1078,
+                      "start": 1091,
+                      "end": 1099,
                       "loc": {
                         "start": {
                           "line": 30,
@@ -1164,8 +1164,8 @@
                       },
                       "expression": {
                         "type": "CallExpression",
-                        "start": 1070,
-                        "end": 1077,
+                        "start": 1091,
+                        "end": 1098,
                         "loc": {
                           "start": {
                             "line": 30,
@@ -1178,8 +1178,8 @@
                         },
                         "callee": {
                           "type": "Super",
-                          "start": 1070,
-                          "end": 1075,
+                          "start": 1091,
+                          "end": 1096,
                           "loc": {
                             "start": {
                               "line": 30,
@@ -1196,8 +1196,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1087,
-                      "end": 1108,
+                      "start": 1108,
+                      "end": 1129,
                       "loc": {
                         "start": {
                           "line": 31,
@@ -1210,8 +1210,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1087,
-                        "end": 1107,
+                        "start": 1108,
+                        "end": 1128,
                         "loc": {
                           "start": {
                             "line": 31,
@@ -1225,8 +1225,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1087,
-                          "end": 1098,
+                          "start": 1108,
+                          "end": 1119,
                           "loc": {
                             "start": {
                               "line": 31,
@@ -1239,8 +1239,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1087,
-                            "end": 1091,
+                            "start": 1108,
+                            "end": 1112,
                             "loc": {
                               "start": {
                                 "line": 31,
@@ -1254,8 +1254,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1092,
-                            "end": 1098,
+                            "start": 1113,
+                            "end": 1119,
                             "loc": {
                               "start": {
                                 "line": 31,
@@ -1273,8 +1273,8 @@
                         },
                         "right": {
                           "type": "Identifier",
-                          "start": 1101,
-                          "end": 1107,
+                          "start": 1122,
+                          "end": 1128,
                           "loc": {
                             "start": {
                               "line": 31,
@@ -1300,8 +1300,8 @@
             {
               "type": "CommentBlock",
               "value": "*\n * This CausalNetSampling class provides sampling methods\n * mixwith:\n * [ SubSamplingMixins, NegSamplingMixins ]\n * @class CausalNetSampling\n * @extends Function\n * @example\n * import { causalNetSampling } from 'causal-net.sampling';\n * import {termLogger as Logger} from 'causal-net.log';\n * let numSamples = 4;\n * let idSize = 10;//id list: [0,1,2,3,4,5,6,7,8,9]\n * Logger.log(causalNetSampling.subSampling(numSamples, idSize));\n * \n * numSamples = 4;\n * let positiveSampleId = [0, 1];\n * //ids: [0, 1, 2, 3];\n * let probIds = [0.9, 0.9, 0.3, 0.7];\n * let samples = causalNetSampling.negSampling(numSamples, positiveSampleId, probIds);\n * termLogger.log({ samples });\n ",
-              "start": 257,
-              "end": 935,
+              "start": 273,
+              "end": 951,
               "loc": {
                 "start": {
                   "line": 7,
@@ -1321,8 +1321,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 1122,
-        "end": 1161,
+        "start": 1143,
+        "end": 1182,
         "loc": {
           "start": {
             "line": 35,
@@ -1373,8 +1373,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n * This CausalNetSampling class provides sampling methods\n * mixwith:\n * [ SubSamplingMixins, NegSamplingMixins ]\n * @class CausalNetSampling\n * @extends Function\n * @example\n * import { causalNetSampling } from 'causal-net.sampling';\n * import {termLogger as Logger} from 'causal-net.log';\n * let numSamples = 4;\n * let idSize = 10;//id list: [0,1,2,3,4,5,6,7,8,9]\n * Logger.log(causalNetSampling.subSampling(numSamples, idSize));\n * \n * numSamples = 4;\n * let positiveSampleId = [0, 1];\n * //ids: [0, 1, 2, 3];\n * let probIds = [0.9, 0.9, 0.3, 0.7];\n * let samples = causalNetSampling.negSampling(numSamples, positiveSampleId, probIds);\n * termLogger.log({ samples });\n ",
-      "start": 257,
-      "end": 935,
+      "start": 273,
+      "end": 951,
       "loc": {
         "start": {
           "line": 7,
@@ -1469,6 +1469,58 @@
     },
     {
       "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "as",
+      "start": 18,
+      "end": 20,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 18
+        },
+        "end": {
+          "line": 1,
+          "column": 20
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "BaseFunction",
+      "start": 21,
+      "end": 33,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 21
+        },
+        "end": {
+          "line": 1,
+          "column": 33
+        }
+      }
+    },
+    {
+      "type": {
         "label": "}",
         "beforeExpr": false,
         "startsExpr": false,
@@ -1479,16 +1531,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 18,
-      "end": 19,
+      "start": 34,
+      "end": 35,
       "loc": {
         "start": {
           "line": 1,
-          "column": 18
+          "column": 34
         },
         "end": {
           "line": 1,
-          "column": 19
+          "column": 35
         }
       }
     },
@@ -1505,16 +1557,16 @@
         "binop": null
       },
       "value": "from",
-      "start": 20,
-      "end": 24,
+      "start": 36,
+      "end": 40,
       "loc": {
         "start": {
           "line": 1,
-          "column": 20
+          "column": 36
         },
         "end": {
           "line": 1,
-          "column": 24
+          "column": 40
         }
       }
     },
@@ -1532,16 +1584,16 @@
         "updateContext": null
       },
       "value": "causal-net.core",
-      "start": 25,
-      "end": 42,
+      "start": 41,
+      "end": 58,
       "loc": {
         "start": {
           "line": 1,
-          "column": 25
+          "column": 41
         },
         "end": {
           "line": 1,
-          "column": 42
+          "column": 58
         }
       }
     },
@@ -1558,16 +1610,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 42,
-      "end": 43,
+      "start": 58,
+      "end": 59,
       "loc": {
         "start": {
           "line": 1,
-          "column": 42
+          "column": 58
         },
         "end": {
           "line": 1,
-          "column": 43
+          "column": 59
         }
       }
     },
@@ -1586,8 +1638,8 @@
         "updateContext": null
       },
       "value": "import",
-      "start": 44,
-      "end": 50,
+      "start": 60,
+      "end": 66,
       "loc": {
         "start": {
           "line": 2,
@@ -1611,8 +1663,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 51,
-      "end": 52,
+      "start": 67,
+      "end": 68,
       "loc": {
         "start": {
           "line": 2,
@@ -1636,9 +1688,9 @@
         "postfix": false,
         "binop": null
       },
-      "value": "Platform",
-      "start": 53,
-      "end": 61,
+      "value": "platform",
+      "start": 69,
+      "end": 77,
       "loc": {
         "start": {
           "line": 2,
@@ -1662,8 +1714,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 62,
-      "end": 63,
+      "start": 78,
+      "end": 79,
       "loc": {
         "start": {
           "line": 2,
@@ -1688,8 +1740,8 @@
         "binop": null
       },
       "value": "from",
-      "start": 64,
-      "end": 68,
+      "start": 80,
+      "end": 84,
       "loc": {
         "start": {
           "line": 2,
@@ -1715,8 +1767,8 @@
         "updateContext": null
       },
       "value": "causal-net.utils",
-      "start": 69,
-      "end": 87,
+      "start": 85,
+      "end": 103,
       "loc": {
         "start": {
           "line": 2,
@@ -1741,8 +1793,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 87,
-      "end": 88,
+      "start": 103,
+      "end": 104,
       "loc": {
         "start": {
           "line": 2,
@@ -1769,8 +1821,8 @@
         "updateContext": null
       },
       "value": "import",
-      "start": 89,
-      "end": 95,
+      "start": 105,
+      "end": 111,
       "loc": {
         "start": {
           "line": 3,
@@ -1795,8 +1847,8 @@
         "binop": null
       },
       "value": "random",
-      "start": 96,
-      "end": 102,
+      "start": 112,
+      "end": 118,
       "loc": {
         "start": {
           "line": 3,
@@ -1821,8 +1873,8 @@
         "binop": null
       },
       "value": "from",
-      "start": 103,
-      "end": 107,
+      "start": 119,
+      "end": 123,
       "loc": {
         "start": {
           "line": 3,
@@ -1848,8 +1900,8 @@
         "updateContext": null
       },
       "value": "random",
-      "start": 108,
-      "end": 116,
+      "start": 124,
+      "end": 132,
       "loc": {
         "start": {
           "line": 3,
@@ -1874,8 +1926,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 116,
-      "end": 117,
+      "start": 132,
+      "end": 133,
       "loc": {
         "start": {
           "line": 3,
@@ -1902,8 +1954,8 @@
         "updateContext": null
       },
       "value": "import",
-      "start": 118,
-      "end": 124,
+      "start": 134,
+      "end": 140,
       "loc": {
         "start": {
           "line": 4,
@@ -1927,8 +1979,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 125,
-      "end": 126,
+      "start": 141,
+      "end": 142,
       "loc": {
         "start": {
           "line": 4,
@@ -1955,8 +2007,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 127,
-      "end": 134,
+      "start": 143,
+      "end": 150,
       "loc": {
         "start": {
           "line": 4,
@@ -1981,8 +2033,8 @@
         "binop": null
       },
       "value": "as",
-      "start": 135,
-      "end": 137,
+      "start": 151,
+      "end": 153,
       "loc": {
         "start": {
           "line": 4,
@@ -2007,8 +2059,8 @@
         "binop": null
       },
       "value": "SubSamplingMixins",
-      "start": 138,
-      "end": 155,
+      "start": 154,
+      "end": 171,
       "loc": {
         "start": {
           "line": 4,
@@ -2032,8 +2084,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 156,
-      "end": 157,
+      "start": 172,
+      "end": 173,
       "loc": {
         "start": {
           "line": 4,
@@ -2058,8 +2110,8 @@
         "binop": null
       },
       "value": "from",
-      "start": 158,
-      "end": 162,
+      "start": 174,
+      "end": 178,
       "loc": {
         "start": {
           "line": 4,
@@ -2085,8 +2137,8 @@
         "updateContext": null
       },
       "value": "./subSampling.mixins",
-      "start": 163,
-      "end": 185,
+      "start": 179,
+      "end": 201,
       "loc": {
         "start": {
           "line": 4,
@@ -2111,8 +2163,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 185,
-      "end": 186,
+      "start": 201,
+      "end": 202,
       "loc": {
         "start": {
           "line": 4,
@@ -2139,8 +2191,8 @@
         "updateContext": null
       },
       "value": "import",
-      "start": 187,
-      "end": 193,
+      "start": 203,
+      "end": 209,
       "loc": {
         "start": {
           "line": 5,
@@ -2164,8 +2216,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 194,
-      "end": 195,
+      "start": 210,
+      "end": 211,
       "loc": {
         "start": {
           "line": 5,
@@ -2192,8 +2244,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 196,
-      "end": 203,
+      "start": 212,
+      "end": 219,
       "loc": {
         "start": {
           "line": 5,
@@ -2218,8 +2270,8 @@
         "binop": null
       },
       "value": "as",
-      "start": 204,
-      "end": 206,
+      "start": 220,
+      "end": 222,
       "loc": {
         "start": {
           "line": 5,
@@ -2244,8 +2296,8 @@
         "binop": null
       },
       "value": "NegSamplingMixins",
-      "start": 207,
-      "end": 224,
+      "start": 223,
+      "end": 240,
       "loc": {
         "start": {
           "line": 5,
@@ -2269,8 +2321,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 225,
-      "end": 226,
+      "start": 241,
+      "end": 242,
       "loc": {
         "start": {
           "line": 5,
@@ -2295,8 +2347,8 @@
         "binop": null
       },
       "value": "from",
-      "start": 227,
-      "end": 231,
+      "start": 243,
+      "end": 247,
       "loc": {
         "start": {
           "line": 5,
@@ -2322,8 +2374,8 @@
         "updateContext": null
       },
       "value": "./negSampling.mixins",
-      "start": 232,
-      "end": 254,
+      "start": 248,
+      "end": 270,
       "loc": {
         "start": {
           "line": 5,
@@ -2348,8 +2400,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 254,
-      "end": 255,
+      "start": 270,
+      "end": 271,
       "loc": {
         "start": {
           "line": 5,
@@ -2364,8 +2416,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n * This CausalNetSampling class provides sampling methods\n * mixwith:\n * [ SubSamplingMixins, NegSamplingMixins ]\n * @class CausalNetSampling\n * @extends Function\n * @example\n * import { causalNetSampling } from 'causal-net.sampling';\n * import {termLogger as Logger} from 'causal-net.log';\n * let numSamples = 4;\n * let idSize = 10;//id list: [0,1,2,3,4,5,6,7,8,9]\n * Logger.log(causalNetSampling.subSampling(numSamples, idSize));\n * \n * numSamples = 4;\n * let positiveSampleId = [0, 1];\n * //ids: [0, 1, 2, 3];\n * let probIds = [0.9, 0.9, 0.3, 0.7];\n * let samples = causalNetSampling.negSampling(numSamples, positiveSampleId, probIds);\n * termLogger.log({ samples });\n ",
-      "start": 257,
-      "end": 935,
+      "start": 273,
+      "end": 951,
       "loc": {
         "start": {
           "line": 7,
@@ -2392,8 +2444,8 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 936,
-      "end": 941,
+      "start": 952,
+      "end": 957,
       "loc": {
         "start": {
           "line": 27,
@@ -2418,8 +2470,8 @@
         "binop": null
       },
       "value": "CausalNetSampling",
-      "start": 942,
-      "end": 959,
+      "start": 958,
+      "end": 975,
       "loc": {
         "start": {
           "line": 27,
@@ -2446,8 +2498,8 @@
         "updateContext": null
       },
       "value": "extends",
-      "start": 960,
-      "end": 967,
+      "start": 976,
+      "end": 983,
       "loc": {
         "start": {
           "line": 27,
@@ -2471,9 +2523,9 @@
         "postfix": false,
         "binop": null
       },
-      "value": "Platform",
-      "start": 968,
-      "end": 976,
+      "value": "platform",
+      "start": 984,
+      "end": 992,
       "loc": {
         "start": {
           "line": 27,
@@ -2498,8 +2550,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 976,
-      "end": 977,
+      "start": 992,
+      "end": 993,
       "loc": {
         "start": {
           "line": 27,
@@ -2524,8 +2576,8 @@
         "binop": null
       },
       "value": "mixWith",
-      "start": 977,
-      "end": 984,
+      "start": 993,
+      "end": 1000,
       "loc": {
         "start": {
           "line": 27,
@@ -2549,8 +2601,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 984,
-      "end": 985,
+      "start": 1000,
+      "end": 1001,
       "loc": {
         "start": {
           "line": 27,
@@ -2574,17 +2626,17 @@
         "postfix": false,
         "binop": null
       },
-      "value": "Function",
-      "start": 985,
-      "end": 993,
+      "value": "BaseFunction",
+      "start": 1002,
+      "end": 1014,
       "loc": {
         "start": {
           "line": 27,
-          "column": 49
+          "column": 50
         },
         "end": {
           "line": 27,
-          "column": 57
+          "column": 62
         }
       }
     },
@@ -2601,16 +2653,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 993,
-      "end": 994,
+      "start": 1014,
+      "end": 1015,
       "loc": {
         "start": {
           "line": 27,
-          "column": 57
+          "column": 62
         },
         "end": {
           "line": 27,
-          "column": 58
+          "column": 63
         }
       }
     },
@@ -2627,8 +2679,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1000,
-      "end": 1001,
+      "start": 1021,
+      "end": 1022,
       "loc": {
         "start": {
           "line": 28,
@@ -2653,8 +2705,8 @@
         "binop": null
       },
       "value": "SubSamplingMixins",
-      "start": 1002,
-      "end": 1019,
+      "start": 1023,
+      "end": 1040,
       "loc": {
         "start": {
           "line": 28,
@@ -2679,8 +2731,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1019,
-      "end": 1020,
+      "start": 1040,
+      "end": 1041,
       "loc": {
         "start": {
           "line": 28,
@@ -2705,8 +2757,8 @@
         "binop": null
       },
       "value": "NegSamplingMixins",
-      "start": 1021,
-      "end": 1038,
+      "start": 1042,
+      "end": 1059,
       "loc": {
         "start": {
           "line": 28,
@@ -2731,8 +2783,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1039,
-      "end": 1040,
+      "start": 1060,
+      "end": 1061,
       "loc": {
         "start": {
           "line": 28,
@@ -2756,8 +2808,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1040,
-      "end": 1041,
+      "start": 1061,
+      "end": 1062,
       "loc": {
         "start": {
           "line": 28,
@@ -2781,8 +2833,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1041,
-      "end": 1042,
+      "start": 1062,
+      "end": 1063,
       "loc": {
         "start": {
           "line": 28,
@@ -2807,8 +2859,8 @@
         "binop": null
       },
       "value": "constructor",
-      "start": 1047,
-      "end": 1058,
+      "start": 1068,
+      "end": 1079,
       "loc": {
         "start": {
           "line": 29,
@@ -2832,8 +2884,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1058,
-      "end": 1059,
+      "start": 1079,
+      "end": 1080,
       "loc": {
         "start": {
           "line": 29,
@@ -2857,8 +2909,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1059,
-      "end": 1060,
+      "start": 1080,
+      "end": 1081,
       "loc": {
         "start": {
           "line": 29,
@@ -2882,8 +2934,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1060,
-      "end": 1061,
+      "start": 1081,
+      "end": 1082,
       "loc": {
         "start": {
           "line": 29,
@@ -2910,8 +2962,8 @@
         "updateContext": null
       },
       "value": "super",
-      "start": 1070,
-      "end": 1075,
+      "start": 1091,
+      "end": 1096,
       "loc": {
         "start": {
           "line": 30,
@@ -2935,8 +2987,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1075,
-      "end": 1076,
+      "start": 1096,
+      "end": 1097,
       "loc": {
         "start": {
           "line": 30,
@@ -2960,8 +3012,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1076,
-      "end": 1077,
+      "start": 1097,
+      "end": 1098,
       "loc": {
         "start": {
           "line": 30,
@@ -2986,8 +3038,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1077,
-      "end": 1078,
+      "start": 1098,
+      "end": 1099,
       "loc": {
         "start": {
           "line": 30,
@@ -3014,8 +3066,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1087,
-      "end": 1091,
+      "start": 1108,
+      "end": 1112,
       "loc": {
         "start": {
           "line": 31,
@@ -3040,8 +3092,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1091,
-      "end": 1092,
+      "start": 1112,
+      "end": 1113,
       "loc": {
         "start": {
           "line": 31,
@@ -3066,8 +3118,8 @@
         "binop": null
       },
       "value": "Random",
-      "start": 1092,
-      "end": 1098,
+      "start": 1113,
+      "end": 1119,
       "loc": {
         "start": {
           "line": 31,
@@ -3093,8 +3145,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1099,
-      "end": 1100,
+      "start": 1120,
+      "end": 1121,
       "loc": {
         "start": {
           "line": 31,
@@ -3119,8 +3171,8 @@
         "binop": null
       },
       "value": "random",
-      "start": 1101,
-      "end": 1107,
+      "start": 1122,
+      "end": 1128,
       "loc": {
         "start": {
           "line": 31,
@@ -3145,8 +3197,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1107,
-      "end": 1108,
+      "start": 1128,
+      "end": 1129,
       "loc": {
         "start": {
           "line": 31,
@@ -3170,8 +3222,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1117,
-      "end": 1118,
+      "start": 1138,
+      "end": 1139,
       "loc": {
         "start": {
           "line": 32,
@@ -3195,8 +3247,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1119,
-      "end": 1120,
+      "start": 1140,
+      "end": 1141,
       "loc": {
         "start": {
           "line": 33,
@@ -3223,8 +3275,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 1122,
-      "end": 1128,
+      "start": 1143,
+      "end": 1149,
       "loc": {
         "start": {
           "line": 35,
@@ -3251,8 +3303,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 1129,
-      "end": 1136,
+      "start": 1150,
+      "end": 1157,
       "loc": {
         "start": {
           "line": 35,
@@ -3279,8 +3331,8 @@
         "updateContext": null
       },
       "value": "new",
-      "start": 1137,
-      "end": 1140,
+      "start": 1158,
+      "end": 1161,
       "loc": {
         "start": {
           "line": 35,
@@ -3305,8 +3357,8 @@
         "binop": null
       },
       "value": "CausalNetSampling",
-      "start": 1141,
-      "end": 1158,
+      "start": 1162,
+      "end": 1179,
       "loc": {
         "start": {
           "line": 35,
@@ -3330,8 +3382,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1158,
-      "end": 1159,
+      "start": 1179,
+      "end": 1180,
       "loc": {
         "start": {
           "line": 35,
@@ -3355,8 +3407,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1159,
-      "end": 1160,
+      "start": 1180,
+      "end": 1181,
       "loc": {
         "start": {
           "line": 35,
@@ -3381,8 +3433,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1160,
-      "end": 1161,
+      "start": 1181,
+      "end": 1182,
       "loc": {
         "start": {
           "line": 35,
@@ -3407,8 +3459,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1161,
-      "end": 1161,
+      "start": 1182,
+      "end": 1182,
       "loc": {
         "start": {
           "line": 35,
