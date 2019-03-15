@@ -192,10 +192,10 @@ mixWith:</p>
   <div class="example-doc" data-ice="exampleDoc">
       
       <pre class="prettyprint source-code"><code data-ice="exampleCode">import { StorageMixins, indexDBStorage } from &apos;causal-net.storage&apos;;
-import { Platform } from &apos;causal-net.utils&apos;;
+import { platform } from &apos;causal-net.utils&apos;;
 import { Tensor, Store } from &apos;causal-net.core&apos;;
 
-class SimplePipeline extends Platform.mixWith(Tensor, [StorageMixins]){
+class SimplePipeline extends platform.mixWith(Tensor, [StorageMixins]){
     constructor(){
         super();
         this.Storage = indexDBStorage;

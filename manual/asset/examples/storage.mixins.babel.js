@@ -1,8 +1,8 @@
 import { StorageMixins, indexDBStorage } from 'causal-net.storage';
-import { Platform } from 'causal-net.utils';
+import { platform } from 'causal-net.utils';
 import { Tensor, Store } from 'causal-net.core';
 
-class SimplePipeline extends Platform.mixWith(Tensor, [StorageMixins]){
+class SimplePipeline extends platform.mixWith(Tensor, [StorageMixins]){
     constructor(){
         super();
         this.Storage = indexDBStorage;
