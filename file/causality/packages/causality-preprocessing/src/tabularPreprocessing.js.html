@@ -148,9 +148,9 @@
 
 <div class="content" data-ice="content"><h1 data-ice="title">causality/packages/causality-preprocessing/src/tabularPreprocessing.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { Function as BaseFunction } from &apos;causal-net.core&apos;;
-import { Platform } from &apos;causal-net.utils&apos;;
+import { platform } from &apos;causal-net.utils&apos;;
 import { ItemNormalizing, NullItemReplace } from &apos;./Tabular/index&apos;;
-class TabularPreprocessing extends Platform.mixWith(BaseFunction, 
+class TabularPreprocessing extends platform.mixWith(BaseFunction, 
     []){
     constructor(){
         super();

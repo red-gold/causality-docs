@@ -148,7 +148,7 @@
 
 <div class="content" data-ice="content"><h1 data-ice="title">causality/packages/causality-preprocessing/src/nlpPreprocessing.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { Function as BaseFunction } from &apos;causal-net.core&apos;;
-import { Platform } from &apos;causal-net.utils&apos;;
+import { platform } from &apos;causal-net.utils&apos;;
 import { TokenTransformingMixins } from &apos;./NLP/index&apos;;
 /**
  * This NLPPreprocessing class provide methods for preprocessing text and output valid tokens.
@@ -160,7 +160,7 @@ import { TokenTransformingMixins } from &apos;./NLP/index&apos;;
  * [!EXAMPLE ../examples/nlpPreprocessing.babel.node.js]
  */
 
-class NLPPreprocessing extends Platform.mixWith(BaseFunction, 
+class NLPPreprocessing extends platform.mixWith(BaseFunction, 
     [ TokenTransformingMixins ]){
     constructor(){
         super();

@@ -148,7 +148,7 @@
 
 <div class="content" data-ice="content"><h1 data-ice="title">causality/packages/causality-preprocessing/src/imagePreprocessing.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { Function as BaseFunction } from &apos;causal-net.core&apos;;
-import { Platform } from &apos;causal-net.utils&apos;;
+import { platform } from &apos;causal-net.utils&apos;;
 import { ColorTransformingMixins, ImageSplittingMixins } from &apos;./Image/index&apos;;
 
 /**
@@ -161,7 +161,7 @@ import { ColorTransformingMixins, ImageSplittingMixins } from &apos;./Image/inde
  * @example
  * [EXAMPLE ../examples/imagePreprocessing.babel.node.js]
  */
-class ImagePreprocessing extends Platform.mixWith(BaseFunction, [
+class ImagePreprocessing extends platform.mixWith(BaseFunction, [
         ColorTransformingMixins, 
         ImageSplittingMixins ]){
     constructor(){

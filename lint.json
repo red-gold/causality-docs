@@ -1,5 +1,181 @@
 [
   {
+    "name": "Store#getItem",
+    "filePath": "causality/packages/causality-core/src/store.js",
+    "lines": [
+      {
+        "lineNumber": 17,
+        "line": "    /**"
+      },
+      {
+        "lineNumber": 18,
+        "line": "     * Get item given the key"
+      },
+      {
+        "lineNumber": 19,
+        "line": "     * @param { String } key - key name"
+      },
+      {
+        "lineNumber": 20,
+        "line": "     * @param {boolean} [asBuffer=false] - return object or buffer array, default object"
+      },
+      {
+        "lineNumber": 21,
+        "line": "     * @returns { Object } item object "
+      },
+      {
+        "lineNumber": 22,
+        "line": "     * @memberof MemoryCache"
+      },
+      {
+        "lineNumber": 23,
+        "line": "     */"
+      },
+      {
+        "lineNumber": 24,
+        "line": "    async getItem(key, asBuffer=false, noError=false){"
+      }
+    ],
+    "codeParams": [
+      "key",
+      "asBuffer",
+      "noError"
+    ],
+    "docParams": [
+      "key",
+      "asBuffer"
+    ]
+  },
+  {
+    "name": "Store#setItem",
+    "filePath": "causality/packages/causality-core/src/store.js",
+    "lines": [
+      {
+        "lineNumber": 45,
+        "line": "    /**"
+      },
+      {
+        "lineNumber": 46,
+        "line": "     * Set new item with the given key and value"
+      },
+      {
+        "lineNumber": 47,
+        "line": "     * @param { String } key - key name of item"
+      },
+      {
+        "lineNumber": 48,
+        "line": "     * @param { Object } data - value of item"
+      },
+      {
+        "lineNumber": 49,
+        "line": "     * @returns { Promise } - new key promise"
+      },
+      {
+        "lineNumber": 50,
+        "line": "     * @memberof MemoryCache"
+      },
+      {
+        "lineNumber": 51,
+        "line": "     */"
+      },
+      {
+        "lineNumber": 52,
+        "line": "    async setItem(key, data, noError=false){"
+      }
+    ],
+    "codeParams": [
+      "key",
+      "data",
+      "noError"
+    ],
+    "docParams": [
+      "key",
+      "data"
+    ]
+  },
+  {
+    "name": "Store#delItem",
+    "filePath": "causality/packages/causality-core/src/store.js",
+    "lines": [
+      {
+        "lineNumber": 73,
+        "line": "    /**"
+      },
+      {
+        "lineNumber": 74,
+        "line": "     * Delete item given the item key"
+      },
+      {
+        "lineNumber": 75,
+        "line": "     * @param { String } key - key name to delete"
+      },
+      {
+        "lineNumber": 76,
+        "line": "     * @returns { Promise } deleted key promise"
+      },
+      {
+        "lineNumber": 77,
+        "line": "     * @memberof MemoryCache"
+      },
+      {
+        "lineNumber": 78,
+        "line": "     */"
+      },
+      {
+        "lineNumber": 79,
+        "line": "    async delItem(key, noError=false){"
+      }
+    ],
+    "codeParams": [
+      "key",
+      "noError"
+    ],
+    "docParams": [
+      "key"
+    ]
+  },
+  {
+    "name": "Store#getItemList",
+    "filePath": "causality/packages/causality-core/src/store.js",
+    "lines": [
+      {
+        "lineNumber": 111,
+        "line": "    /**"
+      },
+      {
+        "lineNumber": 112,
+        "line": "     * Get the current items under the prefix path"
+      },
+      {
+        "lineNumber": 113,
+        "line": "     * @param { String } namePrefix"
+      },
+      {
+        "lineNumber": 114,
+        "line": "     * @returns { Array } list of item names"
+      },
+      {
+        "lineNumber": 115,
+        "line": "     * @memberof MemoryCache"
+      },
+      {
+        "lineNumber": 116,
+        "line": "     */"
+      },
+      {
+        "lineNumber": 117,
+        "line": "    async getItemList(namePrefix, noError=false){"
+      }
+    ],
+    "codeParams": [
+      "namePrefix",
+      "noError"
+    ],
+    "docParams": [
+      "namePrefix"
+    ]
+  },
+  {
     "name": "MemorizingMixins#write",
     "filePath": "causality/packages/causality-memcache/src/memorizing.mixins.js",
     "lines": [
