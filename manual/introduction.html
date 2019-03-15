@@ -46,6 +46,10 @@
 <li data-ice="manualNav" class="indent-h2" data-link="manual/introduction.html"><a href="manual/introduction.html#causal-net-sampling" data-ice="link">causal-net.sampling</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/introduction.html"><a href="manual/introduction.html#causalnetsampling" data-ice="link">causalNetSampling</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/introduction.html"><a href="manual/introduction.html#samplingmixins" data-ice="link">SamplingMixins</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/introduction.html"><a href="manual/introduction.html#causal-net-models" data-ice="link">causal-net.models</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/introduction.html"><a href="manual/introduction.html#causalnetmodels" data-ice="link">causalNetModels</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/introduction.html"><a href="manual/introduction.html#supervisedmodelsmixins" data-ice="link">SupervisedModelsMixins</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/introduction.html"><a href="manual/introduction.html#unsupervisedmodelsmixins" data-ice="link">UnSupervisedModelsMixins</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/introduction.html"><a href="manual/introduction.html#causal-net-storage" data-ice="link">causal-net.storage</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/introduction.html"><a href="manual/introduction.html#indexdbstorage" data-ice="link">indexDBStorage</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/introduction.html"><a href="manual/introduction.html#storagemixins" data-ice="link">StorageMixins</a></li>
@@ -59,6 +63,13 @@
 <li data-ice="manualNav" class="indent-h3" data-link="manual/introduction.html"><a href="manual/introduction.html#csv" data-ice="link">CSV</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/introduction.html"><a href="manual/introduction.html#stream" data-ice="link">Stream</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/introduction.html"><a href="manual/introduction.html#assert" data-ice="link">assert</a></li>
+</ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/streamProcessingText8.babel.node.js.html"><a href="manual/streamProcessingText8.babel.node.js.html" data-ice="link">Tutorials</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/streamProcessingText8.babel.node.js.html"><a href="manual/streamProcessingText8.babel.node.js.html#stream-processing-text8-corpus-text" data-ice="link">Stream processing text8 corpus text</a></li>
 </ul>
   </div>
 </div>
@@ -143,7 +154,7 @@ import { termLogger } from &apos;causal-net.log&apos;;
 <h3 id="universalembedding">universalEmbedding</h3><ul>
 <li>Provide methods for transforming tokens or representing sentence into single vector based <a href="https://github.com/tensorflow/tfjs-models/tree/master/universal-sentence-encoder">use</a></li>
 </ul>
-<p>[EXAMPLE  ERROR! /home/huynhnguyen/github/causality/packages/causality-representation/DESCRIPTION.md, /home/huynhnguyen/github/causality/packages/causality-representation/examples/universalembedding.babel.js]</p>
+<p>[EXAMPLE  ERROR! /home/huynhnguyen/github/causality/packages/causality-representation/DESCRIPTION.md, /home/huynhnguyen/github/causality/packages/causality-representation/examples/universalEmbedding.babel.js]</p>
 <h3 id="representationmixins">RepresentationMixins</h3><ul>
 <li>Mixins for mix with Pipeline class or dataset class.</li>
 </ul>
@@ -203,7 +214,64 @@ let pipeline = new SimplePipeline();
 console.log(pipeline.Sampling);</code>
 </code></pre>
 <p><a href="./manual/./asset/examples/sampling.mixins.babel.js">Run code</a></p>
-<p>[EXAMPLE  ERROR! /home/huynhnguyen/github/causality/packages/causality-models/DESCRIPTION.md]</p>
+<h2 id="causal-net-models">causal-net.models</h2><h3 id="causalnetmodels">causalNetModels</h3><ul>
+<li>causalNetModels provides common used models: </li>
+</ul>
+<p>Classification models</p>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">import { Log, Models, CausalNet } from &apos;../../src/index&apos;;
+const { causalNetModels } = Models;
+const { termLogger } = Log;
+let inputs = [[0.52, 1.12,  0.77],
+              [0.88, -1.08, 0.15],
+              [0.52, 0.06, -1.30],
+              [0.74, -2.49, 1.39]];
+let targets = [[0, 1], [0, 1], [0, 1], [0, 1]];
+const _NetConfig = {
+    HyperParameters: {SampleSize: 4},
+    NumClasses: 2,
+    Pipeline:[
+        {   Name:&apos;dense&apos;, Type: &apos;Tensor&apos;, 
+            Parameters: { Weight: [3, 2], Bias: [2]  },
+            Flow: [ { Op: &apos;dot&apos;, Parameter: &apos;Weight&apos;, Args: [] },
+                    { Op: &apos;add&apos;, Parameter: &apos;Bias&apos;,  Args: [] } ] 
+        },
+        {   Name:&apos;PipeOutput&apos;, Type: &apos;Tensor&apos;, 
+            Flow: [ { Op: &apos;reshape&apos;, Args: [[&apos;$SampleSize&apos;, -1]] } ] 
+        } 
+    ],
+    Model:  causalNetModels.classification() };
+
+console.log({NetConfig: _NetConfig});
+let parameters = {};
+
+let causalNet = new CausalNet(_NetConfig, parameters);
+
+(async ()=&gt;{
+    const DoBatchTrainSampleGenerator = (epochIdx)=&gt;([{idx:0, batchSize:4, data: [inputs, targets]}]);
+    let logTrain = await causalNet.train(DoBatchTrainSampleGenerator, 20);
+    termLogger.log(logTrain);
+    const DoBatchTestSampleGenerator = ()=&gt;([{idx:0, batchSize:4, data: [inputs, targets]}]);
+    let testResult = await causalNet.accuracyTest(DoBatchTestSampleGenerator);
+    termLogger.log({testResult});
+    await causalNet.saveParams(&apos;save_model.model&apos;);
+    await causalNet.loadParams(&apos;save_model.model&apos;);
+    testResult = await causalNet.accuracyTest(DoBatchTestSampleGenerator);
+    termLogger.log({testResult});
+    testResult = await causalNet.ensembleAccuracyTest(DoBatchTestSampleGenerator, [&apos;save_model.model&apos;]);
+    termLogger.log({testResult});
+    testResult = await causalNet.accuracyTest(DoBatchTestSampleGenerator, [&apos;save_model.model&apos;]);
+    termLogger.log({testResult});
+})().catch(err=&gt;{
+    console.error({err});
+});</code>
+</code></pre>
+<p><a href="./manual/./asset/examples/classification.babel.js">Run code</a></p>
+<h3 id="supervisedmodelsmixins">SupervisedModelsMixins</h3><ul>
+<li>Mixins for mix with Pipeline class for supervised models.</li>
+</ul>
+<h3 id="unsupervisedmodelsmixins">UnSupervisedModelsMixins</h3><ul>
+<li>Mixins for mix with Pipeline class for unsupervised models.</li>
+</ul>
 <p>[EXAMPLE  ERROR! /home/huynhnguyen/github/causality/packages/causality-layers/DESCRIPTION.md]</p>
 <p>[EXAMPLE  ERROR! /home/huynhnguyen/github/causality/packages/causality-memcache/DESCRIPTION.md]</p>
 <h2 id="causal-net-storage">causal-net.storage</h2><p>This module provides:</p>

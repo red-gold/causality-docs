@@ -1,5 +1,47 @@
 [
   {
+    "name": "MemorizingMixins#write",
+    "filePath": "causality/packages/causality-memcache/src/memorizing.mixins.js",
+    "lines": [
+      {
+        "lineNumber": 25,
+        "line": "    /**"
+      },
+      {
+        "lineNumber": 26,
+        "line": "     * "
+      },
+      {
+        "lineNumber": 27,
+        "line": "     * @param { String|Number } memorySlotIndex - positive number for memory slot"
+      },
+      {
+        "lineNumber": 28,
+        "line": "     * @param { Array } memory value"
+      },
+      {
+        "lineNumber": 29,
+        "line": "     * @returns { Promise } memory slot index value"
+      },
+      {
+        "lineNumber": 30,
+        "line": "     */"
+      },
+      {
+        "lineNumber": 31,
+        "line": "    async write(memorySlotIndex, value){"
+      }
+    ],
+    "codeParams": [
+      "memorySlotIndex",
+      "value"
+    ],
+    "docParams": [
+      "memorySlotIndex",
+      "memory"
+    ]
+  },
+  {
     "name": "RepresentationMixins#connect",
     "filePath": "causality/packages/causality-representation/src/representation.mixins.js",
     "lines": [
@@ -122,56 +164,56 @@
     "filePath": "causality/packages/causality-storage/src/indexDBStorage.js",
     "lines": [
       {
-        "lineNumber": 50,
-        "line": "    /**"
-      },
-      {
-        "lineNumber": 51,
-        "line": "     * get list of file base on prefix"
-      },
-      {
-        "lineNumber": 52,
-        "line": "     * @param { String } filePath"
-      },
-      {
         "lineNumber": 53,
-        "line": "     * @return { Promise } List of filenames "
+        "line": "    /**"
       },
       {
         "lineNumber": 54,
-        "line": "     * @memberof IndexDBStorage"
+        "line": "     * get list of file base on prefix"
       },
       {
         "lineNumber": 55,
-        "line": "     */"
+        "line": "     * @param { String } filePath"
       },
       {
         "lineNumber": 56,
-        "line": "    async getFileList(filePath){"
+        "line": "     * @return { Promise } List of filenames "
       },
       {
         "lineNumber": 57,
-        "line": "        return await this.getItemList(filePath);"
+        "line": "     * @memberof IndexDBStorage"
       },
       {
         "lineNumber": 58,
-        "line": "    }"
+        "line": "     */"
       },
       {
         "lineNumber": 59,
-        "line": ""
+        "line": "    async getFileList(filePath){"
       },
       {
         "lineNumber": 60,
-        "line": "    /**"
+        "line": "        filePath = this.correctName(filePath);"
       },
       {
         "lineNumber": 61,
-        "line": "     * delete all files with name match prefix pattern "
+        "line": "        return await this.getItemList(filePath);"
       },
       {
         "lineNumber": 62,
-        "line": "     * return list of deleted files"
+        "line": "    }"
+      },
+      {
+        "lineNumber": 63,
+        "line": ""
+      },
+      {
+        "lineNumber": 64,
+        "line": "    /**"
+      },
+      {
+        "lineNumber": 65,
+        "line": "     * delete all files with name match prefix pattern "
       }
     ],
     "codeParams": [
@@ -212,23 +254,23 @@
     "filePath": "causality/packages/causality-storage/src/textFile.mixins.js",
     "lines": [
       {
-        "lineNumber": 10,
+        "lineNumber": 11,
         "line": "    /**"
       },
       {
-        "lineNumber": 11,
+        "lineNumber": 12,
         "line": "     * @param  {} filePath"
       },
       {
-        "lineNumber": 12,
+        "lineNumber": 13,
         "line": "     * @param  {} data"
       },
       {
-        "lineNumber": 13,
+        "lineNumber": 14,
         "line": "     */"
       },
       {
-        "lineNumber": 14,
+        "lineNumber": 15,
         "line": "    async writeFile(filePath, data){"
       }
     ],

@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 179,
+  "end": 121,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 4,
+      "line": 3,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 179,
+    "end": 121,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 4,
+        "line": 3,
         "column": 0
       }
     },
@@ -118,7 +118,7 @@
       {
         "type": "ExportNamedDeclaration",
         "start": 58,
-        "end": 115,
+        "end": 120,
         "loc": {
           "start": {
             "line": 2,
@@ -126,7 +126,7 @@
           },
           "end": {
             "line": 2,
-            "column": 57
+            "column": 62
           }
         },
         "declaration": null,
@@ -134,7 +134,7 @@
           {
             "type": "ExportSpecifier",
             "start": 67,
-            "end": 90,
+            "end": 92,
             "loc": {
               "start": {
                 "line": 2,
@@ -142,7 +142,7 @@
               },
               "end": {
                 "line": 2,
-                "column": 32
+                "column": 34
               }
             },
             "local": {
@@ -165,7 +165,7 @@
             "exported": {
               "type": "Identifier",
               "start": 78,
-              "end": 90,
+              "end": 92,
               "loc": {
                 "start": {
                   "line": 2,
@@ -173,93 +173,6 @@
                 },
                 "end": {
                   "line": 2,
-                  "column": 32
-                },
-                "identifierName": "BaseMemCache"
-              },
-              "name": "BaseMemCache"
-            }
-          }
-        ],
-        "source": {
-          "type": "StringLiteral",
-          "start": 98,
-          "end": 114,
-          "loc": {
-            "start": {
-              "line": 2,
-              "column": 40
-            },
-            "end": {
-              "line": 2,
-              "column": 56
-            }
-          },
-          "extra": {
-            "rawValue": "./baseMemCache",
-            "raw": "'./baseMemCache'"
-          },
-          "value": "./baseMemCache"
-        }
-      },
-      {
-        "type": "ExportNamedDeclaration",
-        "start": 116,
-        "end": 178,
-        "loc": {
-          "start": {
-            "line": 3,
-            "column": 0
-          },
-          "end": {
-            "line": 3,
-            "column": 62
-          }
-        },
-        "declaration": null,
-        "specifiers": [
-          {
-            "type": "ExportSpecifier",
-            "start": 125,
-            "end": 150,
-            "loc": {
-              "start": {
-                "line": 3,
-                "column": 9
-              },
-              "end": {
-                "line": 3,
-                "column": 34
-              }
-            },
-            "local": {
-              "type": "Identifier",
-              "start": 125,
-              "end": 132,
-              "loc": {
-                "start": {
-                  "line": 3,
-                  "column": 9
-                },
-                "end": {
-                  "line": 3,
-                  "column": 16
-                },
-                "identifierName": "default"
-              },
-              "name": "default"
-            },
-            "exported": {
-              "type": "Identifier",
-              "start": 136,
-              "end": 150,
-              "loc": {
-                "start": {
-                  "line": 3,
-                  "column": 20
-                },
-                "end": {
-                  "line": 3,
                   "column": 34
                 },
                 "identifierName": "MemCacheMixins"
@@ -270,15 +183,15 @@
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 158,
-          "end": 177,
+          "start": 100,
+          "end": 119,
           "loc": {
             "start": {
-              "line": 3,
+              "line": 2,
               "column": 42
             },
             "end": {
-              "line": 3,
+              "line": 2,
               "column": 61
             }
           },
@@ -650,253 +563,16 @@
         "postfix": false,
         "binop": null
       },
-      "value": "BaseMemCache",
+      "value": "MemCacheMixins",
       "start": 78,
-      "end": 90,
-      "loc": {
-        "start": {
-          "line": 2,
-          "column": 20
-        },
-        "end": {
-          "line": 2,
-          "column": 32
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "}",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 91,
       "end": 92,
       "loc": {
         "start": {
           "line": 2,
-          "column": 33
-        },
-        "end": {
-          "line": 2,
-          "column": 34
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "from",
-      "start": 93,
-      "end": 97,
-      "loc": {
-        "start": {
-          "line": 2,
-          "column": 35
-        },
-        "end": {
-          "line": 2,
-          "column": 39
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "./baseMemCache",
-      "start": 98,
-      "end": 114,
-      "loc": {
-        "start": {
-          "line": 2,
-          "column": 40
-        },
-        "end": {
-          "line": 2,
-          "column": 56
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ";",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 114,
-      "end": 115,
-      "loc": {
-        "start": {
-          "line": 2,
-          "column": 56
-        },
-        "end": {
-          "line": 2,
-          "column": 57
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "export",
-        "keyword": "export",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "export",
-      "start": 116,
-      "end": 122,
-      "loc": {
-        "start": {
-          "line": 3,
-          "column": 0
-        },
-        "end": {
-          "line": 3,
-          "column": 6
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "{",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 123,
-      "end": 124,
-      "loc": {
-        "start": {
-          "line": 3,
-          "column": 7
-        },
-        "end": {
-          "line": 3,
-          "column": 8
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "default",
-        "keyword": "default",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "default",
-      "start": 125,
-      "end": 132,
-      "loc": {
-        "start": {
-          "line": 3,
-          "column": 9
-        },
-        "end": {
-          "line": 3,
-          "column": 16
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "as",
-      "start": 133,
-      "end": 135,
-      "loc": {
-        "start": {
-          "line": 3,
-          "column": 17
-        },
-        "end": {
-          "line": 3,
-          "column": 19
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "MemCacheMixins",
-      "start": 136,
-      "end": 150,
-      "loc": {
-        "start": {
-          "line": 3,
           "column": 20
         },
         "end": {
-          "line": 3,
+          "line": 2,
           "column": 34
         }
       }
@@ -913,15 +589,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 151,
-      "end": 152,
+      "start": 93,
+      "end": 94,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 2,
           "column": 35
         },
         "end": {
-          "line": 3,
+          "line": 2,
           "column": 36
         }
       }
@@ -939,15 +615,15 @@
         "binop": null
       },
       "value": "from",
-      "start": 153,
-      "end": 157,
+      "start": 95,
+      "end": 99,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 2,
           "column": 37
         },
         "end": {
-          "line": 3,
+          "line": 2,
           "column": 41
         }
       }
@@ -966,15 +642,15 @@
         "updateContext": null
       },
       "value": "./memcache.mixins",
-      "start": 158,
-      "end": 177,
+      "start": 100,
+      "end": 119,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 2,
           "column": 42
         },
         "end": {
-          "line": 3,
+          "line": 2,
           "column": 61
         }
       }
@@ -992,15 +668,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 177,
-      "end": 178,
+      "start": 119,
+      "end": 120,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 2,
           "column": 61
         },
         "end": {
-          "line": 3,
+          "line": 2,
           "column": 62
         }
       }
@@ -1018,15 +694,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 179,
-      "end": 179,
+      "start": 121,
+      "end": 121,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 3,
           "column": 0
         },
         "end": {
-          "line": 4,
+          "line": 3,
           "column": 0
         }
       }
