@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 168,
+  "end": 169,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 5,
+      "line": 6,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 168,
+    "end": 169,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 5,
+        "line": 6,
         "column": 0
       }
     },
@@ -117,15 +117,15 @@
       },
       {
         "type": "ExportNamedDeclaration",
-        "start": 55,
-        "end": 113,
+        "start": 54,
+        "end": 112,
         "loc": {
           "start": {
-            "line": 3,
+            "line": 2,
             "column": 0
           },
           "end": {
-            "line": 3,
+            "line": 2,
             "column": 58
           }
         },
@@ -133,29 +133,29 @@
         "specifiers": [
           {
             "type": "ExportSpecifier",
-            "start": 64,
-            "end": 87,
+            "start": 63,
+            "end": 86,
             "loc": {
               "start": {
-                "line": 3,
+                "line": 2,
                 "column": 9
               },
               "end": {
-                "line": 3,
+                "line": 2,
                 "column": 32
               }
             },
             "local": {
               "type": "Identifier",
-              "start": 64,
-              "end": 71,
+              "start": 63,
+              "end": 70,
               "loc": {
                 "start": {
-                  "line": 3,
+                  "line": 2,
                   "column": 9
                 },
                 "end": {
-                  "line": 3,
+                  "line": 2,
                   "column": 16
                 },
                 "identifierName": "default"
@@ -164,15 +164,15 @@
             },
             "exported": {
               "type": "Identifier",
-              "start": 75,
-              "end": 87,
+              "start": 74,
+              "end": 86,
               "loc": {
                 "start": {
-                  "line": 3,
+                  "line": 2,
                   "column": 20
                 },
                 "end": {
-                  "line": 3,
+                  "line": 2,
                   "column": 32
                 },
                 "identifierName": "LoggerMixins"
@@ -183,15 +183,15 @@
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 95,
-          "end": 112,
+          "start": 94,
+          "end": 111,
           "loc": {
             "start": {
-              "line": 3,
+              "line": 2,
               "column": 40
             },
             "end": {
-              "line": 3,
+              "line": 2,
               "column": 57
             }
           },
@@ -546,15 +546,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 55,
-      "end": 61,
+      "start": 54,
+      "end": 60,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 2,
           "column": 0
         },
         "end": {
-          "line": 3,
+          "line": 2,
           "column": 6
         }
       }
@@ -571,15 +571,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 62,
-      "end": 63,
+      "start": 61,
+      "end": 62,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 2,
           "column": 7
         },
         "end": {
-          "line": 3,
+          "line": 2,
           "column": 8
         }
       }
@@ -599,15 +599,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 64,
-      "end": 71,
+      "start": 63,
+      "end": 70,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 2,
           "column": 9
         },
         "end": {
-          "line": 3,
+          "line": 2,
           "column": 16
         }
       }
@@ -625,15 +625,15 @@
         "binop": null
       },
       "value": "as",
-      "start": 72,
-      "end": 74,
+      "start": 71,
+      "end": 73,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 2,
           "column": 17
         },
         "end": {
-          "line": 3,
+          "line": 2,
           "column": 19
         }
       }
@@ -651,15 +651,15 @@
         "binop": null
       },
       "value": "LoggerMixins",
-      "start": 75,
-      "end": 87,
+      "start": 74,
+      "end": 86,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 2,
           "column": 20
         },
         "end": {
-          "line": 3,
+          "line": 2,
           "column": 32
         }
       }
@@ -676,15 +676,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 88,
-      "end": 89,
+      "start": 87,
+      "end": 88,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 2,
           "column": 33
         },
         "end": {
-          "line": 3,
+          "line": 2,
           "column": 34
         }
       }
@@ -702,15 +702,15 @@
         "binop": null
       },
       "value": "from",
-      "start": 90,
-      "end": 94,
+      "start": 89,
+      "end": 93,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 2,
           "column": 35
         },
         "end": {
-          "line": 3,
+          "line": 2,
           "column": 39
         }
       }
@@ -729,15 +729,15 @@
         "updateContext": null
       },
       "value": "./logger.mixins",
-      "start": 95,
-      "end": 112,
+      "start": 94,
+      "end": 111,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 2,
           "column": 40
         },
         "end": {
-          "line": 3,
+          "line": 2,
           "column": 57
         }
       }
@@ -755,15 +755,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 112,
-      "end": 113,
+      "start": 111,
+      "end": 112,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 2,
           "column": 57
         },
         "end": {
-          "line": 3,
+          "line": 2,
           "column": 58
         }
       }
@@ -1018,15 +1018,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 168,
-      "end": 168,
+      "start": 169,
+      "end": 169,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 6,
           "column": 0
         },
         "end": {
-          "line": 5,
+          "line": 6,
           "column": 0
         }
       }
