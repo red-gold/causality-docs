@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 441,
+  "end": 439,
   "loc": {
     "start": {
       "line": 1,
@@ -9,13 +9,13 @@
     },
     "end": {
       "line": 6,
-      "column": 88
+      "column": 86
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 441,
+    "end": 439,
     "loc": {
       "start": {
         "line": 1,
@@ -23,7 +23,7 @@
       },
       "end": {
         "line": 6,
-        "column": 88
+        "column": 86
       }
     },
     "sourceType": "module",
@@ -515,7 +515,7 @@
       {
         "type": "ExportNamedDeclaration",
         "start": 353,
-        "end": 441,
+        "end": 439,
         "loc": {
           "start": {
             "line": 6,
@@ -523,7 +523,7 @@
           },
           "end": {
             "line": 6,
-            "column": 88
+            "column": 86
           }
         },
         "declaration": null,
@@ -531,7 +531,7 @@
           {
             "type": "ExportSpecifier",
             "start": 362,
-            "end": 400,
+            "end": 399,
             "loc": {
               "start": {
                 "line": 6,
@@ -539,7 +539,7 @@
               },
               "end": {
                 "line": 6,
-                "column": 47
+                "column": 46
               }
             },
             "local": {
@@ -562,7 +562,7 @@
             "exported": {
               "type": "Identifier",
               "start": 373,
-              "end": 400,
+              "end": 399,
               "loc": {
                 "start": {
                   "line": 6,
@@ -570,33 +570,33 @@
                 },
                 "end": {
                   "line": 6,
-                  "column": 47
+                  "column": 46
                 },
-                "identifierName": "WordEmbeddingFunctionMixins"
+                "identifierName": "WordEmbeddingFunctorMixins"
               },
-              "name": "WordEmbeddingFunctionMixins"
+              "name": "WordEmbeddingFunctorMixins"
             }
           }
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 408,
-          "end": 440,
+          "start": 407,
+          "end": 438,
           "loc": {
             "start": {
               "line": 6,
-              "column": 55
+              "column": 54
             },
             "end": {
               "line": 6,
-              "column": 87
+              "column": 85
             }
           },
           "extra": {
-            "rawValue": "./wordEmbeddingFunction.mixins",
-            "raw": "'./wordEmbeddingFunction.mixins'"
+            "rawValue": "./wordEmbeddingFunctor.mixins",
+            "raw": "'./wordEmbeddingFunctor.mixins'"
           },
-          "value": "./wordEmbeddingFunction.mixins"
+          "value": "./wordEmbeddingFunctor.mixins"
         }
       }
     ],
@@ -1906,9 +1906,9 @@
         "postfix": false,
         "binop": null
       },
-      "value": "WordEmbeddingFunctionMixins",
+      "value": "WordEmbeddingFunctorMixins",
       "start": 373,
-      "end": 400,
+      "end": 399,
       "loc": {
         "start": {
           "line": 6,
@@ -1916,7 +1916,7 @@
         },
         "end": {
           "line": 6,
-          "column": 47
+          "column": 46
         }
       }
     },
@@ -1932,16 +1932,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 401,
-      "end": 402,
+      "start": 400,
+      "end": 401,
       "loc": {
         "start": {
           "line": 6,
-          "column": 48
+          "column": 47
         },
         "end": {
           "line": 6,
-          "column": 49
+          "column": 48
         }
       }
     },
@@ -1958,16 +1958,16 @@
         "binop": null
       },
       "value": "from",
-      "start": 403,
-      "end": 407,
+      "start": 402,
+      "end": 406,
       "loc": {
         "start": {
           "line": 6,
-          "column": 50
+          "column": 49
         },
         "end": {
           "line": 6,
-          "column": 54
+          "column": 53
         }
       }
     },
@@ -1984,17 +1984,17 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "./wordEmbeddingFunction.mixins",
-      "start": 408,
-      "end": 440,
+      "value": "./wordEmbeddingFunctor.mixins",
+      "start": 407,
+      "end": 438,
       "loc": {
         "start": {
           "line": 6,
-          "column": 55
+          "column": 54
         },
         "end": {
           "line": 6,
-          "column": 87
+          "column": 85
         }
       }
     },
@@ -2011,16 +2011,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 440,
-      "end": 441,
+      "start": 438,
+      "end": 439,
       "loc": {
         "start": {
           "line": 6,
-          "column": 87
+          "column": 85
         },
         "end": {
           "line": 6,
-          "column": 88
+          "column": 86
         }
       }
     },
@@ -2037,16 +2037,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 441,
-      "end": 441,
+      "start": 439,
+      "end": 439,
       "loc": {
         "start": {
           "line": 6,
-          "column": 88
+          "column": 86
         },
         "end": {
           "line": 6,
-          "column": 88
+          "column": 86
         }
       }
     }

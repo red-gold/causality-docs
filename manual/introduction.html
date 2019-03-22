@@ -17,6 +17,13 @@
   <a href="identifiers.html">Reference</a>
   <a href="source.html">Source</a>
   <a href="test.html" data-ice="testLink">Test</a>
+  <div class="v-seperate"></div>
+  <ul class="demo">
+    <li>
+        <a href="prebuilt-demos/representation.html">Sentence representation demo</a>
+    </li>
+  </ul>
+  
   <div class="search-box">
   <span>
     <img src="./image/search.png">
@@ -39,7 +46,7 @@
 <div data-ice="manual">
     <ul class="manual-toc">
       
-    <li data-ice="manualNav" class="indent-h1" data-link="manual/packages.html"><a href="manual/packages.html" data-ice="link">Monorepo</a></li>
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/packages.html"><a href="manual/packages.html#monorepo" data-ice="link">Monorepo</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/packages.html"><a href="manual/packages.html#causal-net-core" data-ice="link">causal-net.core</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#causalnetcore" data-ice="link">causalNetCore</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#tensor" data-ice="link">Tensor</a></li>
@@ -48,6 +55,10 @@
 <li data-ice="manualNav" class="indent-h2" data-link="manual/packages.html"><a href="manual/packages.html#causal-net-log" data-ice="link">causal-net.log</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#termlogger" data-ice="link">termLogger</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#loggermixins" data-ice="link">LoggerMixins</a></li>
+<li data-ice="manualNav" class="indent-h1" data-link="manual/packages.html"><a href="manual/packages.html#causal-net-preprocessing" data-ice="link">causal-net.preprocessing</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#nlppreprocessing" data-ice="link">nlpPreprocessing</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#imagepreprocessing" data-ice="link">imagePreprocessing</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#preprocessingmixins" data-ice="link">PreprocessingMixins</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/packages.html"><a href="manual/packages.html#causal-net-representation" data-ice="link">causal-net.representation</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#causalnetembedding" data-ice="link">causalNetEmbedding</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#universalembedding" data-ice="link">universalEmbedding</a></li>
@@ -58,6 +69,12 @@
 <li data-ice="manualNav" class="indent-h2" data-link="manual/packages.html"><a href="manual/packages.html#causal-net-models" data-ice="link">causal-net.models</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#causalnetmodels" data-ice="link">causalNetModels</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#supervisedmodelsmixins" data-ice="link">SupervisedModelsMixins</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/packages.html"><a href="manual/packages.html#causal-net-layer" data-ice="link">causal-net.layer</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#causalnetsgdoptimizer" data-ice="link">causalNetSGDOptimizer</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#trainermixins" data-ice="link">TrainerMixins</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/packages.html"><a href="manual/packages.html#causal-net-optimizers" data-ice="link">causal-net.optimizers</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#causalnetsgdoptimizer" data-ice="link">causalNetSGDOptimizer</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#trainermixins" data-ice="link">TrainerMixins</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/packages.html"><a href="manual/packages.html#causal-net-memcache" data-ice="link">causal-net.memcache</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#memdowncache" data-ice="link">memDownCache</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#memcachemixins" data-ice="link">MemCacheMixins</a></li>
@@ -91,7 +108,7 @@
 are seperated into different sub-packages under the <code>/packages/</code> folder. Each sub-package exports at most one mixin for building pipeline, For example, causality-optimizer provide trainerMixins for optimizing parameters.</p>
 <p>Key design principles:</p>
 <ul>
-<li>Isomorphic.</li>
+<li>Make everything isomorphic.</li>
 <li>Make everything easy to extend.</li>
 <li>Make everything open to view.</li>
 <li>Make data processing as functional blocks. </li>

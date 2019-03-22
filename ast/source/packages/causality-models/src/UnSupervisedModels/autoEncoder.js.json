@@ -1,0 +1,5720 @@
+{
+  "type": "File",
+  "start": 0,
+  "end": 756,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 28,
+      "column": 27
+    }
+  },
+  "program": {
+    "type": "Program",
+    "start": 0,
+    "end": 756,
+    "loc": {
+      "start": {
+        "line": 1,
+        "column": 0
+      },
+      "end": {
+        "line": 28,
+        "column": 27
+      }
+    },
+    "sourceType": "module",
+    "body": [
+      {
+        "type": "ImportDeclaration",
+        "start": 0,
+        "end": 75,
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 75
+          }
+        },
+        "specifiers": [
+          {
+            "type": "ImportSpecifier",
+            "start": 9,
+            "end": 41,
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 9
+              },
+              "end": {
+                "line": 1,
+                "column": 41
+              }
+            },
+            "imported": {
+              "type": "Identifier",
+              "start": 9,
+              "end": 16,
+              "loc": {
+                "start": {
+                  "line": 1,
+                  "column": 9
+                },
+                "end": {
+                  "line": 1,
+                  "column": 16
+                },
+                "identifierName": "default"
+              },
+              "name": "default"
+            },
+            "local": {
+              "type": "Identifier",
+              "start": 20,
+              "end": 41,
+              "loc": {
+                "start": {
+                  "line": 1,
+                  "column": 20
+                },
+                "end": {
+                  "line": 1,
+                  "column": 41
+                },
+                "identifierName": "BaseUnsupervisedModel"
+              },
+              "name": "BaseUnsupervisedModel"
+            }
+          }
+        ],
+        "source": {
+          "type": "StringLiteral",
+          "start": 49,
+          "end": 74,
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 49
+            },
+            "end": {
+              "line": 1,
+              "column": 74
+            }
+          },
+          "extra": {
+            "rawValue": "./baseUnsupervisedModel",
+            "raw": "'./baseUnsupervisedModel'"
+          },
+          "value": "./baseUnsupervisedModel"
+        }
+      },
+      {
+        "type": "Identifier",
+        "start": 76,
+        "end": 728,
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 0
+          },
+          "end": {
+            "line": 27,
+            "column": 1
+          }
+        },
+        "id": {
+          "type": "Identifier",
+          "start": 82,
+          "end": 93,
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 6
+            },
+            "end": {
+              "line": 2,
+              "column": 17
+            },
+            "identifierName": "AutoEncoder"
+          },
+          "name": "AutoEncoder"
+        },
+        "superClass": {
+          "type": "Identifier",
+          "start": 102,
+          "end": 123,
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 26
+            },
+            "end": {
+              "line": 2,
+              "column": 47
+            },
+            "identifierName": "BaseUnsupervisedModel"
+          },
+          "name": "BaseUnsupervisedModel"
+        },
+        "body": {
+          "type": "ClassBody",
+          "start": 123,
+          "end": 728,
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 47
+            },
+            "end": {
+              "line": 27,
+              "column": 1
+            }
+          },
+          "body": [
+            {
+              "type": "ClassMethod",
+              "start": 129,
+              "end": 184,
+              "loc": {
+                "start": {
+                  "line": 3,
+                  "column": 4
+                },
+                "end": {
+                  "line": 5,
+                  "column": 5
+                }
+              },
+              "static": false,
+              "computed": false,
+              "key": {
+                "type": "Identifier",
+                "start": 129,
+                "end": 140,
+                "loc": {
+                  "start": {
+                    "line": 3,
+                    "column": 4
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 15
+                  },
+                  "identifierName": "constructor"
+                },
+                "name": "constructor"
+              },
+              "kind": "constructor",
+              "id": null,
+              "generator": false,
+              "expression": false,
+              "async": false,
+              "params": [
+                {
+                  "type": "Identifier",
+                  "start": 141,
+                  "end": 151,
+                  "loc": {
+                    "start": {
+                      "line": 3,
+                      "column": 16
+                    },
+                    "end": {
+                      "line": 3,
+                      "column": 26
+                    },
+                    "identifierName": "encodeSize"
+                  },
+                  "name": "encodeSize"
+                }
+              ],
+              "body": {
+                "type": "BlockStatement",
+                "start": 152,
+                "end": 184,
+                "loc": {
+                  "start": {
+                    "line": 3,
+                    "column": 27
+                  },
+                  "end": {
+                    "line": 5,
+                    "column": 5
+                  }
+                },
+                "body": [
+                  {
+                    "type": "ExpressionStatement",
+                    "start": 162,
+                    "end": 178,
+                    "loc": {
+                      "start": {
+                        "line": 4,
+                        "column": 8
+                      },
+                      "end": {
+                        "line": 4,
+                        "column": 24
+                      }
+                    },
+                    "expression": {
+                      "type": "MemberExpression",
+                      "start": 162,
+                      "end": 177,
+                      "loc": {
+                        "start": {
+                          "line": 4,
+                          "column": 8
+                        },
+                        "end": {
+                          "line": 4,
+                          "column": 23
+                        }
+                      },
+                      "object": {
+                        "type": "ThisExpression",
+                        "start": 162,
+                        "end": 166,
+                        "loc": {
+                          "start": {
+                            "line": 4,
+                            "column": 8
+                          },
+                          "end": {
+                            "line": 4,
+                            "column": 12
+                          }
+                        }
+                      },
+                      "property": {
+                        "type": "Identifier",
+                        "start": 167,
+                        "end": 177,
+                        "loc": {
+                          "start": {
+                            "line": 4,
+                            "column": 13
+                          },
+                          "end": {
+                            "line": 4,
+                            "column": 23
+                          },
+                          "identifierName": "encodeSize"
+                        },
+                        "name": "encodeSize"
+                      },
+                      "computed": false
+                    }
+                  }
+                ],
+                "directives": []
+              }
+            },
+            {
+              "type": "ClassMethod",
+              "start": 190,
+              "end": 256,
+              "loc": {
+                "start": {
+                  "line": 7,
+                  "column": 4
+                },
+                "end": {
+                  "line": 9,
+                  "column": 5
+                }
+              },
+              "static": false,
+              "computed": false,
+              "key": {
+                "type": "Identifier",
+                "start": 190,
+                "end": 196,
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 4
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 10
+                  },
+                  "identifierName": "encode"
+                },
+                "name": "encode"
+              },
+              "kind": "method",
+              "id": null,
+              "generator": false,
+              "expression": false,
+              "async": false,
+              "params": [
+                {
+                  "type": "Identifier",
+                  "start": 197,
+                  "end": 214,
+                  "loc": {
+                    "start": {
+                      "line": 7,
+                      "column": 11
+                    },
+                    "end": {
+                      "line": 7,
+                      "column": 28
+                    },
+                    "identifierName": "pipelineOutTensor"
+                  },
+                  "name": "pipelineOutTensor"
+                }
+              ],
+              "body": {
+                "type": "BlockStatement",
+                "start": 215,
+                "end": 256,
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 29
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 5
+                  }
+                },
+                "body": [
+                  {
+                    "type": "ReturnStatement",
+                    "start": 225,
+                    "end": 250,
+                    "loc": {
+                      "start": {
+                        "line": 8,
+                        "column": 8
+                      },
+                      "end": {
+                        "line": 8,
+                        "column": 33
+                      }
+                    },
+                    "argument": {
+                      "type": "Identifier",
+                      "start": 232,
+                      "end": 249,
+                      "loc": {
+                        "start": {
+                          "line": 8,
+                          "column": 15
+                        },
+                        "end": {
+                          "line": 8,
+                          "column": 32
+                        },
+                        "identifierName": "pipelineOutTensor"
+                      },
+                      "name": "pipelineOutTensor"
+                    }
+                  }
+                ],
+                "directives": []
+              }
+            },
+            {
+              "type": "ClassMethod",
+              "start": 262,
+              "end": 327,
+              "loc": {
+                "start": {
+                  "line": 11,
+                  "column": 4
+                },
+                "end": {
+                  "line": 13,
+                  "column": 5
+                }
+              },
+              "static": false,
+              "computed": false,
+              "key": {
+                "type": "Identifier",
+                "start": 262,
+                "end": 268,
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 4
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 10
+                  },
+                  "identifierName": "decode"
+                },
+                "name": "decode"
+              },
+              "kind": "method",
+              "id": null,
+              "generator": false,
+              "expression": false,
+              "async": false,
+              "params": [
+                {
+                  "type": "Identifier",
+                  "start": 269,
+                  "end": 286,
+                  "loc": {
+                    "start": {
+                      "line": 11,
+                      "column": 11
+                    },
+                    "end": {
+                      "line": 11,
+                      "column": 28
+                    },
+                    "identifierName": "pipelineOutTensor"
+                  },
+                  "name": "pipelineOutTensor"
+                }
+              ],
+              "body": {
+                "type": "BlockStatement",
+                "start": 287,
+                "end": 327,
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 29
+                  },
+                  "end": {
+                    "line": 13,
+                    "column": 5
+                  }
+                },
+                "body": [
+                  {
+                    "type": "ReturnStatement",
+                    "start": 297,
+                    "end": 321,
+                    "loc": {
+                      "start": {
+                        "line": 12,
+                        "column": 8
+                      },
+                      "end": {
+                        "line": 12,
+                        "column": 32
+                      }
+                    },
+                    "argument": {
+                      "type": "Identifier",
+                      "start": 304,
+                      "end": 321,
+                      "loc": {
+                        "start": {
+                          "line": 12,
+                          "column": 15
+                        },
+                        "end": {
+                          "line": 12,
+                          "column": 32
+                        },
+                        "identifierName": "pipelineOutTensor"
+                      },
+                      "name": "pipelineOutTensor"
+                    }
+                  }
+                ],
+                "directives": []
+              }
+            },
+            {
+              "type": "ClassMethod",
+              "start": 334,
+              "end": 489,
+              "loc": {
+                "start": {
+                  "line": 16,
+                  "column": 4
+                },
+                "end": {
+                  "line": 19,
+                  "column": 5
+                }
+              },
+              "static": false,
+              "computed": false,
+              "key": {
+                "type": "Identifier",
+                "start": 334,
+                "end": 337,
+                "loc": {
+                  "start": {
+                    "line": 16,
+                    "column": 4
+                  },
+                  "end": {
+                    "line": 16,
+                    "column": 7
+                  },
+                  "identifierName": "fit"
+                },
+                "name": "fit"
+              },
+              "kind": "method",
+              "id": null,
+              "generator": false,
+              "expression": false,
+              "async": false,
+              "params": [
+                {
+                  "type": "Identifier",
+                  "start": 338,
+                  "end": 355,
+                  "loc": {
+                    "start": {
+                      "line": 16,
+                      "column": 8
+                    },
+                    "end": {
+                      "line": 16,
+                      "column": 25
+                    },
+                    "identifierName": "pipelineOutTensor"
+                  },
+                  "name": "pipelineOutTensor"
+                },
+                {
+                  "type": "Identifier",
+                  "start": 357,
+                  "end": 368,
+                  "loc": {
+                    "start": {
+                      "line": 16,
+                      "column": 27
+                    },
+                    "end": {
+                      "line": 16,
+                      "column": 38
+                    },
+                    "identifierName": "inputTensor"
+                  },
+                  "name": "inputTensor"
+                }
+              ],
+              "body": {
+                "type": "BlockStatement",
+                "start": 369,
+                "end": 489,
+                "loc": {
+                  "start": {
+                    "line": 16,
+                    "column": 39
+                  },
+                  "end": {
+                    "line": 19,
+                    "column": 5
+                  }
+                },
+                "body": [
+                  {
+                    "type": "VariableDeclaration",
+                    "start": 379,
+                    "end": 450,
+                    "loc": {
+                      "start": {
+                        "line": 17,
+                        "column": 8
+                      },
+                      "end": {
+                        "line": 17,
+                        "column": 79
+                      }
+                    },
+                    "declarations": [
+                      {
+                        "type": "VariableDeclarator",
+                        "start": 383,
+                        "end": 449,
+                        "loc": {
+                          "start": {
+                            "line": 17,
+                            "column": 12
+                          },
+                          "end": {
+                            "line": 17,
+                            "column": 78
+                          }
+                        },
+                        "id": {
+                          "type": "Identifier",
+                          "start": 383,
+                          "end": 399,
+                          "loc": {
+                            "start": {
+                              "line": 17,
+                              "column": 12
+                            },
+                            "end": {
+                              "line": 17,
+                              "column": 28
+                            },
+                            "identifierName": "reconstructError"
+                          },
+                          "name": "reconstructError"
+                        },
+                        "init": {
+                          "type": "CallExpression",
+                          "start": 402,
+                          "end": 449,
+                          "loc": {
+                            "start": {
+                              "line": 17,
+                              "column": 31
+                            },
+                            "end": {
+                              "line": 17,
+                              "column": 78
+                            }
+                          },
+                          "callee": {
+                            "type": "MemberExpression",
+                            "start": 402,
+                            "end": 436,
+                            "loc": {
+                              "start": {
+                                "line": 17,
+                                "column": 31
+                              },
+                              "end": {
+                                "line": 17,
+                                "column": 65
+                              }
+                            },
+                            "object": {
+                              "type": "CallExpression",
+                              "start": 402,
+                              "end": 432,
+                              "loc": {
+                                "start": {
+                                  "line": 17,
+                                  "column": 31
+                                },
+                                "end": {
+                                  "line": 17,
+                                  "column": 61
+                                }
+                              },
+                              "callee": {
+                                "type": "MemberExpression",
+                                "start": 402,
+                                "end": 413,
+                                "loc": {
+                                  "start": {
+                                    "line": 17,
+                                    "column": 31
+                                  },
+                                  "end": {
+                                    "line": 17,
+                                    "column": 42
+                                  }
+                                },
+                                "object": {
+                                  "type": "ThisExpression",
+                                  "start": 402,
+                                  "end": 406,
+                                  "loc": {
+                                    "start": {
+                                      "line": 17,
+                                      "column": 31
+                                    },
+                                    "end": {
+                                      "line": 17,
+                                      "column": 35
+                                    }
+                                  }
+                                },
+                                "property": {
+                                  "type": "Identifier",
+                                  "start": 407,
+                                  "end": 413,
+                                  "loc": {
+                                    "start": {
+                                      "line": 17,
+                                      "column": 36
+                                    },
+                                    "end": {
+                                      "line": 17,
+                                      "column": 42
+                                    },
+                                    "identifierName": "decode"
+                                  },
+                                  "name": "decode"
+                                },
+                                "computed": false
+                              },
+                              "arguments": [
+                                {
+                                  "type": "Identifier",
+                                  "start": 414,
+                                  "end": 431,
+                                  "loc": {
+                                    "start": {
+                                      "line": 17,
+                                      "column": 43
+                                    },
+                                    "end": {
+                                      "line": 17,
+                                      "column": 60
+                                    },
+                                    "identifierName": "pipelineOutTensor"
+                                  },
+                                  "name": "pipelineOutTensor"
+                                }
+                              ]
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "start": 433,
+                              "end": 436,
+                              "loc": {
+                                "start": {
+                                  "line": 17,
+                                  "column": 62
+                                },
+                                "end": {
+                                  "line": 17,
+                                  "column": 65
+                                },
+                                "identifierName": "sub"
+                              },
+                              "name": "sub"
+                            },
+                            "computed": false
+                          },
+                          "arguments": [
+                            {
+                              "type": "Identifier",
+                              "start": 437,
+                              "end": 448,
+                              "loc": {
+                                "start": {
+                                  "line": 17,
+                                  "column": 66
+                                },
+                                "end": {
+                                  "line": 17,
+                                  "column": 77
+                                },
+                                "identifierName": "inputTensor"
+                              },
+                              "name": "inputTensor"
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "kind": "let"
+                  },
+                  {
+                    "type": "ReturnStatement",
+                    "start": 459,
+                    "end": 483,
+                    "loc": {
+                      "start": {
+                        "line": 18,
+                        "column": 8
+                      },
+                      "end": {
+                        "line": 18,
+                        "column": 32
+                      }
+                    },
+                    "argument": {
+                      "type": "Identifier",
+                      "start": 466,
+                      "end": 482,
+                      "loc": {
+                        "start": {
+                          "line": 18,
+                          "column": 15
+                        },
+                        "end": {
+                          "line": 18,
+                          "column": 31
+                        },
+                        "identifierName": "reconstructError"
+                      },
+                      "name": "reconstructError"
+                    }
+                  }
+                ],
+                "directives": []
+              }
+            },
+            {
+              "type": "ClassMethod",
+              "start": 499,
+              "end": 726,
+              "loc": {
+                "start": {
+                  "line": 21,
+                  "column": 4
+                },
+                "end": {
+                  "line": 26,
+                  "column": 5
+                }
+              },
+              "static": false,
+              "computed": false,
+              "key": {
+                "type": "Identifier",
+                "start": 499,
+                "end": 503,
+                "loc": {
+                  "start": {
+                    "line": 21,
+                    "column": 4
+                  },
+                  "end": {
+                    "line": 21,
+                    "column": 8
+                  },
+                  "identifierName": "loss"
+                },
+                "name": "loss"
+              },
+              "kind": "method",
+              "id": null,
+              "generator": false,
+              "expression": false,
+              "async": false,
+              "params": [
+                {
+                  "type": "Identifier",
+                  "start": 504,
+                  "end": 521,
+                  "loc": {
+                    "start": {
+                      "line": 21,
+                      "column": 9
+                    },
+                    "end": {
+                      "line": 21,
+                      "column": 26
+                    },
+                    "identifierName": "pipelineOutTensor"
+                  },
+                  "name": "pipelineOutTensor"
+                },
+                {
+                  "type": "Identifier",
+                  "start": 523,
+                  "end": 534,
+                  "loc": {
+                    "start": {
+                      "line": 21,
+                      "column": 28
+                    },
+                    "end": {
+                      "line": 21,
+                      "column": 39
+                    },
+                    "identifierName": "inputTensor"
+                  },
+                  "name": "inputTensor"
+                }
+              ],
+              "body": {
+                "type": "BlockStatement",
+                "start": 535,
+                "end": 726,
+                "loc": {
+                  "start": {
+                    "line": 21,
+                    "column": 40
+                  },
+                  "end": {
+                    "line": 26,
+                    "column": 5
+                  }
+                },
+                "body": [
+                  {
+                    "type": "VariableDeclaration",
+                    "start": 545,
+                    "end": 609,
+                    "loc": {
+                      "start": {
+                        "line": 22,
+                        "column": 8
+                      },
+                      "end": {
+                        "line": 22,
+                        "column": 72
+                      }
+                    },
+                    "declarations": [
+                      {
+                        "type": "VariableDeclarator",
+                        "start": 549,
+                        "end": 608,
+                        "loc": {
+                          "start": {
+                            "line": 22,
+                            "column": 12
+                          },
+                          "end": {
+                            "line": 22,
+                            "column": 71
+                          }
+                        },
+                        "id": {
+                          "type": "Identifier",
+                          "start": 549,
+                          "end": 565,
+                          "loc": {
+                            "start": {
+                              "line": 22,
+                              "column": 12
+                            },
+                            "end": {
+                              "line": 22,
+                              "column": 28
+                            },
+                            "identifierName": "reconstructError"
+                          },
+                          "name": "reconstructError"
+                        },
+                        "init": {
+                          "type": "CallExpression",
+                          "start": 568,
+                          "end": 608,
+                          "loc": {
+                            "start": {
+                              "line": 22,
+                              "column": 31
+                            },
+                            "end": {
+                              "line": 22,
+                              "column": 71
+                            }
+                          },
+                          "callee": {
+                            "type": "MemberExpression",
+                            "start": 568,
+                            "end": 576,
+                            "loc": {
+                              "start": {
+                                "line": 22,
+                                "column": 31
+                              },
+                              "end": {
+                                "line": 22,
+                                "column": 39
+                              }
+                            },
+                            "object": {
+                              "type": "ThisExpression",
+                              "start": 568,
+                              "end": 572,
+                              "loc": {
+                                "start": {
+                                  "line": 22,
+                                  "column": 31
+                                },
+                                "end": {
+                                  "line": 22,
+                                  "column": 35
+                                }
+                              }
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "start": 573,
+                              "end": 576,
+                              "loc": {
+                                "start": {
+                                  "line": 22,
+                                  "column": 36
+                                },
+                                "end": {
+                                  "line": 22,
+                                  "column": 39
+                                },
+                                "identifierName": "fit"
+                              },
+                              "name": "fit"
+                            },
+                            "computed": false
+                          },
+                          "arguments": [
+                            {
+                              "type": "Identifier",
+                              "start": 577,
+                              "end": 594,
+                              "loc": {
+                                "start": {
+                                  "line": 22,
+                                  "column": 40
+                                },
+                                "end": {
+                                  "line": 22,
+                                  "column": 57
+                                },
+                                "identifierName": "pipelineOutTensor"
+                              },
+                              "name": "pipelineOutTensor"
+                            },
+                            {
+                              "type": "Identifier",
+                              "start": 596,
+                              "end": 607,
+                              "loc": {
+                                "start": {
+                                  "line": 22,
+                                  "column": 59
+                                },
+                                "end": {
+                                  "line": 22,
+                                  "column": 70
+                                },
+                                "identifierName": "inputTensor"
+                              },
+                              "name": "inputTensor"
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "kind": "let"
+                  },
+                  {
+                    "type": "VariableDeclaration",
+                    "start": 618,
+                    "end": 660,
+                    "loc": {
+                      "start": {
+                        "line": 23,
+                        "column": 8
+                      },
+                      "end": {
+                        "line": 23,
+                        "column": 50
+                      }
+                    },
+                    "declarations": [
+                      {
+                        "type": "VariableDeclarator",
+                        "start": 622,
+                        "end": 659,
+                        "loc": {
+                          "start": {
+                            "line": 23,
+                            "column": 12
+                          },
+                          "end": {
+                            "line": 23,
+                            "column": 49
+                          }
+                        },
+                        "id": {
+                          "type": "Identifier",
+                          "start": 622,
+                          "end": 633,
+                          "loc": {
+                            "start": {
+                              "line": 23,
+                              "column": 12
+                            },
+                            "end": {
+                              "line": 23,
+                              "column": 23
+                            },
+                            "identifierName": "squareError"
+                          },
+                          "name": "squareError"
+                        },
+                        "init": {
+                          "type": "CallExpression",
+                          "start": 636,
+                          "end": 659,
+                          "loc": {
+                            "start": {
+                              "line": 23,
+                              "column": 26
+                            },
+                            "end": {
+                              "line": 23,
+                              "column": 49
+                            }
+                          },
+                          "callee": {
+                            "type": "MemberExpression",
+                            "start": 636,
+                            "end": 656,
+                            "loc": {
+                              "start": {
+                                "line": 23,
+                                "column": 26
+                              },
+                              "end": {
+                                "line": 23,
+                                "column": 46
+                              }
+                            },
+                            "object": {
+                              "type": "Identifier",
+                              "start": 636,
+                              "end": 652,
+                              "loc": {
+                                "start": {
+                                  "line": 23,
+                                  "column": 26
+                                },
+                                "end": {
+                                  "line": 23,
+                                  "column": 42
+                                },
+                                "identifierName": "reconstructError"
+                              },
+                              "name": "reconstructError"
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "start": 653,
+                              "end": 656,
+                              "loc": {
+                                "start": {
+                                  "line": 23,
+                                  "column": 43
+                                },
+                                "end": {
+                                  "line": 23,
+                                  "column": 46
+                                },
+                                "identifierName": "pow"
+                              },
+                              "name": "pow"
+                            },
+                            "computed": false
+                          },
+                          "arguments": [
+                            {
+                              "type": "NumericLiteral",
+                              "start": 657,
+                              "end": 658,
+                              "loc": {
+                                "start": {
+                                  "line": 23,
+                                  "column": 47
+                                },
+                                "end": {
+                                  "line": 23,
+                                  "column": 48
+                                }
+                              },
+                              "extra": {
+                                "rawValue": 2,
+                                "raw": "2"
+                              },
+                              "value": 2
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "kind": "let"
+                  },
+                  {
+                    "type": "VariableDeclaration",
+                    "start": 669,
+                    "end": 699,
+                    "loc": {
+                      "start": {
+                        "line": 24,
+                        "column": 8
+                      },
+                      "end": {
+                        "line": 24,
+                        "column": 38
+                      }
+                    },
+                    "declarations": [
+                      {
+                        "type": "VariableDeclarator",
+                        "start": 673,
+                        "end": 698,
+                        "loc": {
+                          "start": {
+                            "line": 24,
+                            "column": 12
+                          },
+                          "end": {
+                            "line": 24,
+                            "column": 37
+                          }
+                        },
+                        "id": {
+                          "type": "Identifier",
+                          "start": 673,
+                          "end": 677,
+                          "loc": {
+                            "start": {
+                              "line": 24,
+                              "column": 12
+                            },
+                            "end": {
+                              "line": 24,
+                              "column": 16
+                            },
+                            "identifierName": "loss"
+                          },
+                          "name": "loss"
+                        },
+                        "init": {
+                          "type": "CallExpression",
+                          "start": 680,
+                          "end": 698,
+                          "loc": {
+                            "start": {
+                              "line": 24,
+                              "column": 19
+                            },
+                            "end": {
+                              "line": 24,
+                              "column": 37
+                            }
+                          },
+                          "callee": {
+                            "type": "MemberExpression",
+                            "start": 680,
+                            "end": 696,
+                            "loc": {
+                              "start": {
+                                "line": 24,
+                                "column": 19
+                              },
+                              "end": {
+                                "line": 24,
+                                "column": 35
+                              }
+                            },
+                            "object": {
+                              "type": "Identifier",
+                              "start": 680,
+                              "end": 691,
+                              "loc": {
+                                "start": {
+                                  "line": 24,
+                                  "column": 19
+                                },
+                                "end": {
+                                  "line": 24,
+                                  "column": 30
+                                },
+                                "identifierName": "squareError"
+                              },
+                              "name": "squareError"
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "start": 692,
+                              "end": 696,
+                              "loc": {
+                                "start": {
+                                  "line": 24,
+                                  "column": 31
+                                },
+                                "end": {
+                                  "line": 24,
+                                  "column": 35
+                                },
+                                "identifierName": "mean"
+                              },
+                              "name": "mean"
+                            },
+                            "computed": false
+                          },
+                          "arguments": []
+                        }
+                      }
+                    ],
+                    "kind": "let"
+                  },
+                  {
+                    "type": "ReturnStatement",
+                    "start": 708,
+                    "end": 720,
+                    "loc": {
+                      "start": {
+                        "line": 25,
+                        "column": 8
+                      },
+                      "end": {
+                        "line": 25,
+                        "column": 20
+                      }
+                    },
+                    "argument": {
+                      "type": "Identifier",
+                      "start": 715,
+                      "end": 719,
+                      "loc": {
+                        "start": {
+                          "line": 25,
+                          "column": 15
+                        },
+                        "end": {
+                          "line": 25,
+                          "column": 19
+                        },
+                        "identifierName": "loss"
+                      },
+                      "name": "loss"
+                    }
+                  }
+                ],
+                "directives": []
+              }
+            }
+          ]
+        },
+        "name": "_",
+        "leadingComments": [],
+        "trailingComments": []
+      },
+      {
+        "type": "Identifier",
+        "start": 729,
+        "end": 756,
+        "loc": {
+          "start": {
+            "line": 28,
+            "column": 0
+          },
+          "end": {
+            "line": 28,
+            "column": 27
+          }
+        },
+        "declaration": {
+          "type": "Identifier",
+          "start": 744,
+          "end": 755,
+          "loc": {
+            "start": {
+              "line": 28,
+              "column": 15
+            },
+            "end": {
+              "line": 28,
+              "column": 26
+            },
+            "identifierName": "AutoEncoder"
+          },
+          "name": "AutoEncoder"
+        },
+        "name": "_",
+        "leadingComments": [],
+        "trailingComments": []
+      },
+      {
+        "type": "ExportDefaultDeclaration",
+        "start": 729,
+        "end": 756,
+        "loc": {
+          "start": {
+            "line": 28,
+            "column": 0
+          },
+          "end": {
+            "line": 28,
+            "column": 27
+          }
+        },
+        "declaration": {
+          "type": "ClassDeclaration",
+          "start": 76,
+          "end": 728,
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 0
+            },
+            "end": {
+              "line": 27,
+              "column": 1
+            }
+          },
+          "id": {
+            "type": "Identifier",
+            "start": 82,
+            "end": 93,
+            "loc": {
+              "start": {
+                "line": 2,
+                "column": 6
+              },
+              "end": {
+                "line": 2,
+                "column": 17
+              },
+              "identifierName": "AutoEncoder"
+            },
+            "name": "AutoEncoder"
+          },
+          "superClass": {
+            "type": "Identifier",
+            "start": 102,
+            "end": 123,
+            "loc": {
+              "start": {
+                "line": 2,
+                "column": 26
+              },
+              "end": {
+                "line": 2,
+                "column": 47
+              },
+              "identifierName": "BaseUnsupervisedModel"
+            },
+            "name": "BaseUnsupervisedModel"
+          },
+          "body": {
+            "type": "ClassBody",
+            "start": 123,
+            "end": 728,
+            "loc": {
+              "start": {
+                "line": 2,
+                "column": 47
+              },
+              "end": {
+                "line": 27,
+                "column": 1
+              }
+            },
+            "body": [
+              {
+                "type": "ClassMethod",
+                "start": 129,
+                "end": 184,
+                "loc": {
+                  "start": {
+                    "line": 3,
+                    "column": 4
+                  },
+                  "end": {
+                    "line": 5,
+                    "column": 5
+                  }
+                },
+                "static": false,
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "start": 129,
+                  "end": 140,
+                  "loc": {
+                    "start": {
+                      "line": 3,
+                      "column": 4
+                    },
+                    "end": {
+                      "line": 3,
+                      "column": 15
+                    },
+                    "identifierName": "constructor"
+                  },
+                  "name": "constructor"
+                },
+                "kind": "constructor",
+                "id": null,
+                "generator": false,
+                "expression": false,
+                "async": false,
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "start": 141,
+                    "end": 151,
+                    "loc": {
+                      "start": {
+                        "line": 3,
+                        "column": 16
+                      },
+                      "end": {
+                        "line": 3,
+                        "column": 26
+                      },
+                      "identifierName": "encodeSize"
+                    },
+                    "name": "encodeSize"
+                  }
+                ],
+                "body": {
+                  "type": "BlockStatement",
+                  "start": 152,
+                  "end": 184,
+                  "loc": {
+                    "start": {
+                      "line": 3,
+                      "column": 27
+                    },
+                    "end": {
+                      "line": 5,
+                      "column": 5
+                    }
+                  },
+                  "body": [
+                    {
+                      "type": "ExpressionStatement",
+                      "start": 162,
+                      "end": 178,
+                      "loc": {
+                        "start": {
+                          "line": 4,
+                          "column": 8
+                        },
+                        "end": {
+                          "line": 4,
+                          "column": 24
+                        }
+                      },
+                      "expression": {
+                        "type": "MemberExpression",
+                        "start": 162,
+                        "end": 177,
+                        "loc": {
+                          "start": {
+                            "line": 4,
+                            "column": 8
+                          },
+                          "end": {
+                            "line": 4,
+                            "column": 23
+                          }
+                        },
+                        "object": {
+                          "type": "ThisExpression",
+                          "start": 162,
+                          "end": 166,
+                          "loc": {
+                            "start": {
+                              "line": 4,
+                              "column": 8
+                            },
+                            "end": {
+                              "line": 4,
+                              "column": 12
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "start": 167,
+                          "end": 177,
+                          "loc": {
+                            "start": {
+                              "line": 4,
+                              "column": 13
+                            },
+                            "end": {
+                              "line": 4,
+                              "column": 23
+                            },
+                            "identifierName": "encodeSize"
+                          },
+                          "name": "encodeSize"
+                        },
+                        "computed": false
+                      }
+                    }
+                  ],
+                  "directives": []
+                }
+              },
+              {
+                "type": "ClassMethod",
+                "start": 190,
+                "end": 256,
+                "loc": {
+                  "start": {
+                    "line": 7,
+                    "column": 4
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 5
+                  }
+                },
+                "static": false,
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "start": 190,
+                  "end": 196,
+                  "loc": {
+                    "start": {
+                      "line": 7,
+                      "column": 4
+                    },
+                    "end": {
+                      "line": 7,
+                      "column": 10
+                    },
+                    "identifierName": "encode"
+                  },
+                  "name": "encode"
+                },
+                "kind": "method",
+                "id": null,
+                "generator": false,
+                "expression": false,
+                "async": false,
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "start": 197,
+                    "end": 214,
+                    "loc": {
+                      "start": {
+                        "line": 7,
+                        "column": 11
+                      },
+                      "end": {
+                        "line": 7,
+                        "column": 28
+                      },
+                      "identifierName": "pipelineOutTensor"
+                    },
+                    "name": "pipelineOutTensor"
+                  }
+                ],
+                "body": {
+                  "type": "BlockStatement",
+                  "start": 215,
+                  "end": 256,
+                  "loc": {
+                    "start": {
+                      "line": 7,
+                      "column": 29
+                    },
+                    "end": {
+                      "line": 9,
+                      "column": 5
+                    }
+                  },
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "start": 225,
+                      "end": 250,
+                      "loc": {
+                        "start": {
+                          "line": 8,
+                          "column": 8
+                        },
+                        "end": {
+                          "line": 8,
+                          "column": 33
+                        }
+                      },
+                      "argument": {
+                        "type": "Identifier",
+                        "start": 232,
+                        "end": 249,
+                        "loc": {
+                          "start": {
+                            "line": 8,
+                            "column": 15
+                          },
+                          "end": {
+                            "line": 8,
+                            "column": 32
+                          },
+                          "identifierName": "pipelineOutTensor"
+                        },
+                        "name": "pipelineOutTensor"
+                      }
+                    }
+                  ],
+                  "directives": []
+                }
+              },
+              {
+                "type": "ClassMethod",
+                "start": 262,
+                "end": 327,
+                "loc": {
+                  "start": {
+                    "line": 11,
+                    "column": 4
+                  },
+                  "end": {
+                    "line": 13,
+                    "column": 5
+                  }
+                },
+                "static": false,
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "start": 262,
+                  "end": 268,
+                  "loc": {
+                    "start": {
+                      "line": 11,
+                      "column": 4
+                    },
+                    "end": {
+                      "line": 11,
+                      "column": 10
+                    },
+                    "identifierName": "decode"
+                  },
+                  "name": "decode"
+                },
+                "kind": "method",
+                "id": null,
+                "generator": false,
+                "expression": false,
+                "async": false,
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "start": 269,
+                    "end": 286,
+                    "loc": {
+                      "start": {
+                        "line": 11,
+                        "column": 11
+                      },
+                      "end": {
+                        "line": 11,
+                        "column": 28
+                      },
+                      "identifierName": "pipelineOutTensor"
+                    },
+                    "name": "pipelineOutTensor"
+                  }
+                ],
+                "body": {
+                  "type": "BlockStatement",
+                  "start": 287,
+                  "end": 327,
+                  "loc": {
+                    "start": {
+                      "line": 11,
+                      "column": 29
+                    },
+                    "end": {
+                      "line": 13,
+                      "column": 5
+                    }
+                  },
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "start": 297,
+                      "end": 321,
+                      "loc": {
+                        "start": {
+                          "line": 12,
+                          "column": 8
+                        },
+                        "end": {
+                          "line": 12,
+                          "column": 32
+                        }
+                      },
+                      "argument": {
+                        "type": "Identifier",
+                        "start": 304,
+                        "end": 321,
+                        "loc": {
+                          "start": {
+                            "line": 12,
+                            "column": 15
+                          },
+                          "end": {
+                            "line": 12,
+                            "column": 32
+                          },
+                          "identifierName": "pipelineOutTensor"
+                        },
+                        "name": "pipelineOutTensor"
+                      }
+                    }
+                  ],
+                  "directives": []
+                }
+              },
+              {
+                "type": "ClassMethod",
+                "start": 334,
+                "end": 489,
+                "loc": {
+                  "start": {
+                    "line": 16,
+                    "column": 4
+                  },
+                  "end": {
+                    "line": 19,
+                    "column": 5
+                  }
+                },
+                "static": false,
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "start": 334,
+                  "end": 337,
+                  "loc": {
+                    "start": {
+                      "line": 16,
+                      "column": 4
+                    },
+                    "end": {
+                      "line": 16,
+                      "column": 7
+                    },
+                    "identifierName": "fit"
+                  },
+                  "name": "fit"
+                },
+                "kind": "method",
+                "id": null,
+                "generator": false,
+                "expression": false,
+                "async": false,
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "start": 338,
+                    "end": 355,
+                    "loc": {
+                      "start": {
+                        "line": 16,
+                        "column": 8
+                      },
+                      "end": {
+                        "line": 16,
+                        "column": 25
+                      },
+                      "identifierName": "pipelineOutTensor"
+                    },
+                    "name": "pipelineOutTensor"
+                  },
+                  {
+                    "type": "Identifier",
+                    "start": 357,
+                    "end": 368,
+                    "loc": {
+                      "start": {
+                        "line": 16,
+                        "column": 27
+                      },
+                      "end": {
+                        "line": 16,
+                        "column": 38
+                      },
+                      "identifierName": "inputTensor"
+                    },
+                    "name": "inputTensor"
+                  }
+                ],
+                "body": {
+                  "type": "BlockStatement",
+                  "start": 369,
+                  "end": 489,
+                  "loc": {
+                    "start": {
+                      "line": 16,
+                      "column": 39
+                    },
+                    "end": {
+                      "line": 19,
+                      "column": 5
+                    }
+                  },
+                  "body": [
+                    {
+                      "type": "VariableDeclaration",
+                      "start": 379,
+                      "end": 450,
+                      "loc": {
+                        "start": {
+                          "line": 17,
+                          "column": 8
+                        },
+                        "end": {
+                          "line": 17,
+                          "column": 79
+                        }
+                      },
+                      "declarations": [
+                        {
+                          "type": "VariableDeclarator",
+                          "start": 383,
+                          "end": 449,
+                          "loc": {
+                            "start": {
+                              "line": 17,
+                              "column": 12
+                            },
+                            "end": {
+                              "line": 17,
+                              "column": 78
+                            }
+                          },
+                          "id": {
+                            "type": "Identifier",
+                            "start": 383,
+                            "end": 399,
+                            "loc": {
+                              "start": {
+                                "line": 17,
+                                "column": 12
+                              },
+                              "end": {
+                                "line": 17,
+                                "column": 28
+                              },
+                              "identifierName": "reconstructError"
+                            },
+                            "name": "reconstructError"
+                          },
+                          "init": {
+                            "type": "CallExpression",
+                            "start": 402,
+                            "end": 449,
+                            "loc": {
+                              "start": {
+                                "line": 17,
+                                "column": 31
+                              },
+                              "end": {
+                                "line": 17,
+                                "column": 78
+                              }
+                            },
+                            "callee": {
+                              "type": "MemberExpression",
+                              "start": 402,
+                              "end": 436,
+                              "loc": {
+                                "start": {
+                                  "line": 17,
+                                  "column": 31
+                                },
+                                "end": {
+                                  "line": 17,
+                                  "column": 65
+                                }
+                              },
+                              "object": {
+                                "type": "CallExpression",
+                                "start": 402,
+                                "end": 432,
+                                "loc": {
+                                  "start": {
+                                    "line": 17,
+                                    "column": 31
+                                  },
+                                  "end": {
+                                    "line": 17,
+                                    "column": 61
+                                  }
+                                },
+                                "callee": {
+                                  "type": "MemberExpression",
+                                  "start": 402,
+                                  "end": 413,
+                                  "loc": {
+                                    "start": {
+                                      "line": 17,
+                                      "column": 31
+                                    },
+                                    "end": {
+                                      "line": 17,
+                                      "column": 42
+                                    }
+                                  },
+                                  "object": {
+                                    "type": "ThisExpression",
+                                    "start": 402,
+                                    "end": 406,
+                                    "loc": {
+                                      "start": {
+                                        "line": 17,
+                                        "column": 31
+                                      },
+                                      "end": {
+                                        "line": 17,
+                                        "column": 35
+                                      }
+                                    }
+                                  },
+                                  "property": {
+                                    "type": "Identifier",
+                                    "start": 407,
+                                    "end": 413,
+                                    "loc": {
+                                      "start": {
+                                        "line": 17,
+                                        "column": 36
+                                      },
+                                      "end": {
+                                        "line": 17,
+                                        "column": 42
+                                      },
+                                      "identifierName": "decode"
+                                    },
+                                    "name": "decode"
+                                  },
+                                  "computed": false
+                                },
+                                "arguments": [
+                                  {
+                                    "type": "Identifier",
+                                    "start": 414,
+                                    "end": 431,
+                                    "loc": {
+                                      "start": {
+                                        "line": 17,
+                                        "column": 43
+                                      },
+                                      "end": {
+                                        "line": 17,
+                                        "column": 60
+                                      },
+                                      "identifierName": "pipelineOutTensor"
+                                    },
+                                    "name": "pipelineOutTensor"
+                                  }
+                                ]
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "start": 433,
+                                "end": 436,
+                                "loc": {
+                                  "start": {
+                                    "line": 17,
+                                    "column": 62
+                                  },
+                                  "end": {
+                                    "line": 17,
+                                    "column": 65
+                                  },
+                                  "identifierName": "sub"
+                                },
+                                "name": "sub"
+                              },
+                              "computed": false
+                            },
+                            "arguments": [
+                              {
+                                "type": "Identifier",
+                                "start": 437,
+                                "end": 448,
+                                "loc": {
+                                  "start": {
+                                    "line": 17,
+                                    "column": 66
+                                  },
+                                  "end": {
+                                    "line": 17,
+                                    "column": 77
+                                  },
+                                  "identifierName": "inputTensor"
+                                },
+                                "name": "inputTensor"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "kind": "let"
+                    },
+                    {
+                      "type": "ReturnStatement",
+                      "start": 459,
+                      "end": 483,
+                      "loc": {
+                        "start": {
+                          "line": 18,
+                          "column": 8
+                        },
+                        "end": {
+                          "line": 18,
+                          "column": 32
+                        }
+                      },
+                      "argument": {
+                        "type": "Identifier",
+                        "start": 466,
+                        "end": 482,
+                        "loc": {
+                          "start": {
+                            "line": 18,
+                            "column": 15
+                          },
+                          "end": {
+                            "line": 18,
+                            "column": 31
+                          },
+                          "identifierName": "reconstructError"
+                        },
+                        "name": "reconstructError"
+                      }
+                    }
+                  ],
+                  "directives": []
+                }
+              },
+              {
+                "type": "ClassMethod",
+                "start": 499,
+                "end": 726,
+                "loc": {
+                  "start": {
+                    "line": 21,
+                    "column": 4
+                  },
+                  "end": {
+                    "line": 26,
+                    "column": 5
+                  }
+                },
+                "static": false,
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "start": 499,
+                  "end": 503,
+                  "loc": {
+                    "start": {
+                      "line": 21,
+                      "column": 4
+                    },
+                    "end": {
+                      "line": 21,
+                      "column": 8
+                    },
+                    "identifierName": "loss"
+                  },
+                  "name": "loss"
+                },
+                "kind": "method",
+                "id": null,
+                "generator": false,
+                "expression": false,
+                "async": false,
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "start": 504,
+                    "end": 521,
+                    "loc": {
+                      "start": {
+                        "line": 21,
+                        "column": 9
+                      },
+                      "end": {
+                        "line": 21,
+                        "column": 26
+                      },
+                      "identifierName": "pipelineOutTensor"
+                    },
+                    "name": "pipelineOutTensor"
+                  },
+                  {
+                    "type": "Identifier",
+                    "start": 523,
+                    "end": 534,
+                    "loc": {
+                      "start": {
+                        "line": 21,
+                        "column": 28
+                      },
+                      "end": {
+                        "line": 21,
+                        "column": 39
+                      },
+                      "identifierName": "inputTensor"
+                    },
+                    "name": "inputTensor"
+                  }
+                ],
+                "body": {
+                  "type": "BlockStatement",
+                  "start": 535,
+                  "end": 726,
+                  "loc": {
+                    "start": {
+                      "line": 21,
+                      "column": 40
+                    },
+                    "end": {
+                      "line": 26,
+                      "column": 5
+                    }
+                  },
+                  "body": [
+                    {
+                      "type": "VariableDeclaration",
+                      "start": 545,
+                      "end": 609,
+                      "loc": {
+                        "start": {
+                          "line": 22,
+                          "column": 8
+                        },
+                        "end": {
+                          "line": 22,
+                          "column": 72
+                        }
+                      },
+                      "declarations": [
+                        {
+                          "type": "VariableDeclarator",
+                          "start": 549,
+                          "end": 608,
+                          "loc": {
+                            "start": {
+                              "line": 22,
+                              "column": 12
+                            },
+                            "end": {
+                              "line": 22,
+                              "column": 71
+                            }
+                          },
+                          "id": {
+                            "type": "Identifier",
+                            "start": 549,
+                            "end": 565,
+                            "loc": {
+                              "start": {
+                                "line": 22,
+                                "column": 12
+                              },
+                              "end": {
+                                "line": 22,
+                                "column": 28
+                              },
+                              "identifierName": "reconstructError"
+                            },
+                            "name": "reconstructError"
+                          },
+                          "init": {
+                            "type": "CallExpression",
+                            "start": 568,
+                            "end": 608,
+                            "loc": {
+                              "start": {
+                                "line": 22,
+                                "column": 31
+                              },
+                              "end": {
+                                "line": 22,
+                                "column": 71
+                              }
+                            },
+                            "callee": {
+                              "type": "MemberExpression",
+                              "start": 568,
+                              "end": 576,
+                              "loc": {
+                                "start": {
+                                  "line": 22,
+                                  "column": 31
+                                },
+                                "end": {
+                                  "line": 22,
+                                  "column": 39
+                                }
+                              },
+                              "object": {
+                                "type": "ThisExpression",
+                                "start": 568,
+                                "end": 572,
+                                "loc": {
+                                  "start": {
+                                    "line": 22,
+                                    "column": 31
+                                  },
+                                  "end": {
+                                    "line": 22,
+                                    "column": 35
+                                  }
+                                }
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "start": 573,
+                                "end": 576,
+                                "loc": {
+                                  "start": {
+                                    "line": 22,
+                                    "column": 36
+                                  },
+                                  "end": {
+                                    "line": 22,
+                                    "column": 39
+                                  },
+                                  "identifierName": "fit"
+                                },
+                                "name": "fit"
+                              },
+                              "computed": false
+                            },
+                            "arguments": [
+                              {
+                                "type": "Identifier",
+                                "start": 577,
+                                "end": 594,
+                                "loc": {
+                                  "start": {
+                                    "line": 22,
+                                    "column": 40
+                                  },
+                                  "end": {
+                                    "line": 22,
+                                    "column": 57
+                                  },
+                                  "identifierName": "pipelineOutTensor"
+                                },
+                                "name": "pipelineOutTensor"
+                              },
+                              {
+                                "type": "Identifier",
+                                "start": 596,
+                                "end": 607,
+                                "loc": {
+                                  "start": {
+                                    "line": 22,
+                                    "column": 59
+                                  },
+                                  "end": {
+                                    "line": 22,
+                                    "column": 70
+                                  },
+                                  "identifierName": "inputTensor"
+                                },
+                                "name": "inputTensor"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "kind": "let"
+                    },
+                    {
+                      "type": "VariableDeclaration",
+                      "start": 618,
+                      "end": 660,
+                      "loc": {
+                        "start": {
+                          "line": 23,
+                          "column": 8
+                        },
+                        "end": {
+                          "line": 23,
+                          "column": 50
+                        }
+                      },
+                      "declarations": [
+                        {
+                          "type": "VariableDeclarator",
+                          "start": 622,
+                          "end": 659,
+                          "loc": {
+                            "start": {
+                              "line": 23,
+                              "column": 12
+                            },
+                            "end": {
+                              "line": 23,
+                              "column": 49
+                            }
+                          },
+                          "id": {
+                            "type": "Identifier",
+                            "start": 622,
+                            "end": 633,
+                            "loc": {
+                              "start": {
+                                "line": 23,
+                                "column": 12
+                              },
+                              "end": {
+                                "line": 23,
+                                "column": 23
+                              },
+                              "identifierName": "squareError"
+                            },
+                            "name": "squareError"
+                          },
+                          "init": {
+                            "type": "CallExpression",
+                            "start": 636,
+                            "end": 659,
+                            "loc": {
+                              "start": {
+                                "line": 23,
+                                "column": 26
+                              },
+                              "end": {
+                                "line": 23,
+                                "column": 49
+                              }
+                            },
+                            "callee": {
+                              "type": "MemberExpression",
+                              "start": 636,
+                              "end": 656,
+                              "loc": {
+                                "start": {
+                                  "line": 23,
+                                  "column": 26
+                                },
+                                "end": {
+                                  "line": 23,
+                                  "column": 46
+                                }
+                              },
+                              "object": {
+                                "type": "Identifier",
+                                "start": 636,
+                                "end": 652,
+                                "loc": {
+                                  "start": {
+                                    "line": 23,
+                                    "column": 26
+                                  },
+                                  "end": {
+                                    "line": 23,
+                                    "column": 42
+                                  },
+                                  "identifierName": "reconstructError"
+                                },
+                                "name": "reconstructError"
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "start": 653,
+                                "end": 656,
+                                "loc": {
+                                  "start": {
+                                    "line": 23,
+                                    "column": 43
+                                  },
+                                  "end": {
+                                    "line": 23,
+                                    "column": 46
+                                  },
+                                  "identifierName": "pow"
+                                },
+                                "name": "pow"
+                              },
+                              "computed": false
+                            },
+                            "arguments": [
+                              {
+                                "type": "NumericLiteral",
+                                "start": 657,
+                                "end": 658,
+                                "loc": {
+                                  "start": {
+                                    "line": 23,
+                                    "column": 47
+                                  },
+                                  "end": {
+                                    "line": 23,
+                                    "column": 48
+                                  }
+                                },
+                                "extra": {
+                                  "rawValue": 2,
+                                  "raw": "2"
+                                },
+                                "value": 2
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "kind": "let"
+                    },
+                    {
+                      "type": "VariableDeclaration",
+                      "start": 669,
+                      "end": 699,
+                      "loc": {
+                        "start": {
+                          "line": 24,
+                          "column": 8
+                        },
+                        "end": {
+                          "line": 24,
+                          "column": 38
+                        }
+                      },
+                      "declarations": [
+                        {
+                          "type": "VariableDeclarator",
+                          "start": 673,
+                          "end": 698,
+                          "loc": {
+                            "start": {
+                              "line": 24,
+                              "column": 12
+                            },
+                            "end": {
+                              "line": 24,
+                              "column": 37
+                            }
+                          },
+                          "id": {
+                            "type": "Identifier",
+                            "start": 673,
+                            "end": 677,
+                            "loc": {
+                              "start": {
+                                "line": 24,
+                                "column": 12
+                              },
+                              "end": {
+                                "line": 24,
+                                "column": 16
+                              },
+                              "identifierName": "loss"
+                            },
+                            "name": "loss"
+                          },
+                          "init": {
+                            "type": "CallExpression",
+                            "start": 680,
+                            "end": 698,
+                            "loc": {
+                              "start": {
+                                "line": 24,
+                                "column": 19
+                              },
+                              "end": {
+                                "line": 24,
+                                "column": 37
+                              }
+                            },
+                            "callee": {
+                              "type": "MemberExpression",
+                              "start": 680,
+                              "end": 696,
+                              "loc": {
+                                "start": {
+                                  "line": 24,
+                                  "column": 19
+                                },
+                                "end": {
+                                  "line": 24,
+                                  "column": 35
+                                }
+                              },
+                              "object": {
+                                "type": "Identifier",
+                                "start": 680,
+                                "end": 691,
+                                "loc": {
+                                  "start": {
+                                    "line": 24,
+                                    "column": 19
+                                  },
+                                  "end": {
+                                    "line": 24,
+                                    "column": 30
+                                  },
+                                  "identifierName": "squareError"
+                                },
+                                "name": "squareError"
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "start": 692,
+                                "end": 696,
+                                "loc": {
+                                  "start": {
+                                    "line": 24,
+                                    "column": 31
+                                  },
+                                  "end": {
+                                    "line": 24,
+                                    "column": 35
+                                  },
+                                  "identifierName": "mean"
+                                },
+                                "name": "mean"
+                              },
+                              "computed": false
+                            },
+                            "arguments": []
+                          }
+                        }
+                      ],
+                      "kind": "let"
+                    },
+                    {
+                      "type": "ReturnStatement",
+                      "start": 708,
+                      "end": 720,
+                      "loc": {
+                        "start": {
+                          "line": 25,
+                          "column": 8
+                        },
+                        "end": {
+                          "line": 25,
+                          "column": 20
+                        }
+                      },
+                      "argument": {
+                        "type": "Identifier",
+                        "start": 715,
+                        "end": 719,
+                        "loc": {
+                          "start": {
+                            "line": 25,
+                            "column": 15
+                          },
+                          "end": {
+                            "line": 25,
+                            "column": 19
+                          },
+                          "identifierName": "loss"
+                        },
+                        "name": "loss"
+                      }
+                    }
+                  ],
+                  "directives": []
+                }
+              }
+            ]
+          },
+          "__PseudoExport__": false,
+          "leadingComments": [],
+          "trailingComments": []
+        },
+        "leadingComments": null
+      }
+    ],
+    "directives": []
+  },
+  "comments": [],
+  "tokens": [
+    {
+      "type": {
+        "label": "import",
+        "keyword": "import",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "import",
+      "start": 0,
+      "end": 6,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 7,
+      "end": 8,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 7
+        },
+        "end": {
+          "line": 1,
+          "column": 8
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "default",
+        "keyword": "default",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "default",
+      "start": 9,
+      "end": 16,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 9
+        },
+        "end": {
+          "line": 1,
+          "column": 16
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "as",
+      "start": 17,
+      "end": 19,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 17
+        },
+        "end": {
+          "line": 1,
+          "column": 19
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "BaseUnsupervisedModel",
+      "start": 20,
+      "end": 41,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 20
+        },
+        "end": {
+          "line": 1,
+          "column": 41
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 42,
+      "end": 43,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 42
+        },
+        "end": {
+          "line": 1,
+          "column": 43
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "from",
+      "start": 44,
+      "end": 48,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 44
+        },
+        "end": {
+          "line": 1,
+          "column": 48
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "./baseUnsupervisedModel",
+      "start": 49,
+      "end": 74,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 49
+        },
+        "end": {
+          "line": 1,
+          "column": 74
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ";",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 74,
+      "end": 75,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 74
+        },
+        "end": {
+          "line": 1,
+          "column": 75
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "class",
+        "keyword": "class",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "class",
+      "start": 76,
+      "end": 81,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 0
+        },
+        "end": {
+          "line": 2,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "AutoEncoder",
+      "start": 82,
+      "end": 93,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 6
+        },
+        "end": {
+          "line": 2,
+          "column": 17
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "extends",
+        "keyword": "extends",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "extends",
+      "start": 94,
+      "end": 101,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 18
+        },
+        "end": {
+          "line": 2,
+          "column": 25
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "BaseUnsupervisedModel",
+      "start": 102,
+      "end": 123,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 26
+        },
+        "end": {
+          "line": 2,
+          "column": 47
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 123,
+      "end": 124,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 47
+        },
+        "end": {
+          "line": 2,
+          "column": 48
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "constructor",
+      "start": 129,
+      "end": 140,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 4
+        },
+        "end": {
+          "line": 3,
+          "column": 15
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 140,
+      "end": 141,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 15
+        },
+        "end": {
+          "line": 3,
+          "column": 16
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "encodeSize",
+      "start": 141,
+      "end": 151,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 16
+        },
+        "end": {
+          "line": 3,
+          "column": 26
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 151,
+      "end": 152,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 26
+        },
+        "end": {
+          "line": 3,
+          "column": 27
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 152,
+      "end": 153,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 27
+        },
+        "end": {
+          "line": 3,
+          "column": 28
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "this",
+        "keyword": "this",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "this",
+      "start": 162,
+      "end": 166,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 8
+        },
+        "end": {
+          "line": 4,
+          "column": 12
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ".",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 166,
+      "end": 167,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 12
+        },
+        "end": {
+          "line": 4,
+          "column": 13
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "encodeSize",
+      "start": 167,
+      "end": 177,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 13
+        },
+        "end": {
+          "line": 4,
+          "column": 23
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ";",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 177,
+      "end": 178,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 23
+        },
+        "end": {
+          "line": 4,
+          "column": 24
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 183,
+      "end": 184,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 4
+        },
+        "end": {
+          "line": 5,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "encode",
+      "start": 190,
+      "end": 196,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 4
+        },
+        "end": {
+          "line": 7,
+          "column": 10
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 196,
+      "end": 197,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 10
+        },
+        "end": {
+          "line": 7,
+          "column": 11
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "pipelineOutTensor",
+      "start": 197,
+      "end": 214,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 11
+        },
+        "end": {
+          "line": 7,
+          "column": 28
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 214,
+      "end": 215,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 28
+        },
+        "end": {
+          "line": 7,
+          "column": 29
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 215,
+      "end": 216,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 29
+        },
+        "end": {
+          "line": 7,
+          "column": 30
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "return",
+        "keyword": "return",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "return",
+      "start": 225,
+      "end": 231,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 8
+        },
+        "end": {
+          "line": 8,
+          "column": 14
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "pipelineOutTensor",
+      "start": 232,
+      "end": 249,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 15
+        },
+        "end": {
+          "line": 8,
+          "column": 32
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ";",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 249,
+      "end": 250,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 32
+        },
+        "end": {
+          "line": 8,
+          "column": 33
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 255,
+      "end": 256,
+      "loc": {
+        "start": {
+          "line": 9,
+          "column": 4
+        },
+        "end": {
+          "line": 9,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "decode",
+      "start": 262,
+      "end": 268,
+      "loc": {
+        "start": {
+          "line": 11,
+          "column": 4
+        },
+        "end": {
+          "line": 11,
+          "column": 10
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 268,
+      "end": 269,
+      "loc": {
+        "start": {
+          "line": 11,
+          "column": 10
+        },
+        "end": {
+          "line": 11,
+          "column": 11
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "pipelineOutTensor",
+      "start": 269,
+      "end": 286,
+      "loc": {
+        "start": {
+          "line": 11,
+          "column": 11
+        },
+        "end": {
+          "line": 11,
+          "column": 28
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 286,
+      "end": 287,
+      "loc": {
+        "start": {
+          "line": 11,
+          "column": 28
+        },
+        "end": {
+          "line": 11,
+          "column": 29
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 287,
+      "end": 288,
+      "loc": {
+        "start": {
+          "line": 11,
+          "column": 29
+        },
+        "end": {
+          "line": 11,
+          "column": 30
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "return",
+        "keyword": "return",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "return",
+      "start": 297,
+      "end": 303,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 8
+        },
+        "end": {
+          "line": 12,
+          "column": 14
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "pipelineOutTensor",
+      "start": 304,
+      "end": 321,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 15
+        },
+        "end": {
+          "line": 12,
+          "column": 32
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 326,
+      "end": 327,
+      "loc": {
+        "start": {
+          "line": 13,
+          "column": 4
+        },
+        "end": {
+          "line": 13,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "fit",
+      "start": 334,
+      "end": 337,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 4
+        },
+        "end": {
+          "line": 16,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 337,
+      "end": 338,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 7
+        },
+        "end": {
+          "line": 16,
+          "column": 8
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "pipelineOutTensor",
+      "start": 338,
+      "end": 355,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 8
+        },
+        "end": {
+          "line": 16,
+          "column": 25
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 355,
+      "end": 356,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 25
+        },
+        "end": {
+          "line": 16,
+          "column": 26
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "inputTensor",
+      "start": 357,
+      "end": 368,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 27
+        },
+        "end": {
+          "line": 16,
+          "column": 38
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 368,
+      "end": 369,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 38
+        },
+        "end": {
+          "line": 16,
+          "column": 39
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 369,
+      "end": 370,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 39
+        },
+        "end": {
+          "line": 16,
+          "column": 40
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "let",
+        "keyword": "let",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "let",
+      "start": 379,
+      "end": 382,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 8
+        },
+        "end": {
+          "line": 17,
+          "column": 11
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "reconstructError",
+      "start": 383,
+      "end": 399,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 12
+        },
+        "end": {
+          "line": 17,
+          "column": 28
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "=",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": true,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "=",
+      "start": 400,
+      "end": 401,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 29
+        },
+        "end": {
+          "line": 17,
+          "column": 30
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "this",
+        "keyword": "this",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "this",
+      "start": 402,
+      "end": 406,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 31
+        },
+        "end": {
+          "line": 17,
+          "column": 35
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ".",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 406,
+      "end": 407,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 35
+        },
+        "end": {
+          "line": 17,
+          "column": 36
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "decode",
+      "start": 407,
+      "end": 413,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 36
+        },
+        "end": {
+          "line": 17,
+          "column": 42
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 413,
+      "end": 414,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 42
+        },
+        "end": {
+          "line": 17,
+          "column": 43
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "pipelineOutTensor",
+      "start": 414,
+      "end": 431,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 43
+        },
+        "end": {
+          "line": 17,
+          "column": 60
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 431,
+      "end": 432,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 60
+        },
+        "end": {
+          "line": 17,
+          "column": 61
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ".",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 432,
+      "end": 433,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 61
+        },
+        "end": {
+          "line": 17,
+          "column": 62
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "sub",
+      "start": 433,
+      "end": 436,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 62
+        },
+        "end": {
+          "line": 17,
+          "column": 65
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 436,
+      "end": 437,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 65
+        },
+        "end": {
+          "line": 17,
+          "column": 66
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "inputTensor",
+      "start": 437,
+      "end": 448,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 66
+        },
+        "end": {
+          "line": 17,
+          "column": 77
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 448,
+      "end": 449,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 77
+        },
+        "end": {
+          "line": 17,
+          "column": 78
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ";",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 449,
+      "end": 450,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 78
+        },
+        "end": {
+          "line": 17,
+          "column": 79
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "return",
+        "keyword": "return",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "return",
+      "start": 459,
+      "end": 465,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 8
+        },
+        "end": {
+          "line": 18,
+          "column": 14
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "reconstructError",
+      "start": 466,
+      "end": 482,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 15
+        },
+        "end": {
+          "line": 18,
+          "column": 31
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ";",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 482,
+      "end": 483,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 31
+        },
+        "end": {
+          "line": 18,
+          "column": 32
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 488,
+      "end": 489,
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 4
+        },
+        "end": {
+          "line": 19,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "loss",
+      "start": 499,
+      "end": 503,
+      "loc": {
+        "start": {
+          "line": 21,
+          "column": 4
+        },
+        "end": {
+          "line": 21,
+          "column": 8
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 503,
+      "end": 504,
+      "loc": {
+        "start": {
+          "line": 21,
+          "column": 8
+        },
+        "end": {
+          "line": 21,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "pipelineOutTensor",
+      "start": 504,
+      "end": 521,
+      "loc": {
+        "start": {
+          "line": 21,
+          "column": 9
+        },
+        "end": {
+          "line": 21,
+          "column": 26
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 521,
+      "end": 522,
+      "loc": {
+        "start": {
+          "line": 21,
+          "column": 26
+        },
+        "end": {
+          "line": 21,
+          "column": 27
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "inputTensor",
+      "start": 523,
+      "end": 534,
+      "loc": {
+        "start": {
+          "line": 21,
+          "column": 28
+        },
+        "end": {
+          "line": 21,
+          "column": 39
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 534,
+      "end": 535,
+      "loc": {
+        "start": {
+          "line": 21,
+          "column": 39
+        },
+        "end": {
+          "line": 21,
+          "column": 40
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 535,
+      "end": 536,
+      "loc": {
+        "start": {
+          "line": 21,
+          "column": 40
+        },
+        "end": {
+          "line": 21,
+          "column": 41
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "let",
+        "keyword": "let",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "let",
+      "start": 545,
+      "end": 548,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 8
+        },
+        "end": {
+          "line": 22,
+          "column": 11
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "reconstructError",
+      "start": 549,
+      "end": 565,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 12
+        },
+        "end": {
+          "line": 22,
+          "column": 28
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "=",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": true,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "=",
+      "start": 566,
+      "end": 567,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 29
+        },
+        "end": {
+          "line": 22,
+          "column": 30
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "this",
+        "keyword": "this",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "this",
+      "start": 568,
+      "end": 572,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 31
+        },
+        "end": {
+          "line": 22,
+          "column": 35
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ".",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 572,
+      "end": 573,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 35
+        },
+        "end": {
+          "line": 22,
+          "column": 36
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "fit",
+      "start": 573,
+      "end": 576,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 36
+        },
+        "end": {
+          "line": 22,
+          "column": 39
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 576,
+      "end": 577,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 39
+        },
+        "end": {
+          "line": 22,
+          "column": 40
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "pipelineOutTensor",
+      "start": 577,
+      "end": 594,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 40
+        },
+        "end": {
+          "line": 22,
+          "column": 57
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 594,
+      "end": 595,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 57
+        },
+        "end": {
+          "line": 22,
+          "column": 58
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "inputTensor",
+      "start": 596,
+      "end": 607,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 59
+        },
+        "end": {
+          "line": 22,
+          "column": 70
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 607,
+      "end": 608,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 70
+        },
+        "end": {
+          "line": 22,
+          "column": 71
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ";",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 608,
+      "end": 609,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 71
+        },
+        "end": {
+          "line": 22,
+          "column": 72
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "let",
+        "keyword": "let",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "let",
+      "start": 618,
+      "end": 621,
+      "loc": {
+        "start": {
+          "line": 23,
+          "column": 8
+        },
+        "end": {
+          "line": 23,
+          "column": 11
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "squareError",
+      "start": 622,
+      "end": 633,
+      "loc": {
+        "start": {
+          "line": 23,
+          "column": 12
+        },
+        "end": {
+          "line": 23,
+          "column": 23
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "=",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": true,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "=",
+      "start": 634,
+      "end": 635,
+      "loc": {
+        "start": {
+          "line": 23,
+          "column": 24
+        },
+        "end": {
+          "line": 23,
+          "column": 25
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "reconstructError",
+      "start": 636,
+      "end": 652,
+      "loc": {
+        "start": {
+          "line": 23,
+          "column": 26
+        },
+        "end": {
+          "line": 23,
+          "column": 42
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ".",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 652,
+      "end": 653,
+      "loc": {
+        "start": {
+          "line": 23,
+          "column": 42
+        },
+        "end": {
+          "line": 23,
+          "column": 43
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "pow",
+      "start": 653,
+      "end": 656,
+      "loc": {
+        "start": {
+          "line": 23,
+          "column": 43
+        },
+        "end": {
+          "line": 23,
+          "column": 46
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 656,
+      "end": 657,
+      "loc": {
+        "start": {
+          "line": 23,
+          "column": 46
+        },
+        "end": {
+          "line": 23,
+          "column": 47
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "num",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": 2,
+      "start": 657,
+      "end": 658,
+      "loc": {
+        "start": {
+          "line": 23,
+          "column": 47
+        },
+        "end": {
+          "line": 23,
+          "column": 48
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 658,
+      "end": 659,
+      "loc": {
+        "start": {
+          "line": 23,
+          "column": 48
+        },
+        "end": {
+          "line": 23,
+          "column": 49
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ";",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 659,
+      "end": 660,
+      "loc": {
+        "start": {
+          "line": 23,
+          "column": 49
+        },
+        "end": {
+          "line": 23,
+          "column": 50
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "let",
+        "keyword": "let",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "let",
+      "start": 669,
+      "end": 672,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 8
+        },
+        "end": {
+          "line": 24,
+          "column": 11
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "loss",
+      "start": 673,
+      "end": 677,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 12
+        },
+        "end": {
+          "line": 24,
+          "column": 16
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "=",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": true,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "=",
+      "start": 678,
+      "end": 679,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 17
+        },
+        "end": {
+          "line": 24,
+          "column": 18
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "squareError",
+      "start": 680,
+      "end": 691,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 19
+        },
+        "end": {
+          "line": 24,
+          "column": 30
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ".",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 691,
+      "end": 692,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 30
+        },
+        "end": {
+          "line": 24,
+          "column": 31
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "mean",
+      "start": 692,
+      "end": 696,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 31
+        },
+        "end": {
+          "line": 24,
+          "column": 35
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 696,
+      "end": 697,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 35
+        },
+        "end": {
+          "line": 24,
+          "column": 36
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 697,
+      "end": 698,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 36
+        },
+        "end": {
+          "line": 24,
+          "column": 37
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ";",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 698,
+      "end": 699,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 37
+        },
+        "end": {
+          "line": 24,
+          "column": 38
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "return",
+        "keyword": "return",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "return",
+      "start": 708,
+      "end": 714,
+      "loc": {
+        "start": {
+          "line": 25,
+          "column": 8
+        },
+        "end": {
+          "line": 25,
+          "column": 14
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "loss",
+      "start": 715,
+      "end": 719,
+      "loc": {
+        "start": {
+          "line": 25,
+          "column": 15
+        },
+        "end": {
+          "line": 25,
+          "column": 19
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ";",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 719,
+      "end": 720,
+      "loc": {
+        "start": {
+          "line": 25,
+          "column": 19
+        },
+        "end": {
+          "line": 25,
+          "column": 20
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 725,
+      "end": 726,
+      "loc": {
+        "start": {
+          "line": 26,
+          "column": 4
+        },
+        "end": {
+          "line": 26,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 727,
+      "end": 728,
+      "loc": {
+        "start": {
+          "line": 27,
+          "column": 0
+        },
+        "end": {
+          "line": 27,
+          "column": 1
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "export",
+        "keyword": "export",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "export",
+      "start": 729,
+      "end": 735,
+      "loc": {
+        "start": {
+          "line": 28,
+          "column": 0
+        },
+        "end": {
+          "line": 28,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "default",
+        "keyword": "default",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "default",
+      "start": 736,
+      "end": 743,
+      "loc": {
+        "start": {
+          "line": 28,
+          "column": 7
+        },
+        "end": {
+          "line": 28,
+          "column": 14
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "AutoEncoder",
+      "start": 744,
+      "end": 755,
+      "loc": {
+        "start": {
+          "line": 28,
+          "column": 15
+        },
+        "end": {
+          "line": 28,
+          "column": 26
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ";",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 755,
+      "end": 756,
+      "loc": {
+        "start": {
+          "line": 28,
+          "column": 26
+        },
+        "end": {
+          "line": 28,
+          "column": 27
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "eof",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 756,
+      "end": 756,
+      "loc": {
+        "start": {
+          "line": 28,
+          "column": 27
+        },
+        "end": {
+          "line": 28,
+          "column": 27
+        }
+      }
+    }
+  ]
+}

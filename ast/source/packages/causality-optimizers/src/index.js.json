@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 146,
+  "end": 135,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 146,
+    "end": 135,
     "loc": {
       "start": {
         "line": 1,
@@ -31,7 +31,7 @@
       {
         "type": "ExportNamedDeclaration",
         "start": 0,
-        "end": 85,
+        "end": 74,
         "loc": {
           "start": {
             "line": 1,
@@ -39,7 +39,7 @@
           },
           "end": {
             "line": 1,
-            "column": 85
+            "column": 74
           }
         },
         "declaration": null,
@@ -47,7 +47,7 @@
           {
             "type": "ExportSpecifier",
             "start": 9,
-            "end": 41,
+            "end": 30,
             "loc": {
               "start": {
                 "line": 1,
@@ -55,13 +55,13 @@
               },
               "end": {
                 "line": 1,
-                "column": 41
+                "column": 30
               }
             },
             "local": {
               "type": "Identifier",
               "start": 9,
-              "end": 16,
+              "end": 30,
               "loc": {
                 "start": {
                   "line": 1,
@@ -69,24 +69,24 @@
                 },
                 "end": {
                   "line": 1,
-                  "column": 16
+                  "column": 30
                 },
-                "identifierName": "default"
+                "identifierName": "causalNetSGDOptimizer"
               },
-              "name": "default"
+              "name": "causalNetSGDOptimizer"
             },
             "exported": {
               "type": "Identifier",
-              "start": 20,
-              "end": 41,
+              "start": 9,
+              "end": 30,
               "loc": {
                 "start": {
                   "line": 1,
-                  "column": 20
+                  "column": 9
                 },
                 "end": {
                   "line": 1,
-                  "column": 41
+                  "column": 30
                 },
                 "identifierName": "causalNetSGDOptimizer"
               },
@@ -96,16 +96,16 @@
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 49,
-          "end": 84,
+          "start": 38,
+          "end": 73,
           "loc": {
             "start": {
               "line": 1,
-              "column": 49
+              "column": 38
             },
             "end": {
               "line": 1,
-              "column": 84
+              "column": 73
             }
           },
           "extra": {
@@ -117,8 +117,8 @@
       },
       {
         "type": "ExportNamedDeclaration",
-        "start": 86,
-        "end": 146,
+        "start": 75,
+        "end": 135,
         "loc": {
           "start": {
             "line": 2,
@@ -133,8 +133,8 @@
         "specifiers": [
           {
             "type": "ExportSpecifier",
-            "start": 95,
-            "end": 119,
+            "start": 84,
+            "end": 108,
             "loc": {
               "start": {
                 "line": 2,
@@ -147,8 +147,8 @@
             },
             "local": {
               "type": "Identifier",
-              "start": 95,
-              "end": 102,
+              "start": 84,
+              "end": 91,
               "loc": {
                 "start": {
                   "line": 2,
@@ -164,8 +164,8 @@
             },
             "exported": {
               "type": "Identifier",
-              "start": 106,
-              "end": 119,
+              "start": 95,
+              "end": 108,
               "loc": {
                 "start": {
                   "line": 2,
@@ -183,8 +183,8 @@
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 127,
-          "end": 145,
+          "start": 116,
+          "end": 134,
           "loc": {
             "start": {
               "line": 2,
@@ -262,60 +262,6 @@
     },
     {
       "type": {
-        "label": "default",
-        "keyword": "default",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "default",
-      "start": 9,
-      "end": 16,
-      "loc": {
-        "start": {
-          "line": 1,
-          "column": 9
-        },
-        "end": {
-          "line": 1,
-          "column": 16
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "as",
-      "start": 17,
-      "end": 19,
-      "loc": {
-        "start": {
-          "line": 1,
-          "column": 17
-        },
-        "end": {
-          "line": 1,
-          "column": 19
-        }
-      }
-    },
-    {
-      "type": {
         "label": "name",
         "beforeExpr": false,
         "startsExpr": true,
@@ -327,16 +273,16 @@
         "binop": null
       },
       "value": "causalNetSGDOptimizer",
-      "start": 20,
-      "end": 41,
+      "start": 9,
+      "end": 30,
       "loc": {
         "start": {
           "line": 1,
-          "column": 20
+          "column": 9
         },
         "end": {
           "line": 1,
-          "column": 41
+          "column": 30
         }
       }
     },
@@ -352,16 +298,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 42,
-      "end": 43,
+      "start": 31,
+      "end": 32,
       "loc": {
         "start": {
           "line": 1,
-          "column": 42
+          "column": 31
         },
         "end": {
           "line": 1,
-          "column": 43
+          "column": 32
         }
       }
     },
@@ -378,16 +324,16 @@
         "binop": null
       },
       "value": "from",
-      "start": 44,
-      "end": 48,
+      "start": 33,
+      "end": 37,
       "loc": {
         "start": {
           "line": 1,
-          "column": 44
+          "column": 33
         },
         "end": {
           "line": 1,
-          "column": 48
+          "column": 37
         }
       }
     },
@@ -405,16 +351,16 @@
         "updateContext": null
       },
       "value": "./StochasticGradientDescent/index",
-      "start": 49,
-      "end": 84,
+      "start": 38,
+      "end": 73,
       "loc": {
         "start": {
           "line": 1,
-          "column": 49
+          "column": 38
         },
         "end": {
           "line": 1,
-          "column": 84
+          "column": 73
         }
       }
     },
@@ -431,16 +377,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 84,
-      "end": 85,
+      "start": 73,
+      "end": 74,
       "loc": {
         "start": {
           "line": 1,
-          "column": 84
+          "column": 73
         },
         "end": {
           "line": 1,
-          "column": 85
+          "column": 74
         }
       }
     },
@@ -459,8 +405,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 86,
-      "end": 92,
+      "start": 75,
+      "end": 81,
       "loc": {
         "start": {
           "line": 2,
@@ -484,8 +430,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 93,
-      "end": 94,
+      "start": 82,
+      "end": 83,
       "loc": {
         "start": {
           "line": 2,
@@ -512,8 +458,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 95,
-      "end": 102,
+      "start": 84,
+      "end": 91,
       "loc": {
         "start": {
           "line": 2,
@@ -538,8 +484,8 @@
         "binop": null
       },
       "value": "as",
-      "start": 103,
-      "end": 105,
+      "start": 92,
+      "end": 94,
       "loc": {
         "start": {
           "line": 2,
@@ -564,8 +510,8 @@
         "binop": null
       },
       "value": "TrainerMixins",
-      "start": 106,
-      "end": 119,
+      "start": 95,
+      "end": 108,
       "loc": {
         "start": {
           "line": 2,
@@ -589,8 +535,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 120,
-      "end": 121,
+      "start": 109,
+      "end": 110,
       "loc": {
         "start": {
           "line": 2,
@@ -615,8 +561,8 @@
         "binop": null
       },
       "value": "from",
-      "start": 122,
-      "end": 126,
+      "start": 111,
+      "end": 115,
       "loc": {
         "start": {
           "line": 2,
@@ -642,8 +588,8 @@
         "updateContext": null
       },
       "value": "./trainer.mixins",
-      "start": 127,
-      "end": 145,
+      "start": 116,
+      "end": 134,
       "loc": {
         "start": {
           "line": 2,
@@ -668,8 +614,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 145,
-      "end": 146,
+      "start": 134,
+      "end": 135,
       "loc": {
         "start": {
           "line": 2,
@@ -694,8 +640,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 146,
-      "end": 146,
+      "start": 135,
+      "end": 135,
       "loc": {
         "start": {
           "line": 2,

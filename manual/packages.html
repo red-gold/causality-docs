@@ -17,6 +17,13 @@
   <a href="identifiers.html">Reference</a>
   <a href="source.html">Source</a>
   <a href="test.html" data-ice="testLink">Test</a>
+  <div class="v-seperate"></div>
+  <ul class="demo">
+    <li>
+        <a href="prebuilt-demos/representation.html">Sentence representation demo</a>
+    </li>
+  </ul>
+  
   <div class="search-box">
   <span>
     <img src="./image/search.png">
@@ -39,7 +46,7 @@
 <div data-ice="manual">
     <ul class="manual-toc">
       
-    <li data-ice="manualNav" class="indent-h1" data-link="manual/packages.html"><a href="manual/packages.html" data-ice="link">Monorepo</a></li>
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/packages.html"><a href="manual/packages.html#monorepo" data-ice="link">Monorepo</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/packages.html"><a href="manual/packages.html#causal-net-core" data-ice="link">causal-net.core</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#causalnetcore" data-ice="link">causalNetCore</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#tensor" data-ice="link">Tensor</a></li>
@@ -48,6 +55,10 @@
 <li data-ice="manualNav" class="indent-h2" data-link="manual/packages.html"><a href="manual/packages.html#causal-net-log" data-ice="link">causal-net.log</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#termlogger" data-ice="link">termLogger</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#loggermixins" data-ice="link">LoggerMixins</a></li>
+<li data-ice="manualNav" class="indent-h1" data-link="manual/packages.html"><a href="manual/packages.html#causal-net-preprocessing" data-ice="link">causal-net.preprocessing</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#nlppreprocessing" data-ice="link">nlpPreprocessing</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#imagepreprocessing" data-ice="link">imagePreprocessing</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#preprocessingmixins" data-ice="link">PreprocessingMixins</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/packages.html"><a href="manual/packages.html#causal-net-representation" data-ice="link">causal-net.representation</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#causalnetembedding" data-ice="link">causalNetEmbedding</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#universalembedding" data-ice="link">universalEmbedding</a></li>
@@ -58,6 +69,12 @@
 <li data-ice="manualNav" class="indent-h2" data-link="manual/packages.html"><a href="manual/packages.html#causal-net-models" data-ice="link">causal-net.models</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#causalnetmodels" data-ice="link">causalNetModels</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#supervisedmodelsmixins" data-ice="link">SupervisedModelsMixins</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/packages.html"><a href="manual/packages.html#causal-net-layer" data-ice="link">causal-net.layer</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#causalnetsgdoptimizer" data-ice="link">causalNetSGDOptimizer</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#trainermixins" data-ice="link">TrainerMixins</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/packages.html"><a href="manual/packages.html#causal-net-optimizers" data-ice="link">causal-net.optimizers</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#causalnetsgdoptimizer" data-ice="link">causalNetSGDOptimizer</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#trainermixins" data-ice="link">TrainerMixins</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/packages.html"><a href="manual/packages.html#causal-net-memcache" data-ice="link">causal-net.memcache</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#memdowncache" data-ice="link">memDownCache</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#memcachemixins" data-ice="link">MemCacheMixins</a></li>
@@ -160,6 +177,17 @@ let pipeline = new SimplePipeline();
 console.log(pipeline.Logger instanceof BaseLogger);</code>
 </code></pre>
 <p><a href="./manual/./asset/examples/logger.mixins.babel.js">Run code</a></p>
+<h1 id="causal-net-preprocessing">causal-net.preprocessing</h1><p>This causal-net.preprocessing is a sub-module for <a href="https://red-gold.github.io/causality-docs/">causality</a> project.
+This module provide preprocessing instances and preprocessing mixins</p>
+<h3 id="nlppreprocessing">nlpPreprocessing</h3><ul>
+<li>Provide methods for text processing: tokenize, filter, count word frequency.</li>
+</ul>
+<h3 id="imagepreprocessing">imagePreprocessing</h3><ul>
+<li>Provide method for image processing: split, transform color</li>
+</ul>
+<h3 id="preprocessingmixins">PreprocessingMixins</h3><ul>
+<li>Mixins for mix with Pipeline class or dataset class.</li>
+</ul>
 <h2 id="causal-net-representation">causal-net.representation</h2><p>This module provide representation instances and representation mixins</p>
 <h3 id="causalnetembedding">causalNetEmbedding</h3><ul>
 <li>Provide methods for transforming tokens or representing sentence into single vector.</li>
@@ -276,16 +304,14 @@ let targets = [[0, 1], [0, 1], [0, 1], [0, 1]];
 const _NetConfig = {
     HyperParameters: {SampleSize: 4},
     NumClasses: 2,
-    Pipeline:[
-        {   Name:&apos;dense&apos;, Type: &apos;Tensor&apos;, 
-            Parameters: { Weight: [3, 2], Bias: [2]  },
-            Flow: [ { Op: &apos;dot&apos;, Parameter: &apos;Weight&apos;, Args: [] },
-                    { Op: &apos;add&apos;, Parameter: &apos;Bias&apos;,  Args: [] } ] 
-        },
-        {   Name:&apos;PipeOutput&apos;, Type: &apos;Tensor&apos;, 
-            Flow: [ { Op: &apos;reshape&apos;, Args: [[&apos;$SampleSize&apos;, -1]] } ] 
-        } 
-    ],
+    Net:{Predict: [ {   Name:&apos;dense&apos;, Type: &apos;Tensor&apos;, 
+                        Parameters: { Weight: [3, 2], Bias: [2]  },
+                        Flow: [ { Op: &apos;dot&apos;, Parameter: &apos;Weight&apos;, Args: [] },
+                                { Op: &apos;add&apos;, Parameter: &apos;Bias&apos;,  Args: [] } ] 
+                               },
+                    {   Name:&apos;PipeOutput&apos;, Type: &apos;Tensor&apos;, 
+                        Flow: [ { Op: &apos;reshape&apos;, Args: [[&apos;$SampleSize&apos;, -1]] } ] 
+                    } ] },
     Model:  causalNetModels.classification() };
 
 console.log({NetConfig: _NetConfig});
@@ -316,7 +342,57 @@ let causalNet = new CausalNet(_NetConfig, parameters);
 <h3 id="supervisedmodelsmixins">SupervisedModelsMixins</h3><ul>
 <li>Mixins for mix with Pipeline class for supervised models.</li>
 </ul>
-<p>[EXAMPLE  ERROR! /home/huynhnguyen/github/causality/packages/causality-layers/DESCRIPTION.md]</p>
+<h2 id="causal-net-layer">causal-net.layer</h2><p>This module provides:</p>
+<h3 id="causalnetsgdoptimizer">causalNetSGDOptimizer</h3><ul>
+<li>Provide SGD optimizing methods: adam
+[EXAMPLE  ERROR! /home/huynhnguyen/github/causality/packages/causality-layer/DESCRIPTION.md, /home/huynhnguyen/github/causality/packages/causality-layer/examples/examples/SGDOptimizer.babel.js]<h3 id="trainermixins">TrainerMixins</h3></li>
+<li>Mixins for mix with Pipeline class.
+[EXAMPLE  ERROR! /home/huynhnguyen/github/causality/packages/causality-layer/DESCRIPTION.md, /home/huynhnguyen/github/causality/packages/causality-layer/examples/trainer.mixins.babel.js]</li>
+</ul>
+<h2 id="causal-net-optimizers">causal-net.optimizers</h2><p>This causal-net.optimizer provides: </p>
+<h3 id="causalnetsgdoptimizer">causalNetSGDOptimizer</h3><ul>
+<li>Provide SGD optimizing methods: adam</li>
+</ul>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">import { causalNetCore } from &quot;causal-net.core&quot;;
+import { causalNetSGDOptimizer } from &apos;causal-net.optimizers&apos;;
+
+var adam = causalNetSGDOptimizer.adam({learningRate: 0.01});
+
+const T = causalNetCore.CoreTensor;
+var a = T.variable(T.tensor([1,2,3,4]).reshape([2,2])); 
+var b = T.tensor([2,3,4,5]).reshape([2,2]);
+const FitFn = ()=&gt;{
+    return a.mul(b).mean();
+};
+console.log(adam.fit(FitFn));
+a.print();
+b.print();</code>
+</code></pre>
+<p><a href="./manual/./asset/examples/causalNetSGDOptimizers.babel.js">Run code</a></p>
+<h3 id="trainermixins">TrainerMixins</h3><ul>
+<li>Mixins for mix with Pipeline class.</li>
+</ul>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">import { causalNetSGDOptimizer, TrainerMixins } from &apos;causal-net.optimizers&apos;;
+import { platform } from &apos;causal-net.utils&apos;;
+import { Tensor } from &apos;causal-net.core&apos;;
+const PipeLineConfigure = {
+    Trainer: {
+        Optimizer: causalNetSGDOptimizer.adam,
+        OptimizerParameters: {},
+        TrainableParameters: [],
+    }
+}
+class SimplePipeline extends platform.mixWith(Tensor, [TrainerMixins]){
+    constructor(configure){
+        super();
+        this.Trainer = configure.Trainer;
+    }
+}
+let pipeline = new SimplePipeline(PipeLineConfigure);
+console.log([ pipeline.Optimizer instanceof Tensor ]);
+console.log([ pipeline.OptimizerParameters, pipeline.TrainableParameters ]);</code>
+</code></pre>
+<p><a href="./manual/./asset/examples/trainer.mixins.babel.js">Run code</a></p>
 <h2 id="causal-net-memcache">causal-net.memcache</h2><h3 id="memdowncache">memDownCache</h3><ul>
 <li>memDownCache provides wrapper for <a href>memdown</a> caching.</li>
 </ul>

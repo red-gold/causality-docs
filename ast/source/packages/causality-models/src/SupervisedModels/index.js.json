@@ -1,29 +1,29 @@
 {
   "type": "File",
   "start": 0,
-  "end": 143,
+  "end": 230,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 2,
-      "column": 74
+      "line": 4,
+      "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 143,
+    "end": 230,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 2,
-        "column": 74
+        "line": 4,
+        "column": 0
       }
     },
     "sourceType": "module",
@@ -31,7 +31,7 @@
       {
         "type": "ExportNamedDeclaration",
         "start": 0,
-        "end": 68,
+        "end": 73,
         "loc": {
           "start": {
             "line": 1,
@@ -39,7 +39,7 @@
           },
           "end": {
             "line": 1,
-            "column": 68
+            "column": 73
           }
         },
         "declaration": null,
@@ -47,7 +47,7 @@
           {
             "type": "ExportSpecifier",
             "start": 9,
-            "end": 37,
+            "end": 35,
             "loc": {
               "start": {
                 "line": 1,
@@ -55,7 +55,7 @@
               },
               "end": {
                 "line": 1,
-                "column": 37
+                "column": 35
               }
             },
             "local": {
@@ -78,7 +78,7 @@
             "exported": {
               "type": "Identifier",
               "start": 20,
-              "end": 37,
+              "end": 35,
               "loc": {
                 "start": {
                   "line": 1,
@@ -86,39 +86,39 @@
                 },
                 "end": {
                   "line": 1,
-                  "column": 37
+                  "column": 35
                 },
-                "identifierName": "SingleLabelMixins"
+                "identifierName": "causalNetModels"
               },
-              "name": "SingleLabelMixins"
+              "name": "causalNetModels"
             }
           }
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 45,
-          "end": 67,
+          "start": 43,
+          "end": 72,
           "loc": {
             "start": {
               "line": 1,
-              "column": 45
+              "column": 43
             },
             "end": {
               "line": 1,
-              "column": 67
+              "column": 72
             }
           },
           "extra": {
-            "rawValue": "./singleLabel.mixins",
-            "raw": "'./singleLabel.mixins'"
+            "rawValue": "./causalNetSupervisedModels",
+            "raw": "'./causalNetSupervisedModels'"
           },
-          "value": "./singleLabel.mixins"
+          "value": "./causalNetSupervisedModels"
         }
       },
       {
         "type": "ExportNamedDeclaration",
-        "start": 69,
-        "end": 143,
+        "start": 74,
+        "end": 145,
         "loc": {
           "start": {
             "line": 2,
@@ -126,15 +126,15 @@
           },
           "end": {
             "line": 2,
-            "column": 74
+            "column": 71
           }
         },
         "declaration": null,
         "specifiers": [
           {
             "type": "ExportSpecifier",
-            "start": 78,
-            "end": 109,
+            "start": 83,
+            "end": 113,
             "loc": {
               "start": {
                 "line": 2,
@@ -142,13 +142,13 @@
               },
               "end": {
                 "line": 2,
-                "column": 40
+                "column": 39
               }
             },
             "local": {
               "type": "Identifier",
-              "start": 78,
-              "end": 85,
+              "start": 83,
+              "end": 90,
               "loc": {
                 "start": {
                   "line": 2,
@@ -164,8 +164,8 @@
             },
             "exported": {
               "type": "Identifier",
-              "start": 89,
-              "end": 109,
+              "start": 94,
+              "end": 113,
               "loc": {
                 "start": {
                   "line": 2,
@@ -173,33 +173,120 @@
                 },
                 "end": {
                   "line": 2,
-                  "column": 40
+                  "column": 39
                 },
-                "identifierName": "SequenceLabelsMixins"
+                "identifierName": "BaseSupervisedModel"
               },
-              "name": "SequenceLabelsMixins"
+              "name": "BaseSupervisedModel"
             }
           }
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 117,
-          "end": 142,
+          "start": 121,
+          "end": 144,
           "loc": {
             "start": {
               "line": 2,
-              "column": 48
+              "column": 47
             },
             "end": {
               "line": 2,
-              "column": 73
+              "column": 70
             }
           },
           "extra": {
-            "rawValue": "./sequenceLabels.mixins",
-            "raw": "'./sequenceLabels.mixins'"
+            "rawValue": "./baseSupervisedModel",
+            "raw": "'./baseSupervisedModel'"
           },
-          "value": "./sequenceLabels.mixins"
+          "value": "./baseSupervisedModel"
+        }
+      },
+      {
+        "type": "ExportNamedDeclaration",
+        "start": 146,
+        "end": 229,
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 0
+          },
+          "end": {
+            "line": 3,
+            "column": 83
+          }
+        },
+        "declaration": null,
+        "specifiers": [
+          {
+            "type": "ExportSpecifier",
+            "start": 155,
+            "end": 191,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 9
+              },
+              "end": {
+                "line": 3,
+                "column": 45
+              }
+            },
+            "local": {
+              "type": "Identifier",
+              "start": 155,
+              "end": 162,
+              "loc": {
+                "start": {
+                  "line": 3,
+                  "column": 9
+                },
+                "end": {
+                  "line": 3,
+                  "column": 16
+                },
+                "identifierName": "default"
+              },
+              "name": "default"
+            },
+            "exported": {
+              "type": "Identifier",
+              "start": 166,
+              "end": 191,
+              "loc": {
+                "start": {
+                  "line": 3,
+                  "column": 20
+                },
+                "end": {
+                  "line": 3,
+                  "column": 45
+                },
+                "identifierName": "SingleLabelClassification"
+              },
+              "name": "SingleLabelClassification"
+            }
+          }
+        ],
+        "source": {
+          "type": "StringLiteral",
+          "start": 199,
+          "end": 228,
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 53
+            },
+            "end": {
+              "line": 3,
+              "column": 82
+            }
+          },
+          "extra": {
+            "rawValue": "./singleLableClassification",
+            "raw": "'./singleLableClassification'"
+          },
+          "value": "./singleLableClassification"
         }
       }
     ],
@@ -326,9 +413,9 @@
         "postfix": false,
         "binop": null
       },
-      "value": "SingleLabelMixins",
+      "value": "causalNetModels",
       "start": 20,
-      "end": 37,
+      "end": 35,
       "loc": {
         "start": {
           "line": 1,
@@ -336,7 +423,7 @@
         },
         "end": {
           "line": 1,
-          "column": 37
+          "column": 35
         }
       }
     },
@@ -352,16 +439,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 38,
-      "end": 39,
+      "start": 36,
+      "end": 37,
       "loc": {
         "start": {
           "line": 1,
-          "column": 38
+          "column": 36
         },
         "end": {
           "line": 1,
-          "column": 39
+          "column": 37
         }
       }
     },
@@ -378,16 +465,16 @@
         "binop": null
       },
       "value": "from",
-      "start": 40,
-      "end": 44,
+      "start": 38,
+      "end": 42,
       "loc": {
         "start": {
           "line": 1,
-          "column": 40
+          "column": 38
         },
         "end": {
           "line": 1,
-          "column": 44
+          "column": 42
         }
       }
     },
@@ -404,17 +491,17 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "./singleLabel.mixins",
-      "start": 45,
-      "end": 67,
+      "value": "./causalNetSupervisedModels",
+      "start": 43,
+      "end": 72,
       "loc": {
         "start": {
           "line": 1,
-          "column": 45
+          "column": 43
         },
         "end": {
           "line": 1,
-          "column": 67
+          "column": 72
         }
       }
     },
@@ -431,16 +518,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 67,
-      "end": 68,
+      "start": 72,
+      "end": 73,
       "loc": {
         "start": {
           "line": 1,
-          "column": 67
+          "column": 72
         },
         "end": {
           "line": 1,
-          "column": 68
+          "column": 73
         }
       }
     },
@@ -459,8 +546,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 69,
-      "end": 75,
+      "start": 74,
+      "end": 80,
       "loc": {
         "start": {
           "line": 2,
@@ -484,8 +571,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 76,
-      "end": 77,
+      "start": 81,
+      "end": 82,
       "loc": {
         "start": {
           "line": 2,
@@ -512,8 +599,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 78,
-      "end": 85,
+      "start": 83,
+      "end": 90,
       "loc": {
         "start": {
           "line": 2,
@@ -538,8 +625,8 @@
         "binop": null
       },
       "value": "as",
-      "start": 86,
-      "end": 88,
+      "start": 91,
+      "end": 93,
       "loc": {
         "start": {
           "line": 2,
@@ -563,9 +650,9 @@
         "postfix": false,
         "binop": null
       },
-      "value": "SequenceLabelsMixins",
-      "start": 89,
-      "end": 109,
+      "value": "BaseSupervisedModel",
+      "start": 94,
+      "end": 113,
       "loc": {
         "start": {
           "line": 2,
@@ -573,7 +660,7 @@
         },
         "end": {
           "line": 2,
-          "column": 40
+          "column": 39
         }
       }
     },
@@ -589,16 +676,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 110,
-      "end": 111,
+      "start": 114,
+      "end": 115,
       "loc": {
         "start": {
           "line": 2,
-          "column": 41
+          "column": 40
         },
         "end": {
           "line": 2,
-          "column": 42
+          "column": 41
         }
       }
     },
@@ -615,16 +702,16 @@
         "binop": null
       },
       "value": "from",
-      "start": 112,
-      "end": 116,
+      "start": 116,
+      "end": 120,
       "loc": {
         "start": {
           "line": 2,
-          "column": 43
+          "column": 42
         },
         "end": {
           "line": 2,
-          "column": 47
+          "column": 46
         }
       }
     },
@@ -641,17 +728,17 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "./sequenceLabels.mixins",
-      "start": 117,
-      "end": 142,
+      "value": "./baseSupervisedModel",
+      "start": 121,
+      "end": 144,
       "loc": {
         "start": {
           "line": 2,
-          "column": 48
+          "column": 47
         },
         "end": {
           "line": 2,
-          "column": 73
+          "column": 70
         }
       }
     },
@@ -668,16 +755,253 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 142,
-      "end": 143,
+      "start": 144,
+      "end": 145,
       "loc": {
         "start": {
           "line": 2,
-          "column": 73
+          "column": 70
         },
         "end": {
           "line": 2,
-          "column": 74
+          "column": 71
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "export",
+        "keyword": "export",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "export",
+      "start": 146,
+      "end": 152,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 153,
+      "end": 154,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 7
+        },
+        "end": {
+          "line": 3,
+          "column": 8
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "default",
+        "keyword": "default",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "default",
+      "start": 155,
+      "end": 162,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 9
+        },
+        "end": {
+          "line": 3,
+          "column": 16
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "as",
+      "start": 163,
+      "end": 165,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 17
+        },
+        "end": {
+          "line": 3,
+          "column": 19
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "SingleLabelClassification",
+      "start": 166,
+      "end": 191,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 20
+        },
+        "end": {
+          "line": 3,
+          "column": 45
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 192,
+      "end": 193,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 46
+        },
+        "end": {
+          "line": 3,
+          "column": 47
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "from",
+      "start": 194,
+      "end": 198,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 48
+        },
+        "end": {
+          "line": 3,
+          "column": 52
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "./singleLableClassification",
+      "start": 199,
+      "end": 228,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 53
+        },
+        "end": {
+          "line": 3,
+          "column": 82
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ";",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 228,
+      "end": 229,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 82
+        },
+        "end": {
+          "line": 3,
+          "column": 83
         }
       }
     },
@@ -694,16 +1018,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 143,
-      "end": 143,
+      "start": 230,
+      "end": 230,
       "loc": {
         "start": {
-          "line": 2,
-          "column": 74
+          "line": 4,
+          "column": 0
         },
         "end": {
-          "line": 2,
-          "column": 74
+          "line": 4,
+          "column": 0
         }
       }
     }

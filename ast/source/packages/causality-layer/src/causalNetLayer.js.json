@@ -8,7 +8,7 @@
       "column": 0
     },
     "end": {
-      "line": 17,
+      "line": 16,
       "column": 34
     }
   },
@@ -22,7 +22,7 @@
         "column": 0
       },
       "end": {
-        "line": 17,
+        "line": 16,
         "column": 34
       }
     },
@@ -288,7 +288,7 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * This CausalNetLayer class provide common use layers\n * mixWith:\n *  [ DenseMixins ]\n * @class CausalNetLayer\n * @extends BaseTensor\n ",
+            "value": "*\n * This CausalNetLayer class provide common use layers\n * { mixWith: [ DenseMixins ] }\n * @class CausalNetLayer\n * @extends BaseTensor\n ",
             "start": 166,
             "end": 308,
             "loc": {
@@ -297,7 +297,7 @@
                 "column": 0
               },
               "end": {
-                "line": 10,
+                "line": 9,
                 "column": 3
               }
             }
@@ -310,11 +310,11 @@
         "end": 428,
         "loc": {
           "start": {
-            "line": 11,
+            "line": 10,
             "column": 0
           },
           "end": {
-            "line": 15,
+            "line": 14,
             "column": 1
           }
         },
@@ -324,11 +324,11 @@
           "end": 329,
           "loc": {
             "start": {
-              "line": 11,
+              "line": 10,
               "column": 6
             },
             "end": {
-              "line": 11,
+              "line": 10,
               "column": 20
             },
             "identifierName": "CausalNetLayer"
@@ -342,11 +342,11 @@
           "end": 383,
           "loc": {
             "start": {
-              "line": 11,
+              "line": 10,
               "column": 29
             },
             "end": {
-              "line": 11,
+              "line": 10,
               "column": 74
             }
           },
@@ -356,11 +356,11 @@
             "end": 354,
             "loc": {
               "start": {
-                "line": 11,
+                "line": 10,
                 "column": 29
               },
               "end": {
-                "line": 11,
+                "line": 10,
                 "column": 45
               }
             },
@@ -370,11 +370,11 @@
               "end": 346,
               "loc": {
                 "start": {
-                  "line": 11,
+                  "line": 10,
                   "column": 29
                 },
                 "end": {
-                  "line": 11,
+                  "line": 10,
                   "column": 37
                 },
                 "identifierName": "platform"
@@ -387,11 +387,11 @@
               "end": 354,
               "loc": {
                 "start": {
-                  "line": 11,
+                  "line": 10,
                   "column": 38
                 },
                 "end": {
-                  "line": 11,
+                  "line": 10,
                   "column": 45
                 },
                 "identifierName": "mixWith"
@@ -407,11 +407,11 @@
               "end": 365,
               "loc": {
                 "start": {
-                  "line": 11,
+                  "line": 10,
                   "column": 46
                 },
                 "end": {
-                  "line": 11,
+                  "line": 10,
                   "column": 56
                 },
                 "identifierName": "BaseTensor"
@@ -424,11 +424,11 @@
               "end": 381,
               "loc": {
                 "start": {
-                  "line": 11,
+                  "line": 10,
                   "column": 58
                 },
                 "end": {
-                  "line": 11,
+                  "line": 10,
                   "column": 72
                 }
               },
@@ -439,11 +439,11 @@
                   "end": 380,
                   "loc": {
                     "start": {
-                      "line": 11,
+                      "line": 10,
                       "column": 60
                     },
                     "end": {
-                      "line": 11,
+                      "line": 10,
                       "column": 71
                     },
                     "identifierName": "DenseMixins"
@@ -460,11 +460,11 @@
           "end": 428,
           "loc": {
             "start": {
-              "line": 11,
+              "line": 10,
               "column": 74
             },
             "end": {
-              "line": 15,
+              "line": 14,
               "column": 1
             }
           },
@@ -475,11 +475,11 @@
               "end": 426,
               "loc": {
                 "start": {
-                  "line": 12,
+                  "line": 11,
                   "column": 4
                 },
                 "end": {
-                  "line": 14,
+                  "line": 13,
                   "column": 5
                 }
               },
@@ -491,11 +491,11 @@
                 "end": 400,
                 "loc": {
                   "start": {
-                    "line": 12,
+                    "line": 11,
                     "column": 4
                   },
                   "end": {
-                    "line": 12,
+                    "line": 11,
                     "column": 15
                   },
                   "identifierName": "constructor"
@@ -514,11 +514,11 @@
                 "end": 426,
                 "loc": {
                   "start": {
-                    "line": 12,
+                    "line": 11,
                     "column": 17
                   },
                   "end": {
-                    "line": 14,
+                    "line": 13,
                     "column": 5
                   }
                 },
@@ -529,11 +529,11 @@
                     "end": 420,
                     "loc": {
                       "start": {
-                        "line": 13,
+                        "line": 12,
                         "column": 8
                       },
                       "end": {
-                        "line": 13,
+                        "line": 12,
                         "column": 16
                       }
                     },
@@ -543,11 +543,11 @@
                       "end": 419,
                       "loc": {
                         "start": {
-                          "line": 13,
+                          "line": 12,
                           "column": 8
                         },
                         "end": {
-                          "line": 13,
+                          "line": 12,
                           "column": 15
                         }
                       },
@@ -557,11 +557,11 @@
                         "end": 417,
                         "loc": {
                           "start": {
-                            "line": 13,
+                            "line": 12,
                             "column": 8
                           },
                           "end": {
-                            "line": 13,
+                            "line": 12,
                             "column": 13
                           }
                         }
@@ -585,11 +585,11 @@
         "end": 464,
         "loc": {
           "start": {
-            "line": 17,
+            "line": 16,
             "column": 0
           },
           "end": {
-            "line": 17,
+            "line": 16,
             "column": 34
           }
         },
@@ -599,11 +599,11 @@
           "end": 463,
           "loc": {
             "start": {
-              "line": 17,
+              "line": 16,
               "column": 15
             },
             "end": {
-              "line": 17,
+              "line": 16,
               "column": 33
             }
           },
@@ -613,11 +613,11 @@
             "end": 463,
             "loc": {
               "start": {
-                "line": 17,
+                "line": 16,
                 "column": 19
               },
               "end": {
-                "line": 17,
+                "line": 16,
                 "column": 33
               },
               "identifierName": "CausalNetLayer"
@@ -636,11 +636,11 @@
         "end": 464,
         "loc": {
           "start": {
-            "line": 17,
+            "line": 16,
             "column": 0
           },
           "end": {
-            "line": 17,
+            "line": 16,
             "column": 34
           }
         },
@@ -650,11 +650,11 @@
           "end": 428,
           "loc": {
             "start": {
-              "line": 11,
+              "line": 10,
               "column": 0
             },
             "end": {
-              "line": 15,
+              "line": 14,
               "column": 1
             }
           },
@@ -664,11 +664,11 @@
             "end": 329,
             "loc": {
               "start": {
-                "line": 11,
+                "line": 10,
                 "column": 6
               },
               "end": {
-                "line": 11,
+                "line": 10,
                 "column": 20
               },
               "identifierName": "CausalNetLayer"
@@ -682,11 +682,11 @@
             "end": 383,
             "loc": {
               "start": {
-                "line": 11,
+                "line": 10,
                 "column": 29
               },
               "end": {
-                "line": 11,
+                "line": 10,
                 "column": 74
               }
             },
@@ -696,11 +696,11 @@
               "end": 354,
               "loc": {
                 "start": {
-                  "line": 11,
+                  "line": 10,
                   "column": 29
                 },
                 "end": {
-                  "line": 11,
+                  "line": 10,
                   "column": 45
                 }
               },
@@ -710,11 +710,11 @@
                 "end": 346,
                 "loc": {
                   "start": {
-                    "line": 11,
+                    "line": 10,
                     "column": 29
                   },
                   "end": {
-                    "line": 11,
+                    "line": 10,
                     "column": 37
                   },
                   "identifierName": "platform"
@@ -727,11 +727,11 @@
                 "end": 354,
                 "loc": {
                   "start": {
-                    "line": 11,
+                    "line": 10,
                     "column": 38
                   },
                   "end": {
-                    "line": 11,
+                    "line": 10,
                     "column": 45
                   },
                   "identifierName": "mixWith"
@@ -747,11 +747,11 @@
                 "end": 365,
                 "loc": {
                   "start": {
-                    "line": 11,
+                    "line": 10,
                     "column": 46
                   },
                   "end": {
-                    "line": 11,
+                    "line": 10,
                     "column": 56
                   },
                   "identifierName": "BaseTensor"
@@ -764,11 +764,11 @@
                 "end": 381,
                 "loc": {
                   "start": {
-                    "line": 11,
+                    "line": 10,
                     "column": 58
                   },
                   "end": {
-                    "line": 11,
+                    "line": 10,
                     "column": 72
                   }
                 },
@@ -779,11 +779,11 @@
                     "end": 380,
                     "loc": {
                       "start": {
-                        "line": 11,
+                        "line": 10,
                         "column": 60
                       },
                       "end": {
-                        "line": 11,
+                        "line": 10,
                         "column": 71
                       },
                       "identifierName": "DenseMixins"
@@ -800,11 +800,11 @@
             "end": 428,
             "loc": {
               "start": {
-                "line": 11,
+                "line": 10,
                 "column": 74
               },
               "end": {
-                "line": 15,
+                "line": 14,
                 "column": 1
               }
             },
@@ -815,11 +815,11 @@
                 "end": 426,
                 "loc": {
                   "start": {
-                    "line": 12,
+                    "line": 11,
                     "column": 4
                   },
                   "end": {
-                    "line": 14,
+                    "line": 13,
                     "column": 5
                   }
                 },
@@ -831,11 +831,11 @@
                   "end": 400,
                   "loc": {
                     "start": {
-                      "line": 12,
+                      "line": 11,
                       "column": 4
                     },
                     "end": {
-                      "line": 12,
+                      "line": 11,
                       "column": 15
                     },
                     "identifierName": "constructor"
@@ -854,11 +854,11 @@
                   "end": 426,
                   "loc": {
                     "start": {
-                      "line": 12,
+                      "line": 11,
                       "column": 17
                     },
                     "end": {
-                      "line": 14,
+                      "line": 13,
                       "column": 5
                     }
                   },
@@ -869,11 +869,11 @@
                       "end": 420,
                       "loc": {
                         "start": {
-                          "line": 13,
+                          "line": 12,
                           "column": 8
                         },
                         "end": {
-                          "line": 13,
+                          "line": 12,
                           "column": 16
                         }
                       },
@@ -883,11 +883,11 @@
                         "end": 419,
                         "loc": {
                           "start": {
-                            "line": 13,
+                            "line": 12,
                             "column": 8
                           },
                           "end": {
-                            "line": 13,
+                            "line": 12,
                             "column": 15
                           }
                         },
@@ -897,11 +897,11 @@
                           "end": 417,
                           "loc": {
                             "start": {
-                              "line": 13,
+                              "line": 12,
                               "column": 8
                             },
                             "end": {
-                              "line": 13,
+                              "line": 12,
                               "column": 13
                             }
                           }
@@ -918,7 +918,7 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * This CausalNetLayer class provide common use layers\n * mixWith:\n *  [ DenseMixins ]\n * @class CausalNetLayer\n * @extends BaseTensor\n ",
+              "value": "*\n * This CausalNetLayer class provide common use layers\n * { mixWith: [ DenseMixins ] }\n * @class CausalNetLayer\n * @extends BaseTensor\n ",
               "start": 166,
               "end": 308,
               "loc": {
@@ -927,7 +927,7 @@
                   "column": 0
                 },
                 "end": {
-                  "line": 10,
+                  "line": 9,
                   "column": 3
                 }
               }
@@ -944,11 +944,11 @@
         "end": 464,
         "loc": {
           "start": {
-            "line": 17,
+            "line": 16,
             "column": 0
           },
           "end": {
-            "line": 17,
+            "line": 16,
             "column": 34
           }
         },
@@ -957,11 +957,11 @@
           "kind": "let",
           "loc": {
             "start": {
-              "line": 17,
+              "line": 16,
               "column": 0
             },
             "end": {
-              "line": 17,
+              "line": 16,
               "column": 34
             }
           },
@@ -991,7 +991,7 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * This CausalNetLayer class provide common use layers\n * mixWith:\n *  [ DenseMixins ]\n * @class CausalNetLayer\n * @extends BaseTensor\n ",
+      "value": "*\n * This CausalNetLayer class provide common use layers\n * { mixWith: [ DenseMixins ] }\n * @class CausalNetLayer\n * @extends BaseTensor\n ",
       "start": 166,
       "end": 308,
       "loc": {
@@ -1000,7 +1000,7 @@
           "column": 0
         },
         "end": {
-          "line": 10,
+          "line": 9,
           "column": 3
         }
       }
@@ -1664,7 +1664,7 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * This CausalNetLayer class provide common use layers\n * mixWith:\n *  [ DenseMixins ]\n * @class CausalNetLayer\n * @extends BaseTensor\n ",
+      "value": "*\n * This CausalNetLayer class provide common use layers\n * { mixWith: [ DenseMixins ] }\n * @class CausalNetLayer\n * @extends BaseTensor\n ",
       "start": 166,
       "end": 308,
       "loc": {
@@ -1673,7 +1673,7 @@
           "column": 0
         },
         "end": {
-          "line": 10,
+          "line": 9,
           "column": 3
         }
       }
@@ -1697,11 +1697,11 @@
       "end": 314,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 10,
           "column": 0
         },
         "end": {
-          "line": 11,
+          "line": 10,
           "column": 5
         }
       }
@@ -1723,11 +1723,11 @@
       "end": 329,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 10,
           "column": 6
         },
         "end": {
-          "line": 11,
+          "line": 10,
           "column": 20
         }
       }
@@ -1751,11 +1751,11 @@
       "end": 337,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 10,
           "column": 21
         },
         "end": {
-          "line": 11,
+          "line": 10,
           "column": 28
         }
       }
@@ -1777,11 +1777,11 @@
       "end": 346,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 10,
           "column": 29
         },
         "end": {
-          "line": 11,
+          "line": 10,
           "column": 37
         }
       }
@@ -1803,11 +1803,11 @@
       "end": 347,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 10,
           "column": 37
         },
         "end": {
-          "line": 11,
+          "line": 10,
           "column": 38
         }
       }
@@ -1829,11 +1829,11 @@
       "end": 354,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 10,
           "column": 38
         },
         "end": {
-          "line": 11,
+          "line": 10,
           "column": 45
         }
       }
@@ -1854,11 +1854,11 @@
       "end": 355,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 10,
           "column": 45
         },
         "end": {
-          "line": 11,
+          "line": 10,
           "column": 46
         }
       }
@@ -1880,11 +1880,11 @@
       "end": 365,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 10,
           "column": 46
         },
         "end": {
-          "line": 11,
+          "line": 10,
           "column": 56
         }
       }
@@ -1906,11 +1906,11 @@
       "end": 366,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 10,
           "column": 56
         },
         "end": {
-          "line": 11,
+          "line": 10,
           "column": 57
         }
       }
@@ -1932,11 +1932,11 @@
       "end": 368,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 10,
           "column": 58
         },
         "end": {
-          "line": 11,
+          "line": 10,
           "column": 59
         }
       }
@@ -1958,11 +1958,11 @@
       "end": 380,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 10,
           "column": 60
         },
         "end": {
-          "line": 11,
+          "line": 10,
           "column": 71
         }
       }
@@ -1984,11 +1984,11 @@
       "end": 381,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 10,
           "column": 71
         },
         "end": {
-          "line": 11,
+          "line": 10,
           "column": 72
         }
       }
@@ -2009,11 +2009,11 @@
       "end": 383,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 10,
           "column": 73
         },
         "end": {
-          "line": 11,
+          "line": 10,
           "column": 74
         }
       }
@@ -2034,11 +2034,11 @@
       "end": 384,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 10,
           "column": 74
         },
         "end": {
-          "line": 11,
+          "line": 10,
           "column": 75
         }
       }
@@ -2060,11 +2060,11 @@
       "end": 400,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 4
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 15
         }
       }
@@ -2085,11 +2085,11 @@
       "end": 401,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 15
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 16
         }
       }
@@ -2110,11 +2110,11 @@
       "end": 402,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 16
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 17
         }
       }
@@ -2135,11 +2135,11 @@
       "end": 403,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 17
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 18
         }
       }
@@ -2163,11 +2163,11 @@
       "end": 417,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 12,
           "column": 8
         },
         "end": {
-          "line": 13,
+          "line": 12,
           "column": 13
         }
       }
@@ -2188,11 +2188,11 @@
       "end": 418,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 12,
           "column": 13
         },
         "end": {
-          "line": 13,
+          "line": 12,
           "column": 14
         }
       }
@@ -2213,11 +2213,11 @@
       "end": 419,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 12,
           "column": 14
         },
         "end": {
-          "line": 13,
+          "line": 12,
           "column": 15
         }
       }
@@ -2239,11 +2239,11 @@
       "end": 420,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 12,
           "column": 15
         },
         "end": {
-          "line": 13,
+          "line": 12,
           "column": 16
         }
       }
@@ -2264,11 +2264,11 @@
       "end": 426,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 4
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 5
         }
       }
@@ -2289,11 +2289,11 @@
       "end": 428,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 14,
           "column": 0
         },
         "end": {
-          "line": 15,
+          "line": 14,
           "column": 1
         }
       }
@@ -2317,11 +2317,11 @@
       "end": 436,
       "loc": {
         "start": {
-          "line": 17,
+          "line": 16,
           "column": 0
         },
         "end": {
-          "line": 17,
+          "line": 16,
           "column": 6
         }
       }
@@ -2345,11 +2345,11 @@
       "end": 444,
       "loc": {
         "start": {
-          "line": 17,
+          "line": 16,
           "column": 7
         },
         "end": {
-          "line": 17,
+          "line": 16,
           "column": 14
         }
       }
@@ -2373,11 +2373,11 @@
       "end": 448,
       "loc": {
         "start": {
-          "line": 17,
+          "line": 16,
           "column": 15
         },
         "end": {
-          "line": 17,
+          "line": 16,
           "column": 18
         }
       }
@@ -2399,11 +2399,11 @@
       "end": 463,
       "loc": {
         "start": {
-          "line": 17,
+          "line": 16,
           "column": 19
         },
         "end": {
-          "line": 17,
+          "line": 16,
           "column": 33
         }
       }
@@ -2425,11 +2425,11 @@
       "end": 464,
       "loc": {
         "start": {
-          "line": 17,
+          "line": 16,
           "column": 33
         },
         "end": {
-          "line": 17,
+          "line": 16,
           "column": 34
         }
       }
@@ -2451,11 +2451,11 @@
       "end": 464,
       "loc": {
         "start": {
-          "line": 17,
+          "line": 16,
           "column": 34
         },
         "end": {
-          "line": 17,
+          "line": 16,
           "column": 34
         }
       }
