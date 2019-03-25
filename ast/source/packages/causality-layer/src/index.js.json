@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 119,
+  "end": 269,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 3,
+      "line": 5,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 119,
+    "end": 269,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 3,
+        "line": 5,
         "column": 0
       }
     },
@@ -31,7 +31,7 @@
       {
         "type": "ExportNamedDeclaration",
         "start": 0,
-        "end": 61,
+        "end": 58,
         "loc": {
           "start": {
             "line": 1,
@@ -39,7 +39,7 @@
           },
           "end": {
             "line": 1,
-            "column": 61
+            "column": 58
           }
         },
         "declaration": null,
@@ -47,7 +47,7 @@
           {
             "type": "ExportSpecifier",
             "start": 9,
-            "end": 34,
+            "end": 24,
             "loc": {
               "start": {
                 "line": 1,
@@ -55,13 +55,13 @@
               },
               "end": {
                 "line": 1,
-                "column": 34
+                "column": 24
               }
             },
             "local": {
               "type": "Identifier",
               "start": 9,
-              "end": 16,
+              "end": 24,
               "loc": {
                 "start": {
                   "line": 1,
@@ -69,56 +69,56 @@
                 },
                 "end": {
                   "line": 1,
-                  "column": 16
+                  "column": 24
                 },
-                "identifierName": "default"
+                "identifierName": "causalNetLayers"
               },
-              "name": "default"
+              "name": "causalNetLayers"
             },
             "exported": {
               "type": "Identifier",
-              "start": 20,
-              "end": 34,
+              "start": 9,
+              "end": 24,
               "loc": {
                 "start": {
                   "line": 1,
-                  "column": 20
+                  "column": 9
                 },
                 "end": {
                   "line": 1,
-                  "column": 34
+                  "column": 24
                 },
-                "identifierName": "causalNetLayer"
+                "identifierName": "causalNetLayers"
               },
-              "name": "causalNetLayer"
+              "name": "causalNetLayers"
             }
           }
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 42,
-          "end": 60,
+          "start": 32,
+          "end": 57,
           "loc": {
             "start": {
               "line": 1,
-              "column": 42
+              "column": 32
             },
             "end": {
               "line": 1,
-              "column": 60
+              "column": 57
             }
           },
           "extra": {
-            "rawValue": "./causalNetLayer",
-            "raw": "'./causalNetLayer'"
+            "rawValue": "./CausalNetLayers/index",
+            "raw": "'./CausalNetLayers/index'"
           },
-          "value": "./causalNetLayer"
+          "value": "./CausalNetLayers/index"
         }
       },
       {
         "type": "ExportNamedDeclaration",
-        "start": 62,
-        "end": 118,
+        "start": 59,
+        "end": 142,
         "loc": {
           "start": {
             "line": 2,
@@ -126,15 +126,15 @@
           },
           "end": {
             "line": 2,
-            "column": 56
+            "column": 83
           }
         },
         "declaration": null,
         "specifiers": [
           {
             "type": "ExportSpecifier",
-            "start": 71,
-            "end": 93,
+            "start": 68,
+            "end": 87,
             "loc": {
               "start": {
                 "line": 2,
@@ -142,13 +142,13 @@
               },
               "end": {
                 "line": 2,
-                "column": 31
+                "column": 28
               }
             },
             "local": {
               "type": "Identifier",
-              "start": 71,
-              "end": 78,
+              "start": 68,
+              "end": 87,
               "loc": {
                 "start": {
                   "line": 2,
@@ -156,6 +156,278 @@
                 },
                 "end": {
                   "line": 2,
+                  "column": 28
+                },
+                "identifierName": "causalNetParameters"
+              },
+              "name": "causalNetParameters"
+            },
+            "exported": {
+              "type": "Identifier",
+              "start": 68,
+              "end": 87,
+              "loc": {
+                "start": {
+                  "line": 2,
+                  "column": 9
+                },
+                "end": {
+                  "line": 2,
+                  "column": 28
+                },
+                "identifierName": "causalNetParameters"
+              },
+              "name": "causalNetParameters"
+            }
+          },
+          {
+            "type": "ExportSpecifier",
+            "start": 89,
+            "end": 104,
+            "loc": {
+              "start": {
+                "line": 2,
+                "column": 30
+              },
+              "end": {
+                "line": 2,
+                "column": 45
+              }
+            },
+            "local": {
+              "type": "Identifier",
+              "start": 89,
+              "end": 104,
+              "loc": {
+                "start": {
+                  "line": 2,
+                  "column": 30
+                },
+                "end": {
+                  "line": 2,
+                  "column": 45
+                },
+                "identifierName": "ParameterMixins"
+              },
+              "name": "ParameterMixins"
+            },
+            "exported": {
+              "type": "Identifier",
+              "start": 89,
+              "end": 104,
+              "loc": {
+                "start": {
+                  "line": 2,
+                  "column": 30
+                },
+                "end": {
+                  "line": 2,
+                  "column": 45
+                },
+                "identifierName": "ParameterMixins"
+              },
+              "name": "ParameterMixins"
+            }
+          }
+        ],
+        "source": {
+          "type": "StringLiteral",
+          "start": 112,
+          "end": 141,
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 53
+            },
+            "end": {
+              "line": 2,
+              "column": 82
+            }
+          },
+          "extra": {
+            "rawValue": "./CausalNetParameters/index",
+            "raw": "'./CausalNetParameters/index'"
+          },
+          "value": "./CausalNetParameters/index"
+        }
+      },
+      {
+        "type": "ExportNamedDeclaration",
+        "start": 143,
+        "end": 215,
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 0
+          },
+          "end": {
+            "line": 3,
+            "column": 72
+          }
+        },
+        "declaration": null,
+        "specifiers": [
+          {
+            "type": "ExportSpecifier",
+            "start": 152,
+            "end": 167,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 9
+              },
+              "end": {
+                "line": 3,
+                "column": 24
+              }
+            },
+            "local": {
+              "type": "Identifier",
+              "start": 152,
+              "end": 167,
+              "loc": {
+                "start": {
+                  "line": 3,
+                  "column": 9
+                },
+                "end": {
+                  "line": 3,
+                  "column": 24
+                },
+                "identifierName": "causalNetRunner"
+              },
+              "name": "causalNetRunner"
+            },
+            "exported": {
+              "type": "Identifier",
+              "start": 152,
+              "end": 167,
+              "loc": {
+                "start": {
+                  "line": 3,
+                  "column": 9
+                },
+                "end": {
+                  "line": 3,
+                  "column": 24
+                },
+                "identifierName": "causalNetRunner"
+              },
+              "name": "causalNetRunner"
+            }
+          },
+          {
+            "type": "ExportSpecifier",
+            "start": 169,
+            "end": 181,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 26
+              },
+              "end": {
+                "line": 3,
+                "column": 38
+              }
+            },
+            "local": {
+              "type": "Identifier",
+              "start": 169,
+              "end": 181,
+              "loc": {
+                "start": {
+                  "line": 3,
+                  "column": 26
+                },
+                "end": {
+                  "line": 3,
+                  "column": 38
+                },
+                "identifierName": "RunnerMixins"
+              },
+              "name": "RunnerMixins"
+            },
+            "exported": {
+              "type": "Identifier",
+              "start": 169,
+              "end": 181,
+              "loc": {
+                "start": {
+                  "line": 3,
+                  "column": 26
+                },
+                "end": {
+                  "line": 3,
+                  "column": 38
+                },
+                "identifierName": "RunnerMixins"
+              },
+              "name": "RunnerMixins"
+            }
+          }
+        ],
+        "source": {
+          "type": "StringLiteral",
+          "start": 189,
+          "end": 214,
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 46
+            },
+            "end": {
+              "line": 3,
+              "column": 71
+            }
+          },
+          "extra": {
+            "rawValue": "./CausalNetRunner/index",
+            "raw": "'./CausalNetRunner/index'"
+          },
+          "value": "./CausalNetRunner/index"
+        }
+      },
+      {
+        "type": "ExportNamedDeclaration",
+        "start": 216,
+        "end": 268,
+        "loc": {
+          "start": {
+            "line": 4,
+            "column": 0
+          },
+          "end": {
+            "line": 4,
+            "column": 52
+          }
+        },
+        "declaration": null,
+        "specifiers": [
+          {
+            "type": "ExportSpecifier",
+            "start": 225,
+            "end": 245,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 9
+              },
+              "end": {
+                "line": 4,
+                "column": 29
+              }
+            },
+            "local": {
+              "type": "Identifier",
+              "start": 225,
+              "end": 232,
+              "loc": {
+                "start": {
+                  "line": 4,
+                  "column": 9
+                },
+                "end": {
+                  "line": 4,
                   "column": 16
                 },
                 "identifierName": "default"
@@ -164,42 +436,42 @@
             },
             "exported": {
               "type": "Identifier",
-              "start": 82,
-              "end": 93,
+              "start": 236,
+              "end": 245,
               "loc": {
                 "start": {
-                  "line": 2,
+                  "line": 4,
                   "column": 20
                 },
                 "end": {
-                  "line": 2,
-                  "column": 31
+                  "line": 4,
+                  "column": 29
                 },
-                "identifierName": "LayerMixins"
+                "identifierName": "NetMixins"
               },
-              "name": "LayerMixins"
+              "name": "NetMixins"
             }
           }
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 101,
-          "end": 117,
+          "start": 253,
+          "end": 267,
           "loc": {
             "start": {
-              "line": 2,
-              "column": 39
+              "line": 4,
+              "column": 37
             },
             "end": {
-              "line": 2,
-              "column": 55
+              "line": 4,
+              "column": 51
             }
           },
           "extra": {
-            "rawValue": "./layer.mixins",
-            "raw": "'./layer.mixins'"
+            "rawValue": "./net.mixins",
+            "raw": "'./net.mixins'"
           },
-          "value": "./layer.mixins"
+          "value": "./net.mixins"
         }
       }
     ],
@@ -262,21 +534,19 @@
     },
     {
       "type": {
-        "label": "default",
-        "keyword": "default",
-        "beforeExpr": true,
-        "startsExpr": false,
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
         "rightAssociative": false,
         "isLoop": false,
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null,
-        "updateContext": null
+        "binop": null
       },
-      "value": "default",
+      "value": "causalNetLayers",
       "start": 9,
-      "end": 16,
+      "end": 24,
       "loc": {
         "start": {
           "line": 1,
@@ -284,59 +554,7 @@
         },
         "end": {
           "line": 1,
-          "column": 16
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "as",
-      "start": 17,
-      "end": 19,
-      "loc": {
-        "start": {
-          "line": 1,
-          "column": 17
-        },
-        "end": {
-          "line": 1,
-          "column": 19
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "causalNetLayer",
-      "start": 20,
-      "end": 34,
-      "loc": {
-        "start": {
-          "line": 1,
-          "column": 20
-        },
-        "end": {
-          "line": 1,
-          "column": 34
+          "column": 24
         }
       }
     },
@@ -352,16 +570,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 35,
-      "end": 36,
+      "start": 25,
+      "end": 26,
       "loc": {
         "start": {
           "line": 1,
-          "column": 35
+          "column": 25
         },
         "end": {
           "line": 1,
-          "column": 36
+          "column": 26
         }
       }
     },
@@ -378,16 +596,16 @@
         "binop": null
       },
       "value": "from",
-      "start": 37,
-      "end": 41,
+      "start": 27,
+      "end": 31,
       "loc": {
         "start": {
           "line": 1,
-          "column": 37
+          "column": 27
         },
         "end": {
           "line": 1,
-          "column": 41
+          "column": 31
         }
       }
     },
@@ -404,17 +622,17 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "./causalNetLayer",
-      "start": 42,
-      "end": 60,
+      "value": "./CausalNetLayers/index",
+      "start": 32,
+      "end": 57,
       "loc": {
         "start": {
           "line": 1,
-          "column": 42
+          "column": 32
         },
         "end": {
           "line": 1,
-          "column": 60
+          "column": 57
         }
       }
     },
@@ -431,16 +649,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 60,
-      "end": 61,
+      "start": 57,
+      "end": 58,
       "loc": {
         "start": {
           "line": 1,
-          "column": 60
+          "column": 57
         },
         "end": {
           "line": 1,
-          "column": 61
+          "column": 58
         }
       }
     },
@@ -459,8 +677,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 62,
-      "end": 68,
+      "start": 59,
+      "end": 65,
       "loc": {
         "start": {
           "line": 2,
@@ -484,8 +702,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 69,
-      "end": 70,
+      "start": 66,
+      "end": 67,
       "loc": {
         "start": {
           "line": 2,
@@ -493,6 +711,476 @@
         },
         "end": {
           "line": 2,
+          "column": 8
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "causalNetParameters",
+      "start": 68,
+      "end": 87,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 9
+        },
+        "end": {
+          "line": 2,
+          "column": 28
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 87,
+      "end": 88,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 28
+        },
+        "end": {
+          "line": 2,
+          "column": 29
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "ParameterMixins",
+      "start": 89,
+      "end": 104,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 30
+        },
+        "end": {
+          "line": 2,
+          "column": 45
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 105,
+      "end": 106,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 46
+        },
+        "end": {
+          "line": 2,
+          "column": 47
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "from",
+      "start": 107,
+      "end": 111,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 48
+        },
+        "end": {
+          "line": 2,
+          "column": 52
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "./CausalNetParameters/index",
+      "start": 112,
+      "end": 141,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 53
+        },
+        "end": {
+          "line": 2,
+          "column": 82
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ";",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 141,
+      "end": 142,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 82
+        },
+        "end": {
+          "line": 2,
+          "column": 83
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "export",
+        "keyword": "export",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "export",
+      "start": 143,
+      "end": 149,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 150,
+      "end": 151,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 7
+        },
+        "end": {
+          "line": 3,
+          "column": 8
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "causalNetRunner",
+      "start": 152,
+      "end": 167,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 9
+        },
+        "end": {
+          "line": 3,
+          "column": 24
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 167,
+      "end": 168,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 24
+        },
+        "end": {
+          "line": 3,
+          "column": 25
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "RunnerMixins",
+      "start": 169,
+      "end": 181,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 26
+        },
+        "end": {
+          "line": 3,
+          "column": 38
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 182,
+      "end": 183,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 39
+        },
+        "end": {
+          "line": 3,
+          "column": 40
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "from",
+      "start": 184,
+      "end": 188,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 41
+        },
+        "end": {
+          "line": 3,
+          "column": 45
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "./CausalNetRunner/index",
+      "start": 189,
+      "end": 214,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 46
+        },
+        "end": {
+          "line": 3,
+          "column": 71
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ";",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 214,
+      "end": 215,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 71
+        },
+        "end": {
+          "line": 3,
+          "column": 72
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "export",
+        "keyword": "export",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "export",
+      "start": 216,
+      "end": 222,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 223,
+      "end": 224,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 7
+        },
+        "end": {
+          "line": 4,
           "column": 8
         }
       }
@@ -512,15 +1200,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 71,
-      "end": 78,
+      "start": 225,
+      "end": 232,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 4,
           "column": 9
         },
         "end": {
-          "line": 2,
+          "line": 4,
           "column": 16
         }
       }
@@ -538,15 +1226,15 @@
         "binop": null
       },
       "value": "as",
-      "start": 79,
-      "end": 81,
+      "start": 233,
+      "end": 235,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 4,
           "column": 17
         },
         "end": {
-          "line": 2,
+          "line": 4,
           "column": 19
         }
       }
@@ -563,17 +1251,17 @@
         "postfix": false,
         "binop": null
       },
-      "value": "LayerMixins",
-      "start": 82,
-      "end": 93,
+      "value": "NetMixins",
+      "start": 236,
+      "end": 245,
       "loc": {
         "start": {
-          "line": 2,
+          "line": 4,
           "column": 20
         },
         "end": {
-          "line": 2,
-          "column": 31
+          "line": 4,
+          "column": 29
         }
       }
     },
@@ -589,16 +1277,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 94,
-      "end": 95,
+      "start": 246,
+      "end": 247,
       "loc": {
         "start": {
-          "line": 2,
-          "column": 32
+          "line": 4,
+          "column": 30
         },
         "end": {
-          "line": 2,
-          "column": 33
+          "line": 4,
+          "column": 31
         }
       }
     },
@@ -615,16 +1303,16 @@
         "binop": null
       },
       "value": "from",
-      "start": 96,
-      "end": 100,
+      "start": 248,
+      "end": 252,
       "loc": {
         "start": {
-          "line": 2,
-          "column": 34
+          "line": 4,
+          "column": 32
         },
         "end": {
-          "line": 2,
-          "column": 38
+          "line": 4,
+          "column": 36
         }
       }
     },
@@ -641,17 +1329,17 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "./layer.mixins",
-      "start": 101,
-      "end": 117,
+      "value": "./net.mixins",
+      "start": 253,
+      "end": 267,
       "loc": {
         "start": {
-          "line": 2,
-          "column": 39
+          "line": 4,
+          "column": 37
         },
         "end": {
-          "line": 2,
-          "column": 55
+          "line": 4,
+          "column": 51
         }
       }
     },
@@ -668,16 +1356,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 117,
-      "end": 118,
+      "start": 267,
+      "end": 268,
       "loc": {
         "start": {
-          "line": 2,
-          "column": 55
+          "line": 4,
+          "column": 51
         },
         "end": {
-          "line": 2,
-          "column": 56
+          "line": 4,
+          "column": 52
         }
       }
     },
@@ -694,15 +1382,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 119,
-      "end": 119,
+      "start": 269,
+      "end": 269,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 5,
           "column": 0
         },
         "end": {
-          "line": 3,
+          "line": 5,
           "column": 0
         }
       }

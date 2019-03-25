@@ -9,6 +9,6 @@ var b = T.tensor([2,3,4,5]).reshape([2,2]);
 const FitFn = ()=>{
     return a.mul(b).mean();
 };
-console.log(adam.fit(FitFn));
+console.log( adam.fit(FitFn) );
 a.print();
 b.print();

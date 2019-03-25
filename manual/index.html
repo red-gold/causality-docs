@@ -46,7 +46,7 @@
 <div data-ice="manual">
     <ul class="manual-toc">
       
-    <li data-ice="manualNav" class="indent-h1" data-link="manual/packages.html"><a href="manual/packages.html#monorepo" data-ice="link">Monorepo</a></li>
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/packages.html"><a href="manual/packages.html" data-ice="link">Monorepo</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/packages.html"><a href="manual/packages.html#causal-net-core" data-ice="link">causal-net.core</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#causalnetcore" data-ice="link">causalNetCore</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#tensor" data-ice="link">Tensor</a></li>
@@ -55,7 +55,7 @@
 <li data-ice="manualNav" class="indent-h2" data-link="manual/packages.html"><a href="manual/packages.html#causal-net-log" data-ice="link">causal-net.log</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#termlogger" data-ice="link">termLogger</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#loggermixins" data-ice="link">LoggerMixins</a></li>
-<li data-ice="manualNav" class="indent-h1" data-link="manual/packages.html"><a href="manual/packages.html#causal-net-preprocessing" data-ice="link">causal-net.preprocessing</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/packages.html"><a href="manual/packages.html#causal-net-preprocessing" data-ice="link">causal-net.preprocessing</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#nlppreprocessing" data-ice="link">nlpPreprocessing</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#imagepreprocessing" data-ice="link">imagePreprocessing</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#preprocessingmixins" data-ice="link">PreprocessingMixins</a></li>
@@ -143,7 +143,66 @@ are seperated into different sub-packages under the <code>/packages/</code> fold
     </div>
 <div class="manual-card-wrap" data-ice="cards">
       <div class="manual-card">
-        <div data-ice="card"><h1>causal-net.preprocessing</h1><p>This causal-net.preprocessing is a sub-module for <a href="https://red-gold.github.io/causality-docs/">causality</a> project.
+        <div data-ice="card"><h1>Monorepo</h1><p>Causality provides sub-package plugins for build up pipeline as follows:</p><h2>causal-net.core</h2><p>This package provides:</p><h3>causalNetCore</h3><ul>
+<li>Allow acess to core function and core tensor instance.</li>
+</ul><pre><code class="lang-javascript"><code class="source-code prettyprint">import { causalNetCore } from &apos;causal-net.core&apos;;
+console.log(causalNetCore.CoreTensor);
+console.log(causalNetCore.CoreFunctor);
+</code>
+</code></pre><p><a href="./manual/./asset/examples/core.babel.js">Run code</a></p><h3>Tensor</h3><ul>
+<li>Primitive class for composing Tensor based class. This class is based on <a href="https://js.tensorflow.org/">tensorflowjs</a></li>
+</ul><h3>Function</h3><ul>
+<li>Primitive class for composing Function based class. This class is based on <a href="https://ramdajs.com/">Ramda</a></li>
+</ul><h3>Store</h3><ul>
+<li>Primivtive class for composing Store base class. This class is based on <a href="https://www.npmjs.com/package/levelup">levelup</a></li>
+</ul><h2>causal-net.log</h2><p>This causal-net.log is a sub-module for <a href="https://red-gold.github.io/causality-docs/">causality</a> project.
+This module provide log instance and sampling mixins</p><h3>termLogger</h3><ul>
+<li>Provide isomomorphic logger instance to replace console.log.</li>
+</ul><pre><code class="lang-javascript"><code class="source-code prettyprint">import { termLogger } from &apos;causal-net.log&apos;;
+
+termLogger.log(&apos;this is text&apos;);
+termLogger.log({&apos;name&apos;:&apos;this is text&apos;});
+
+termLogger.log({&apos;father&apos;:{&apos;name&apos;:&apos;this is text&apos;,&apos;alias&apos;:&apos;this is another text&apos;}});
+termLogger.log({&apos;father&apos;:{&apos;name&apos;:{sub:&apos;this is text&apos;},&apos;alias&apos;:&apos;this is another text&apos;}});
+termLogger.log({&apos;array&apos;:[0,1,2,3,4]});
+termLogger.log({&apos;array&apos;:[{a:0}, {b:1}, {c:2},  {d:4},  {e:6}]});
+
+termLogger.Level = &apos;debug&apos;;
+console.log(termLogger.Level);
+termLogger.log({&apos;not to show&apos;: true});
+termLogger.Level = &apos;log&apos;;
+console.log(termLogger.Level);
+
+termLogger.progressBegin(5);
+for(let i of [1,2,3,4,5]){
+    termLogger.progressUpdate({current: i});
+}
+termLogger.progressEnd();
+
+termLogger.groupBegin(&apos;group A&apos;);
+termLogger.groupBegin(&apos;group B&apos;);
+termLogger.groupBegin(&apos;group C&apos;);
+termLogger.groupEnd();
+termLogger.groupEnd();
+termLogger.groupEnd();
+
+</code>
+</code></pre><p><a href="./manual/./asset/examples/log.babel.js">Run code</a></p><h3>LoggerMixins</h3><ul>
+<li>Mixins function for mix with the main class to acquire logger.</li>
+</ul><pre><code class="lang-javascript"><code class="source-code prettyprint">import { LoggerMixins, termLogger, BaseLogger } from &apos;causal-net.log&apos;;
+import { platform } from &apos;causal-net.utils&apos;;
+import { Tensor } from &apos;causal-net.core&apos;;
+
+class SimplePipeline extends platform.mixWith(Tensor, [LoggerMixins]){
+    constructor(){
+        super();
+        this.Logger = termLogger;
+    }
+}
+let pipeline = new SimplePipeline();
+console.log(pipeline.Logger instanceof BaseLogger);</code>
+</code></pre><p><a href="./manual/./asset/examples/logger.mixins.babel.js">Run code</a></p><h2>causal-net.preprocessing</h2><p>This causal-net.preprocessing is a sub-module for <a href="https://red-gold.github.io/causality-docs/">causality</a> project.
 This module provide preprocessing instances and preprocessing mixins</p><h3>nlpPreprocessing</h3><ul>
 <li>Provide methods for text processing: tokenize, filter, count word frequency.</li>
 </ul><h3>imagePreprocessing</h3><ul>
@@ -235,51 +294,8 @@ let pipeline = new SimplePipeline();
 console.log(pipeline.Sampling);</code>
 </code></pre><p><a href="./manual/./asset/examples/sampling.mixins.babel.js">Run code</a></p><h2>causal-net.models</h2><h3>causalNetModels</h3><ul>
 <li>causalNetModels provides common used models: </li>
-</ul><p>Classification models</p><pre><code class="lang-javascript"><code class="source-code prettyprint">import { Log, Models, CausalNet } from &apos;../../src/index&apos;;
-const { causalNetModels } = Models;
-const { termLogger } = Log;
-let inputs = [[0.52, 1.12,  0.77],
-              [0.88, -1.08, 0.15],
-              [0.52, 0.06, -1.30],
-              [0.74, -2.49, 1.39]];
-let targets = [[0, 1], [0, 1], [0, 1], [0, 1]];
-const _NetConfig = {
-    HyperParameters: {SampleSize: 4},
-    NumClasses: 2,
-    Net:{Predict: [ {   Name:&apos;dense&apos;, Type: &apos;Tensor&apos;, 
-                        Parameters: { Weight: [3, 2], Bias: [2]  },
-                        Flow: [ { Op: &apos;dot&apos;, Parameter: &apos;Weight&apos;, Args: [] },
-                                { Op: &apos;add&apos;, Parameter: &apos;Bias&apos;,  Args: [] } ] 
-                               },
-                    {   Name:&apos;PipeOutput&apos;, Type: &apos;Tensor&apos;, 
-                        Flow: [ { Op: &apos;reshape&apos;, Args: [[&apos;$SampleSize&apos;, -1]] } ] 
-                    } ] },
-    Model:  causalNetModels.classification() };
-
-console.log({NetConfig: _NetConfig});
-let parameters = {};
-
-let causalNet = new CausalNet(_NetConfig, parameters);
-
-(async ()=&gt;{
-    const DoBatchTrainSampleGenerator = (epochIdx)=&gt;([{idx:0, batchSize:4, data: [inputs, targets]}]);
-    let logTrain = await causalNet.train(DoBatchTrainSampleGenerator, 20);
-    termLogger.log(logTrain);
-    const DoBatchTestSampleGenerator = ()=&gt;([{idx:0, batchSize:4, data: [inputs, targets]}]);
-    let testResult = await causalNet.accuracyTest(DoBatchTestSampleGenerator);
-    termLogger.log({testResult});
-    await causalNet.saveParams(&apos;save_model.model&apos;);
-    await causalNet.loadParams(&apos;save_model.model&apos;);
-    testResult = await causalNet.accuracyTest(DoBatchTestSampleGenerator);
-    termLogger.log({testResult});
-    testResult = await causalNet.ensembleAccuracyTest(DoBatchTestSampleGenerator, [&apos;save_model.model&apos;]);
-    termLogger.log({testResult});
-    testResult = await causalNet.accuracyTest(DoBatchTestSampleGenerator, [&apos;save_model.model&apos;]);
-    termLogger.log({testResult});
-})().catch(err=&gt;{
-    console.error({err});
-});</code>
-</code></pre><p><a href="./manual/./asset/examples/classification.babel.js">Run code</a></p><h3>SupervisedModelsMixins</h3><ul>
+</ul><p>Classification models
+[EXAMPLE  ERROR! /home/huynhnguyen/github/causality/packages/causality-models/DESCRIPTION.md, /home/huynhnguyen/github/causality/packages/causality-models/examples/classification.babel.js]</p><h3>SupervisedModelsMixins</h3><ul>
 <li>Mixins for mix with Pipeline class for supervised models.</li>
 </ul><h2>causal-net.layer</h2><p>This module provides:</p><h3>causalNetSGDOptimizer</h3><ul>
 <li>Provide SGD optimizing methods: adam
@@ -299,30 +315,76 @@ var b = T.tensor([2,3,4,5]).reshape([2,2]);
 const FitFn = ()=&gt;{
     return a.mul(b).mean();
 };
-console.log(adam.fit(FitFn));
+console.log( adam.fit(FitFn) );
 a.print();
 b.print();</code>
 </code></pre><p><a href="./manual/./asset/examples/causalNetSGDOptimizers.babel.js">Run code</a></p><h3>TrainerMixins</h3><ul>
 <li>Mixins for mix with Pipeline class.</li>
 </ul><pre><code class="lang-javascript"><code class="source-code prettyprint">import { causalNetSGDOptimizer, TrainerMixins } from &apos;causal-net.optimizers&apos;;
+import { causalNetModels, ModelMixins } from &apos;causal-net.models&apos;;
+import { causalNetParameters, causalNetLayers, causalNetRunner, NetMixins } from &apos;causal-net.layer&apos;;
+import { causalNetCore } from &apos;causal-net.core&apos;;
 import { platform } from &apos;causal-net.utils&apos;;
 import { Tensor } from &apos;causal-net.core&apos;;
-const PipeLineConfigure = {
-    Trainer: {
-        Optimizer: causalNetSGDOptimizer.adam,
-        OptimizerParameters: {},
-        TrainableParameters: [],
-    }
-}
-class SimplePipeline extends platform.mixWith(Tensor, [TrainerMixins]){
-    constructor(configure){
+import { termLogger } from &apos;causal-net.log&apos;;
+
+class SimplePipeline extends platform.mixWith(Tensor, [ 
+        NetMixins, 
+        ModelMixins, 
+        TrainerMixins]){
+    constructor(netParameters, netRunner, logger){
         super();
-        this.Trainer = configure.Trainer;
+        this.logger = logger;
+        this.Parameters = netParameters;
+        this.Net = netRunner;
     }
 }
-let pipeline = new SimplePipeline(PipeLineConfigure);
-console.log([ pipeline.Optimizer instanceof Tensor ]);
-console.log([ pipeline.OptimizerParameters, pipeline.TrainableParameters ]);</code>
+const T = causalNetCore.CoreTensor;
+(async ()=&gt;{
+    const PipeLineConfigure = {
+        Dataset: {
+            TrainData: [[1,2,3,4]],
+            TestData: [[1,2,3,4]],
+            ValidateData: [[1,2,3,4]]
+        },
+        Net: { 
+                Parameters: { Predict: null, Encode: null, Decode: null },
+                Layers: { 
+                    Predict: [ causalNetLayers.dense(4, 3), 
+                               causalNetLayers.dense(3, 2) ], 
+                    Encode: [ causalNetLayers.dense(4, 2) ], 
+                    Decode: [ causalNetLayers.dense(4, 2) ] 
+                },
+                Model: causalNetModels.classification(2),
+                Optimizer: causalNetSGDOptimizer.adam({learningRate: 0.01})
+        }
+    };
+
+    let pipeline = new SimplePipeline( causalNetParameters, 
+                            causalNetRunner, termLogger);
+    pipeline.setByConfig(PipeLineConfigure);
+    const { Predictor } = pipeline.Net;
+    let predictInfer = Predictor(T.tensor([[1,2,3,4]]));
+    predictInfer.print();
+    predictInfer = pipeline.PredictModel(T.tensor([[1,2,3,4]]));
+    predictInfer.print();
+
+    let modelOneHotPredict = pipeline.OneHotPredictModel(T.tensor([[1,2,3,4]]).asType(&apos;float32&apos;));
+    modelOneHotPredict.print();
+    let fit = pipeline.FitModel(T.tensor([[1,2,3,4]]).asType(&apos;float32&apos;));
+    fit.print();
+    let modelLoss = pipeline.LossModel(T.tensor([[1,2,3,4]]).asType(&apos;float32&apos;), 
+                             T.tensor([[0, 1]]).asType(&apos;float32&apos;));
+    modelLoss.print();
+    let trainLoss = pipeline.Trainer(T.tensor([[1,2,3,4]]).asType(&apos;float32&apos;), 
+        T.tensor([[0, 1]]).asType(&apos;float32&apos;));
+    trainLoss.print();
+    trainLoss = pipeline.Trainer(T.tensor([[1,2,3,4]]).asType(&apos;float32&apos;), 
+        T.tensor([[0, 1]]).asType(&apos;float32&apos;));
+    trainLoss.print();
+})().catch(err=&gt;{
+    console.error({err});
+});</code>
 </code></pre><p><a href="./manual/./asset/examples/trainer.mixins.babel.js">Run code</a></p><h2>causal-net.memcache</h2><h3>memDownCache</h3><ul>
 <li>memDownCache provides wrapper for <a href>memdown</a> caching.</li>
 </ul><pre><code class="lang-javascript"><code class="source-code prettyprint">import {memDownCache} from &apos;causal-net.memcache&apos;;
@@ -384,12 +446,12 @@ import { platform } from &apos;causal-net.utils&apos;;
 import { Tensor, Store } from &apos;causal-net.core&apos;;
 
 class SimplePipeline extends platform.mixWith(Tensor, [StorageMixins]){
-    constructor(){
+    constructor(storage){
         super();
-        this.Storage = indexDBStorage;
+        this.Storage = storage;
     }
 }
-let pipeline = new SimplePipeline();
+let pipeline = new SimplePipeline(indexDBStorage);
 console.log(pipeline.Storage instanceof Store);</code>
 </code></pre><p><a href="./manual/./asset/examples/storage.mixins.babel.js">Run code</a></p><h3>CSVFileMixins</h3><ul>
 <li>Mixins for read/write/fetch CSV file. </li>
@@ -504,7 +566,7 @@ catch(err){
 }
 </code>
 </code></pre><p><a href="./manual/./asset/examples/assert.babel.js">Run code</a></p></div>
-        <a data-ice="link" href="manual/packages.html#causal-net-preprocessing"></a>
+        <a data-ice="link" href="manual/packages.html"></a>
       </div>
     </div>
 <div class="manual-card-wrap" data-ice="cards">
