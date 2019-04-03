@@ -1,5 +1,46 @@
 [
   {
+    "name": "Functor#range",
+    "filePath": "causality/packages/causality-core/src/functor.js",
+    "lines": [
+      {
+        "lineNumber": 75,
+        "line": "    /**"
+      },
+      {
+        "lineNumber": 76,
+        "line": "     * Return an array with the given range"
+      },
+      {
+        "lineNumber": 77,
+        "line": "     * @param { Array } size - array of pairs to unzip"
+      },
+      {
+        "lineNumber": 78,
+        "line": "     * @returns { [Array] } - arrays from [beginAt, ...size]"
+      },
+      {
+        "lineNumber": 79,
+        "line": "     * @memberof Functor"
+      },
+      {
+        "lineNumber": 80,
+        "line": "     */"
+      },
+      {
+        "lineNumber": 81,
+        "line": "    range(size, beginIdx=0){"
+      }
+    ],
+    "codeParams": [
+      "size",
+      "beginIdx"
+    ],
+    "docParams": [
+      "size"
+    ]
+  },
+  {
     "name": "Store#getItem",
     "filePath": "causality/packages/causality-core/src/store.js",
     "lines": [
@@ -457,39 +498,128 @@
     "docParams": []
   },
   {
+    "name": "BufferUtils#writeBuffer",
+    "filePath": "causality/packages/causality-utils/src/bufferUtils.js",
+    "lines": [
+      {
+        "lineNumber": 24,
+        "line": "    /**"
+      },
+      {
+        "lineNumber": 25,
+        "line": "     * write buffer content from given content"
+      },
+      {
+        "lineNumber": 26,
+        "line": "     * @todo enhance reject case"
+      },
+      {
+        "lineNumber": 27,
+        "line": "     * @param { URL } url - url for csv content"
+      },
+      {
+        "lineNumber": 28,
+        "line": "     * @returns { Promise } - data promise with data if success"
+      },
+      {
+        "lineNumber": 29,
+        "line": "     * @memberof BufferUtils"
+      },
+      {
+        "lineNumber": 30,
+        "line": "     */"
+      },
+      {
+        "lineNumber": 31,
+        "line": "    async writeBuffer(data, filePath){"
+      }
+    ],
+    "codeParams": [
+      "data",
+      "filePath"
+    ],
+    "docParams": [
+      "url"
+    ]
+  },
+  {
+    "name": "BufferUtils#readBuffer",
+    "filePath": "causality/packages/causality-utils/src/bufferUtils.js",
+    "lines": [
+      {
+        "lineNumber": 48,
+        "line": "    /**"
+      },
+      {
+        "lineNumber": 49,
+        "line": "     * fetch buffer content from given url"
+      },
+      {
+        "lineNumber": 50,
+        "line": "     * @todo enhance reject case"
+      },
+      {
+        "lineNumber": 51,
+        "line": "     * @param { URL } url - url for csv content"
+      },
+      {
+        "lineNumber": 52,
+        "line": "     * @returns { Promise } - data promise with data if success"
+      },
+      {
+        "lineNumber": 53,
+        "line": "     * @memberof BufferUtils"
+      },
+      {
+        "lineNumber": 54,
+        "line": "     */"
+      },
+      {
+        "lineNumber": 55,
+        "line": "    readBuffer(filePath){"
+      }
+    ],
+    "codeParams": [
+      "filePath"
+    ],
+    "docParams": [
+      "url"
+    ]
+  },
+  {
     "name": "JSONUtils#writeJSON",
     "filePath": "causality/packages/causality-utils/src/jsonUtils.js",
     "lines": [
       {
-        "lineNumber": 32,
+        "lineNumber": 34,
         "line": "    /**"
       },
       {
-        "lineNumber": 33,
+        "lineNumber": 35,
         "line": "     * write json content from given content"
       },
       {
-        "lineNumber": 34,
+        "lineNumber": 36,
         "line": "     * @todo enhance reject case"
       },
       {
-        "lineNumber": 35,
+        "lineNumber": 37,
         "line": "     * @param { URL } url - url for csv content"
       },
       {
-        "lineNumber": 36,
+        "lineNumber": 38,
         "line": "     * @returns { Promise } - data promise with data if success"
       },
       {
-        "lineNumber": 37,
+        "lineNumber": 39,
         "line": "     * @memberof JSONUtils"
       },
       {
-        "lineNumber": 38,
+        "lineNumber": 40,
         "line": "     */"
       },
       {
-        "lineNumber": 39,
+        "lineNumber": 41,
         "line": "    async writeJSON(data, filePath){"
       }
     ],
@@ -506,35 +636,35 @@
     "filePath": "causality/packages/causality-utils/src/jsonUtils.js",
     "lines": [
       {
-        "lineNumber": 56,
+        "lineNumber": 58,
         "line": "    /**"
       },
       {
-        "lineNumber": 57,
+        "lineNumber": 59,
         "line": "     * fetch json content from given url"
       },
       {
-        "lineNumber": 58,
+        "lineNumber": 60,
         "line": "     * @todo enhance reject case"
       },
       {
-        "lineNumber": 59,
+        "lineNumber": 61,
         "line": "     * @param { URL } url - url for csv content"
       },
       {
-        "lineNumber": 60,
+        "lineNumber": 62,
         "line": "     * @returns { Promise } - data promise with data if success"
       },
       {
-        "lineNumber": 61,
+        "lineNumber": 63,
         "line": "     * @memberof JSONUtils"
       },
       {
-        "lineNumber": 62,
+        "lineNumber": 64,
         "line": "     */"
       },
       {
-        "lineNumber": 63,
+        "lineNumber": 65,
         "line": "    readJSON(filePath){"
       }
     ],

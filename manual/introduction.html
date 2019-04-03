@@ -108,10 +108,8 @@
 are seperated into different sub-packages under the <code>/packages/</code> folder. Each sub-package exports at most one mixin for building pipeline, For example, causality-optimizer provide trainerMixins for optimizing parameters.</p>
 <p>Key design principles:</p>
 <ul>
-<li>Make everything isomorphic.</li>
-<li>Make everything easy to extend.</li>
-<li>Make everything open to view.</li>
-<li>Make data processing as functional blocks. </li>
+<li>All components are isomorphic.</li>
+<li>self-explaning. </li>
 </ul>
 <p>We not use type script because we try to mitigate early technical debt from unpaid <a href="https://medium.com/javascript-scene/the-typescript-tax-132ff4cb175b">type tax</a>. </p>
 <h2 id="pipeline">Pipeline</h2><p>Causality attempts to standardize the pipeline into those steps:</p>

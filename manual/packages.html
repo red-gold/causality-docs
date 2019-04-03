@@ -327,38 +327,53 @@ b.print();</code>
 <h3 id="trainermixins">TrainerMixins</h3><ul>
 <li>Mixins for mix with Pipeline class.</li>
 </ul>
-<pre><code class="lang-javascript"><code class="source-code prettyprint">import { causalNetSGDOptimizer, TrainerMixins } from &apos;causal-net.optimizers&apos;;
+<pre><code class="lang-javascript"><code class="source-code prettyprint">import { causalNetSGDOptimizer, TrainerMixins, EvaluatorMixins } from &apos;causal-net.optimizers&apos;;
 import { causalNetModels, ModelMixins } from &apos;causal-net.models&apos;;
-import { causalNetParameters, causalNetLayers, causalNetRunner, NetMixins } from &apos;causal-net.layer&apos;;
-import { causalNetCore } from &apos;causal-net.core&apos;;
+import { causalNetParameters, causalNetLayers, causalNetRunner, LayerRunnerMixins } from &apos;causal-net.layer&apos;;
+import { causalNetCore, Functor } from &apos;causal-net.core&apos;;
 import { platform } from &apos;causal-net.utils&apos;;
 import { Tensor } from &apos;causal-net.core&apos;;
-import { termLogger } from &apos;causal-net.log&apos;;
+import { termLogger, LoggerMixins } from &apos;causal-net.log&apos;;
 
 class SimplePipeline extends platform.mixWith(Tensor, [ 
-        NetMixins, 
+        LayerRunnerMixins, 
         ModelMixins, 
+        EvaluatorMixins,
+        LoggerMixins,
         TrainerMixins]){
-    constructor(netParameters, netRunner, logger){
+    constructor( netRunner, functor, logger){
         super();
-        this.logger = logger;
-        this.Parameters = netParameters;
-        this.Net = netRunner;
+        this.F = functor;
+        this.LayerRunner = netRunner;
+        this.Log = logger;
     }
 }
 const T = causalNetCore.CoreTensor;
+const R = causalNetCore.CoreFunctor;
+const F = new Functor();
+const DummyData = (batchSize)=&gt;{
+    let samples = [ [0,1,2,3], 
+                    [0,1,2,3], 
+                    [0,1,2,3] ];
+    let labels  = [ [0,1], 
+                    [0,1], 
+                    [0,1] ];
+    return [{samples, labels}];
+}
+console.log(F.range(10));
+console.log(F.enumerate([0,1,2,3,4]));
+console.log(DummyData(1));
 (async ()=&gt;{
     const PipeLineConfigure = {
         Dataset: {
-            TrainData: [[1,2,3,4]],
-            TestData: [[1,2,3,4]],
-            ValidateData: [[1,2,3,4]]
+            TrainDataGenerator: DummyData,
+            TestDataGenerator: DummyData,
         },
         Net: { 
-                Parameters: { Predict: null, Encode: null, Decode: null },
+                Parameters: causalNetParameters.InitParameters(),
                 Layers: { 
-                    Predict: [ causalNetLayers.dense(4, 3), 
-                               causalNetLayers.dense(3, 2) ], 
+                    Predict: [  causalNetLayers.dense(4, 3), 
+                                causalNetLayers.dense(3, 2)], 
                     Encode: [ causalNetLayers.dense(4, 2) ], 
                     Decode: [ causalNetLayers.dense(4, 2) ] 
                 },
@@ -367,10 +382,9 @@ const T = causalNetCore.CoreTensor;
         }
     };
 
-    let pipeline = new SimplePipeline( causalNetParameters, 
-                            causalNetRunner, termLogger);
+    let pipeline = new SimplePipeline( causalNetRunner, F, termLogger);
     pipeline.setByConfig(PipeLineConfigure);
-    const { Predictor } = pipeline.Net;
+    const { Predictor } = pipeline.LayerRunner;
     let predictInfer = Predictor(T.tensor([[1,2,3,4]]));
     predictInfer.print();
     predictInfer = pipeline.PredictModel(T.tensor([[1,2,3,4]]));
@@ -389,6 +403,8 @@ const T = causalNetCore.CoreTensor;
     trainLoss = pipeline.Trainer(T.tensor([[1,2,3,4]]).asType(&apos;float32&apos;), 
         T.tensor([[0, 1]]).asType(&apos;float32&apos;));
     trainLoss.print();
+    console.log(await pipeline.train(10, 1));
+    console.log(await pipeline.test());
 })().catch(err=&gt;{
     console.error({err});
 });</code>

@@ -1,29 +1,29 @@
 {
   "type": "File",
   "start": 0,
-  "end": 52,
+  "end": 138,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 1,
-      "column": 52
+      "line": 2,
+      "column": 66
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 52,
+    "end": 138,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 1,
-        "column": 52
+        "line": 2,
+        "column": 66
       }
     },
     "sourceType": "module",
@@ -31,7 +31,7 @@
       {
         "type": "ExportNamedDeclaration",
         "start": 0,
-        "end": 52,
+        "end": 71,
         "loc": {
           "start": {
             "line": 1,
@@ -39,37 +39,37 @@
           },
           "end": {
             "line": 1,
-            "column": 52
+            "column": 71
           }
         },
         "declaration": null,
         "specifiers": [
           {
             "type": "ExportSpecifier",
-            "start": 8,
-            "end": 24,
+            "start": 9,
+            "end": 39,
             "loc": {
               "start": {
                 "line": 1,
-                "column": 8
+                "column": 9
               },
               "end": {
                 "line": 1,
-                "column": 24
+                "column": 39
               }
             },
             "local": {
               "type": "Identifier",
-              "start": 8,
-              "end": 15,
+              "start": 9,
+              "end": 16,
               "loc": {
                 "start": {
                   "line": 1,
-                  "column": 8
+                  "column": 9
                 },
                 "end": {
                   "line": 1,
-                  "column": 15
+                  "column": 16
                 },
                 "identifierName": "default"
               },
@@ -77,42 +77,129 @@
             },
             "exported": {
               "type": "Identifier",
-              "start": 19,
-              "end": 24,
+              "start": 20,
+              "end": 39,
               "loc": {
                 "start": {
                   "line": 1,
-                  "column": 19
+                  "column": 20
                 },
                 "end": {
                   "line": 1,
-                  "column": 24
+                  "column": 39
                 },
-                "identifierName": "MNIST"
+                "identifierName": "causalNetDataSource"
               },
-              "name": "MNIST"
+              "name": "causalNetDataSource"
             }
           }
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 31,
-          "end": 51,
+          "start": 47,
+          "end": 70,
           "loc": {
             "start": {
               "line": 1,
-              "column": 31
+              "column": 47
             },
             "end": {
               "line": 1,
-              "column": 51
+              "column": 70
             }
           },
           "extra": {
-            "rawValue": "./MNIST.ImgDataset",
-            "raw": "'./MNIST.ImgDataset'"
+            "rawValue": "./causalNetDataSource",
+            "raw": "'./causalNetDataSource'"
           },
-          "value": "./MNIST.ImgDataset"
+          "value": "./causalNetDataSource"
+        }
+      },
+      {
+        "type": "ExportNamedDeclaration",
+        "start": 72,
+        "end": 138,
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 0
+          },
+          "end": {
+            "line": 2,
+            "column": 66
+          }
+        },
+        "declaration": null,
+        "specifiers": [
+          {
+            "type": "ExportSpecifier",
+            "start": 81,
+            "end": 108,
+            "loc": {
+              "start": {
+                "line": 2,
+                "column": 9
+              },
+              "end": {
+                "line": 2,
+                "column": 36
+              }
+            },
+            "local": {
+              "type": "Identifier",
+              "start": 81,
+              "end": 88,
+              "loc": {
+                "start": {
+                  "line": 2,
+                  "column": 9
+                },
+                "end": {
+                  "line": 2,
+                  "column": 16
+                },
+                "identifierName": "default"
+              },
+              "name": "default"
+            },
+            "exported": {
+              "type": "Identifier",
+              "start": 92,
+              "end": 108,
+              "loc": {
+                "start": {
+                  "line": 2,
+                  "column": 20
+                },
+                "end": {
+                  "line": 2,
+                  "column": 36
+                },
+                "identifierName": "DataSourceMixins"
+              },
+              "name": "DataSourceMixins"
+            }
+          }
+        ],
+        "source": {
+          "type": "StringLiteral",
+          "start": 116,
+          "end": 137,
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 44
+            },
+            "end": {
+              "line": 2,
+              "column": 65
+            }
+          },
+          "extra": {
+            "rawValue": "./dataSource.mixins",
+            "raw": "'./dataSource.mixins'"
+          },
+          "value": "./dataSource.mixins"
         }
       }
     ],
@@ -188,16 +275,16 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 8,
-      "end": 15,
+      "start": 9,
+      "end": 16,
       "loc": {
         "start": {
           "line": 1,
-          "column": 8
+          "column": 9
         },
         "end": {
           "line": 1,
-          "column": 15
+          "column": 16
         }
       }
     },
@@ -214,16 +301,16 @@
         "binop": null
       },
       "value": "as",
-      "start": 16,
-      "end": 18,
+      "start": 17,
+      "end": 19,
       "loc": {
         "start": {
           "line": 1,
-          "column": 16
+          "column": 17
         },
         "end": {
           "line": 1,
-          "column": 18
+          "column": 19
         }
       }
     },
@@ -239,17 +326,17 @@
         "postfix": false,
         "binop": null
       },
-      "value": "MNIST",
-      "start": 19,
-      "end": 24,
+      "value": "causalNetDataSource",
+      "start": 20,
+      "end": 39,
       "loc": {
         "start": {
           "line": 1,
-          "column": 19
+          "column": 20
         },
         "end": {
           "line": 1,
-          "column": 24
+          "column": 39
         }
       }
     },
@@ -265,16 +352,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 24,
-      "end": 25,
+      "start": 40,
+      "end": 41,
       "loc": {
         "start": {
           "line": 1,
-          "column": 24
+          "column": 40
         },
         "end": {
           "line": 1,
-          "column": 25
+          "column": 41
         }
       }
     },
@@ -291,16 +378,16 @@
         "binop": null
       },
       "value": "from",
-      "start": 26,
-      "end": 30,
+      "start": 42,
+      "end": 46,
       "loc": {
         "start": {
           "line": 1,
-          "column": 26
+          "column": 42
         },
         "end": {
           "line": 1,
-          "column": 30
+          "column": 46
         }
       }
     },
@@ -317,17 +404,17 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "./MNIST.ImgDataset",
-      "start": 31,
-      "end": 51,
+      "value": "./causalNetDataSource",
+      "start": 47,
+      "end": 70,
       "loc": {
         "start": {
           "line": 1,
-          "column": 31
+          "column": 47
         },
         "end": {
           "line": 1,
-          "column": 51
+          "column": 70
         }
       }
     },
@@ -344,16 +431,253 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 51,
-      "end": 52,
+      "start": 70,
+      "end": 71,
       "loc": {
         "start": {
           "line": 1,
-          "column": 51
+          "column": 70
         },
         "end": {
           "line": 1,
-          "column": 52
+          "column": 71
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "export",
+        "keyword": "export",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "export",
+      "start": 72,
+      "end": 78,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 0
+        },
+        "end": {
+          "line": 2,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 79,
+      "end": 80,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 7
+        },
+        "end": {
+          "line": 2,
+          "column": 8
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "default",
+        "keyword": "default",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "default",
+      "start": 81,
+      "end": 88,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 9
+        },
+        "end": {
+          "line": 2,
+          "column": 16
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "as",
+      "start": 89,
+      "end": 91,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 17
+        },
+        "end": {
+          "line": 2,
+          "column": 19
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "DataSourceMixins",
+      "start": 92,
+      "end": 108,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 20
+        },
+        "end": {
+          "line": 2,
+          "column": 36
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 109,
+      "end": 110,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 37
+        },
+        "end": {
+          "line": 2,
+          "column": 38
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "from",
+      "start": 111,
+      "end": 115,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 39
+        },
+        "end": {
+          "line": 2,
+          "column": 43
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "./dataSource.mixins",
+      "start": 116,
+      "end": 137,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 44
+        },
+        "end": {
+          "line": 2,
+          "column": 65
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ";",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 137,
+      "end": 138,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 65
+        },
+        "end": {
+          "line": 2,
+          "column": 66
         }
       }
     },
@@ -370,16 +694,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 52,
-      "end": 52,
+      "start": 138,
+      "end": 138,
       "loc": {
         "start": {
-          "line": 1,
-          "column": 52
+          "line": 2,
+          "column": 66
         },
         "end": {
-          "line": 1,
-          "column": 52
+          "line": 2,
+          "column": 66
         }
       }
     }
