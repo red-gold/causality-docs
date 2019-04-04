@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 185,
+  "end": 258,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 5,
+      "line": 6,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 185,
+    "end": 258,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 5,
+        "line": 6,
         "column": 0
       }
     },
@@ -31,15 +31,15 @@
       {
         "type": "ExportNamedDeclaration",
         "start": 0,
-        "end": 127,
+        "end": 63,
         "loc": {
           "start": {
             "line": 1,
             "column": 0
           },
           "end": {
-            "line": 3,
-            "column": 69
+            "line": 1,
+            "column": 63
           }
         },
         "declaration": null,
@@ -47,7 +47,7 @@
           {
             "type": "ExportSpecifier",
             "start": 9,
-            "end": 24,
+            "end": 35,
             "loc": {
               "start": {
                 "line": 1,
@@ -55,13 +55,13 @@
               },
               "end": {
                 "line": 1,
-                "column": 24
+                "column": 35
               }
             },
             "local": {
               "type": "Identifier",
               "start": 9,
-              "end": 24,
+              "end": 16,
               "loc": {
                 "start": {
                   "line": 1,
@@ -69,161 +69,63 @@
                 },
                 "end": {
                   "line": 1,
-                  "column": 24
+                  "column": 16
+                },
+                "identifierName": "default"
+              },
+              "name": "default"
+            },
+            "exported": {
+              "type": "Identifier",
+              "start": 20,
+              "end": 35,
+              "loc": {
+                "start": {
+                  "line": 1,
+                  "column": 20
+                },
+                "end": {
+                  "line": 1,
+                  "column": 35
                 },
                 "identifierName": "causalNetModels"
               },
               "name": "causalNetModels"
-            },
-            "exported": {
-              "type": "Identifier",
-              "start": 9,
-              "end": 24,
-              "loc": {
-                "start": {
-                  "line": 1,
-                  "column": 9
-                },
-                "end": {
-                  "line": 1,
-                  "column": 24
-                },
-                "identifierName": "causalNetModels"
-              },
-              "name": "causalNetModels"
-            }
-          },
-          {
-            "type": "ExportSpecifier",
-            "start": 36,
-            "end": 55,
-            "loc": {
-              "start": {
-                "line": 2,
-                "column": 9
-              },
-              "end": {
-                "line": 2,
-                "column": 28
-              }
-            },
-            "local": {
-              "type": "Identifier",
-              "start": 36,
-              "end": 55,
-              "loc": {
-                "start": {
-                  "line": 2,
-                  "column": 9
-                },
-                "end": {
-                  "line": 2,
-                  "column": 28
-                },
-                "identifierName": "BaseSupervisedModel"
-              },
-              "name": "BaseSupervisedModel"
-            },
-            "exported": {
-              "type": "Identifier",
-              "start": 36,
-              "end": 55,
-              "loc": {
-                "start": {
-                  "line": 2,
-                  "column": 9
-                },
-                "end": {
-                  "line": 2,
-                  "column": 28
-                },
-                "identifierName": "BaseSupervisedModel"
-              },
-              "name": "BaseSupervisedModel"
-            }
-          },
-          {
-            "type": "ExportSpecifier",
-            "start": 67,
-            "end": 92,
-            "loc": {
-              "start": {
-                "line": 3,
-                "column": 9
-              },
-              "end": {
-                "line": 3,
-                "column": 34
-              }
-            },
-            "local": {
-              "type": "Identifier",
-              "start": 67,
-              "end": 92,
-              "loc": {
-                "start": {
-                  "line": 3,
-                  "column": 9
-                },
-                "end": {
-                  "line": 3,
-                  "column": 34
-                },
-                "identifierName": "SingleLabelClassification"
-              },
-              "name": "SingleLabelClassification"
-            },
-            "exported": {
-              "type": "Identifier",
-              "start": 67,
-              "end": 92,
-              "loc": {
-                "start": {
-                  "line": 3,
-                  "column": 9
-                },
-                "end": {
-                  "line": 3,
-                  "column": 34
-                },
-                "identifierName": "SingleLabelClassification"
-              },
-              "name": "SingleLabelClassification"
             }
           }
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 100,
-          "end": 126,
+          "start": 43,
+          "end": 62,
           "loc": {
             "start": {
-              "line": 3,
-              "column": 42
+              "line": 1,
+              "column": 43
             },
             "end": {
-              "line": 3,
-              "column": 68
+              "line": 1,
+              "column": 62
             }
           },
           "extra": {
-            "rawValue": "./SupervisedModels/index",
-            "raw": "'./SupervisedModels/index'"
+            "rawValue": "./causalNetModels",
+            "raw": "'./causalNetModels'"
           },
-          "value": "./SupervisedModels/index"
+          "value": "./causalNetModels"
         }
       },
       {
         "type": "ExportNamedDeclaration",
-        "start": 128,
-        "end": 184,
+        "start": 64,
+        "end": 120,
         "loc": {
           "start": {
-            "line": 4,
+            "line": 2,
             "column": 0
           },
           "end": {
-            "line": 4,
+            "line": 2,
             "column": 56
           }
         },
@@ -231,8 +133,95 @@
         "specifiers": [
           {
             "type": "ExportSpecifier",
-            "start": 137,
-            "end": 159,
+            "start": 73,
+            "end": 95,
+            "loc": {
+              "start": {
+                "line": 2,
+                "column": 9
+              },
+              "end": {
+                "line": 2,
+                "column": 31
+              }
+            },
+            "local": {
+              "type": "Identifier",
+              "start": 73,
+              "end": 80,
+              "loc": {
+                "start": {
+                  "line": 2,
+                  "column": 9
+                },
+                "end": {
+                  "line": 2,
+                  "column": 16
+                },
+                "identifierName": "default"
+              },
+              "name": "default"
+            },
+            "exported": {
+              "type": "Identifier",
+              "start": 84,
+              "end": 95,
+              "loc": {
+                "start": {
+                  "line": 2,
+                  "column": 20
+                },
+                "end": {
+                  "line": 2,
+                  "column": 31
+                },
+                "identifierName": "ModelMixins"
+              },
+              "name": "ModelMixins"
+            }
+          }
+        ],
+        "source": {
+          "type": "StringLiteral",
+          "start": 103,
+          "end": 119,
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 39
+            },
+            "end": {
+              "line": 2,
+              "column": 55
+            }
+          },
+          "extra": {
+            "rawValue": "./model.mixins",
+            "raw": "'./model.mixins'"
+          },
+          "value": "./model.mixins"
+        }
+      },
+      {
+        "type": "ExportNamedDeclaration",
+        "start": 122,
+        "end": 173,
+        "loc": {
+          "start": {
+            "line": 4,
+            "column": 0
+          },
+          "end": {
+            "line": 4,
+            "column": 51
+          }
+        },
+        "declaration": null,
+        "specifiers": [
+          {
+            "type": "ExportSpecifier",
+            "start": 131,
+            "end": 151,
             "loc": {
               "start": {
                 "line": 4,
@@ -240,13 +229,13 @@
               },
               "end": {
                 "line": 4,
-                "column": 31
+                "column": 29
               }
             },
             "local": {
               "type": "Identifier",
-              "start": 137,
-              "end": 144,
+              "start": 131,
+              "end": 138,
               "loc": {
                 "start": {
                   "line": 4,
@@ -262,8 +251,8 @@
             },
             "exported": {
               "type": "Identifier",
-              "start": 148,
-              "end": 159,
+              "start": 142,
+              "end": 151,
               "loc": {
                 "start": {
                   "line": 4,
@@ -271,33 +260,120 @@
                 },
                 "end": {
                   "line": 4,
-                  "column": 31
+                  "column": 29
                 },
-                "identifierName": "ModelMixins"
+                "identifierName": "BaseModel"
               },
-              "name": "ModelMixins"
+              "name": "BaseModel"
             }
           }
         ],
         "source": {
           "type": "StringLiteral",
-          "start": 167,
-          "end": 183,
+          "start": 159,
+          "end": 172,
           "loc": {
             "start": {
               "line": 4,
-              "column": 39
+              "column": 37
             },
             "end": {
               "line": 4,
-              "column": 55
+              "column": 50
             }
           },
           "extra": {
-            "rawValue": "./model.mixins",
-            "raw": "'./model.mixins'"
+            "rawValue": "./baseModel",
+            "raw": "'./baseModel'"
           },
-          "value": "./model.mixins"
+          "value": "./baseModel"
+        }
+      },
+      {
+        "type": "ExportNamedDeclaration",
+        "start": 174,
+        "end": 257,
+        "loc": {
+          "start": {
+            "line": 5,
+            "column": 0
+          },
+          "end": {
+            "line": 5,
+            "column": 83
+          }
+        },
+        "declaration": null,
+        "specifiers": [
+          {
+            "type": "ExportSpecifier",
+            "start": 183,
+            "end": 219,
+            "loc": {
+              "start": {
+                "line": 5,
+                "column": 9
+              },
+              "end": {
+                "line": 5,
+                "column": 45
+              }
+            },
+            "local": {
+              "type": "Identifier",
+              "start": 183,
+              "end": 190,
+              "loc": {
+                "start": {
+                  "line": 5,
+                  "column": 9
+                },
+                "end": {
+                  "line": 5,
+                  "column": 16
+                },
+                "identifierName": "default"
+              },
+              "name": "default"
+            },
+            "exported": {
+              "type": "Identifier",
+              "start": 194,
+              "end": 219,
+              "loc": {
+                "start": {
+                  "line": 5,
+                  "column": 20
+                },
+                "end": {
+                  "line": 5,
+                  "column": 45
+                },
+                "identifierName": "SingleLabelClassification"
+              },
+              "name": "SingleLabelClassification"
+            }
+          }
+        ],
+        "source": {
+          "type": "StringLiteral",
+          "start": 227,
+          "end": 256,
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 53
+            },
+            "end": {
+              "line": 5,
+              "column": 82
+            }
+          },
+          "extra": {
+            "rawValue": "./singleLableClassification",
+            "raw": "'./singleLableClassification'"
+          },
+          "value": "./singleLableClassification"
         }
       }
     ],
@@ -360,6 +436,60 @@
     },
     {
       "type": {
+        "label": "default",
+        "keyword": "default",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "default",
+      "start": 9,
+      "end": 16,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 9
+        },
+        "end": {
+          "line": 1,
+          "column": 16
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "as",
+      "start": 17,
+      "end": 19,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 17
+        },
+        "end": {
+          "line": 1,
+          "column": 19
+        }
+      }
+    },
+    {
+      "type": {
         "label": "name",
         "beforeExpr": false,
         "startsExpr": true,
@@ -371,120 +501,16 @@
         "binop": null
       },
       "value": "causalNetModels",
-      "start": 9,
-      "end": 24,
+      "start": 20,
+      "end": 35,
       "loc": {
         "start": {
           "line": 1,
-          "column": 9
+          "column": 20
         },
         "end": {
           "line": 1,
-          "column": 24
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ",",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 24,
-      "end": 25,
-      "loc": {
-        "start": {
-          "line": 1,
-          "column": 24
-        },
-        "end": {
-          "line": 1,
-          "column": 25
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "BaseSupervisedModel",
-      "start": 36,
-      "end": 55,
-      "loc": {
-        "start": {
-          "line": 2,
-          "column": 9
-        },
-        "end": {
-          "line": 2,
-          "column": 28
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ",",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 55,
-      "end": 56,
-      "loc": {
-        "start": {
-          "line": 2,
-          "column": 28
-        },
-        "end": {
-          "line": 2,
-          "column": 29
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "SingleLabelClassification",
-      "start": 67,
-      "end": 92,
-      "loc": {
-        "start": {
-          "line": 3,
-          "column": 9
-        },
-        "end": {
-          "line": 3,
-          "column": 34
+          "column": 35
         }
       }
     },
@@ -500,16 +526,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 93,
-      "end": 94,
+      "start": 36,
+      "end": 37,
       "loc": {
         "start": {
-          "line": 3,
-          "column": 35
+          "line": 1,
+          "column": 36
         },
         "end": {
-          "line": 3,
-          "column": 36
+          "line": 1,
+          "column": 37
         }
       }
     },
@@ -526,16 +552,16 @@
         "binop": null
       },
       "value": "from",
-      "start": 95,
-      "end": 99,
+      "start": 38,
+      "end": 42,
       "loc": {
         "start": {
-          "line": 3,
-          "column": 37
+          "line": 1,
+          "column": 38
         },
         "end": {
-          "line": 3,
-          "column": 41
+          "line": 1,
+          "column": 42
         }
       }
     },
@@ -552,17 +578,17 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "./SupervisedModels/index",
-      "start": 100,
-      "end": 126,
+      "value": "./causalNetModels",
+      "start": 43,
+      "end": 62,
       "loc": {
         "start": {
-          "line": 3,
-          "column": 42
+          "line": 1,
+          "column": 43
         },
         "end": {
-          "line": 3,
-          "column": 68
+          "line": 1,
+          "column": 62
         }
       }
     },
@@ -579,16 +605,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 126,
-      "end": 127,
+      "start": 62,
+      "end": 63,
       "loc": {
         "start": {
-          "line": 3,
-          "column": 68
+          "line": 1,
+          "column": 62
         },
         "end": {
-          "line": 3,
-          "column": 69
+          "line": 1,
+          "column": 63
         }
       }
     },
@@ -607,8 +633,245 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 128,
-      "end": 134,
+      "start": 64,
+      "end": 70,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 0
+        },
+        "end": {
+          "line": 2,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 71,
+      "end": 72,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 7
+        },
+        "end": {
+          "line": 2,
+          "column": 8
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "default",
+        "keyword": "default",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "default",
+      "start": 73,
+      "end": 80,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 9
+        },
+        "end": {
+          "line": 2,
+          "column": 16
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "as",
+      "start": 81,
+      "end": 83,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 17
+        },
+        "end": {
+          "line": 2,
+          "column": 19
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "ModelMixins",
+      "start": 84,
+      "end": 95,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 20
+        },
+        "end": {
+          "line": 2,
+          "column": 31
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 96,
+      "end": 97,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 32
+        },
+        "end": {
+          "line": 2,
+          "column": 33
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "from",
+      "start": 98,
+      "end": 102,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 34
+        },
+        "end": {
+          "line": 2,
+          "column": 38
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "./model.mixins",
+      "start": 103,
+      "end": 119,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 39
+        },
+        "end": {
+          "line": 2,
+          "column": 55
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ";",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 119,
+      "end": 120,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 55
+        },
+        "end": {
+          "line": 2,
+          "column": 56
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "export",
+        "keyword": "export",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "export",
+      "start": 122,
+      "end": 128,
       "loc": {
         "start": {
           "line": 4,
@@ -632,8 +895,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 135,
-      "end": 136,
+      "start": 129,
+      "end": 130,
       "loc": {
         "start": {
           "line": 4,
@@ -660,8 +923,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 137,
-      "end": 144,
+      "start": 131,
+      "end": 138,
       "loc": {
         "start": {
           "line": 4,
@@ -686,8 +949,8 @@
         "binop": null
       },
       "value": "as",
-      "start": 145,
-      "end": 147,
+      "start": 139,
+      "end": 141,
       "loc": {
         "start": {
           "line": 4,
@@ -711,9 +974,9 @@
         "postfix": false,
         "binop": null
       },
-      "value": "ModelMixins",
-      "start": 148,
-      "end": 159,
+      "value": "BaseModel",
+      "start": 142,
+      "end": 151,
       "loc": {
         "start": {
           "line": 4,
@@ -721,7 +984,7 @@
         },
         "end": {
           "line": 4,
-          "column": 31
+          "column": 29
         }
       }
     },
@@ -737,16 +1000,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 160,
-      "end": 161,
+      "start": 152,
+      "end": 153,
       "loc": {
         "start": {
           "line": 4,
-          "column": 32
+          "column": 30
         },
         "end": {
           "line": 4,
-          "column": 33
+          "column": 31
         }
       }
     },
@@ -763,16 +1026,16 @@
         "binop": null
       },
       "value": "from",
-      "start": 162,
-      "end": 166,
+      "start": 154,
+      "end": 158,
       "loc": {
         "start": {
           "line": 4,
-          "column": 34
+          "column": 32
         },
         "end": {
           "line": 4,
-          "column": 38
+          "column": 36
         }
       }
     },
@@ -789,17 +1052,17 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "./model.mixins",
-      "start": 167,
-      "end": 183,
+      "value": "./baseModel",
+      "start": 159,
+      "end": 172,
       "loc": {
         "start": {
           "line": 4,
-          "column": 39
+          "column": 37
         },
         "end": {
           "line": 4,
-          "column": 55
+          "column": 50
         }
       }
     },
@@ -816,16 +1079,253 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 183,
-      "end": 184,
+      "start": 172,
+      "end": 173,
       "loc": {
         "start": {
           "line": 4,
-          "column": 55
+          "column": 50
         },
         "end": {
           "line": 4,
-          "column": 56
+          "column": 51
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "export",
+        "keyword": "export",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "export",
+      "start": 174,
+      "end": 180,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 0
+        },
+        "end": {
+          "line": 5,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 181,
+      "end": 182,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 7
+        },
+        "end": {
+          "line": 5,
+          "column": 8
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "default",
+        "keyword": "default",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "default",
+      "start": 183,
+      "end": 190,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 9
+        },
+        "end": {
+          "line": 5,
+          "column": 16
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "as",
+      "start": 191,
+      "end": 193,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 17
+        },
+        "end": {
+          "line": 5,
+          "column": 19
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "SingleLabelClassification",
+      "start": 194,
+      "end": 219,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 20
+        },
+        "end": {
+          "line": 5,
+          "column": 45
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 220,
+      "end": 221,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 46
+        },
+        "end": {
+          "line": 5,
+          "column": 47
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "from",
+      "start": 222,
+      "end": 226,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 48
+        },
+        "end": {
+          "line": 5,
+          "column": 52
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "./singleLableClassification",
+      "start": 227,
+      "end": 256,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 53
+        },
+        "end": {
+          "line": 5,
+          "column": 82
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ";",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 256,
+      "end": 257,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 82
+        },
+        "end": {
+          "line": 5,
+          "column": 83
         }
       }
     },
@@ -842,15 +1342,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 185,
-      "end": 185,
+      "start": 258,
+      "end": 258,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 6,
           "column": 0
         },
         "end": {
-          "line": 5,
+          "line": 6,
           "column": 0
         }
       }

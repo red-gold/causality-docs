@@ -12,27 +12,15 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
-    "causal-net/causality/packages/causality-models/src/unsupervisedmodels/autoencoder.js~autoencoder",
-    "class/causality/packages/causality-models/src/UnSupervisedModels/autoEncoder.js~AutoEncoder.html",
-    "<span>AutoEncoder</span> <span class=\"search-result-import-path\">causal-net/causality/packages/causality-models/src/UnSupervisedModels/autoEncoder.js</span>",
-    "class"
-  ],
-  [
     "causal-net/causality/packages/causality-log/src/baselogger.js~baselogger",
     "class/causality/packages/causality-log/src/baseLogger.js~BaseLogger.html",
     "<span>BaseLogger</span> <span class=\"search-result-import-path\">causal-net/causality/packages/causality-log/src/baseLogger.js</span>",
     "class"
   ],
   [
-    "causal-net/causality/packages/causality-models/src/supervisedmodels/basesupervisedmodel.js~basesupervisedmodel",
-    "class/causality/packages/causality-models/src/SupervisedModels/baseSupervisedModel.js~BaseSupervisedModel.html",
-    "<span>BaseSupervisedModel</span> <span class=\"search-result-import-path\">causal-net/causality/packages/causality-models/src/SupervisedModels/baseSupervisedModel.js</span>",
-    "class"
-  ],
-  [
-    "causal-net/causality/packages/causality-models/src/unsupervisedmodels/baseunsupervisedmodel.js~basesupervisedmodel",
-    "class/causality/packages/causality-models/src/UnSupervisedModels/baseUnsupervisedModel.js~BaseSupervisedModel.html",
-    "<span>BaseSupervisedModel</span> <span class=\"search-result-import-path\">causal-net/causality/packages/causality-models/src/UnSupervisedModels/baseUnsupervisedModel.js</span>",
+    "causal-net/causality/packages/causality-models/src/basemodel.js~basemodel",
+    "class/causality/packages/causality-models/src/baseModel.js~BaseModel.html",
+    "<span>BaseModel</span> <span class=\"search-result-import-path\">causal-net/causality/packages/causality-models/src/baseModel.js</span>",
     "class"
   ],
   [
@@ -102,12 +90,6 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
-    "causal-net/causality/packages/causality-models/src/supervisedmodels/causalnetsupervisedmodels.js~causalnetmodels",
-    "class/causality/packages/causality-models/src/SupervisedModels/causalNetSupervisedModels.js~CausalNetModels.html",
-    "<span>CausalNetModels</span> <span class=\"search-result-import-path\">causal-net/causality/packages/causality-models/src/SupervisedModels/causalNetSupervisedModels.js</span>",
-    "class"
-  ],
-  [
     "causal-net/causality/packages/causality-models/src/causalnetmodels.js~causalnetmodels",
     "class/causality/packages/causality-models/src/causalNetModels.js~CausalNetModels.html",
     "<span>CausalNetModels</span> <span class=\"search-result-import-path\">causal-net/causality/packages/causality-models/src/causalNetModels.js</span>",
@@ -141,12 +123,6 @@ window.esdocSearchIndex = [
     "causal-net/causality/packages/causality-sampling/src/causalnetsampling.js~causalnetsampling",
     "class/causality/packages/causality-sampling/src/causalNetSampling.js~CausalNetSampling.html",
     "<span>CausalNetSampling</span> <span class=\"search-result-import-path\">causal-net/causality/packages/causality-sampling/src/causalNetSampling.js</span>",
-    "class"
-  ],
-  [
-    "causal-net/causality/packages/causality-models/src/unsupervisedmodels/causalnetunsupervisedmodels.js~causalnetunsupervisedmodels",
-    "class/causality/packages/causality-models/src/UnSupervisedModels/causalNetUnsupervisedModels.js~CausalNetUnsupervisedModels.html",
-    "<span>CausalNetUnsupervisedModels</span> <span class=\"search-result-import-path\">causal-net/causality/packages/causality-models/src/UnSupervisedModels/causalNetUnsupervisedModels.js</span>",
     "class"
   ],
   [
@@ -240,6 +216,12 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
+    "causal-net/causality/src/functor.js~functor",
+    "class/causality/src/functor.js~Functor.html",
+    "<span>Functor</span> <span class=\"search-result-import-path\">causal-net/causality/src/functor.js</span>",
+    "class"
+  ],
+  [
     "causal-net/causality/packages/causality-preprocessing/src/imagepreprocessing.js~imagepreprocessing",
     "class/causality/packages/causality-preprocessing/src/imagePreprocessing.js~ImagePreprocessing.html",
     "<span>ImagePreprocessing</span> <span class=\"search-result-import-path\">causal-net/causality/packages/causality-preprocessing/src/imagePreprocessing.js</span>",
@@ -330,6 +312,12 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
+    "causal-net/causality/packages/causality-models/src/model.mixins.js~modelmixins",
+    "class/causality/packages/causality-models/src/model.mixins.js~ModelMixins.html",
+    "<span>ModelMixins</span> <span class=\"search-result-import-path\">causal-net/causality/packages/causality-models/src/model.mixins.js</span>",
+    "class"
+  ],
+  [
     "causal-net/causality/packages/causality-preprocessing/src/nlppreprocessing.js~nlppreprocessing",
     "class/causality/packages/causality-preprocessing/src/nlpPreprocessing.js~NLPPreprocessing.html",
     "<span>NLPPreprocessing</span> <span class=\"search-result-import-path\">causal-net/causality/packages/causality-preprocessing/src/nlpPreprocessing.js</span>",
@@ -375,12 +363,6 @@ window.esdocSearchIndex = [
     "causal-net/causality/packages/causality-layer/src/causalnetparameters/parameterfunctor.js~parameterfunctor",
     "class/causality/packages/causality-layer/src/CausalNetParameters/parameterFunctor.js~ParameterFunctor.html",
     "<span>ParameterFunctor</span> <span class=\"search-result-import-path\">causal-net/causality/packages/causality-layer/src/CausalNetParameters/parameterFunctor.js</span>",
-    "class"
-  ],
-  [
-    "causal-net/causality/src/functor.js~parameterfunctor",
-    "class/causality/src/functor.js~ParameterFunctor.html",
-    "<span>ParameterFunctor</span> <span class=\"search-result-import-path\">causal-net/causality/src/functor.js</span>",
     "class"
   ],
   [
@@ -432,9 +414,9 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
-    "causal-net/causality/packages/causality-models/src/supervisedmodels/singlelableclassification.js~singlelabelclassification",
-    "class/causality/packages/causality-models/src/SupervisedModels/singleLableClassification.js~SingleLabelClassification.html",
-    "<span>SingleLabelClassification</span> <span class=\"search-result-import-path\">causal-net/causality/packages/causality-models/src/SupervisedModels/singleLableClassification.js</span>",
+    "causal-net/causality/packages/causality-models/src/singlelableclassification.js~singlelabelclassification",
+    "class/causality/packages/causality-models/src/singleLableClassification.js~SingleLabelClassification.html",
+    "<span>SingleLabelClassification</span> <span class=\"search-result-import-path\">causal-net/causality/packages/causality-models/src/singleLableClassification.js</span>",
     "class"
   ],
   [
@@ -510,15 +492,9 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
-    "causal-net/causality/packages/causality-models/src/model.mixins.js~unsupervisedmodelsmixins",
-    "class/causality/packages/causality-models/src/model.mixins.js~UnSupervisedModelsMixins.html",
-    "<span>UnSupervisedModelsMixins</span> <span class=\"search-result-import-path\">causal-net/causality/packages/causality-models/src/model.mixins.js</span>",
-    "class"
-  ],
-  [
-    "causal-net/causality/packages/causality-representation/src/universalembedding.js~universialembedding",
-    "class/causality/packages/causality-representation/src/universalEmbedding.js~UniversialEmbedding.html",
-    "<span>UniversialEmbedding</span> <span class=\"search-result-import-path\">causal-net/causality/packages/causality-representation/src/universalEmbedding.js</span>",
+    "causal-net/causality/packages/causality-representation/src/universalembedding.js~universalembedding",
+    "class/causality/packages/causality-representation/src/universalEmbedding.js~UniversalEmbedding.html",
+    "<span>UniversalEmbedding</span> <span class=\"search-result-import-path\">causal-net/causality/packages/causality-representation/src/universalEmbedding.js</span>",
     "class"
   ],
   [
@@ -606,12 +582,6 @@ window.esdocSearchIndex = [
     "variable"
   ],
   [
-    "causal-net/causality/packages/causality-models/src/supervisedmodels/causalnetsupervisedmodels.js~causalnetmodels",
-    "variable/index.html#static-variable-causalNetModels",
-    "<span>causalNetModels</span> <span class=\"search-result-import-path\">causal-net/causality/packages/causality-models/src/SupervisedModels/causalNetSupervisedModels.js</span>",
-    "variable"
-  ],
-  [
     "causal-net/causality/packages/causality-models/src/causalnetmodels.js~causalnetmodels",
     "variable/index.html#static-variable-causalNetModels",
     "<span>causalNetModels</span> <span class=\"search-result-import-path\">causal-net/causality/packages/causality-models/src/causalNetModels.js</span>",
@@ -648,12 +618,6 @@ window.esdocSearchIndex = [
     "variable"
   ],
   [
-    "causal-net/causality/packages/causality-models/src/unsupervisedmodels/causalnetunsupervisedmodels.js~causalnetunsupervisedmodels",
-    "variable/index.html#static-variable-causalNetUnsupervisedModels",
-    "<span>causalNetUnsupervisedModels</span> <span class=\"search-result-import-path\">causal-net/causality/packages/causality-models/src/UnSupervisedModels/causalNetUnsupervisedModels.js</span>",
-    "variable"
-  ],
-  [
     "causal-net/causality/packages/causality-utils/src/fetch.js~fetch",
     "variable/index.html#static-variable-fetch",
     "<span>fetch</span> <span class=\"search-result-import-path\">causal-net/causality/packages/causality-utils/src/fetch.js</span>",
@@ -669,6 +633,12 @@ window.esdocSearchIndex = [
     "causal-net/causality/packages/causality-representation/src/functor.js~functor",
     "variable/index.html#static-variable-functor",
     "<span>functor</span> <span class=\"search-result-import-path\">causal-net/causality/packages/causality-representation/src/functor.js</span>",
+    "variable"
+  ],
+  [
+    "causal-net/causality/src/functor.js~functor",
+    "variable/index.html#static-variable-functor",
+    "<span>functor</span> <span class=\"search-result-import-path\">causal-net/causality/src/functor.js</span>",
     "variable"
   ],
   [
@@ -714,12 +684,6 @@ window.esdocSearchIndex = [
     "variable"
   ],
   [
-    "causal-net/causality/src/functor.js~parameterfunctor",
-    "variable/index.html#static-variable-parameterFunctor",
-    "<span>parameterFunctor</span> <span class=\"search-result-import-path\">causal-net/causality/src/functor.js</span>",
-    "variable"
-  ],
-  [
     "causal-net/causality/packages/causality-utils/src/platform.js~platform",
     "variable/index.html#static-variable-platform",
     "<span>platform</span> <span class=\"search-result-import-path\">causal-net/causality/packages/causality-utils/src/platform.js</span>",
@@ -750,15 +714,81 @@ window.esdocSearchIndex = [
     "variable"
   ],
   [
-    "causal-net/causality/packages/causality-representation/src/universalembedding.js~universialembedding",
-    "variable/index.html#static-variable-universialEmbedding",
-    "<span>universialEmbedding</span> <span class=\"search-result-import-path\">causal-net/causality/packages/causality-representation/src/universalEmbedding.js</span>",
+    "causal-net/causality/packages/causality-representation/src/universalembedding.js~universalembedding",
+    "variable/index.html#static-variable-universalEmbedding",
+    "<span>universalEmbedding</span> <span class=\"search-result-import-path\">causal-net/causality/packages/causality-representation/src/universalEmbedding.js</span>",
     "variable"
   ],
   [
-    " imagepreprocessing   imagepreprocessing , imagepreprocessing ",
+    "causalnetcore causality/packages/causality-core/src/causalnetcore.js~causalnetcore,causalnetcore",
+    "test-file/causality/packages/causality-core/test/causalNetCore.test.js.html#lineNumber3",
+    "CausalNetCore instance should be defined",
+    "test"
+  ],
+  [
+    "causalnetembedding causality/packages/causality-representation/src/causalnetembedding.js~causalnetembedding,causalnetembedding",
+    "test-file/causality/packages/causality-representation/test/causalNetEmbedding.test.js.html#lineNumber3",
+    "CausalNetEmbedding instance should be okay",
+    "test"
+  ],
+  [
+    "causalnetparameters causality/packages/causality-layer/src/causalnetparameters/causalnetparameters.js~causalnetparameters,causalnetparameters",
+    "test-file/causality/packages/causality-layer/test/parameters.test.js.html#lineNumber3",
+    "CausalNetParameters should be defined",
+    "test"
+  ],
+  [
+    "datasourcemixins causality/packages/causality-datasets/src/datasource.mixins.js~datasourcemixins,datasourcemixins",
+    "test-file/causality/packages/causality-datasets/test/dataSource.mixins.test.js.html#lineNumber3",
+    "DataSourceMixins should be defined",
+    "test"
+  ],
+  [
+    "evaluatormixins causality/packages/causality-optimizers/src/evaluator.mixins.js~evaluatormixins,evaluatormixins",
+    "test-file/causality/packages/causality-optimizers/test/evaluator.mixins.test.js.html#lineNumber3",
+    "EvaluatorMixins instance should be define",
+    "test"
+  ],
+  [
+    "imagepreprocessing causality/packages/causality-preprocessing/src/imagepreprocessing.js~imagepreprocessing,imagepreprocessing",
     "test-file/causality/packages/causality-preprocessing/test/imgPreprocessing.test.js.html#lineNumber3",
     "ImagePreprocessing instance should be define",
+    "test"
+  ],
+  [
+    "layerrunnermixins causality/packages/causality-layer/src/layerrunner.mixins.js~layerrunnermixins,layerrunnermixins",
+    "test-file/causality/packages/causality-layer/test/layerRunner.mixins.test.js.html#lineNumber3",
+    "LayerRunnerMixins should be defined",
+    "test"
+  ],
+  [
+    "memcachemixins causality/packages/causality-memcache/src/memcache.mixins.js~memcachemixins,memcachemixins",
+    "test-file/causality/packages/causality-memcache/test/memcache.mixins.test.js.html#lineNumber3",
+    "MemCacheMixins instance should be define",
+    "test"
+  ],
+  [
+    "memdowncache causality/packages/causality-memcache/src/memdowncache.js~memdowncache,memdowncache",
+    "test-file/causality/packages/causality-memcache/test/memdown.test.js.html#lineNumber3",
+    "MemdownCache instance should be define",
+    "test"
+  ],
+  [
+    "modelmixins causality/packages/causality-models/src/model.mixins.js~modelmixins,modelmixins",
+    "test-file/causality/packages/causality-models/test/model.mixins.test.js.html#lineNumber3",
+    "ModelMixins instance should be define",
+    "test"
+  ],
+  [
+    "parameterfunctormixins causality/packages/causality-layer/src/causalnetparameters/parameterfunctor.mixins.js~parameterfunctormixins,parameterfunctormixins",
+    "test-file/causality/packages/causality-layer/test/parameters.test.js.html#lineNumber11",
+    "ParameterFunctorMixins should be defined",
+    "test"
+  ],
+  [
+    "parametermixins causality/packages/causality-layer/src/causalnetparameters/parameter.mixins.js~parametermixins,parametermixins",
+    "test-file/causality/packages/causality-layer/test/parameters.test.js.html#lineNumber7",
+    "ParameterMixins should be defined",
     "test"
   ],
   [
@@ -768,21 +798,33 @@ window.esdocSearchIndex = [
     "test"
   ],
   [
-    " causalnetembedding   causalnetembedding , causalnetembedding ",
-    "test-file/causality/packages/causality-representation/test/causalNetEmbedding.test.js.html#lineNumber3",
-    "UniversalEmbedding instance should be okay",
-    "test"
-  ],
-  [
-    " universalembedding   universalembedding , universalembedding ",
-    "test-file/causality/packages/causality-representation/test/universalEmbedding.test.js.html#lineNumber3",
-    "UniversalEmbedding instance should be okay",
+    "trainermixins causality/packages/causality-optimizers/src/trainer.mixins.js~trainermixins,trainermixins",
+    "test-file/causality/packages/causality-optimizers/test/trainer.mixins.test.js.html#lineNumber3",
+    "TrainerMixins instance should be define",
     "test"
   ],
   [
     "assert causality/packages/causality-utils/src/assert.js~assert#assert,assert",
     "test-file/causality/packages/causality-utils/test/assert.test.js.html#lineNumber3",
     "assert should be define",
+    "test"
+  ],
+  [
+    "causalnetdeployment causality/packages/causality-deployment/src/causalnetdeployment.js~causalnetdeployment,causalnetdeployment",
+    "test-file/causality/packages/causality-deployment/test/causalNetDeployment.test.js.html#lineNumber3",
+    "causalNetDeployment should be defined",
+    "test"
+  ],
+  [
+    "causalnetmodels causality/packages/causality-models/src/causalnetmodels.js~causalnetmodels,causalnetmodels",
+    "test-file/causality/packages/causality-models/test/causalNetModel.test.js.html#lineNumber3",
+    "causalNetModels instance should be define",
+    "test"
+  ],
+  [
+    "causalnetsgdoptimizer causality/packages/causality-optimizers/src/stochasticgradientdescent/causalnetsgdoptimizer.js~causalnetsgdoptimizer,causalnetsgdoptimizer",
+    "test-file/causality/packages/causality-optimizers/test/causalNetSGDOptimizer.test.js.html#lineNumber3",
+    "causalNetSGDOptimizer instance should be define",
     "test"
   ],
   [
@@ -838,12 +880,6 @@ window.esdocSearchIndex = [
     "class/causality/packages/causality-core/src/event.js~Event.html#instance-method-emit",
     "causality/packages/causality-core/src/event.js~Event#emit",
     "method"
-  ],
-  [
-    "causality/packages/causality-core/src/event.js~event#logger",
-    "class/causality/packages/causality-core/src/event.js~Event.html#instance-member-logger",
-    "causality/packages/causality-core/src/event.js~Event#logger",
-    "member"
   ],
   [
     "causality/packages/causality-core/src/event.js~event#on",
@@ -990,12 +1026,6 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
-    "causality/packages/causality-core/src/store.js~store#store",
-    "class/causality/packages/causality-core/src/store.js~Store.html#instance-member-store",
-    "causality/packages/causality-core/src/store.js~Store#store",
-    "member"
-  ],
-  [
     "causality/packages/causality-core/src/tensor.js",
     "file/causality/packages/causality-core/src/tensor.js.html",
     "causality/packages/causality-core/src/tensor.js",
@@ -1026,10 +1056,16 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
-    "causality/packages/causality-core/src/tensor.js~tensor#logger",
-    "class/causality/packages/causality-core/src/tensor.js~Tensor.html#instance-member-logger",
-    "causality/packages/causality-core/src/tensor.js~Tensor#logger",
-    "member"
+    "causality/packages/causality-core/test/causalnetcore.test.js",
+    "test-file/causality/packages/causality-core/test/causalNetCore.test.js.html",
+    "causality/packages/causality-core/test/causalNetCore.test.js",
+    "testFile"
+  ],
+  [
+    "causality/packages/causality-core/test/event.test.js",
+    "test-file/causality/packages/causality-core/test/event.test.js.html",
+    "causality/packages/causality-core/test/event.test.js",
+    "testFile"
   ],
   [
     "causality/packages/causality-core/test/functor.test.js",
@@ -1242,9 +1278,15 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "causality/packages/causality-datasets/test/dataset.test.js",
-    "test-file/causality/packages/causality-datasets/test/dataset.test.js.html",
-    "causality/packages/causality-datasets/test/dataset.test.js",
+    "causality/packages/causality-datasets/test/causalnetdatasource.test.js",
+    "test-file/causality/packages/causality-datasets/test/causalNetDataSource.test.js.html",
+    "causality/packages/causality-datasets/test/causalNetDataSource.test.js",
+    "testFile"
+  ],
+  [
+    "causality/packages/causality-datasets/test/datasource.mixins.test.js",
+    "test-file/causality/packages/causality-datasets/test/dataSource.mixins.test.js.html",
+    "causality/packages/causality-datasets/test/dataSource.mixins.test.js",
     "testFile"
   ],
   [
@@ -1404,9 +1446,9 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "causality/packages/causality-deployment/test/deployment.test.js",
-    "test-file/causality/packages/causality-deployment/test/deployment.test.js.html",
-    "causality/packages/causality-deployment/test/deployment.test.js",
+    "causality/packages/causality-deployment/test/causalnetdeployment.test.js",
+    "test-file/causality/packages/causality-deployment/test/causalNetDeployment.test.js.html",
+    "causality/packages/causality-deployment/test/causalNetDeployment.test.js",
     "testFile"
   ],
   [
@@ -1836,6 +1878,18 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "causality/packages/causality-layer/test/layerrunner.mixins.test.js",
+    "test-file/causality/packages/causality-layer/test/layerRunner.mixins.test.js.html",
+    "causality/packages/causality-layer/test/layerRunner.mixins.test.js",
+    "testFile"
+  ],
+  [
+    "causality/packages/causality-layer/test/parameters.test.js",
+    "test-file/causality/packages/causality-layer/test/parameters.test.js.html",
+    "causality/packages/causality-layer/test/parameters.test.js",
+    "testFile"
+  ],
+  [
     "causality/packages/causality-log/src/baselogger.js",
     "file/causality/packages/causality-log/src/baseLogger.js.html",
     "causality/packages/causality-log/src/baseLogger.js",
@@ -2238,6 +2292,12 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "causality/packages/causality-memcache/test/memcache.mixins.test.js",
+    "test-file/causality/packages/causality-memcache/test/memcache.mixins.test.js.html",
+    "causality/packages/causality-memcache/test/memcache.mixins.test.js",
+    "testFile"
+  ],
+  [
     "causality/packages/causality-memcache/test/memdown.test.js",
     "test-file/causality/packages/causality-memcache/test/memdown.test.js.html",
     "causality/packages/causality-memcache/test/memdown.test.js",
@@ -2352,250 +2412,58 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "causality/packages/causality-models/src/supervisedmodels/basesupervisedmodel.js",
-    "file/causality/packages/causality-models/src/SupervisedModels/baseSupervisedModel.js.html",
-    "causality/packages/causality-models/src/SupervisedModels/baseSupervisedModel.js",
+    "causality/packages/causality-models/src/basemodel.js",
+    "file/causality/packages/causality-models/src/baseModel.js.html",
+    "causality/packages/causality-models/src/baseModel.js",
     "file"
   ],
   [
-    "causality/packages/causality-models/src/supervisedmodels/basesupervisedmodel.js~basesupervisedmodel#layerrunner",
-    "class/causality/packages/causality-models/src/SupervisedModels/baseSupervisedModel.js~BaseSupervisedModel.html#instance-set-LayerRunner",
-    "causality/packages/causality-models/src/SupervisedModels/baseSupervisedModel.js~BaseSupervisedModel#LayerRunner",
+    "causality/packages/causality-models/src/basemodel.js~basemodel#layerrunner",
+    "class/causality/packages/causality-models/src/baseModel.js~BaseModel.html#instance-set-LayerRunner",
+    "causality/packages/causality-models/src/baseModel.js~BaseModel#LayerRunner",
     "member"
   ],
   [
-    "causality/packages/causality-models/src/supervisedmodels/basesupervisedmodel.js~basesupervisedmodel#layerrunner",
-    "class/causality/packages/causality-models/src/SupervisedModels/baseSupervisedModel.js~BaseSupervisedModel.html#instance-get-LayerRunner",
-    "causality/packages/causality-models/src/SupervisedModels/baseSupervisedModel.js~BaseSupervisedModel#LayerRunner",
+    "causality/packages/causality-models/src/basemodel.js~basemodel#layerrunner",
+    "class/causality/packages/causality-models/src/baseModel.js~BaseModel.html#instance-get-LayerRunner",
+    "causality/packages/causality-models/src/baseModel.js~BaseModel#LayerRunner",
     "member"
   ],
   [
-    "causality/packages/causality-models/src/supervisedmodels/basesupervisedmodel.js~basesupervisedmodel#constructor",
-    "class/causality/packages/causality-models/src/SupervisedModels/baseSupervisedModel.js~BaseSupervisedModel.html#instance-constructor-constructor",
-    "causality/packages/causality-models/src/SupervisedModels/baseSupervisedModel.js~BaseSupervisedModel#constructor",
+    "causality/packages/causality-models/src/basemodel.js~basemodel#constructor",
+    "class/causality/packages/causality-models/src/baseModel.js~BaseModel.html#instance-constructor-constructor",
+    "causality/packages/causality-models/src/baseModel.js~BaseModel#constructor",
     "method"
   ],
   [
-    "causality/packages/causality-models/src/supervisedmodels/basesupervisedmodel.js~basesupervisedmodel#fit",
-    "class/causality/packages/causality-models/src/SupervisedModels/baseSupervisedModel.js~BaseSupervisedModel.html#instance-method-fit",
-    "causality/packages/causality-models/src/SupervisedModels/baseSupervisedModel.js~BaseSupervisedModel#fit",
+    "causality/packages/causality-models/src/basemodel.js~basemodel#fit",
+    "class/causality/packages/causality-models/src/baseModel.js~BaseModel.html#instance-method-fit",
+    "causality/packages/causality-models/src/baseModel.js~BaseModel#fit",
     "method"
   ],
   [
-    "causality/packages/causality-models/src/supervisedmodels/basesupervisedmodel.js~basesupervisedmodel#loss",
-    "class/causality/packages/causality-models/src/SupervisedModels/baseSupervisedModel.js~BaseSupervisedModel.html#instance-method-loss",
-    "causality/packages/causality-models/src/SupervisedModels/baseSupervisedModel.js~BaseSupervisedModel#loss",
+    "causality/packages/causality-models/src/basemodel.js~basemodel#loss",
+    "class/causality/packages/causality-models/src/baseModel.js~BaseModel.html#instance-method-loss",
+    "causality/packages/causality-models/src/baseModel.js~BaseModel#loss",
     "method"
   ],
   [
-    "causality/packages/causality-models/src/supervisedmodels/basesupervisedmodel.js~basesupervisedmodel#modelname",
-    "class/causality/packages/causality-models/src/SupervisedModels/baseSupervisedModel.js~BaseSupervisedModel.html#instance-member-modelName",
-    "causality/packages/causality-models/src/SupervisedModels/baseSupervisedModel.js~BaseSupervisedModel#modelName",
+    "causality/packages/causality-models/src/basemodel.js~basemodel#modelname",
+    "class/causality/packages/causality-models/src/baseModel.js~BaseModel.html#instance-member-modelName",
+    "causality/packages/causality-models/src/baseModel.js~BaseModel#modelName",
     "member"
   ],
   [
-    "causality/packages/causality-models/src/supervisedmodels/basesupervisedmodel.js~basesupervisedmodel#onehotpredict",
-    "class/causality/packages/causality-models/src/SupervisedModels/baseSupervisedModel.js~BaseSupervisedModel.html#instance-method-oneHotPredict",
-    "causality/packages/causality-models/src/SupervisedModels/baseSupervisedModel.js~BaseSupervisedModel#oneHotPredict",
+    "causality/packages/causality-models/src/basemodel.js~basemodel#onehotpredict",
+    "class/causality/packages/causality-models/src/baseModel.js~BaseModel.html#instance-method-oneHotPredict",
+    "causality/packages/causality-models/src/baseModel.js~BaseModel#oneHotPredict",
     "method"
   ],
   [
-    "causality/packages/causality-models/src/supervisedmodels/basesupervisedmodel.js~basesupervisedmodel#predict",
-    "class/causality/packages/causality-models/src/SupervisedModels/baseSupervisedModel.js~BaseSupervisedModel.html#instance-method-predict",
-    "causality/packages/causality-models/src/SupervisedModels/baseSupervisedModel.js~BaseSupervisedModel#predict",
+    "causality/packages/causality-models/src/basemodel.js~basemodel#predict",
+    "class/causality/packages/causality-models/src/baseModel.js~BaseModel.html#instance-method-predict",
+    "causality/packages/causality-models/src/baseModel.js~BaseModel#predict",
     "method"
-  ],
-  [
-    "causality/packages/causality-models/src/supervisedmodels/causalnetsupervisedmodels.js",
-    "file/causality/packages/causality-models/src/SupervisedModels/causalNetSupervisedModels.js.html",
-    "causality/packages/causality-models/src/SupervisedModels/causalNetSupervisedModels.js",
-    "file"
-  ],
-  [
-    "causality/packages/causality-models/src/supervisedmodels/causalnetsupervisedmodels.js~causalnetmodels#classification",
-    "class/causality/packages/causality-models/src/SupervisedModels/causalNetSupervisedModels.js~CausalNetModels.html#instance-method-classification",
-    "causality/packages/causality-models/src/SupervisedModels/causalNetSupervisedModels.js~CausalNetModels#classification",
-    "method"
-  ],
-  [
-    "causality/packages/causality-models/src/supervisedmodels/causalnetsupervisedmodels.js~causalnetmodels#constructor",
-    "class/causality/packages/causality-models/src/SupervisedModels/causalNetSupervisedModels.js~CausalNetModels.html#instance-constructor-constructor",
-    "causality/packages/causality-models/src/SupervisedModels/causalNetSupervisedModels.js~CausalNetModels#constructor",
-    "method"
-  ],
-  [
-    "causality/packages/causality-models/src/supervisedmodels/causalnetsupervisedmodels.js~causalnetmodels#model",
-    "class/causality/packages/causality-models/src/SupervisedModels/causalNetSupervisedModels.js~CausalNetModels.html#instance-member-model",
-    "causality/packages/causality-models/src/SupervisedModels/causalNetSupervisedModels.js~CausalNetModels#model",
-    "member"
-  ],
-  [
-    "causality/packages/causality-models/src/supervisedmodels/index.js",
-    "file/causality/packages/causality-models/src/SupervisedModels/index.js.html",
-    "causality/packages/causality-models/src/SupervisedModels/index.js",
-    "file"
-  ],
-  [
-    "causality/packages/causality-models/src/supervisedmodels/singlelableclassification.js",
-    "file/causality/packages/causality-models/src/SupervisedModels/singleLableClassification.js.html",
-    "causality/packages/causality-models/src/SupervisedModels/singleLableClassification.js",
-    "file"
-  ],
-  [
-    "causality/packages/causality-models/src/supervisedmodels/singlelableclassification.js~singlelabelclassification#fit",
-    "class/causality/packages/causality-models/src/SupervisedModels/singleLableClassification.js~SingleLabelClassification.html#instance-get-Fit",
-    "causality/packages/causality-models/src/SupervisedModels/singleLableClassification.js~SingleLabelClassification#Fit",
-    "member"
-  ],
-  [
-    "causality/packages/causality-models/src/supervisedmodels/singlelableclassification.js~singlelabelclassification#layerrunner",
-    "class/causality/packages/causality-models/src/SupervisedModels/singleLableClassification.js~SingleLabelClassification.html#instance-set-LayerRunner",
-    "causality/packages/causality-models/src/SupervisedModels/singleLableClassification.js~SingleLabelClassification#LayerRunner",
-    "member"
-  ],
-  [
-    "causality/packages/causality-models/src/supervisedmodels/singlelableclassification.js~singlelabelclassification#layerrunner",
-    "class/causality/packages/causality-models/src/SupervisedModels/singleLableClassification.js~SingleLabelClassification.html#instance-get-LayerRunner",
-    "causality/packages/causality-models/src/SupervisedModels/singleLableClassification.js~SingleLabelClassification#LayerRunner",
-    "member"
-  ],
-  [
-    "causality/packages/causality-models/src/supervisedmodels/singlelableclassification.js~singlelabelclassification#loss",
-    "class/causality/packages/causality-models/src/SupervisedModels/singleLableClassification.js~SingleLabelClassification.html#instance-get-Loss",
-    "causality/packages/causality-models/src/SupervisedModels/singleLableClassification.js~SingleLabelClassification#Loss",
-    "member"
-  ],
-  [
-    "causality/packages/causality-models/src/supervisedmodels/singlelableclassification.js~singlelabelclassification#onehotpredict",
-    "class/causality/packages/causality-models/src/SupervisedModels/singleLableClassification.js~SingleLabelClassification.html#instance-get-OneHotPredict",
-    "causality/packages/causality-models/src/SupervisedModels/singleLableClassification.js~SingleLabelClassification#OneHotPredict",
-    "member"
-  ],
-  [
-    "causality/packages/causality-models/src/supervisedmodels/singlelableclassification.js~singlelabelclassification#predict",
-    "class/causality/packages/causality-models/src/SupervisedModels/singleLableClassification.js~SingleLabelClassification.html#instance-get-Predict",
-    "causality/packages/causality-models/src/SupervisedModels/singleLableClassification.js~SingleLabelClassification#Predict",
-    "member"
-  ],
-  [
-    "causality/packages/causality-models/src/supervisedmodels/singlelableclassification.js~singlelabelclassification#constructor",
-    "class/causality/packages/causality-models/src/SupervisedModels/singleLableClassification.js~SingleLabelClassification.html#instance-constructor-constructor",
-    "causality/packages/causality-models/src/SupervisedModels/singleLableClassification.js~SingleLabelClassification#constructor",
-    "method"
-  ],
-  [
-    "causality/packages/causality-models/src/supervisedmodels/singlelableclassification.js~singlelabelclassification#numclass",
-    "class/causality/packages/causality-models/src/SupervisedModels/singleLableClassification.js~SingleLabelClassification.html#instance-member-numClass",
-    "causality/packages/causality-models/src/SupervisedModels/singleLableClassification.js~SingleLabelClassification#numClass",
-    "member"
-  ],
-  [
-    "causality/packages/causality-models/src/supervisedmodels/singlelableclassification.js~singlelabelclassification#runner",
-    "class/causality/packages/causality-models/src/SupervisedModels/singleLableClassification.js~SingleLabelClassification.html#instance-member-runner",
-    "causality/packages/causality-models/src/SupervisedModels/singleLableClassification.js~SingleLabelClassification#runner",
-    "member"
-  ],
-  [
-    "causality/packages/causality-models/src/unsupervisedmodels/autoencoder.js",
-    "file/causality/packages/causality-models/src/UnSupervisedModels/autoEncoder.js.html",
-    "causality/packages/causality-models/src/UnSupervisedModels/autoEncoder.js",
-    "file"
-  ],
-  [
-    "causality/packages/causality-models/src/unsupervisedmodels/autoencoder.js~autoencoder#constructor",
-    "class/causality/packages/causality-models/src/UnSupervisedModels/autoEncoder.js~AutoEncoder.html#instance-constructor-constructor",
-    "causality/packages/causality-models/src/UnSupervisedModels/autoEncoder.js~AutoEncoder#constructor",
-    "method"
-  ],
-  [
-    "causality/packages/causality-models/src/unsupervisedmodels/autoencoder.js~autoencoder#decode",
-    "class/causality/packages/causality-models/src/UnSupervisedModels/autoEncoder.js~AutoEncoder.html#instance-method-decode",
-    "causality/packages/causality-models/src/UnSupervisedModels/autoEncoder.js~AutoEncoder#decode",
-    "method"
-  ],
-  [
-    "causality/packages/causality-models/src/unsupervisedmodels/autoencoder.js~autoencoder#encode",
-    "class/causality/packages/causality-models/src/UnSupervisedModels/autoEncoder.js~AutoEncoder.html#instance-method-encode",
-    "causality/packages/causality-models/src/UnSupervisedModels/autoEncoder.js~AutoEncoder#encode",
-    "method"
-  ],
-  [
-    "causality/packages/causality-models/src/unsupervisedmodels/autoencoder.js~autoencoder#fit",
-    "class/causality/packages/causality-models/src/UnSupervisedModels/autoEncoder.js~AutoEncoder.html#instance-method-fit",
-    "causality/packages/causality-models/src/UnSupervisedModels/autoEncoder.js~AutoEncoder#fit",
-    "method"
-  ],
-  [
-    "causality/packages/causality-models/src/unsupervisedmodels/autoencoder.js~autoencoder#loss",
-    "class/causality/packages/causality-models/src/UnSupervisedModels/autoEncoder.js~AutoEncoder.html#instance-method-loss",
-    "causality/packages/causality-models/src/UnSupervisedModels/autoEncoder.js~AutoEncoder#loss",
-    "method"
-  ],
-  [
-    "causality/packages/causality-models/src/unsupervisedmodels/baseunsupervisedmodel.js",
-    "file/causality/packages/causality-models/src/UnSupervisedModels/baseUnsupervisedModel.js.html",
-    "causality/packages/causality-models/src/UnSupervisedModels/baseUnsupervisedModel.js",
-    "file"
-  ],
-  [
-    "causality/packages/causality-models/src/unsupervisedmodels/baseunsupervisedmodel.js~basesupervisedmodel#constructor",
-    "class/causality/packages/causality-models/src/UnSupervisedModels/baseUnsupervisedModel.js~BaseSupervisedModel.html#instance-constructor-constructor",
-    "causality/packages/causality-models/src/UnSupervisedModels/baseUnsupervisedModel.js~BaseSupervisedModel#constructor",
-    "method"
-  ],
-  [
-    "causality/packages/causality-models/src/unsupervisedmodels/baseunsupervisedmodel.js~basesupervisedmodel#decode",
-    "class/causality/packages/causality-models/src/UnSupervisedModels/baseUnsupervisedModel.js~BaseSupervisedModel.html#instance-method-decode",
-    "causality/packages/causality-models/src/UnSupervisedModels/baseUnsupervisedModel.js~BaseSupervisedModel#decode",
-    "method"
-  ],
-  [
-    "causality/packages/causality-models/src/unsupervisedmodels/baseunsupervisedmodel.js~basesupervisedmodel#encode",
-    "class/causality/packages/causality-models/src/UnSupervisedModels/baseUnsupervisedModel.js~BaseSupervisedModel.html#instance-method-encode",
-    "causality/packages/causality-models/src/UnSupervisedModels/baseUnsupervisedModel.js~BaseSupervisedModel#encode",
-    "method"
-  ],
-  [
-    "causality/packages/causality-models/src/unsupervisedmodels/baseunsupervisedmodel.js~basesupervisedmodel#fit",
-    "class/causality/packages/causality-models/src/UnSupervisedModels/baseUnsupervisedModel.js~BaseSupervisedModel.html#instance-method-fit",
-    "causality/packages/causality-models/src/UnSupervisedModels/baseUnsupervisedModel.js~BaseSupervisedModel#fit",
-    "method"
-  ],
-  [
-    "causality/packages/causality-models/src/unsupervisedmodels/baseunsupervisedmodel.js~basesupervisedmodel#loss",
-    "class/causality/packages/causality-models/src/UnSupervisedModels/baseUnsupervisedModel.js~BaseSupervisedModel.html#instance-method-loss",
-    "causality/packages/causality-models/src/UnSupervisedModels/baseUnsupervisedModel.js~BaseSupervisedModel#loss",
-    "method"
-  ],
-  [
-    "causality/packages/causality-models/src/unsupervisedmodels/baseunsupervisedmodel.js~basesupervisedmodel#modelname",
-    "class/causality/packages/causality-models/src/UnSupervisedModels/baseUnsupervisedModel.js~BaseSupervisedModel.html#instance-member-modelName",
-    "causality/packages/causality-models/src/UnSupervisedModels/baseUnsupervisedModel.js~BaseSupervisedModel#modelName",
-    "member"
-  ],
-  [
-    "causality/packages/causality-models/src/unsupervisedmodels/causalnetunsupervisedmodels.js",
-    "file/causality/packages/causality-models/src/UnSupervisedModels/causalNetUnsupervisedModels.js.html",
-    "causality/packages/causality-models/src/UnSupervisedModels/causalNetUnsupervisedModels.js",
-    "file"
-  ],
-  [
-    "causality/packages/causality-models/src/unsupervisedmodels/causalnetunsupervisedmodels.js~causalnetunsupervisedmodels#autoencoder",
-    "class/causality/packages/causality-models/src/UnSupervisedModels/causalNetUnsupervisedModels.js~CausalNetUnsupervisedModels.html#instance-method-autoEncoder",
-    "causality/packages/causality-models/src/UnSupervisedModels/causalNetUnsupervisedModels.js~CausalNetUnsupervisedModels#autoEncoder",
-    "method"
-  ],
-  [
-    "causality/packages/causality-models/src/unsupervisedmodels/causalnetunsupervisedmodels.js~causalnetunsupervisedmodels#constructor",
-    "class/causality/packages/causality-models/src/UnSupervisedModels/causalNetUnsupervisedModels.js~CausalNetUnsupervisedModels.html#instance-constructor-constructor",
-    "causality/packages/causality-models/src/UnSupervisedModels/causalNetUnsupervisedModels.js~CausalNetUnsupervisedModels#constructor",
-    "method"
-  ],
-  [
-    "causality/packages/causality-models/src/unsupervisedmodels/index.js",
-    "file/causality/packages/causality-models/src/UnSupervisedModels/index.js.html",
-    "causality/packages/causality-models/src/UnSupervisedModels/index.js",
-    "file"
   ],
   [
     "causality/packages/causality-models/src/causalnetmodels.js",
@@ -2604,10 +2472,22 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "causality/packages/causality-models/src/causalnetmodels.js~causalnetmodels#classification",
+    "class/causality/packages/causality-models/src/causalNetModels.js~CausalNetModels.html#instance-method-classification",
+    "causality/packages/causality-models/src/causalNetModels.js~CausalNetModels#classification",
+    "method"
+  ],
+  [
     "causality/packages/causality-models/src/causalnetmodels.js~causalnetmodels#constructor",
     "class/causality/packages/causality-models/src/causalNetModels.js~CausalNetModels.html#instance-constructor-constructor",
     "causality/packages/causality-models/src/causalNetModels.js~CausalNetModels#constructor",
     "method"
+  ],
+  [
+    "causality/packages/causality-models/src/causalnetmodels.js~causalnetmodels#model",
+    "class/causality/packages/causality-models/src/causalNetModels.js~CausalNetModels.html#instance-member-model",
+    "causality/packages/causality-models/src/causalNetModels.js~CausalNetModels#model",
+    "member"
   ],
   [
     "causality/packages/causality-models/src/index.js",
@@ -2622,70 +2502,136 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "causality/packages/causality-models/src/model.mixins.js~unsupervisedmodelsmixins#decodemodel",
-    "class/causality/packages/causality-models/src/model.mixins.js~UnSupervisedModelsMixins.html#instance-get-DecodeModel",
-    "causality/packages/causality-models/src/model.mixins.js~UnSupervisedModelsMixins#DecodeModel",
+    "causality/packages/causality-models/src/model.mixins.js~modelmixins#decodemodel",
+    "class/causality/packages/causality-models/src/model.mixins.js~ModelMixins.html#instance-get-DecodeModel",
+    "causality/packages/causality-models/src/model.mixins.js~ModelMixins#DecodeModel",
     "member"
   ],
   [
-    "causality/packages/causality-models/src/model.mixins.js~unsupervisedmodelsmixins#encodemodel",
-    "class/causality/packages/causality-models/src/model.mixins.js~UnSupervisedModelsMixins.html#instance-get-EncodeModel",
-    "causality/packages/causality-models/src/model.mixins.js~UnSupervisedModelsMixins#EncodeModel",
+    "causality/packages/causality-models/src/model.mixins.js~modelmixins#encodemodel",
+    "class/causality/packages/causality-models/src/model.mixins.js~ModelMixins.html#instance-get-EncodeModel",
+    "causality/packages/causality-models/src/model.mixins.js~ModelMixins#EncodeModel",
     "member"
   ],
   [
-    "causality/packages/causality-models/src/model.mixins.js~unsupervisedmodelsmixins#fitmodel",
-    "class/causality/packages/causality-models/src/model.mixins.js~UnSupervisedModelsMixins.html#instance-get-FitModel",
-    "causality/packages/causality-models/src/model.mixins.js~UnSupervisedModelsMixins#FitModel",
+    "causality/packages/causality-models/src/model.mixins.js~modelmixins#fitmodel",
+    "class/causality/packages/causality-models/src/model.mixins.js~ModelMixins.html#instance-get-FitModel",
+    "causality/packages/causality-models/src/model.mixins.js~ModelMixins#FitModel",
     "member"
   ],
   [
-    "causality/packages/causality-models/src/model.mixins.js~unsupervisedmodelsmixins#lossmodel",
-    "class/causality/packages/causality-models/src/model.mixins.js~UnSupervisedModelsMixins.html#instance-get-LossModel",
-    "causality/packages/causality-models/src/model.mixins.js~UnSupervisedModelsMixins#LossModel",
+    "causality/packages/causality-models/src/model.mixins.js~modelmixins#lossmodel",
+    "class/causality/packages/causality-models/src/model.mixins.js~ModelMixins.html#instance-get-LossModel",
+    "causality/packages/causality-models/src/model.mixins.js~ModelMixins#LossModel",
     "member"
   ],
   [
-    "causality/packages/causality-models/src/model.mixins.js~unsupervisedmodelsmixins#model",
-    "class/causality/packages/causality-models/src/model.mixins.js~UnSupervisedModelsMixins.html#instance-get-Model",
-    "causality/packages/causality-models/src/model.mixins.js~UnSupervisedModelsMixins#Model",
+    "causality/packages/causality-models/src/model.mixins.js~modelmixins#model",
+    "class/causality/packages/causality-models/src/model.mixins.js~ModelMixins.html#instance-get-Model",
+    "causality/packages/causality-models/src/model.mixins.js~ModelMixins#Model",
     "member"
   ],
   [
-    "causality/packages/causality-models/src/model.mixins.js~unsupervisedmodelsmixins#model",
-    "class/causality/packages/causality-models/src/model.mixins.js~UnSupervisedModelsMixins.html#instance-set-Model",
-    "causality/packages/causality-models/src/model.mixins.js~UnSupervisedModelsMixins#Model",
+    "causality/packages/causality-models/src/model.mixins.js~modelmixins#model",
+    "class/causality/packages/causality-models/src/model.mixins.js~ModelMixins.html#instance-set-Model",
+    "causality/packages/causality-models/src/model.mixins.js~ModelMixins#Model",
     "member"
   ],
   [
-    "causality/packages/causality-models/src/model.mixins.js~unsupervisedmodelsmixins#onehotpredictmodel",
-    "class/causality/packages/causality-models/src/model.mixins.js~UnSupervisedModelsMixins.html#instance-get-OneHotPredictModel",
-    "causality/packages/causality-models/src/model.mixins.js~UnSupervisedModelsMixins#OneHotPredictModel",
+    "causality/packages/causality-models/src/model.mixins.js~modelmixins#onehotpredictmodel",
+    "class/causality/packages/causality-models/src/model.mixins.js~ModelMixins.html#instance-get-OneHotPredictModel",
+    "causality/packages/causality-models/src/model.mixins.js~ModelMixins#OneHotPredictModel",
     "member"
   ],
   [
-    "causality/packages/causality-models/src/model.mixins.js~unsupervisedmodelsmixins#predictmodel",
-    "class/causality/packages/causality-models/src/model.mixins.js~UnSupervisedModelsMixins.html#instance-get-PredictModel",
-    "causality/packages/causality-models/src/model.mixins.js~UnSupervisedModelsMixins#PredictModel",
+    "causality/packages/causality-models/src/model.mixins.js~modelmixins#predictmodel",
+    "class/causality/packages/causality-models/src/model.mixins.js~ModelMixins.html#instance-get-PredictModel",
+    "causality/packages/causality-models/src/model.mixins.js~ModelMixins#PredictModel",
     "member"
   ],
   [
-    "causality/packages/causality-models/src/model.mixins.js~unsupervisedmodelsmixins#netmodel",
-    "class/causality/packages/causality-models/src/model.mixins.js~UnSupervisedModelsMixins.html#instance-member-netModel",
-    "causality/packages/causality-models/src/model.mixins.js~UnSupervisedModelsMixins#netModel",
+    "causality/packages/causality-models/src/model.mixins.js~modelmixins#netmodel",
+    "class/causality/packages/causality-models/src/model.mixins.js~ModelMixins.html#instance-member-netModel",
+    "causality/packages/causality-models/src/model.mixins.js~ModelMixins#netModel",
     "member"
   ],
   [
-    "causality/packages/causality-models/src/model.mixins.js~unsupervisedmodelsmixins#setbyconfig",
-    "class/causality/packages/causality-models/src/model.mixins.js~UnSupervisedModelsMixins.html#instance-method-setByConfig",
-    "causality/packages/causality-models/src/model.mixins.js~UnSupervisedModelsMixins#setByConfig",
+    "causality/packages/causality-models/src/model.mixins.js~modelmixins#setbyconfig",
+    "class/causality/packages/causality-models/src/model.mixins.js~ModelMixins.html#instance-method-setByConfig",
+    "causality/packages/causality-models/src/model.mixins.js~ModelMixins#setByConfig",
     "method"
   ],
   [
-    "causality/packages/causality-optimizers/src/sampling/index.js",
-    "file/causality/packages/causality-optimizers/src/Sampling/index.js.html",
-    "causality/packages/causality-optimizers/src/Sampling/index.js",
+    "causality/packages/causality-models/src/singlelableclassification.js",
+    "file/causality/packages/causality-models/src/singleLableClassification.js.html",
+    "causality/packages/causality-models/src/singleLableClassification.js",
     "file"
+  ],
+  [
+    "causality/packages/causality-models/src/singlelableclassification.js~singlelabelclassification#fit",
+    "class/causality/packages/causality-models/src/singleLableClassification.js~SingleLabelClassification.html#instance-get-Fit",
+    "causality/packages/causality-models/src/singleLableClassification.js~SingleLabelClassification#Fit",
+    "member"
+  ],
+  [
+    "causality/packages/causality-models/src/singlelableclassification.js~singlelabelclassification#layerrunner",
+    "class/causality/packages/causality-models/src/singleLableClassification.js~SingleLabelClassification.html#instance-set-LayerRunner",
+    "causality/packages/causality-models/src/singleLableClassification.js~SingleLabelClassification#LayerRunner",
+    "member"
+  ],
+  [
+    "causality/packages/causality-models/src/singlelableclassification.js~singlelabelclassification#layerrunner",
+    "class/causality/packages/causality-models/src/singleLableClassification.js~SingleLabelClassification.html#instance-get-LayerRunner",
+    "causality/packages/causality-models/src/singleLableClassification.js~SingleLabelClassification#LayerRunner",
+    "member"
+  ],
+  [
+    "causality/packages/causality-models/src/singlelableclassification.js~singlelabelclassification#loss",
+    "class/causality/packages/causality-models/src/singleLableClassification.js~SingleLabelClassification.html#instance-get-Loss",
+    "causality/packages/causality-models/src/singleLableClassification.js~SingleLabelClassification#Loss",
+    "member"
+  ],
+  [
+    "causality/packages/causality-models/src/singlelableclassification.js~singlelabelclassification#onehotpredict",
+    "class/causality/packages/causality-models/src/singleLableClassification.js~SingleLabelClassification.html#instance-get-OneHotPredict",
+    "causality/packages/causality-models/src/singleLableClassification.js~SingleLabelClassification#OneHotPredict",
+    "member"
+  ],
+  [
+    "causality/packages/causality-models/src/singlelableclassification.js~singlelabelclassification#predict",
+    "class/causality/packages/causality-models/src/singleLableClassification.js~SingleLabelClassification.html#instance-get-Predict",
+    "causality/packages/causality-models/src/singleLableClassification.js~SingleLabelClassification#Predict",
+    "member"
+  ],
+  [
+    "causality/packages/causality-models/src/singlelableclassification.js~singlelabelclassification#constructor",
+    "class/causality/packages/causality-models/src/singleLableClassification.js~SingleLabelClassification.html#instance-constructor-constructor",
+    "causality/packages/causality-models/src/singleLableClassification.js~SingleLabelClassification#constructor",
+    "method"
+  ],
+  [
+    "causality/packages/causality-models/src/singlelableclassification.js~singlelabelclassification#numclass",
+    "class/causality/packages/causality-models/src/singleLableClassification.js~SingleLabelClassification.html#instance-member-numClass",
+    "causality/packages/causality-models/src/singleLableClassification.js~SingleLabelClassification#numClass",
+    "member"
+  ],
+  [
+    "causality/packages/causality-models/src/singlelableclassification.js~singlelabelclassification#runner",
+    "class/causality/packages/causality-models/src/singleLableClassification.js~SingleLabelClassification.html#instance-member-runner",
+    "causality/packages/causality-models/src/singleLableClassification.js~SingleLabelClassification#runner",
+    "member"
+  ],
+  [
+    "causality/packages/causality-models/test/causalnetmodel.test.js",
+    "test-file/causality/packages/causality-models/test/causalNetModel.test.js.html",
+    "causality/packages/causality-models/test/causalNetModel.test.js",
+    "testFile"
+  ],
+  [
+    "causality/packages/causality-models/test/model.mixins.test.js",
+    "test-file/causality/packages/causality-models/test/model.mixins.test.js.html",
+    "causality/packages/causality-models/test/model.mixins.test.js",
+    "testFile"
   ],
   [
     "causality/packages/causality-optimizers/src/stochasticgradientdescent/sgdfitparams.mixins.js",
@@ -2874,9 +2820,21 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
-    "causality/packages/causality-optimizers/test/sgdoptimizer.test.js",
-    "test-file/causality/packages/causality-optimizers/test/SGDOptimizer.test.js.html",
-    "causality/packages/causality-optimizers/test/SGDOptimizer.test.js",
+    "causality/packages/causality-optimizers/test/causalnetsgdoptimizer.test.js",
+    "test-file/causality/packages/causality-optimizers/test/causalNetSGDOptimizer.test.js.html",
+    "causality/packages/causality-optimizers/test/causalNetSGDOptimizer.test.js",
+    "testFile"
+  ],
+  [
+    "causality/packages/causality-optimizers/test/evaluator.mixins.test.js",
+    "test-file/causality/packages/causality-optimizers/test/evaluator.mixins.test.js.html",
+    "causality/packages/causality-optimizers/test/evaluator.mixins.test.js",
+    "testFile"
+  ],
+  [
+    "causality/packages/causality-optimizers/test/trainer.mixins.test.js",
+    "test-file/causality/packages/causality-optimizers/test/trainer.mixins.test.js.html",
+    "causality/packages/causality-optimizers/test/trainer.mixins.test.js",
     "testFile"
   ],
   [
@@ -3462,33 +3420,33 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "causality/packages/causality-representation/src/universalembedding.js~universialembedding#connect",
-    "class/causality/packages/causality-representation/src/universalEmbedding.js~UniversialEmbedding.html#instance-method-connect",
-    "causality/packages/causality-representation/src/universalEmbedding.js~UniversialEmbedding#connect",
+    "causality/packages/causality-representation/src/universalembedding.js~universalembedding#connect",
+    "class/causality/packages/causality-representation/src/universalEmbedding.js~UniversalEmbedding.html#instance-method-connect",
+    "causality/packages/causality-representation/src/universalEmbedding.js~UniversalEmbedding#connect",
     "method"
   ],
   [
-    "causality/packages/causality-representation/src/universalembedding.js~universialembedding#constructor",
-    "class/causality/packages/causality-representation/src/universalEmbedding.js~UniversialEmbedding.html#instance-constructor-constructor",
-    "causality/packages/causality-representation/src/universalEmbedding.js~UniversialEmbedding#constructor",
+    "causality/packages/causality-representation/src/universalembedding.js~universalembedding#constructor",
+    "class/causality/packages/causality-representation/src/universalEmbedding.js~UniversalEmbedding.html#instance-constructor-constructor",
+    "causality/packages/causality-representation/src/universalEmbedding.js~UniversalEmbedding#constructor",
     "method"
   ],
   [
-    "causality/packages/causality-representation/src/universalembedding.js~universialembedding#model",
-    "class/causality/packages/causality-representation/src/universalEmbedding.js~UniversialEmbedding.html#instance-member-model",
-    "causality/packages/causality-representation/src/universalEmbedding.js~UniversialEmbedding#model",
+    "causality/packages/causality-representation/src/universalembedding.js~universalembedding#model",
+    "class/causality/packages/causality-representation/src/universalEmbedding.js~UniversalEmbedding.html#instance-member-model",
+    "causality/packages/causality-representation/src/universalEmbedding.js~UniversalEmbedding#model",
     "member"
   ],
   [
-    "causality/packages/causality-representation/src/universalembedding.js~universialembedding#sentenceencode",
-    "class/causality/packages/causality-representation/src/universalEmbedding.js~UniversialEmbedding.html#instance-method-sentenceEncode",
-    "causality/packages/causality-representation/src/universalEmbedding.js~UniversialEmbedding#sentenceEncode",
+    "causality/packages/causality-representation/src/universalembedding.js~universalembedding#sentenceencode",
+    "class/causality/packages/causality-representation/src/universalEmbedding.js~UniversalEmbedding.html#instance-method-sentenceEncode",
+    "causality/packages/causality-representation/src/universalEmbedding.js~UniversalEmbedding#sentenceEncode",
     "method"
   ],
   [
-    "causality/packages/causality-representation/src/universalembedding.js~universialembedding#use",
-    "class/causality/packages/causality-representation/src/universalEmbedding.js~UniversialEmbedding.html#instance-member-use",
-    "causality/packages/causality-representation/src/universalEmbedding.js~UniversialEmbedding#use",
+    "causality/packages/causality-representation/src/universalembedding.js~universalembedding#use",
+    "class/causality/packages/causality-representation/src/universalEmbedding.js~UniversalEmbedding.html#instance-member-use",
+    "causality/packages/causality-representation/src/universalEmbedding.js~UniversalEmbedding#use",
     "member"
   ],
   [
@@ -4296,12 +4254,6 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "causality/src/ensemble/ensemblemodel.mixins.js~ensemblemodelmixins#ensemblemodelonehotpredict",
-    "class/causality/src/Ensemble/ensembleModel.mixins.js~EnsembleModelMixins.html#instance-get-EnsembleModelOneHotPredict",
-    "causality/src/Ensemble/ensembleModel.mixins.js~EnsembleModelMixins#EnsembleModelOneHotPredict",
-    "member"
-  ],
-  [
     "causality/src/ensemble/ensemblemodel.mixins.js~ensemblemodelmixins#ensemblemodelpredict",
     "class/causality/src/Ensemble/ensembleModel.mixins.js~EnsembleModelMixins.html#instance-get-EnsembleModelPredict",
     "causality/src/Ensemble/ensembleModel.mixins.js~EnsembleModelMixins#EnsembleModelPredict",
@@ -4398,9 +4350,9 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "causality/src/functor.js~parameterfunctor#constructor",
-    "class/causality/src/functor.js~ParameterFunctor.html#instance-constructor-constructor",
-    "causality/src/functor.js~ParameterFunctor#constructor",
+    "causality/src/functor.js~functor#constructor",
+    "class/causality/src/functor.js~Functor.html#instance-constructor-constructor",
+    "causality/src/functor.js~Functor#constructor",
     "method"
   ],
   [
@@ -4410,7 +4362,7 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "csvutils csvutils,csvutils",
+    "csvutils causality/packages/causality-utils/src/csvutils.js~csvutils,csvutils",
     "test-file/causality/packages/causality-utils/test/csvUtils.test.js.html#lineNumber3",
     "create PNG file must success",
     "test"
@@ -4422,25 +4374,25 @@ window.esdocSearchIndex = [
     "test"
   ],
   [
-    "",
-    "test-file/causality/packages/causality-datasets/test/dataset.test.js.html#lineNumber2",
-    "dataset no configure instance should be not okay",
+    "causalnetdatasource causality/packages/causality-datasets/src/causalnetdatasource.js~causalnetdatasource,causalnetdatasource",
+    "test-file/causality/packages/causality-datasets/test/causalNetDataSource.test.js.html#lineNumber3",
+    "datasource should be defined",
     "test"
   ],
   [
-    "",
-    "test-file/causality/packages/causality-deployment/test/deployment.test.js.html#lineNumber1",
-    "deployment shoul be defined",
+    "event causality/packages/causality-core/src/event.js~event,event",
+    "test-file/causality/packages/causality-core/test/event.test.js.html#lineNumber3",
+    "event instance should be defined",
     "test"
   ],
   [
-    "fetch causality/packages/causality-representation/src/causalnetembedding.js~causalnetembedding#fetch,fetch",
+    "fetch causality/packages/causality-utils/src/fetch.js~fetch,fetch",
     "test-file/causality/packages/causality-utils/test/fetch.test.js.html#lineNumber3",
     "fetch file should be okay",
     "test"
   ],
   [
-    " functor   functor , functor ",
+    "functor causality/packages/causality-core/src/functor.js~functor,functor",
     "test-file/causality/packages/causality-core/test/functor.test.js.html#lineNumber3",
     "functor setIn should be okay",
     "test"
@@ -4482,26 +4434,20 @@ window.esdocSearchIndex = [
     "test"
   ],
   [
-    " memorycache   memorycache , memorycache ",
-    "test-file/causality/packages/causality-memcache/test/memdown.test.js.html#lineNumber3",
-    "memdown instance should be define",
-    "test"
-  ],
-  [
-    " causalnetsampling   causalnetsampling , causalnetsampling ",
+    "causalnetsampling causality/packages/causality-sampling/src/causalnetsampling.js~causalnetsampling,causalnetsampling",
     "test-file/causality/packages/causality-sampling/test/sampling.test.js.html#lineNumber3",
     "negSampling should be okay",
     "test"
   ],
   [
-    " nlppreprocessing   nlppreprocessing , nlppreprocessing ",
+    "nlppreprocessing causality/packages/causality-preprocessing/src/nlppreprocessing.js~nlppreprocessing,nlppreprocessing",
     "test-file/causality/packages/causality-preprocessing/test/nlpPreprocessing.test.js.html#lineNumber3",
     "nlpPreprocessing instance should be define",
     "test"
   ],
   [
-    "",
-    "test-file/causality/packages/causality-utils/test/platform.test.js.html#lineNumber8",
+    "platform causality/packages/causality-utils/src/platform.js~platform,platform",
+    "test-file/causality/packages/causality-utils/test/platform.test.js.html#lineNumber9",
     "platform mix should works",
     "test"
   ],
@@ -4512,21 +4458,27 @@ window.esdocSearchIndex = [
     "test"
   ],
   [
-    " causalnetsampling   causalnetsampling , causalnetsampling ",
+    "causalnetsampling causality/packages/causality-sampling/src/causalnetsampling.js~causalnetsampling,causalnetsampling",
     "test-file/causality/packages/causality-sampling/test/sampling.test.js.html#lineNumber8",
     "subSampling should be okay",
     "test"
   ],
   [
-    " tensor   tensor , tensor ",
+    "tensor causality/packages/causality-core/src/tensor.js~tensor,tensor",
     "test-file/causality/packages/causality-core/test/tensor.test.js.html#lineNumber3",
     "tensor init should be okay",
     "test"
   ],
   [
-    " termlogger   termlogger , termlogger ",
+    "termlogger causality/packages/causality-log/src/termlogger.js~termlogger,termlogger",
     "test-file/causality/packages/causality-log/test/termlog.test.js.html#lineNumber3",
     "term logger instance should be defined",
+    "test"
+  ],
+  [
+    "universalembedding causality/packages/causality-representation/src/universalembedding.js~universalembedding,universalembedding",
+    "test-file/causality/packages/causality-representation/test/universalEmbedding.test.js.html#lineNumber3",
+    "universalEmbedding instance should be okay",
     "test"
   ]
 ]
