@@ -1,49 +1,22 @@
-<html>
-    <head>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" >
-    </head>
-    <style>
-        .content{
-            width: 1400px;
-            margin: auto;
-        }
-        .information{
-            margin: 15px;
-            padding: 10px;
-            border: 1px solid #dfdfdf;
-            border-radius: 5px;
-            background:#ffff0094;
-        }
-        #logger{
-            height: 700px;
-            overflow: scroll;
-        }
-    </style>
-    <body>
-        <div id="infor" class="information">
-            <p>This demo compares the vector representation of two words, senteces, phrases using 
-                <a href="https://github.com/tensorflow/tfjs-models/tree/master/universal-sentence-encoder">Google Universal Sentence Encoder Lite version.</a>
-            </p>
-            <p>Examples: "dog" vs "cat", "king" vs "queen", "the game is not good" vs "the show is terrible".</p>
-            <p>Depend on machine and the length of input sentences, it would take several seconds for inferring vectors and comparing</p>
 
-        </div>
-        <div class="pure-g content">
-            <div class="pure-u-6-24">
-                <form class="pure-form pure-form-stacked">
-                    <fieldset>
-                        <legend>sentence A</legend>
-                        <textarea id="sentenceA" class="pure-input-1" >universal sentence encoder</textarea>
-                        <span>first sentence</span>
-                        <legend>sentence B</legend>
-                        <textarea id="sentenceB" class="pure-input-1" >text representation as vector</textarea>
-                        <span>second sentence</span>
-                        <legend></legend>
-                        <button id="compare-text" class="pure-button">compare</button>
-                    </fieldset>
-            </div>
-            <div id="logger" class="pure-u-18-24"></div>
-        </div>
-    <script type="text/javascript" src="vendors.js"></script><script type="text/javascript" src="representation-demo.js"></script></body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>causal net web demo: 20 news group</title>
+  <style>
+    body{
+            background: #1e2c40;
+            color: white;
+    }
+    #logger > ul{
+      margin: 0px;
+    }
+  </style>
+</head>
+<body>
+  <section id="content"></section>
+<script type="text/javascript" src="vendors.js"></script><script type="text/javascript" src="representation-demo.js"></script></body>
 </html>

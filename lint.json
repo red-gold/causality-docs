@@ -1,16 +1,8 @@
 [
   {
     "name": "Functor#range",
-    "filePath": "causality/packages/causality-core/src/functor.js",
+    "filePath": "packages/causality-core/src/functor.js",
     "lines": [
-      {
-        "lineNumber": 81,
-        "line": "     */"
-      },
-      {
-        "lineNumber": 82,
-        "line": "    range(size, beginIdx=0){"
-      },
       {
         "lineNumber": 83,
         "line": "        const R = this.R;"
@@ -30,6 +22,14 @@
       {
         "lineNumber": 87,
         "line": "    enumerate(array){"
+      },
+      {
+        "lineNumber": 88,
+        "line": "        const R = this.R;"
+      },
+      {
+        "lineNumber": 89,
+        "line": "        return R.addIndex(R.map)((v,i)=>([i,v]))(array);"
       }
     ],
     "codeParams": [
@@ -42,7 +42,7 @@
   },
   {
     "name": "Store#getItem",
-    "filePath": "causality/packages/causality-core/src/store.js",
+    "filePath": "packages/causality-core/src/store.js",
     "lines": [
       {
         "lineNumber": 17,
@@ -85,7 +85,7 @@
   },
   {
     "name": "Store#setItem",
-    "filePath": "causality/packages/causality-core/src/store.js",
+    "filePath": "packages/causality-core/src/store.js",
     "lines": [
       {
         "lineNumber": 44,
@@ -132,7 +132,7 @@
   },
   {
     "name": "Store#delItem",
-    "filePath": "causality/packages/causality-core/src/store.js",
+    "filePath": "packages/causality-core/src/store.js",
     "lines": [
       {
         "lineNumber": 72,
@@ -173,7 +173,7 @@
   },
   {
     "name": "Store#getItemList",
-    "filePath": "causality/packages/causality-core/src/store.js",
+    "filePath": "packages/causality-core/src/store.js",
     "lines": [
       {
         "lineNumber": 110,
@@ -214,7 +214,7 @@
   },
   {
     "name": "MemorizingMixins#write",
-    "filePath": "causality/packages/causality-memcache/src/memorizing.mixins.js",
+    "filePath": "packages/causality-memcache/src/memorizing.mixins.js",
     "lines": [
       {
         "lineNumber": 25,
@@ -255,8 +255,49 @@
     ]
   },
   {
+    "name": "ColorTransformingMixins#blackWhiteTransform",
+    "filePath": "packages/causality-preprocessing/src/Image/colorTransforming.mixins.js",
+    "lines": [
+      {
+        "lineNumber": 6,
+        "line": "    /**"
+      },
+      {
+        "lineNumber": 7,
+        "line": "     * Transform color image to black on white image. This function also reduce chanel to 1."
+      },
+      {
+        "lineNumber": 8,
+        "line": "     * @param { Array|Buffer } sampleBuffer"
+      },
+      {
+        "lineNumber": 9,
+        "line": "     * @param { Number } channelSize"
+      },
+      {
+        "lineNumber": 10,
+        "line": "     * @return { Array } image data after transform"
+      },
+      {
+        "lineNumber": 11,
+        "line": "     */"
+      },
+      {
+        "lineNumber": 12,
+        "line": "    blackWhiteTransform(sampleBuffer){"
+      }
+    ],
+    "codeParams": [
+      "sampleBuffer"
+    ],
+    "docParams": [
+      "sampleBuffer",
+      "channelSize"
+    ]
+  },
+  {
     "name": "RepresentationMixins#connect",
-    "filePath": "causality/packages/causality-representation/src/representation.mixins.js",
+    "filePath": "packages/causality-representation/src/representation.mixins.js",
     "lines": [
       {
         "lineNumber": 44,
@@ -303,7 +344,7 @@
   },
   {
     "name": "WordEmbeddingMixins#sentenceEncode",
-    "filePath": "causality/packages/causality-representation/src/wordEmbedding.mixins.js",
+    "filePath": "packages/causality-representation/src/wordEmbedding.mixins.js",
     "lines": [
       {
         "lineNumber": 14,
@@ -331,11 +372,12 @@
       },
       {
         "lineNumber": 20,
-        "line": "    async sentenceEncode(sentences){"
+        "line": "    async sentenceEncode(sentences, asTensor=true){"
       }
     ],
     "codeParams": [
-      "sentences"
+      "sentences",
+      "asTensor"
     ],
     "docParams": [
       "tokens"
@@ -343,7 +385,7 @@
   },
   {
     "name": "CSVFileMixins#writeCSVFile",
-    "filePath": "causality/packages/causality-storage/src/CSVFile.mixins.js",
+    "filePath": "packages/causality-storage/src/CSVFile.mixins.js",
     "lines": [
       {
         "lineNumber": 16,
@@ -374,7 +416,7 @@
   },
   {
     "name": "IndexDBStorage#batch",
-    "filePath": "causality/packages/causality-storage/src/indexDBStorage.js",
+    "filePath": "packages/causality-storage/src/indexDBStorage.js",
     "lines": [
       {
         "lineNumber": 52,
@@ -438,7 +480,7 @@
   },
   {
     "name": "TextFileMixins#readFile",
-    "filePath": "causality/packages/causality-storage/src/textFile.mixins.js",
+    "filePath": "packages/causality-storage/src/textFile.mixins.js",
     "lines": [
       {
         "lineNumber": 3,
@@ -464,7 +506,7 @@
   },
   {
     "name": "TextFileMixins#writeFile",
-    "filePath": "causality/packages/causality-storage/src/textFile.mixins.js",
+    "filePath": "packages/causality-storage/src/textFile.mixins.js",
     "lines": [
       {
         "lineNumber": 11,
@@ -495,38 +537,38 @@
   },
   {
     "name": "BufferUtils#writeBuffer",
-    "filePath": "causality/packages/causality-utils/src/bufferUtils.js",
+    "filePath": "packages/causality-utils/src/bufferUtils.js",
     "lines": [
       {
-        "lineNumber": 25,
+        "lineNumber": 26,
         "line": "    /**"
       },
       {
-        "lineNumber": 26,
+        "lineNumber": 27,
         "line": "     * write buffer content from given content"
       },
       {
-        "lineNumber": 27,
+        "lineNumber": 28,
         "line": "     * @todo enhance reject case"
       },
       {
-        "lineNumber": 28,
+        "lineNumber": 29,
         "line": "     * @param { URL } url - url for csv content"
       },
       {
-        "lineNumber": 29,
+        "lineNumber": 30,
         "line": "     * @returns { Promise } - data promise with data if success"
       },
       {
-        "lineNumber": 30,
+        "lineNumber": 31,
         "line": "     * @memberof BufferUtils"
       },
       {
-        "lineNumber": 31,
+        "lineNumber": 32,
         "line": "     */"
       },
       {
-        "lineNumber": 32,
+        "lineNumber": 33,
         "line": "    async writeBuffer(data, filePath){"
       }
     ],
@@ -540,38 +582,38 @@
   },
   {
     "name": "BufferUtils#readBuffer",
-    "filePath": "causality/packages/causality-utils/src/bufferUtils.js",
+    "filePath": "packages/causality-utils/src/bufferUtils.js",
     "lines": [
       {
-        "lineNumber": 49,
+        "lineNumber": 50,
         "line": "    /**"
       },
       {
-        "lineNumber": 50,
+        "lineNumber": 51,
         "line": "     * fetch buffer content from given url"
       },
       {
-        "lineNumber": 51,
+        "lineNumber": 52,
         "line": "     * @todo enhance reject case"
       },
       {
-        "lineNumber": 52,
+        "lineNumber": 53,
         "line": "     * @param { URL } url - url for csv content"
       },
       {
-        "lineNumber": 53,
+        "lineNumber": 54,
         "line": "     * @returns { Promise } - data promise with data if success"
       },
       {
-        "lineNumber": 54,
+        "lineNumber": 55,
         "line": "     * @memberof BufferUtils"
       },
       {
-        "lineNumber": 55,
+        "lineNumber": 56,
         "line": "     */"
       },
       {
-        "lineNumber": 56,
+        "lineNumber": 57,
         "line": "    readBuffer(filePath){"
       }
     ],
@@ -584,7 +626,7 @@
   },
   {
     "name": "JSONUtils#writeJSON",
-    "filePath": "causality/packages/causality-utils/src/jsonUtils.js",
+    "filePath": "packages/causality-utils/src/jsonUtils.js",
     "lines": [
       {
         "lineNumber": 34,
@@ -629,7 +671,7 @@
   },
   {
     "name": "JSONUtils#readJSON",
-    "filePath": "causality/packages/causality-utils/src/jsonUtils.js",
+    "filePath": "packages/causality-utils/src/jsonUtils.js",
     "lines": [
       {
         "lineNumber": 58,
@@ -661,7 +703,7 @@
       },
       {
         "lineNumber": 65,
-        "line": "    readJSON(filePath){"
+        "line": "    async readJSON(filePath){"
       }
     ],
     "codeParams": [
@@ -673,7 +715,7 @@
   },
   {
     "name": "PNGUtils#writePNG",
-    "filePath": "causality/packages/causality-utils/src/pngUtils.js",
+    "filePath": "packages/causality-utils/src/pngUtils.js",
     "lines": [
       {
         "lineNumber": 40,

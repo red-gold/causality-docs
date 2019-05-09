@@ -8,7 +8,7 @@
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
   <script src="script/manual.js"></script>
-<link rel="stylesheet" href="./inject/css/0-pure-min.css"><link rel="stylesheet" href="./inject/css/0-causal-style.css"><script src="./inject/script/0-jquery-3.3.1.min.js"></script><script src="./inject/script/0-run_examples.js"></script></head>
+<link rel="stylesheet" href="./inject/css/0-pure-min.css"><link rel="stylesheet" href="./inject/css/0-causal-style.css"><script src="./inject/script/0-jquery-3.3.1.min.js"></script><script src="./inject/script/0-vendors.js"></script><script src="./inject/script/0-transpiler.js"></script><script src="./inject/script/0-require.js"></script><script src="./inject/script/0-run_examples.js"></script></head>
 <body class="layout-container manual-root" data-ice="rootContainer">
 
 <header>
@@ -18,9 +18,22 @@
   <a href="source.html">Source</a>
   <a href="test.html" data-ice="testLink">Test</a>
   <div class="v-seperate"></div>
-  <ul class="demo">
-    <li>
-        <a href="prebuilt-demos/representation.html">Sentence representation demo</a>
+  <ul>
+    <li style="list-style-type: none;margin: 0px;">
+      <button style="border: none;padding: 0 5px 0 5px;" onclick="document.getElementById(&apos;web-demo&apos;).classList.toggle(&apos;show&apos;)"> Try demo </button>
+    </li>
+    <li style="list-style-type: none;margin: 0px;">
+      <ul id="web-demo" class="demo">
+        <li>
+          <a href="prebuilt-demos/representation.html">Sentence representation demo</a>
+        </li>
+        <li>
+          <a href="prebuilt-demos/mnist.html">Hand writing service building demo</a>
+        </li>
+        <li>
+          <a href="prebuilt-demos/20newsgroup.html">Text classification service building demo</a>
+        </li>
+      </ul>    
     </li>
   </ul>
   
@@ -139,6 +152,8 @@ console.log(tensor.isTensor([1,2,3]));</code>
 (async ()=&gt;{
     let functor = new Functor();
     console.log(functor.range(10));
+    console.log(functor.zeros(10));
+    console.log(functor.ones(10));
 })();</code>
 </code></pre>
 <p><a href="./manual/./asset/examples/functor.babel.js">Run code</a></p>
@@ -168,7 +183,7 @@ console.log(tensor.isTensor([1,2,3]));</code>
 (async ()=&gt;{
     let description = await causalNetDataSource.connect(&apos;../../datasets/MNIST_dataset_NoSplit/&apos;);
     console.log( description );
-    console.log( causalNetDataSource.DataChunks );
+    console.log( causalNetDataSource.SampleSize );
     console.log( causalNetDataSource.chunkSelect(1) );
     const SampleReader = causalNetDataSource.SampleReader;
     const LabelReader = causalNetDataSource.LabelReader;
@@ -662,15 +677,25 @@ import { termLogger } from &apos;causal-net.log&apos;;
 </code></pre>
 <p><a href="./manual/./asset/examples/causalNetEmbedding.babel.node.js">Run code</a></p>
 <h3 id="universalembedding">UniversalEmbedding</h3><p>This class provide standard implements for text to vecs transformation into single vector based on <a href="https://github.com/tensorflow/tfjs-models/tree/master/universal-sentence-encoder">use</a> which can be accesed via universalEmbedding</p>
-<pre><code class="lang-javascript"><code class="source-code prettyprint">import { universalEmbedding, Log } from &apos;causal-net.representation&apos;;
+<pre><code class="lang-javascript"><code class="source-code prettyprint">import { universalEmbedding } from &apos;causal-net.representation&apos;;
 import { termLogger } from &apos;causal-net.log&apos;;
+import { tokenizer } from &apos;causal-net.preprocessing&apos;;
 (async ()=&gt;{
-    // termLogger.groupBegin();
-    await universalEmbedding.connect();
-    // termLogger.groupEnd();
-    let sentVec = await universalEmbedding.sentenceEncode([ &apos;this is test&apos; ])
+    const BaseModelServer = &apos;http://0.0.0.0:8080/models/&apos;;
+    termLogger.groupBegin(&apos;load model&apos;);
+    await tokenizer.connect(BaseModelServer + &apos;use/vocab.json&apos;);
+    await universalEmbedding.connect(BaseModelServer + &apos;/use/tensorflowjs_model.json&apos;);
+    termLogger.log(&apos;load finish&apos;);
+    const asEncode = true;
+    let tokens = [tokenizer.tokenize(&apos;dog&apos;, asEncode),
+                  tokenizer.tokenize(&apos;cat&apos;, asEncode)]; 
+    termLogger.log({tokens});
+    let sentVec = await universalEmbedding.sentenceEncode(tokens);
     sentVec.print();
-})();</code>
+    let score = await universalEmbedding.encodeMatching(tokens[0], tokens[1]);
+    score.print();
+    termLogger.groupEnd();
+})().catch(console.err);        </code>
 </code></pre>
 <p><a href="./manual/./asset/examples/universalEmbedding.babel.js">Run code</a></p>
 <h3 id="representationmixins">RepresentationMixins</h3><p>This mixin class provides attributes: <strong>Prepresentation</strong>.</p>
@@ -1031,8 +1056,19 @@ catch(err){
 <p>Node:</p>
 <pre><code class="lang-javascript"><code class="source-code prettyprint">import { csvUtils } from &apos;causal-net.utils&apos;;
 (async ()=&gt;{
-    let data = await csvUtils.readCSV(&apos;../../datasets/credict.csv&apos;);
+    let data = await csvUtils.readCSV(&apos;./credict.csv&apos;);
     console.log(data);
+    let headers = Object.keys(data[0]);
+    await csvUtils.writeCSV(headers, data, &apos;./output.csv&apos;);
+    data = await csvUtils.readCSV(&apos;./output.csv&apos;);
+    console.log(data);
+    // console.log(await csvUtils.chunkCSV(&apos;./output.csv&apos;,3,&apos;./chunk-{}.csv&apos;));
+    // const csvlink = &apos;https://media.githubusercontent.com/media/red-gold/causality/master/datasets/credict.csv&apos;;
+    // data = await csvUtils.fetchCSV(csvlink);
+    // console.log(data);
+    // data = [{&apos;a&apos;:&apos;a&apos;,&apos;text&apos;:&apos;&quot;this is text\n,;&quot;&apos;}];
+    // await csvUtils.writeCSV([&apos;a&apos;,&apos;text&apos;], data, &apos;./output.csv&apos;);
+    // console.log(await csvUtils.readCSV(&apos;./output.csv&apos;));
 })();
 </code>
 </code></pre>

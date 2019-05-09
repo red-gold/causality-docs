@@ -3,7 +3,7 @@ import { causalNetDataSource } from 'causal-net.datasets';
 (async ()=>{
     let description = await causalNetDataSource.connect('../../datasets/MNIST_dataset_NoSplit/');
     console.log( description );
-    console.log( causalNetDataSource.DataChunks );
+    console.log( causalNetDataSource.SampleSize );
     console.log( causalNetDataSource.chunkSelect(1) );
     const SampleReader = causalNetDataSource.SampleReader;
     const LabelReader = causalNetDataSource.LabelReader;

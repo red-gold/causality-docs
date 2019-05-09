@@ -8,7 +8,7 @@
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
   <script src="script/manual.js"></script>
-<link rel="stylesheet" href="./inject/css/0-pure-min.css"><link rel="stylesheet" href="./inject/css/0-causal-style.css"><script src="./inject/script/0-jquery-3.3.1.min.js"></script><script src="./inject/script/0-run_examples.js"></script></head>
+<link rel="stylesheet" href="./inject/css/0-pure-min.css"><link rel="stylesheet" href="./inject/css/0-causal-style.css"><script src="./inject/script/0-jquery-3.3.1.min.js"></script><script src="./inject/script/0-vendors.js"></script><script src="./inject/script/0-transpiler.js"></script><script src="./inject/script/0-require.js"></script><script src="./inject/script/0-run_examples.js"></script></head>
 <body class="layout-container" data-ice="rootContainer">
 
 <header>
@@ -18,9 +18,22 @@
   <a href="source.html">Source</a>
   <a href="test.html" data-ice="testLink">Test</a>
   <div class="v-seperate"></div>
-  <ul class="demo">
-    <li>
-        <a href="prebuilt-demos/representation.html">Sentence representation demo</a>
+  <ul>
+    <li style="list-style-type: none;margin: 0px;">
+      <button style="border: none;padding: 0 5px 0 5px;" onclick="document.getElementById(&apos;web-demo&apos;).classList.toggle(&apos;show&apos;)"> Try demo </button>
+    </li>
+    <li style="list-style-type: none;margin: 0px;">
+      <ul id="web-demo" class="demo">
+        <li>
+          <a href="prebuilt-demos/representation.html">Sentence representation demo</a>
+        </li>
+        <li>
+          <a href="prebuilt-demos/mnist.html">Hand writing service building demo</a>
+        </li>
+        <li>
+          <a href="prebuilt-demos/20newsgroup.html">Text classification service building demo</a>
+        </li>
+      </ul>    
     </li>
   </ul>
   
@@ -36,134 +49,140 @@
 <nav class="navigation" data-ice="nav"><div>
   <ul>
     
-  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-core-src">packages/causality-core/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-core/src/causalNetCore.js~CausalNetCore.html">CausalNetCore</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-core/src/event.js~Event.html">Event</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-core/src/functor.js~Functor.html">Functor</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-core/src/store.js~Store.html">Store</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-core/src/tensor.js~Tensor.html">Tensor</a></span></span></li>
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-core-src">causality-core/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-core/src/causalNetCore.js~CausalNetCore.html">CausalNetCore</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-core/src/event.js~Event.html">Event</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-core/src/functor.js~Functor.html">Functor</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-core/src/store.js~Store.html">Store</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-core/src/tensor.js~Tensor.html">Tensor</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-causalNetCore">causalNetCore</a></span></span></li>
-<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-datasets-src">packages/causality-datasets/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-datasets/src/causalNetDataSource.js~CausalNetDataSource.html">CausalNetDataSource</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-datasets/src/dataSource.mixins.js~DataSourceMixins.html">DataSourceMixins</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-datasets-src">causality-datasets/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-datasets/src/causalNetDataSource.js~CausalNetDataSource.html">CausalNetDataSource</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-datasets/src/dataSource.mixins.js~DataSourceMixins.html">DataSourceMixins</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-causalNetDataSource">causalNetDataSource</a></span></span></li>
-<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-datasets-src-readers">packages/causality-datasets/src/Readers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-datasets/src/Readers/bufferReader.mixins.js~BufferReaderMixins.html">BufferReaderMixins</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-datasets/src/Readers/pngReader.mixins.js~PNGReaderMixins.html">PNGReaderMixins</a></span></span></li>
-<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-deployment-src">packages/causality-deployment/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-deployment/src/causalNetDeployment.js~CausalNetDeployment.html">CausalNetDeployment</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-deployment/src/deployment.mixins.js~DeploymentMixins.html">DeploymentMixins</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-datasets-src-readers">causality-datasets/src/Readers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-datasets/src/Readers/bufferReader.mixins.js~BufferReaderMixins.html">BufferReaderMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-datasets/src/Readers/csvReader.mixins.js~CSVReaderMixins.html">CSVReaderMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-datasets/src/Readers/pngReader.mixins.js~PNGReaderMixins.html">PNGReaderMixins</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-deployment-src">causality-deployment/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-deployment/src/causalNetDeployment.js~CausalNetDeployment.html">CausalNetDeployment</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-deployment/src/deployment.mixins.js~DeploymentMixins.html">DeploymentMixins</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-causalNetDeployment">causalNetDeployment</a></span></span></li>
-<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-layer-src">packages/causality-layer/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-layer/src/layerRunner.mixins.js~LayerRunnerMixins.html">LayerRunnerMixins</a></span></span></li>
-<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-layer-src-causalnetlayers">packages/causality-layer/src/CausalNetLayers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-layer/src/CausalNetLayers/causalNetLayers.js~CausalNetLayers.html">CausalNetLayers</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-layer/src/CausalNetLayers/dense.mixins.js~DenseLayerMixins.html">DenseLayerMixins</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-layer-src">causality-layer/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-layer/src/layerRunner.mixins.js~LayerRunnerMixins.html">LayerRunnerMixins</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-layer-src-causalnetlayers">causality-layer/src/CausalNetLayers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-layer/src/CausalNetLayers/causalNetLayers.js~CausalNetLayers.html">CausalNetLayers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-layer/src/CausalNetLayers/dense.mixins.js~DenseLayerMixins.html">DenseLayerMixins</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-causalNetLayers">causalNetLayers</a></span></span></li>
-<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-layer-src-causalnetparameters">packages/causality-layer/src/CausalNetParameters</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-layer/src/CausalNetParameters/causalNetParameters.js~CausalNetParameters.html">CausalNetParameters</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-layer/src/CausalNetParameters/parameter.mixins.js~ParameterMixins.html">ParameterMixins</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-layer/src/CausalNetParameters/parameterFunctor.js~ParameterFunctor.html">ParameterFunctor</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-layer/src/CausalNetParameters/parameterFunctor.mixins.js~ParameterFunctorMixins.html">ParameterFunctorMixins</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-layer-src-causalnetparameters">causality-layer/src/CausalNetParameters</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-layer/src/CausalNetParameters/causalNetParameters.js~CausalNetParameters.html">CausalNetParameters</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-layer/src/CausalNetParameters/parameter.mixins.js~ParameterMixins.html">ParameterMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-layer/src/CausalNetParameters/parameterFunctor.js~ParameterFunctor.html">ParameterFunctor</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-layer/src/CausalNetParameters/parameterFunctor.mixins.js~ParameterFunctorMixins.html">ParameterFunctorMixins</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-causalNetParameters">causalNetParameters</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-parameterFunctor">parameterFunctor</a></span></span></li>
-<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-layer-src-causalnetrunner">packages/causality-layer/src/CausalNetRunner</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-layer/src/CausalNetRunner/causalNetRunner.js~CausalNetRunner.html">CausalNetRunner</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-layer/src/CausalNetRunner/runner.mixins.js~RunnerMixins.html">RunnerMixins</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-layer-src-causalnetrunner">causality-layer/src/CausalNetRunner</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-layer/src/CausalNetRunner/causalNetRunner.js~CausalNetRunner.html">CausalNetRunner</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-layer/src/CausalNetRunner/runner.mixins.js~RunnerMixins.html">RunnerMixins</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-causalNetRunner">causalNetRunner</a></span></span></li>
-<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-log-src">packages/causality-log/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-log/src/baseLogger.js~BaseLogger.html">BaseLogger</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-log/src/logger.mixins.js~LoggerMixins.html">LoggerMixins</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-log/src/prettyJson.js~JsonView.html">JsonView</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-log/src/termLogger.js~TermLogger.html">TermLogger</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-log/src/termLogger.mixins.node.js~LogNodeMixins.html">LogNodeMixins</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-log/src/termLogger.mixins.web.js~LogWebMixins.html">LogWebMixins</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-log-src">causality-log/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-log/src/baseLogger.js~BaseLogger.html">BaseLogger</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-log/src/logger.mixins.js~LoggerMixins.html">LoggerMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-log/src/prettyJson.js~JsonView.html">JsonView</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-log/src/termLogger.js~TermLogger.html">TermLogger</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-log/src/termLogger.mixins.node.js~LogNodeMixins.html">LogNodeMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-log/src/termLogger.mixins.web.js~LogWebMixins.html">LogWebMixins</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-termLogger">termLogger</a></span></span></li>
-<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-log-src-vivid">packages/causality-log/src/Vivid</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-log/src/Vivid/line.chart.mixins.js~LineChartMixins.html">LineChartMixins</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-log/src/Vivid/plot.mixins.js~PlotMixins.html">PlotMixins</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-log/src/Vivid/scatter.chart.mixins.js~ScatterChartMixins.html">ScatterChartMixins</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-log/src/Vivid/vivid.js~BasePlot.html">BasePlot</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-log/src/Vivid/vivid.js~Vivid.html">Vivid</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-log/src/Vivid/vivid.mixins.node.js~VividNodeMixins.html">VividNodeMixins</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-log/src/Vivid/vivid.mixins.web.js~VividWebMixins.html">VividWebMixins</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-log-src-vivid">causality-log/src/Vivid</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-log/src/Vivid/line.chart.mixins.js~LineChartMixins.html">LineChartMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-log/src/Vivid/plot.mixins.js~PlotMixins.html">PlotMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-log/src/Vivid/scatter.chart.mixins.js~ScatterChartMixins.html">ScatterChartMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-log/src/Vivid/vivid.js~BasePlot.html">BasePlot</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-log/src/Vivid/vivid.js~Vivid.html">Vivid</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-log/src/Vivid/vivid.mixins.node.js~VividNodeMixins.html">VividNodeMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-log/src/Vivid/vivid.mixins.web.js~VividWebMixins.html">VividWebMixins</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-vivid">vivid</a></span></span></li>
-<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-memcache-src">packages/causality-memcache/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-memcache/src/memcache.mixins.js~MemCacheMixins.html">MemCacheMixins</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-memcache/src/memdownCache.js~MemdownCache.html">MemdownCache</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-memcache/src/memorizing.mixins.js~MemorizingMixins.html">MemorizingMixins</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-memcache-src">causality-memcache/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-memcache/src/memcache.mixins.js~MemCacheMixins.html">MemCacheMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-memcache/src/memdownCache.js~MemdownCache.html">MemdownCache</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-memcache/src/memorizing.mixins.js~MemorizingMixins.html">MemorizingMixins</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-memdownCache">memdownCache</a></span></span></li>
-<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-memory-src">packages/causality-memory/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-memory/src/causalNetMemory.js~CausalNetMemory.html">CausalNetMemory</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-memory-src">causality-memory/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-memory/src/causalNetMemory.js~CausalNetMemory.html">CausalNetMemory</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-causalNetMemory">causalNetMemory</a></span></span></li>
-<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-models-src">packages/causality-models/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-models/src/baseModel.js~BaseModel.html">BaseModel</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-models/src/causalNetModels.js~CausalNetModels.html">CausalNetModels</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-models/src/model.mixins.js~ModelMixins.html">ModelMixins</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-models/src/singleLableClassification.js~SingleLabelClassification.html">SingleLabelClassification</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-models-src">causality-models/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-models/src/baseModel.js~BaseModel.html">BaseModel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-models/src/causalNetModels.js~CausalNetModels.html">CausalNetModels</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-models/src/model.mixins.js~ModelMixins.html">ModelMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-models/src/singleLableClassification.js~SingleLabelClassification.html">SingleLabelClassification</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-causalNetModels">causalNetModels</a></span></span></li>
-<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-optimizers-src">packages/causality-optimizers/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-optimizers/src/evaluator.mixins.js~EvaluatorMixins.html">EvaluatorMixins</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-optimizers/src/trainer.mixins.js~TrainerMixins.html">TrainerMixins</a></span></span></li>
-<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-optimizers-src-stochasticgradientdescent">packages/causality-optimizers/src/StochasticGradientDescent</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-optimizers/src/StochasticGradientDescent/SGDFitParams.mixins.js~SGDFitParamsMixins.html">SGDFitParamsMixins</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-optimizers/src/StochasticGradientDescent/adamOptimizer.js~AdamOptimizer.html">AdamOptimizer</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-optimizers/src/StochasticGradientDescent/causalNetSGDOptimizer.js~CausalNetSGDOptimizer.html">CausalNetSGDOptimizer</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-optimizers/src/StochasticGradientDescent/functor.js~Functor.html">Functor</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-optimizers-src">causality-optimizers/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-optimizers/src/evaluator.mixins.js~EvaluatorMixins.html">EvaluatorMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-optimizers/src/trainer.mixins.js~TrainerMixins.html">TrainerMixins</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-optimizers-src-stochasticgradientdescent">causality-optimizers/src/StochasticGradientDescent</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-optimizers/src/StochasticGradientDescent/SGDFitParams.mixins.js~SGDFitParamsMixins.html">SGDFitParamsMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-optimizers/src/StochasticGradientDescent/adamOptimizer.js~AdamOptimizer.html">AdamOptimizer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-optimizers/src/StochasticGradientDescent/causalNetSGDOptimizer.js~CausalNetSGDOptimizer.html">CausalNetSGDOptimizer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-optimizers/src/StochasticGradientDescent/functor.js~Functor.html">Functor</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-causalNetSGDOptimizer">causalNetSGDOptimizer</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-functor">functor</a></span></span></li>
-<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-preprocessing-src">packages/causality-preprocessing/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-preprocessing/src/causalNetPreprocessingStream.js~CausalNetPreprocessingStream.html">CausalNetPreprocessingStream</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-preprocessing/src/imagePreprocessing.js~ImagePreprocessing.html">ImagePreprocessing</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-preprocessing/src/nlpPreprocessing.js~NLPPreprocessing.html">NLPPreprocessing</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-preprocessing/src/preprocessing.mixins.js~PreprocessingMixins.html">PreprocessingMixins</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-preprocessing/src/tabularPreprocessing.js~TabularPreprocessing.html">TabularPreprocessing</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-preprocessing/src/tokenizer.en.js~TokenizerEN.html">TokenizerEN</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-preprocessing-src">causality-preprocessing/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-preprocessing/src/causalNetPreprocessingStream.js~CausalNetPreprocessingStream.html">CausalNetPreprocessingStream</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-preprocessing/src/imagePreprocessing.js~ImagePreprocessing.html">ImagePreprocessing</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-preprocessing/src/nlpPreprocessing.js~NLPPreprocessing.html">NLPPreprocessing</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-preprocessing/src/preprocessing.mixins.js~PreprocessingMixins.html">PreprocessingMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-preprocessing/src/tabularPreprocessing.js~TabularPreprocessing.html">TabularPreprocessing</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-causalNetPreprocessingStream">causalNetPreprocessingStream</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-imagePreprocessing">imagePreprocessing</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-nLPPreprocessing">nLPPreprocessing</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-tabularPreprocessing">tabularPreprocessing</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-tokenizerEN">tokenizerEN</a></span></span></li>
-<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-preprocessing-src-image">packages/causality-preprocessing/src/Image</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-preprocessing/src/Image/colorTransforming.mixins.js~ColorTransformingMixins.html">ColorTransformingMixins</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-preprocessing/src/Image/imageSplitting.mixins.js~ImageSplittingMixins.html">ImageSplittingMixins</a></span></span></li>
-<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-preprocessing-src-nlp">packages/causality-preprocessing/src/NLP</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-preprocessing/src/NLP/tokenTransforming.mixins.js~TokenTransformingMixins.html">TokenTransformingMixins</a></span></span></li>
-<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-preprocessing-src-tabular">packages/causality-preprocessing/src/Tabular</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-preprocessing/src/Tabular/itemNormalizing.mixins.js~ItemNormalizingMixins.html">ItemNormalizingMixins</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-preprocessing/src/Tabular/nullItemReplacing.mixins.js~NullItemReplacingMixins.html">NullItemReplacingMixins</a></span></span></li>
-<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-representation-src">packages/causality-representation/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-representation/src/causalNetEmbedding.js~CausalNetEmbedding.html">CausalNetEmbedding</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-representation/src/functor.js~Functor.html">Functor</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-representation/src/representation.mixins.js~RepresentationMixins.html">RepresentationMixins</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-representation/src/universalEmbedding.js~UniversalEmbedding.html">UniversalEmbedding</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-representation/src/vectorMetrics.mixins.js~VectorMetricMixins.html">VectorMetricMixins</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-representation/src/wordEmbedding.mixins.js~WordEmbeddingMixins.html">WordEmbeddingMixins</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-representation/src/wordEmbeddingFunctor.mixins.js~WordEmbeddingFunctorMixins.html">WordEmbeddingFunctorMixins</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-preprocessing-src-image">causality-preprocessing/src/Image</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-preprocessing/src/Image/colorTransforming.mixins.js~ColorTransformingMixins.html">ColorTransformingMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-preprocessing/src/Image/imageScaling.mixins.js~ImageScalingMixins.html">ImageScalingMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-preprocessing/src/Image/imageSplitting.mixins.js~ImageSplittingMixins.html">ImageSplittingMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-boxScaling">boxScaling</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-preprocessing-src-nlp">causality-preprocessing/src/NLP</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-preprocessing/src/NLP/tokenTransforming.mixins.js~TokenTransformingMixins.html">TokenTransformingMixins</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-preprocessing-src-tabular">causality-preprocessing/src/Tabular</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-preprocessing/src/Tabular/categoryNormalizing.mixins.js~CategoryNormalizingMixins.html">CategoryNormalizingMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-preprocessing/src/Tabular/continuousNormalizing.mixins.js~ItemNormalizingMixins.html">ItemNormalizingMixins</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-preprocessing-src-tokenizer">causality-preprocessing/src/Tokenizer</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-preprocessing/src/Tokenizer/sentencePiece.js~SentencePieceTokenizer.html">SentencePieceTokenizer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-preprocessing/src/Tokenizer/tokenizer.js~Tokenizer.html">Tokenizer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-preprocessing/src/Tokenizer/trie.js~Trie.html">Trie</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-stringToChars">stringToChars</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-tokenizer">tokenizer</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-representation-src">causality-representation/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-representation/src/causalNetEmbedding.js~CausalNetEmbedding.html">CausalNetEmbedding</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-representation/src/functor.js~Functor.html">Functor</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-representation/src/representation.mixins.js~RepresentationMixins.html">RepresentationMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-representation/src/universalEmbedding.js~UniversalEmbedding.html">UniversalEmbedding</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-representation/src/vectorMetrics.mixins.js~VectorMetricMixins.html">VectorMetricMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-representation/src/wordEmbedding.mixins.js~WordEmbeddingMixins.html">WordEmbeddingMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-representation/src/wordEmbeddingFunctor.mixins.js~WordEmbeddingFunctorMixins.html">WordEmbeddingFunctorMixins</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-causalNetEmbedding">causalNetEmbedding</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-functor">functor</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-universalEmbedding">universalEmbedding</a></span></span></li>
-<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-representation-src-lookup">packages/causality-representation/src/Lookup</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-representation/src/Lookup/chunkLookup.mixins.js~ChunkLookupMixins.html">ChunkLookupMixins</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-representation/src/Lookup/tokenLookup.mixins.js~TokenLookUpMixins.html">TokenLookUpMixins</a></span></span></li>
-<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-sampling-src">packages/causality-sampling/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-sampling/src/causalNetSampling.js~CausalNetSampling.html">CausalNetSampling</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-sampling/src/negSampling.mixins.js~NegativeSamplingMixins.html">NegativeSamplingMixins</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-sampling/src/sampling.mixins.js~SamplingMixins.html">SamplingMixins</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-sampling/src/subSampling.mixins.js~SubSamplingMixins.html">SubSamplingMixins</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-representation-src-lookup">causality-representation/src/Lookup</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-representation/src/Lookup/chunkLookup.mixins.js~ChunkLookupMixins.html">ChunkLookupMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-representation/src/Lookup/tokenLookup.mixins.js~TokenLookUpMixins.html">TokenLookUpMixins</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-sampling-src">causality-sampling/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-sampling/src/causalNetSampling.js~CausalNetSampling.html">CausalNetSampling</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-sampling/src/negSampling.mixins.js~NegativeSamplingMixins.html">NegativeSamplingMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-sampling/src/sampling.mixins.js~SamplingMixins.html">SamplingMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-sampling/src/subSampling.mixins.js~SubSamplingMixins.html">SubSamplingMixins</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-causalNetSampling">causalNetSampling</a></span></span></li>
-<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-storage-src">packages/causality-storage/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-storage/src/CSVFile.mixins.js~CSVFileMixins.html">CSVFileMixins</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-storage/src/PNGFile.mixins.js~PNGFileMixins.html">PNGFileMixins</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-storage/src/indexDBStorage.js~IndexDBStorage.html">IndexDBStorage</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-storage/src/indexDBStorage.mixins.node.js~LevelDownMixins.html">LevelDownMixins</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-storage/src/indexDBStorage.mixins.web.js~LevelJSMixins.html">LevelJSMixins</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-storage/src/storage.mixins.js~StorageMixins.html">StorageMixins</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-storage/src/textFile.mixins.js~TextFileMixins.html">TextFileMixins</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-storage-src">causality-storage/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-storage/src/CSVFile.mixins.js~CSVFileMixins.html">CSVFileMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-storage/src/PNGFile.mixins.js~PNGFileMixins.html">PNGFileMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-storage/src/indexDBStorage.js~IndexDBStorage.html">IndexDBStorage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-storage/src/indexDBStorage.mixins.node.js~LevelDownMixins.html">LevelDownMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-storage/src/indexDBStorage.mixins.web.js~LevelJSMixins.html">LevelJSMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-storage/src/storage.mixins.js~StorageMixins.html">StorageMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-storage/src/textFile.mixins.js~TextFileMixins.html">TextFileMixins</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-indexDBStorage">indexDBStorage</a></span></span></li>
-<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-utils-src">packages/causality-utils/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-utils/src/assert.js~Assert.html">Assert</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-utils/src/bufferUtils.js~BufferUtils.html">BufferUtils</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-utils/src/csvUtils.js~CSVUtils.html">CSVUtils</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-utils/src/fetch.js~Fetch.html">Fetch</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-utils/src/fetchStreamMixins.node.js~NodeStreamMixins.html">NodeStreamMixins</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-utils/src/fetchStreamMixins.web.js~WebStreamMixins.html">WebStreamMixins</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-utils/src/jsonUtils.js~JSONUtils.html">JSONUtils</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-utils/src/platform.js~Platform.html">Platform</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-utils/src/pngUtils.js~PNGUtils.html">PNGUtils</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality-utils/src/stream.js~Stream.html">Stream</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-utils-src">causality-utils/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-utils/src/assert.js~Assert.html">Assert</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-utils/src/bufferUtils.js~BufferUtils.html">BufferUtils</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-utils/src/csvUtils.js~CSVUtils.html">CSVUtils</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-utils/src/fetch.js~Fetch.html">Fetch</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-utils/src/fetchStreamMixins.node.js~NodeStreamMixins.html">NodeStreamMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-utils/src/fetchStreamMixins.web.js~WebStreamMixins.html">WebStreamMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-utils/src/jsonUtils.js~JSONUtils.html">JSONUtils</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-utils/src/platform.js~Platform.html">Platform</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-utils/src/pngUtils.js~PNGUtils.html">PNGUtils</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-utils/src/stream.js~Stream.html">Stream</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-assert">assert</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-bufferUtils">bufferUtils</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-cSVUtils">cSVUtils</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-fetch">fetch</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-jSONUtils">jSONUtils</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-jsonUtils">jsonUtils</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-platform">platform</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-pNGUtils">pNGUtils</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-stream">stream</a></span></span></li>
-<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-src">packages/causality/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality/src/causalNet.js~CausalNet.html">CausalNet</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality/src/functor.js~Functor.html">Functor</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-streamUtils">streamUtils</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-src">causality/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality/src/causalNet.js~CausalNet.html">CausalNet</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality/src/functor.js~Functor.html">Functor</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-causalNet">causalNet</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-functor">functor</a></span></span></li>
-<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#packages-causality-src-ensemble">packages/causality/src/Ensemble</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality/src/Ensemble/ensembleDeployment.mixins.js~EnsembleDeploymentMixins.html">EnsembleDeploymentMixins</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality/src/Ensemble/ensembleEvaluator.mixins.js~EnsembleEvaluatorMixins.html">EnsembleEvaluatorMixins</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality/src/Ensemble/ensembleModel.mixins.js~EnsembleModelMixins.html">EnsembleModelMixins</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/causality/packages/causality/src/Ensemble/ensembleTrainer.mixins.js~EnsembleTrainerMixins.html">EnsembleTrainerMixins</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-src-ensemble">causality/src/Ensemble</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality/src/Ensemble/ensembleDeployment.mixins.js~EnsembleDeploymentMixins.html">EnsembleDeploymentMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality/src/Ensemble/ensembleEvaluator.mixins.js~EnsembleEvaluatorMixins.html">EnsembleEvaluatorMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality/src/Ensemble/ensembleModel.mixins.js~EnsembleModelMixins.html">EnsembleModelMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality/src/Ensemble/ensembleTrainer.mixins.js~EnsembleTrainerMixins.html">EnsembleTrainerMixins</a></span></span></li>
 </ul>
 </div>
 </nav>
@@ -187,7 +206,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-assert">assert</a></span></span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-utils/src/assert.js~Assert.html">Assert</a></span></span>
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-assert">assert</a></span></span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-utils/src/assert.js~Assert.html">Assert</a></span></span>
         </p>
       </div>
       <div>
@@ -215,7 +234,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-bufferUtils">bufferUtils</a></span></span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-utils/src/bufferUtils.js~BufferUtils.html">BufferUtils</a></span></span>
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-bufferUtils">bufferUtils</a></span></span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-utils/src/bufferUtils.js~BufferUtils.html">BufferUtils</a></span></span>
         </p>
       </div>
       <div>
@@ -243,7 +262,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-cSVUtils">cSVUtils</a></span></span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-utils/src/csvUtils.js~CSVUtils.html">CSVUtils</a></span></span>
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-cSVUtils">cSVUtils</a></span></span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-utils/src/csvUtils.js~CSVUtils.html">CSVUtils</a></span></span>
         </p>
       </div>
       <div>
@@ -271,7 +290,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-causalNet">causalNet</a></span></span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality/src/causalNet.js~CausalNet.html">CausalNet</a></span></span>
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-causalNet">causalNet</a></span></span><span class="code" data-ice="signature">: <span><a href="class/packages/causality/src/causalNet.js~CausalNet.html">CausalNet</a></span></span>
         </p>
       </div>
       <div>
@@ -299,7 +318,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-causalNetCore">causalNetCore</a></span></span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-core/src/causalNetCore.js~CausalNetCore.html">CausalNetCore</a></span></span>
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-causalNetCore">causalNetCore</a></span></span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-core/src/causalNetCore.js~CausalNetCore.html">CausalNetCore</a></span></span>
         </p>
       </div>
       <div>
@@ -327,7 +346,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-causalNetDataSource">causalNetDataSource</a></span></span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-datasets/src/causalNetDataSource.js~CausalNetDataSource.html">CausalNetDataSource</a></span></span>
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-causalNetDataSource">causalNetDataSource</a></span></span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-datasets/src/causalNetDataSource.js~CausalNetDataSource.html">CausalNetDataSource</a></span></span>
         </p>
       </div>
       <div>
@@ -355,7 +374,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-causalNetDeployment">causalNetDeployment</a></span></span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-deployment/src/causalNetDeployment.js~CausalNetDeployment.html">CausalNetDeployment</a></span></span>
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-causalNetDeployment">causalNetDeployment</a></span></span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-deployment/src/causalNetDeployment.js~CausalNetDeployment.html">CausalNetDeployment</a></span></span>
         </p>
       </div>
       <div>
@@ -383,7 +402,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-causalNetEmbedding">causalNetEmbedding</a></span></span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-representation/src/causalNetEmbedding.js~CausalNetEmbedding.html">CausalNetEmbedding</a></span></span>
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-causalNetEmbedding">causalNetEmbedding</a></span></span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-representation/src/causalNetEmbedding.js~CausalNetEmbedding.html">CausalNetEmbedding</a></span></span>
         </p>
       </div>
       <div>
@@ -411,7 +430,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-causalNetLayers">causalNetLayers</a></span></span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-layer/src/CausalNetLayers/causalNetLayers.js~CausalNetLayers.html">CausalNetLayers</a></span></span>
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-causalNetLayers">causalNetLayers</a></span></span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-layer/src/CausalNetLayers/causalNetLayers.js~CausalNetLayers.html">CausalNetLayers</a></span></span>
         </p>
       </div>
       <div>
@@ -439,7 +458,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-causalNetMemory">causalNetMemory</a></span></span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-memory/src/causalNetMemory.js~CausalNetMemory.html">CausalNetMemory</a></span></span>
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-causalNetMemory">causalNetMemory</a></span></span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-memory/src/causalNetMemory.js~CausalNetMemory.html">CausalNetMemory</a></span></span>
         </p>
       </div>
       <div>
@@ -467,7 +486,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-causalNetModels">causalNetModels</a></span></span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-models/src/causalNetModels.js~CausalNetModels.html">CausalNetModels</a></span></span>
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-causalNetModels">causalNetModels</a></span></span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-models/src/causalNetModels.js~CausalNetModels.html">CausalNetModels</a></span></span>
         </p>
       </div>
       <div>
@@ -495,7 +514,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-causalNetParameters">causalNetParameters</a></span></span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-layer/src/CausalNetParameters/causalNetParameters.js~CausalNetParameters.html">CausalNetParameters</a></span></span>
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-causalNetParameters">causalNetParameters</a></span></span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-layer/src/CausalNetParameters/causalNetParameters.js~CausalNetParameters.html">CausalNetParameters</a></span></span>
         </p>
       </div>
       <div>
@@ -523,7 +542,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-causalNetPreprocessingStream">causalNetPreprocessingStream</a></span></span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-preprocessing/src/causalNetPreprocessingStream.js~CausalNetPreprocessingStream.html">CausalNetPreprocessingStream</a></span></span>
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-causalNetPreprocessingStream">causalNetPreprocessingStream</a></span></span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-preprocessing/src/causalNetPreprocessingStream.js~CausalNetPreprocessingStream.html">CausalNetPreprocessingStream</a></span></span>
         </p>
       </div>
       <div>
@@ -551,7 +570,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-causalNetRunner">causalNetRunner</a></span></span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-layer/src/CausalNetRunner/causalNetRunner.js~CausalNetRunner.html">CausalNetRunner</a></span></span>
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-causalNetRunner">causalNetRunner</a></span></span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-layer/src/CausalNetRunner/causalNetRunner.js~CausalNetRunner.html">CausalNetRunner</a></span></span>
         </p>
       </div>
       <div>
@@ -579,7 +598,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-causalNetSGDOptimizer">causalNetSGDOptimizer</a></span></span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-optimizers/src/StochasticGradientDescent/causalNetSGDOptimizer.js~CausalNetSGDOptimizer.html">CausalNetSGDOptimizer</a></span></span>
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-causalNetSGDOptimizer">causalNetSGDOptimizer</a></span></span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-optimizers/src/StochasticGradientDescent/causalNetSGDOptimizer.js~CausalNetSGDOptimizer.html">CausalNetSGDOptimizer</a></span></span>
         </p>
       </div>
       <div>
@@ -607,7 +626,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-causalNetSampling">causalNetSampling</a></span></span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-sampling/src/causalNetSampling.js~CausalNetSampling.html">CausalNetSampling</a></span></span>
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-causalNetSampling">causalNetSampling</a></span></span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-sampling/src/causalNetSampling.js~CausalNetSampling.html">CausalNetSampling</a></span></span>
         </p>
       </div>
       <div>
@@ -635,7 +654,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-fetch">fetch</a></span></span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-utils/src/fetch.js~Fetch.html">Fetch</a></span></span>
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-fetch">fetch</a></span></span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-utils/src/fetch.js~Fetch.html">Fetch</a></span></span>
         </p>
       </div>
       <div>
@@ -663,7 +682,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-functor">functor</a></span></span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality/src/functor.js~Functor.html">Functor</a></span></span>
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-functor">functor</a></span></span><span class="code" data-ice="signature">: <span><a href="class/packages/causality/src/functor.js~Functor.html">Functor</a></span></span>
         </p>
       </div>
       <div>
@@ -691,7 +710,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-functor">functor</a></span></span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-optimizers/src/StochasticGradientDescent/functor.js~Functor.html">Functor</a></span></span>
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-functor">functor</a></span></span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-optimizers/src/StochasticGradientDescent/functor.js~Functor.html">Functor</a></span></span>
         </p>
       </div>
       <div>
@@ -719,7 +738,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-functor">functor</a></span></span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-representation/src/functor.js~Functor.html">Functor</a></span></span>
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-functor">functor</a></span></span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-representation/src/functor.js~Functor.html">Functor</a></span></span>
         </p>
       </div>
       <div>
@@ -747,7 +766,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-imagePreprocessing">imagePreprocessing</a></span></span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-preprocessing/src/imagePreprocessing.js~ImagePreprocessing.html">ImagePreprocessing</a></span></span>
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-imagePreprocessing">imagePreprocessing</a></span></span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-preprocessing/src/imagePreprocessing.js~ImagePreprocessing.html">ImagePreprocessing</a></span></span>
         </p>
       </div>
       <div>
@@ -775,7 +794,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-indexDBStorage">indexDBStorage</a></span></span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-storage/src/indexDBStorage.js~IndexDBStorage.html">IndexDBStorage</a></span></span>
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-indexDBStorage">indexDBStorage</a></span></span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-storage/src/indexDBStorage.js~IndexDBStorage.html">IndexDBStorage</a></span></span>
         </p>
       </div>
       <div>
@@ -803,7 +822,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-jSONUtils">jSONUtils</a></span></span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-utils/src/jsonUtils.js~JSONUtils.html">JSONUtils</a></span></span>
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-jsonUtils">jsonUtils</a></span></span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-utils/src/jsonUtils.js~JSONUtils.html">JSONUtils</a></span></span>
         </p>
       </div>
       <div>
@@ -831,7 +850,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-memdownCache">memdownCache</a></span></span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-memcache/src/memdownCache.js~MemdownCache.html">MemdownCache</a></span></span>
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-memdownCache">memdownCache</a></span></span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-memcache/src/memdownCache.js~MemdownCache.html">MemdownCache</a></span></span>
         </p>
       </div>
       <div>
@@ -859,7 +878,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-nLPPreprocessing">nLPPreprocessing</a></span></span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-preprocessing/src/nlpPreprocessing.js~NLPPreprocessing.html">NLPPreprocessing</a></span></span>
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-nLPPreprocessing">nLPPreprocessing</a></span></span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-preprocessing/src/nlpPreprocessing.js~NLPPreprocessing.html">NLPPreprocessing</a></span></span>
         </p>
       </div>
       <div>
@@ -887,7 +906,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-pNGUtils">pNGUtils</a></span></span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-utils/src/pngUtils.js~PNGUtils.html">PNGUtils</a></span></span>
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-pNGUtils">pNGUtils</a></span></span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-utils/src/pngUtils.js~PNGUtils.html">PNGUtils</a></span></span>
         </p>
       </div>
       <div>
@@ -915,7 +934,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-parameterFunctor">parameterFunctor</a></span></span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-layer/src/CausalNetParameters/parameterFunctor.js~ParameterFunctor.html">ParameterFunctor</a></span></span>
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-parameterFunctor">parameterFunctor</a></span></span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-layer/src/CausalNetParameters/parameterFunctor.js~ParameterFunctor.html">ParameterFunctor</a></span></span>
         </p>
       </div>
       <div>
@@ -943,7 +962,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-platform">platform</a></span></span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-utils/src/platform.js~Platform.html">Platform</a></span></span>
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-platform">platform</a></span></span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-utils/src/platform.js~Platform.html">Platform</a></span></span>
         </p>
       </div>
       <div>
@@ -971,7 +990,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-stream">stream</a></span></span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-utils/src/stream.js~Stream.html">Stream</a></span></span>
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-streamUtils">streamUtils</a></span></span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-utils/src/stream.js~Stream.html">Stream</a></span></span>
         </p>
       </div>
       <div>
@@ -999,7 +1018,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-tabularPreprocessing">tabularPreprocessing</a></span></span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-preprocessing/src/tabularPreprocessing.js~TabularPreprocessing.html">TabularPreprocessing</a></span></span>
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-tabularPreprocessing">tabularPreprocessing</a></span></span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-preprocessing/src/tabularPreprocessing.js~TabularPreprocessing.html">TabularPreprocessing</a></span></span>
         </p>
       </div>
       <div>
@@ -1027,7 +1046,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-termLogger">termLogger</a></span></span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-log/src/termLogger.js~TermLogger.html">TermLogger</a></span></span>
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-termLogger">termLogger</a></span></span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-log/src/termLogger.js~TermLogger.html">TermLogger</a></span></span>
         </p>
       </div>
       <div>
@@ -1055,7 +1074,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-tokenizerEN">tokenizerEN</a></span></span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-preprocessing/src/tokenizer.en.js~TokenizerEN.html">TokenizerEN</a></span></span>
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-tokenizer">tokenizer</a></span></span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-preprocessing/src/Tokenizer/tokenizer.js~Tokenizer.html">Tokenizer</a></span></span>
         </p>
       </div>
       <div>
@@ -1083,7 +1102,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-universalEmbedding">universalEmbedding</a></span></span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-representation/src/universalEmbedding.js~UniversalEmbedding.html">UniversalEmbedding</a></span></span>
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-universalEmbedding">universalEmbedding</a></span></span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-representation/src/universalEmbedding.js~UniversalEmbedding.html">UniversalEmbedding</a></span></span>
         </p>
       </div>
       <div>
@@ -1111,7 +1130,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-vivid">vivid</a></span></span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-log/src/Vivid/vivid.js~Vivid.html">Vivid</a></span></span>
+          <span class="code" data-ice="name"><span><a href="variable/index.html#static-variable-vivid">vivid</a></span></span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-log/src/Vivid/vivid.js~Vivid.html">Vivid</a></span></span>
         </p>
       </div>
       <div>
@@ -1138,15 +1157,15 @@
     
     
     
-    <span class="code" data-ice="name">assert</span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-utils/src/assert.js~Assert.html">Assert</a></span></span>
+    <span class="code" data-ice="name">assert</span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-utils/src/assert.js~Assert.html">Assert</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/causality/packages/causality-utils/src/assert.js.html#lineNumber89">source</a></span></span>
+      <span data-ice="source"><span><a href="file/packages/causality-utils/src/assert.js.html#lineNumber89">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import assert from &apos;<span><a href="file/causality/packages/causality-utils/src/assert.js.html#lineNumber89">causal-net/causality/packages/causality-utils/src/assert.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import assert from &apos;<span><a href="file/packages/causality-utils/src/assert.js.html#lineNumber89">causal-net/packages/causality-utils/src/assert.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -1181,15 +1200,15 @@
     
     
     
-    <span class="code" data-ice="name">bufferUtils</span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-utils/src/bufferUtils.js~BufferUtils.html">BufferUtils</a></span></span>
+    <span class="code" data-ice="name">bufferUtils</span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-utils/src/bufferUtils.js~BufferUtils.html">BufferUtils</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/causality/packages/causality-utils/src/bufferUtils.js.html#lineNumber74">source</a></span></span>
+      <span data-ice="source"><span><a href="file/packages/causality-utils/src/bufferUtils.js.html#lineNumber75">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import bufferUtils from &apos;<span><a href="file/causality/packages/causality-utils/src/bufferUtils.js.html#lineNumber74">causal-net/causality/packages/causality-utils/src/bufferUtils.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import bufferUtils from &apos;<span><a href="file/packages/causality-utils/src/bufferUtils.js.html#lineNumber75">causal-net/packages/causality-utils/src/bufferUtils.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -1224,15 +1243,15 @@
     
     
     
-    <span class="code" data-ice="name">cSVUtils</span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-utils/src/csvUtils.js~CSVUtils.html">CSVUtils</a></span></span>
+    <span class="code" data-ice="name">cSVUtils</span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-utils/src/csvUtils.js~CSVUtils.html">CSVUtils</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/causality/packages/causality-utils/src/csvUtils.js.html#lineNumber67">source</a></span></span>
+      <span data-ice="source"><span><a href="file/packages/causality-utils/src/csvUtils.js.html#lineNumber112">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import cSVUtils from &apos;<span><a href="file/causality/packages/causality-utils/src/csvUtils.js.html#lineNumber67">causal-net/causality/packages/causality-utils/src/csvUtils.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import cSVUtils from &apos;<span><a href="file/packages/causality-utils/src/csvUtils.js.html#lineNumber112">causal-net/packages/causality-utils/src/csvUtils.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -1267,15 +1286,15 @@
     
     
     
-    <span class="code" data-ice="name">causalNet</span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality/src/causalNet.js~CausalNet.html">CausalNet</a></span></span>
+    <span class="code" data-ice="name">causalNet</span><span class="code" data-ice="signature">: <span><a href="class/packages/causality/src/causalNet.js~CausalNet.html">CausalNet</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/causality/packages/causality/src/causalNet.js.html#lineNumber65">source</a></span></span>
+      <span data-ice="source"><span><a href="file/packages/causality/src/causalNet.js.html#lineNumber66">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import causalNet from &apos;<span><a href="file/causality/packages/causality/src/causalNet.js.html#lineNumber65">causal-net/causality/packages/causality/src/causalNet.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import causalNet from &apos;<span><a href="file/packages/causality/src/causalNet.js.html#lineNumber66">causal-net/packages/causality/src/causalNet.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -1310,15 +1329,15 @@
     
     
     
-    <span class="code" data-ice="name">causalNetCore</span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-core/src/causalNetCore.js~CausalNetCore.html">CausalNetCore</a></span></span>
+    <span class="code" data-ice="name">causalNetCore</span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-core/src/causalNetCore.js~CausalNetCore.html">CausalNetCore</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/causality/packages/causality-core/src/causalNetCore.js.html#lineNumber26">source</a></span></span>
+      <span data-ice="source"><span><a href="file/packages/causality-core/src/causalNetCore.js.html#lineNumber26">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import causalNetCore from &apos;<span><a href="file/causality/packages/causality-core/src/causalNetCore.js.html#lineNumber26">causal-net/causality/packages/causality-core/src/causalNetCore.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import causalNetCore from &apos;<span><a href="file/packages/causality-core/src/causalNetCore.js.html#lineNumber26">causal-net/packages/causality-core/src/causalNetCore.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -1353,15 +1372,15 @@
     
     
     
-    <span class="code" data-ice="name">causalNetDataSource</span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-datasets/src/causalNetDataSource.js~CausalNetDataSource.html">CausalNetDataSource</a></span></span>
+    <span class="code" data-ice="name">causalNetDataSource</span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-datasets/src/causalNetDataSource.js~CausalNetDataSource.html">CausalNetDataSource</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/causality/packages/causality-datasets/src/causalNetDataSource.js.html#lineNumber141">source</a></span></span>
+      <span data-ice="source"><span><a href="file/packages/causality-datasets/src/causalNetDataSource.js.html#lineNumber226">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import causalNetDataSource from &apos;<span><a href="file/causality/packages/causality-datasets/src/causalNetDataSource.js.html#lineNumber141">causal-net/causality/packages/causality-datasets/src/causalNetDataSource.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import causalNetDataSource from &apos;<span><a href="file/packages/causality-datasets/src/causalNetDataSource.js.html#lineNumber226">causal-net/packages/causality-datasets/src/causalNetDataSource.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -1396,15 +1415,15 @@
     
     
     
-    <span class="code" data-ice="name">causalNetDeployment</span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-deployment/src/causalNetDeployment.js~CausalNetDeployment.html">CausalNetDeployment</a></span></span>
+    <span class="code" data-ice="name">causalNetDeployment</span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-deployment/src/causalNetDeployment.js~CausalNetDeployment.html">CausalNetDeployment</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/causality/packages/causality-deployment/src/causalNetDeployment.js.html#lineNumber120">source</a></span></span>
+      <span data-ice="source"><span><a href="file/packages/causality-deployment/src/causalNetDeployment.js.html#lineNumber119">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import causalNetDeployment from &apos;<span><a href="file/causality/packages/causality-deployment/src/causalNetDeployment.js.html#lineNumber120">causal-net/causality/packages/causality-deployment/src/causalNetDeployment.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import causalNetDeployment from &apos;<span><a href="file/packages/causality-deployment/src/causalNetDeployment.js.html#lineNumber119">causal-net/packages/causality-deployment/src/causalNetDeployment.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -1439,15 +1458,15 @@
     
     
     
-    <span class="code" data-ice="name">causalNetEmbedding</span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-representation/src/causalNetEmbedding.js~CausalNetEmbedding.html">CausalNetEmbedding</a></span></span>
+    <span class="code" data-ice="name">causalNetEmbedding</span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-representation/src/causalNetEmbedding.js~CausalNetEmbedding.html">CausalNetEmbedding</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/causality/packages/causality-representation/src/causalNetEmbedding.js.html#lineNumber142">source</a></span></span>
+      <span data-ice="source"><span><a href="file/packages/causality-representation/src/causalNetEmbedding.js.html#lineNumber143">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import causalNetEmbedding from &apos;<span><a href="file/causality/packages/causality-representation/src/causalNetEmbedding.js.html#lineNumber142">causal-net/causality/packages/causality-representation/src/causalNetEmbedding.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import causalNetEmbedding from &apos;<span><a href="file/packages/causality-representation/src/causalNetEmbedding.js.html#lineNumber143">causal-net/packages/causality-representation/src/causalNetEmbedding.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -1482,15 +1501,15 @@
     
     
     
-    <span class="code" data-ice="name">causalNetLayers</span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-layer/src/CausalNetLayers/causalNetLayers.js~CausalNetLayers.html">CausalNetLayers</a></span></span>
+    <span class="code" data-ice="name">causalNetLayers</span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-layer/src/CausalNetLayers/causalNetLayers.js~CausalNetLayers.html">CausalNetLayers</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/causality/packages/causality-layer/src/CausalNetLayers/causalNetLayers.js.html#lineNumber26">source</a></span></span>
+      <span data-ice="source"><span><a href="file/packages/causality-layer/src/CausalNetLayers/causalNetLayers.js.html#lineNumber26">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import causalNetLayers from &apos;<span><a href="file/causality/packages/causality-layer/src/CausalNetLayers/causalNetLayers.js.html#lineNumber26">causal-net/causality/packages/causality-layer/src/CausalNetLayers/causalNetLayers.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import causalNetLayers from &apos;<span><a href="file/packages/causality-layer/src/CausalNetLayers/causalNetLayers.js.html#lineNumber26">causal-net/packages/causality-layer/src/CausalNetLayers/causalNetLayers.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -1525,15 +1544,15 @@
     
     
     
-    <span class="code" data-ice="name">causalNetMemory</span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-memory/src/causalNetMemory.js~CausalNetMemory.html">CausalNetMemory</a></span></span>
+    <span class="code" data-ice="name">causalNetMemory</span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-memory/src/causalNetMemory.js~CausalNetMemory.html">CausalNetMemory</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/causality/packages/causality-memory/src/causalNetMemory.js.html#lineNumber90">source</a></span></span>
+      <span data-ice="source"><span><a href="file/packages/causality-memory/src/causalNetMemory.js.html#lineNumber90">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import causalNetMemory from &apos;<span><a href="file/causality/packages/causality-memory/src/causalNetMemory.js.html#lineNumber90">causal-net/causality/packages/causality-memory/src/causalNetMemory.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import causalNetMemory from &apos;<span><a href="file/packages/causality-memory/src/causalNetMemory.js.html#lineNumber90">causal-net/packages/causality-memory/src/causalNetMemory.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -1568,15 +1587,15 @@
     
     
     
-    <span class="code" data-ice="name">causalNetModels</span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-models/src/causalNetModels.js~CausalNetModels.html">CausalNetModels</a></span></span>
+    <span class="code" data-ice="name">causalNetModels</span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-models/src/causalNetModels.js~CausalNetModels.html">CausalNetModels</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/causality/packages/causality-models/src/causalNetModels.js.html#lineNumber32">source</a></span></span>
+      <span data-ice="source"><span><a href="file/packages/causality-models/src/causalNetModels.js.html#lineNumber32">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import causalNetModels from &apos;<span><a href="file/causality/packages/causality-models/src/causalNetModels.js.html#lineNumber32">causal-net/causality/packages/causality-models/src/causalNetModels.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import causalNetModels from &apos;<span><a href="file/packages/causality-models/src/causalNetModels.js.html#lineNumber32">causal-net/packages/causality-models/src/causalNetModels.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -1611,15 +1630,15 @@
     
     
     
-    <span class="code" data-ice="name">causalNetParameters</span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-layer/src/CausalNetParameters/causalNetParameters.js~CausalNetParameters.html">CausalNetParameters</a></span></span>
+    <span class="code" data-ice="name">causalNetParameters</span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-layer/src/CausalNetParameters/causalNetParameters.js~CausalNetParameters.html">CausalNetParameters</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/causality/packages/causality-layer/src/CausalNetParameters/causalNetParameters.js.html#lineNumber24">source</a></span></span>
+      <span data-ice="source"><span><a href="file/packages/causality-layer/src/CausalNetParameters/causalNetParameters.js.html#lineNumber24">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import causalNetParameters from &apos;<span><a href="file/causality/packages/causality-layer/src/CausalNetParameters/causalNetParameters.js.html#lineNumber24">causal-net/causality/packages/causality-layer/src/CausalNetParameters/causalNetParameters.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import causalNetParameters from &apos;<span><a href="file/packages/causality-layer/src/CausalNetParameters/causalNetParameters.js.html#lineNumber24">causal-net/packages/causality-layer/src/CausalNetParameters/causalNetParameters.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -1654,15 +1673,15 @@
     
     
     
-    <span class="code" data-ice="name">causalNetPreprocessingStream</span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-preprocessing/src/causalNetPreprocessingStream.js~CausalNetPreprocessingStream.html">CausalNetPreprocessingStream</a></span></span>
+    <span class="code" data-ice="name">causalNetPreprocessingStream</span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-preprocessing/src/causalNetPreprocessingStream.js~CausalNetPreprocessingStream.html">CausalNetPreprocessingStream</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/causality/packages/causality-preprocessing/src/causalNetPreprocessingStream.js.html#lineNumber150">source</a></span></span>
+      <span data-ice="source"><span><a href="file/packages/causality-preprocessing/src/causalNetPreprocessingStream.js.html#lineNumber167">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import causalNetPreprocessingStream from &apos;<span><a href="file/causality/packages/causality-preprocessing/src/causalNetPreprocessingStream.js.html#lineNumber150">causal-net/causality/packages/causality-preprocessing/src/causalNetPreprocessingStream.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import causalNetPreprocessingStream from &apos;<span><a href="file/packages/causality-preprocessing/src/causalNetPreprocessingStream.js.html#lineNumber167">causal-net/packages/causality-preprocessing/src/causalNetPreprocessingStream.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -1697,15 +1716,15 @@
     
     
     
-    <span class="code" data-ice="name">causalNetRunner</span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-layer/src/CausalNetRunner/causalNetRunner.js~CausalNetRunner.html">CausalNetRunner</a></span></span>
+    <span class="code" data-ice="name">causalNetRunner</span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-layer/src/CausalNetRunner/causalNetRunner.js~CausalNetRunner.html">CausalNetRunner</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/causality/packages/causality-layer/src/CausalNetRunner/causalNetRunner.js.html#lineNumber18">source</a></span></span>
+      <span data-ice="source"><span><a href="file/packages/causality-layer/src/CausalNetRunner/causalNetRunner.js.html#lineNumber18">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import causalNetRunner from &apos;<span><a href="file/causality/packages/causality-layer/src/CausalNetRunner/causalNetRunner.js.html#lineNumber18">causal-net/causality/packages/causality-layer/src/CausalNetRunner/causalNetRunner.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import causalNetRunner from &apos;<span><a href="file/packages/causality-layer/src/CausalNetRunner/causalNetRunner.js.html#lineNumber18">causal-net/packages/causality-layer/src/CausalNetRunner/causalNetRunner.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -1740,15 +1759,15 @@
     
     
     
-    <span class="code" data-ice="name">causalNetSGDOptimizer</span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-optimizers/src/StochasticGradientDescent/causalNetSGDOptimizer.js~CausalNetSGDOptimizer.html">CausalNetSGDOptimizer</a></span></span>
+    <span class="code" data-ice="name">causalNetSGDOptimizer</span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-optimizers/src/StochasticGradientDescent/causalNetSGDOptimizer.js~CausalNetSGDOptimizer.html">CausalNetSGDOptimizer</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/causality/packages/causality-optimizers/src/StochasticGradientDescent/causalNetSGDOptimizer.js.html#lineNumber22">source</a></span></span>
+      <span data-ice="source"><span><a href="file/packages/causality-optimizers/src/StochasticGradientDescent/causalNetSGDOptimizer.js.html#lineNumber22">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import causalNetSGDOptimizer from &apos;<span><a href="file/causality/packages/causality-optimizers/src/StochasticGradientDescent/causalNetSGDOptimizer.js.html#lineNumber22">causal-net/causality/packages/causality-optimizers/src/StochasticGradientDescent/causalNetSGDOptimizer.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import causalNetSGDOptimizer from &apos;<span><a href="file/packages/causality-optimizers/src/StochasticGradientDescent/causalNetSGDOptimizer.js.html#lineNumber22">causal-net/packages/causality-optimizers/src/StochasticGradientDescent/causalNetSGDOptimizer.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -1783,15 +1802,15 @@
     
     
     
-    <span class="code" data-ice="name">causalNetSampling</span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-sampling/src/causalNetSampling.js~CausalNetSampling.html">CausalNetSampling</a></span></span>
+    <span class="code" data-ice="name">causalNetSampling</span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-sampling/src/causalNetSampling.js~CausalNetSampling.html">CausalNetSampling</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/causality/packages/causality-sampling/src/causalNetSampling.js.html#lineNumber35">source</a></span></span>
+      <span data-ice="source"><span><a href="file/packages/causality-sampling/src/causalNetSampling.js.html#lineNumber35">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import causalNetSampling from &apos;<span><a href="file/causality/packages/causality-sampling/src/causalNetSampling.js.html#lineNumber35">causal-net/causality/packages/causality-sampling/src/causalNetSampling.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import causalNetSampling from &apos;<span><a href="file/packages/causality-sampling/src/causalNetSampling.js.html#lineNumber35">causal-net/packages/causality-sampling/src/causalNetSampling.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -1826,15 +1845,15 @@
     
     
     
-    <span class="code" data-ice="name">fetch</span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-utils/src/fetch.js~Fetch.html">Fetch</a></span></span>
+    <span class="code" data-ice="name">fetch</span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-utils/src/fetch.js~Fetch.html">Fetch</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/causality/packages/causality-utils/src/fetch.js.html#lineNumber57">source</a></span></span>
+      <span data-ice="source"><span><a href="file/packages/causality-utils/src/fetch.js.html#lineNumber57">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import fetch from &apos;<span><a href="file/causality/packages/causality-utils/src/fetch.js.html#lineNumber57">causal-net/causality/packages/causality-utils/src/fetch.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import fetch from &apos;<span><a href="file/packages/causality-utils/src/fetch.js.html#lineNumber57">causal-net/packages/causality-utils/src/fetch.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -1869,15 +1888,15 @@
     
     
     
-    <span class="code" data-ice="name">functor</span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality/src/functor.js~Functor.html">Functor</a></span></span>
+    <span class="code" data-ice="name">functor</span><span class="code" data-ice="signature">: <span><a href="class/packages/causality/src/functor.js~Functor.html">Functor</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/causality/packages/causality/src/functor.js.html#lineNumber14">source</a></span></span>
+      <span data-ice="source"><span><a href="file/packages/causality/src/functor.js.html#lineNumber14">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import functor from &apos;<span><a href="file/causality/packages/causality/src/functor.js.html#lineNumber14">causal-net/causality/packages/causality/src/functor.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import functor from &apos;<span><a href="file/packages/causality/src/functor.js.html#lineNumber14">causal-net/packages/causality/src/functor.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -1912,15 +1931,15 @@
     
     
     
-    <span class="code" data-ice="name">functor</span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-optimizers/src/StochasticGradientDescent/functor.js~Functor.html">Functor</a></span></span>
+    <span class="code" data-ice="name">functor</span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-optimizers/src/StochasticGradientDescent/functor.js~Functor.html">Functor</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/causality/packages/causality-optimizers/src/StochasticGradientDescent/functor.js.html#lineNumber13">source</a></span></span>
+      <span data-ice="source"><span><a href="file/packages/causality-optimizers/src/StochasticGradientDescent/functor.js.html#lineNumber13">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import functor from &apos;<span><a href="file/causality/packages/causality-optimizers/src/StochasticGradientDescent/functor.js.html#lineNumber13">causal-net/causality/packages/causality-optimizers/src/StochasticGradientDescent/functor.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import functor from &apos;<span><a href="file/packages/causality-optimizers/src/StochasticGradientDescent/functor.js.html#lineNumber13">causal-net/packages/causality-optimizers/src/StochasticGradientDescent/functor.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -1955,15 +1974,15 @@
     
     
     
-    <span class="code" data-ice="name">functor</span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-representation/src/functor.js~Functor.html">Functor</a></span></span>
+    <span class="code" data-ice="name">functor</span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-representation/src/functor.js~Functor.html">Functor</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/causality/packages/causality-representation/src/functor.js.html#lineNumber18">source</a></span></span>
+      <span data-ice="source"><span><a href="file/packages/causality-representation/src/functor.js.html#lineNumber18">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import functor from &apos;<span><a href="file/causality/packages/causality-representation/src/functor.js.html#lineNumber18">causal-net/causality/packages/causality-representation/src/functor.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import functor from &apos;<span><a href="file/packages/causality-representation/src/functor.js.html#lineNumber18">causal-net/packages/causality-representation/src/functor.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -1998,15 +2017,15 @@
     
     
     
-    <span class="code" data-ice="name">imagePreprocessing</span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-preprocessing/src/imagePreprocessing.js~ImagePreprocessing.html">ImagePreprocessing</a></span></span>
+    <span class="code" data-ice="name">imagePreprocessing</span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-preprocessing/src/imagePreprocessing.js~ImagePreprocessing.html">ImagePreprocessing</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/causality/packages/causality-preprocessing/src/imagePreprocessing.js.html#lineNumber23">source</a></span></span>
+      <span data-ice="source"><span><a href="file/packages/causality-preprocessing/src/imagePreprocessing.js.html#lineNumber24">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import imagePreprocessing from &apos;<span><a href="file/causality/packages/causality-preprocessing/src/imagePreprocessing.js.html#lineNumber23">causal-net/causality/packages/causality-preprocessing/src/imagePreprocessing.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import imagePreprocessing from &apos;<span><a href="file/packages/causality-preprocessing/src/imagePreprocessing.js.html#lineNumber24">causal-net/packages/causality-preprocessing/src/imagePreprocessing.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -2041,15 +2060,15 @@
     
     
     
-    <span class="code" data-ice="name">indexDBStorage</span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-storage/src/indexDBStorage.js~IndexDBStorage.html">IndexDBStorage</a></span></span>
+    <span class="code" data-ice="name">indexDBStorage</span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-storage/src/indexDBStorage.js~IndexDBStorage.html">IndexDBStorage</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/causality/packages/causality-storage/src/indexDBStorage.js.html#lineNumber105">source</a></span></span>
+      <span data-ice="source"><span><a href="file/packages/causality-storage/src/indexDBStorage.js.html#lineNumber105">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import indexDBStorage from &apos;<span><a href="file/causality/packages/causality-storage/src/indexDBStorage.js.html#lineNumber105">causal-net/causality/packages/causality-storage/src/indexDBStorage.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import indexDBStorage from &apos;<span><a href="file/packages/causality-storage/src/indexDBStorage.js.html#lineNumber105">causal-net/packages/causality-storage/src/indexDBStorage.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -2077,22 +2096,22 @@
   
 </div>
 <div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="static-variable-jSONUtils">
+  <h3 data-ice="anchor" id="static-variable-jsonUtils">
     <span class="access" data-ice="access">public</span>
     
     
     
     
     
-    <span class="code" data-ice="name">jSONUtils</span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-utils/src/jsonUtils.js~JSONUtils.html">JSONUtils</a></span></span>
+    <span class="code" data-ice="name">jsonUtils</span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-utils/src/jsonUtils.js~JSONUtils.html">JSONUtils</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/causality/packages/causality-utils/src/jsonUtils.js.html#lineNumber83">source</a></span></span>
+      <span data-ice="source"><span><a href="file/packages/causality-utils/src/jsonUtils.js.html#lineNumber94">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import jSONUtils from &apos;<span><a href="file/causality/packages/causality-utils/src/jsonUtils.js.html#lineNumber83">causal-net/causality/packages/causality-utils/src/jsonUtils.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import jsonUtils from &apos;<span><a href="file/packages/causality-utils/src/jsonUtils.js.html#lineNumber94">causal-net/packages/causality-utils/src/jsonUtils.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -2127,15 +2146,15 @@
     
     
     
-    <span class="code" data-ice="name">memdownCache</span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-memcache/src/memdownCache.js~MemdownCache.html">MemdownCache</a></span></span>
+    <span class="code" data-ice="name">memdownCache</span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-memcache/src/memdownCache.js~MemdownCache.html">MemdownCache</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/causality/packages/causality-memcache/src/memdownCache.js.html#lineNumber27">source</a></span></span>
+      <span data-ice="source"><span><a href="file/packages/causality-memcache/src/memdownCache.js.html#lineNumber27">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import memdownCache from &apos;<span><a href="file/causality/packages/causality-memcache/src/memdownCache.js.html#lineNumber27">causal-net/causality/packages/causality-memcache/src/memdownCache.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import memdownCache from &apos;<span><a href="file/packages/causality-memcache/src/memdownCache.js.html#lineNumber27">causal-net/packages/causality-memcache/src/memdownCache.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -2170,15 +2189,15 @@
     
     
     
-    <span class="code" data-ice="name">nLPPreprocessing</span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-preprocessing/src/nlpPreprocessing.js~NLPPreprocessing.html">NLPPreprocessing</a></span></span>
+    <span class="code" data-ice="name">nLPPreprocessing</span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-preprocessing/src/nlpPreprocessing.js~NLPPreprocessing.html">NLPPreprocessing</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/causality/packages/causality-preprocessing/src/nlpPreprocessing.js.html#lineNumber48">source</a></span></span>
+      <span data-ice="source"><span><a href="file/packages/causality-preprocessing/src/nlpPreprocessing.js.html#lineNumber48">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import nLPPreprocessing from &apos;<span><a href="file/causality/packages/causality-preprocessing/src/nlpPreprocessing.js.html#lineNumber48">causal-net/causality/packages/causality-preprocessing/src/nlpPreprocessing.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import nLPPreprocessing from &apos;<span><a href="file/packages/causality-preprocessing/src/nlpPreprocessing.js.html#lineNumber48">causal-net/packages/causality-preprocessing/src/nlpPreprocessing.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -2213,15 +2232,15 @@
     
     
     
-    <span class="code" data-ice="name">pNGUtils</span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-utils/src/pngUtils.js~PNGUtils.html">PNGUtils</a></span></span>
+    <span class="code" data-ice="name">pNGUtils</span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-utils/src/pngUtils.js~PNGUtils.html">PNGUtils</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/causality/packages/causality-utils/src/pngUtils.js.html#lineNumber84">source</a></span></span>
+      <span data-ice="source"><span><a href="file/packages/causality-utils/src/pngUtils.js.html#lineNumber84">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import pNGUtils from &apos;<span><a href="file/causality/packages/causality-utils/src/pngUtils.js.html#lineNumber84">causal-net/causality/packages/causality-utils/src/pngUtils.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import pNGUtils from &apos;<span><a href="file/packages/causality-utils/src/pngUtils.js.html#lineNumber84">causal-net/packages/causality-utils/src/pngUtils.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -2256,15 +2275,15 @@
     
     
     
-    <span class="code" data-ice="name">parameterFunctor</span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-layer/src/CausalNetParameters/parameterFunctor.js~ParameterFunctor.html">ParameterFunctor</a></span></span>
+    <span class="code" data-ice="name">parameterFunctor</span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-layer/src/CausalNetParameters/parameterFunctor.js~ParameterFunctor.html">ParameterFunctor</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/causality/packages/causality-layer/src/CausalNetParameters/parameterFunctor.js.html#lineNumber11">source</a></span></span>
+      <span data-ice="source"><span><a href="file/packages/causality-layer/src/CausalNetParameters/parameterFunctor.js.html#lineNumber11">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import parameterFunctor from &apos;<span><a href="file/causality/packages/causality-layer/src/CausalNetParameters/parameterFunctor.js.html#lineNumber11">causal-net/causality/packages/causality-layer/src/CausalNetParameters/parameterFunctor.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import parameterFunctor from &apos;<span><a href="file/packages/causality-layer/src/CausalNetParameters/parameterFunctor.js.html#lineNumber11">causal-net/packages/causality-layer/src/CausalNetParameters/parameterFunctor.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -2299,15 +2318,15 @@
     
     
     
-    <span class="code" data-ice="name">platform</span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-utils/src/platform.js~Platform.html">Platform</a></span></span>
+    <span class="code" data-ice="name">platform</span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-utils/src/platform.js~Platform.html">Platform</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/causality/packages/causality-utils/src/platform.js.html#lineNumber107">source</a></span></span>
+      <span data-ice="source"><span><a href="file/packages/causality-utils/src/platform.js.html#lineNumber107">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import platform from &apos;<span><a href="file/causality/packages/causality-utils/src/platform.js.html#lineNumber107">causal-net/causality/packages/causality-utils/src/platform.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import platform from &apos;<span><a href="file/packages/causality-utils/src/platform.js.html#lineNumber107">causal-net/packages/causality-utils/src/platform.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -2335,22 +2354,22 @@
   
 </div>
 <div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="static-variable-stream">
+  <h3 data-ice="anchor" id="static-variable-streamUtils">
     <span class="access" data-ice="access">public</span>
     
     
     
     
     
-    <span class="code" data-ice="name">stream</span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-utils/src/stream.js~Stream.html">Stream</a></span></span>
+    <span class="code" data-ice="name">streamUtils</span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-utils/src/stream.js~Stream.html">Stream</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/causality/packages/causality-utils/src/stream.js.html#lineNumber112">source</a></span></span>
+      <span data-ice="source"><span><a href="file/packages/causality-utils/src/stream.js.html#lineNumber113">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import stream from &apos;<span><a href="file/causality/packages/causality-utils/src/stream.js.html#lineNumber112">causal-net/causality/packages/causality-utils/src/stream.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import streamUtils from &apos;<span><a href="file/packages/causality-utils/src/stream.js.html#lineNumber113">causal-net/packages/causality-utils/src/stream.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -2385,15 +2404,15 @@
     
     
     
-    <span class="code" data-ice="name">tabularPreprocessing</span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-preprocessing/src/tabularPreprocessing.js~TabularPreprocessing.html">TabularPreprocessing</a></span></span>
+    <span class="code" data-ice="name">tabularPreprocessing</span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-preprocessing/src/tabularPreprocessing.js~TabularPreprocessing.html">TabularPreprocessing</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/causality/packages/causality-preprocessing/src/tabularPreprocessing.js.html#lineNumber11">source</a></span></span>
+      <span data-ice="source"><span><a href="file/packages/causality-preprocessing/src/tabularPreprocessing.js.html#lineNumber11">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import tabularPreprocessing from &apos;<span><a href="file/causality/packages/causality-preprocessing/src/tabularPreprocessing.js.html#lineNumber11">causal-net/causality/packages/causality-preprocessing/src/tabularPreprocessing.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import tabularPreprocessing from &apos;<span><a href="file/packages/causality-preprocessing/src/tabularPreprocessing.js.html#lineNumber11">causal-net/packages/causality-preprocessing/src/tabularPreprocessing.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -2428,15 +2447,15 @@
     
     
     
-    <span class="code" data-ice="name">termLogger</span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-log/src/termLogger.js~TermLogger.html">TermLogger</a></span></span>
+    <span class="code" data-ice="name">termLogger</span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-log/src/termLogger.js~TermLogger.html">TermLogger</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/causality/packages/causality-log/src/termLogger.js.html#lineNumber69">source</a></span></span>
+      <span data-ice="source"><span><a href="file/packages/causality-log/src/termLogger.js.html#lineNumber71">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import termLogger from &apos;<span><a href="file/causality/packages/causality-log/src/termLogger.js.html#lineNumber69">causal-net/causality/packages/causality-log/src/termLogger.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import termLogger from &apos;<span><a href="file/packages/causality-log/src/termLogger.js.html#lineNumber71">causal-net/packages/causality-log/src/termLogger.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -2464,22 +2483,22 @@
   
 </div>
 <div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="static-variable-tokenizerEN">
+  <h3 data-ice="anchor" id="static-variable-tokenizer">
     <span class="access" data-ice="access">public</span>
     
     
     
     
     
-    <span class="code" data-ice="name">tokenizerEN</span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-preprocessing/src/tokenizer.en.js~TokenizerEN.html">TokenizerEN</a></span></span>
+    <span class="code" data-ice="name">tokenizer</span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-preprocessing/src/Tokenizer/tokenizer.js~Tokenizer.html">Tokenizer</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/causality/packages/causality-preprocessing/src/tokenizer.en.js.html#lineNumber18">source</a></span></span>
+      <span data-ice="source"><span><a href="file/packages/causality-preprocessing/src/Tokenizer/tokenizer.js.html#lineNumber36">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import tokenizerEN from &apos;<span><a href="file/causality/packages/causality-preprocessing/src/tokenizer.en.js.html#lineNumber18">causal-net/causality/packages/causality-preprocessing/src/tokenizer.en.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import tokenizer from &apos;<span><a href="file/packages/causality-preprocessing/src/Tokenizer/tokenizer.js.html#lineNumber36">causal-net/packages/causality-preprocessing/src/Tokenizer/tokenizer.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -2514,15 +2533,15 @@
     
     
     
-    <span class="code" data-ice="name">universalEmbedding</span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-representation/src/universalEmbedding.js~UniversalEmbedding.html">UniversalEmbedding</a></span></span>
+    <span class="code" data-ice="name">universalEmbedding</span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-representation/src/universalEmbedding.js~UniversalEmbedding.html">UniversalEmbedding</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/causality/packages/causality-representation/src/universalEmbedding.js.html#lineNumber52">source</a></span></span>
+      <span data-ice="source"><span><a href="file/packages/causality-representation/src/universalEmbedding.js.html#lineNumber82">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import universalEmbedding from &apos;<span><a href="file/causality/packages/causality-representation/src/universalEmbedding.js.html#lineNumber52">causal-net/causality/packages/causality-representation/src/universalEmbedding.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import universalEmbedding from &apos;<span><a href="file/packages/causality-representation/src/universalEmbedding.js.html#lineNumber82">causal-net/packages/causality-representation/src/universalEmbedding.js</a></span>&apos;</code></pre></div>
   
   
   
@@ -2557,15 +2576,15 @@
     
     
     
-    <span class="code" data-ice="name">vivid</span><span class="code" data-ice="signature">: <span><a href="class/causality/packages/causality-log/src/Vivid/vivid.js~Vivid.html">Vivid</a></span></span>
+    <span class="code" data-ice="name">vivid</span><span class="code" data-ice="signature">: <span><a href="class/packages/causality-log/src/Vivid/vivid.js~Vivid.html">Vivid</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/causality/packages/causality-log/src/Vivid/vivid.js.html#lineNumber104">source</a></span></span>
+      <span data-ice="source"><span><a href="file/packages/causality-log/src/Vivid/vivid.js.html#lineNumber104">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import vivid from &apos;<span><a href="file/causality/packages/causality-log/src/Vivid/vivid.js.html#lineNumber104">causal-net/causality/packages/causality-log/src/Vivid/vivid.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import vivid from &apos;<span><a href="file/packages/causality-log/src/Vivid/vivid.js.html#lineNumber104">causal-net/packages/causality-log/src/Vivid/vivid.js</a></span>&apos;</code></pre></div>
   
   
   

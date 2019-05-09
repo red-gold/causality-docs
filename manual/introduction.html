@@ -8,7 +8,7 @@
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
   <script src="script/manual.js"></script>
-<link rel="stylesheet" href="./inject/css/0-pure-min.css"><link rel="stylesheet" href="./inject/css/0-causal-style.css"><script src="./inject/script/0-jquery-3.3.1.min.js"></script><script src="./inject/script/0-run_examples.js"></script></head>
+<link rel="stylesheet" href="./inject/css/0-pure-min.css"><link rel="stylesheet" href="./inject/css/0-causal-style.css"><script src="./inject/script/0-jquery-3.3.1.min.js"></script><script src="./inject/script/0-vendors.js"></script><script src="./inject/script/0-transpiler.js"></script><script src="./inject/script/0-require.js"></script><script src="./inject/script/0-run_examples.js"></script></head>
 <body class="layout-container manual-root" data-ice="rootContainer">
 
 <header>
@@ -18,9 +18,22 @@
   <a href="source.html">Source</a>
   <a href="test.html" data-ice="testLink">Test</a>
   <div class="v-seperate"></div>
-  <ul class="demo">
-    <li>
-        <a href="prebuilt-demos/representation.html">Sentence representation demo</a>
+  <ul>
+    <li style="list-style-type: none;margin: 0px;">
+      <button style="border: none;padding: 0 5px 0 5px;" onclick="document.getElementById(&apos;web-demo&apos;).classList.toggle(&apos;show&apos;)"> Try demo </button>
+    </li>
+    <li style="list-style-type: none;margin: 0px;">
+      <ul id="web-demo" class="demo">
+        <li>
+          <a href="prebuilt-demos/representation.html">Sentence representation demo</a>
+        </li>
+        <li>
+          <a href="prebuilt-demos/mnist.html">Hand writing service building demo</a>
+        </li>
+        <li>
+          <a href="prebuilt-demos/20newsgroup.html">Text classification service building demo</a>
+        </li>
+      </ul>    
     </li>
   </ul>
   
@@ -186,7 +199,8 @@ import { termLogger } from &apos;causal-net.log&apos;;
 })().catch(err=&gt;{
     console.error({err});
 });</code>
-</code></pre><p>and the ensemble version</p>
+</code></pre><p><a href="./manual/./asset/examples/logisticsRegression.babel.js">Run code</a></p>
+<p>and the ensemble version</p>
 <pre><code><code class="source-code prettyprint">import { causalNetSGDOptimizer } from &apos;causal-net.optimizers&apos;;
 import { causalNetModels } from &apos;causal-net.models&apos;;
 import { causalNetParameters, causalNetLayers } from &apos;causal-net.layer&apos;;
@@ -239,7 +253,7 @@ import { termLogger } from &apos;causal-net.log&apos;;
     };
     causalNet.setByConfig(PipeLineConfigure);
 
-    console.log(causalNet.parameters);
+    console.log(causalNet.Parameters);
     let models = [&apos;Model1&apos;, &apos;Model2&apos;, &apos;Model3&apos;];
     let losses = {};
     for(let model of models){
@@ -259,7 +273,8 @@ import { termLogger } from &apos;causal-net.log&apos;;
 })().catch(err=&gt;{
     console.error({err});
 });</code>
-</code></pre></div>
+</code></pre><p><a href="./manual/./asset/examples/ensemble.logisticRegression.babel.js">Run code</a></p>
+</div>
 </div>
 
 <footer class="footer">
