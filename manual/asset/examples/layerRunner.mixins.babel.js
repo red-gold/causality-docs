@@ -7,10 +7,9 @@ const PipeLineConfigure = {
     Net: { 
             Parameters: causalNetParameters.InitParameters(),
             Layers: { 
-                Predict: [  causalNetLayers.dense(4, 3), 
-                            causalNetLayers.dense(3, 2)], 
-                Encode: [ causalNetLayers.dense(4, 2) ], 
-                Decode: [ causalNetLayers.dense(4, 2) ] 
+                Predict: [  causalNetLayers.dense({inputSize:4,outputSize:2}) ], 
+                Encode: [ causalNetLayers.dense({inputSize:4,outputSize:2}) ], 
+                Decode: [ causalNetLayers.dense({inputSize:4,outputSize:2}) ] 
             }
     }
 }

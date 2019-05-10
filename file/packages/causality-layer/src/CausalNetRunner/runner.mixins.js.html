@@ -213,35 +213,20 @@ const RunnerMixins = ( BaseRunnerClass )=&gt; class extends BaseRunnerClass{
         }
         return this.netLayers;
     }
-    runOpFlow(value, flow, parameters){
-        const R = this.R;
-        const OpsRunner = R.addIndex(R.reduce)(R.__,{result: value, trace: {}}, flow);
-        var {result, trace} = OpsRunner(({result, trace}, node, idx)=&gt;{
-            if(node.Parameter){
-                let params = parameters[node.Parameter];
-                result = result[node.Op](params, ...node.Args);
-            }
-            else{
-                result = result[node.Op](...node.Args);    
-            };
-            trace[idx] = result.shape;
-            return {result, trace};
-        });
-        return {result, trace};
-    }
+    
 
-    runOpLayer(value, net, parameters){
-        let { result, trace } = net(value, parameters);
+    runLayer(value, net, parameters){
+        
         return {result, trace};
     }
     runLayer(value, layerConfigure, layerParameters){
         const {Name, Type, Flow, Net} = layerConfigure;
         if(Type === &apos;Tensor&apos;){
-            let {result, trace} = this.runOpFlow(value, Flow, layerParameters);
-            return {[Name]: result, trace};
+            let result = Flow(value);
+            return {[Name]: result, trace:{}};
         }   
         else if(Type === &apos;Layer&apos;){
-            let {result, trace} = this.runOpLayer(value, Net, layerParameters);
+            let { result, trace } = Net(value, layerParameters);
             return {[Name]: result, trace};
         }   
         else{

@@ -213,6 +213,13 @@ class CausalNetLayers extends platform.mixWith(BaseTensor,
         this.layerNames.push(newName);
         return newName;
     }
+
+    custom({Net, Parameters={}, name=null}){
+        if(!name){
+            name = this.nameGenerator(&apos;custom&apos;);
+        }
+        return { Name: name, Type: &apos;Layer&apos;, Config: {name}, Parameters, Net };
+    }
 }
 
 export default new CausalNetLayers();</code></pre>

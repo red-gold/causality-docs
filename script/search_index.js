@@ -1746,6 +1746,12 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "packages/causality-layer/src/causalnetlayers/causalnetlayers.js~causalnetlayers#custom",
+    "class/packages/causality-layer/src/CausalNetLayers/causalNetLayers.js~CausalNetLayers.html#instance-method-custom",
+    "packages/causality-layer/src/CausalNetLayers/causalNetLayers.js~CausalNetLayers#custom",
+    "method"
+  ],
+  [
     "packages/causality-layer/src/causalnetlayers/causalnetlayers.js~causalnetlayers#layernames",
     "class/packages/causality-layer/src/CausalNetLayers/causalNetLayers.js~CausalNetLayers.html#instance-member-layerNames",
     "packages/causality-layer/src/CausalNetLayers/causalNetLayers.js~CausalNetLayers#layerNames",
@@ -2088,15 +2094,9 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
-    "packages/causality-layer/src/causalnetrunner/runner.mixins.js~runnermixins#runopflow",
-    "class/packages/causality-layer/src/CausalNetRunner/runner.mixins.js~RunnerMixins.html#instance-method-runOpFlow",
-    "packages/causality-layer/src/CausalNetRunner/runner.mixins.js~RunnerMixins#runOpFlow",
-    "method"
-  ],
-  [
-    "packages/causality-layer/src/causalnetrunner/runner.mixins.js~runnermixins#runoplayer",
-    "class/packages/causality-layer/src/CausalNetRunner/runner.mixins.js~RunnerMixins.html#instance-method-runOpLayer",
-    "packages/causality-layer/src/CausalNetRunner/runner.mixins.js~RunnerMixins#runOpLayer",
+    "packages/causality-layer/src/causalnetrunner/runner.mixins.js~runnermixins#runlayer",
+    "class/packages/causality-layer/src/CausalNetRunner/runner.mixins.js~RunnerMixins.html#instance-method-runLayer",
+    "packages/causality-layer/src/CausalNetRunner/runner.mixins.js~RunnerMixins#runLayer",
     "method"
   ],
   [

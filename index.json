@@ -3468,7 +3468,7 @@
     "__docId__": 166,
     "kind": "file",
     "name": "packages/causality-layer/src/CausalNetLayers/causalNetLayers.js",
-    "content": "import { Tensor as BaseTensor } from 'causal-net.core';\nimport { platform } from 'causal-net.utils';\nimport { default as DenseMixins } from './dense.mixins';\nimport { default as ConvolutionalMixins } from './convolution.mixins';\n/**\n * This class provides common used layers which can be accessed via **causalNetLayers** instance.\n * { mixWith: [ LayerMixins, DenseMixins ] }\n * @class CausalNetLayers\n * @extends BaseTensor\n * @example\n * [EXAMPLE ../examples/dense.layer.js]\n */\nclass CausalNetLayers extends platform.mixWith(BaseTensor, \n    [ DenseMixins, ConvolutionalMixins ] ){\n    constructor(){\n        super();\n        this.layerNames = [];\n    }\n    nameGenerator(layerType){\n        const layerIdx = this.layerNames.length; \n        let newName = layerType + '/' + layerIdx;\n        this.layerNames.push(newName);\n        return newName;\n    }\n}\n\nexport default new CausalNetLayers();",
+    "content": "import { Tensor as BaseTensor } from 'causal-net.core';\nimport { platform } from 'causal-net.utils';\nimport { default as DenseMixins } from './dense.mixins';\nimport { default as ConvolutionalMixins } from './convolution.mixins';\n/**\n * This class provides common used layers which can be accessed via **causalNetLayers** instance.\n * { mixWith: [ LayerMixins, DenseMixins ] }\n * @class CausalNetLayers\n * @extends BaseTensor\n * @example\n * [EXAMPLE ../examples/dense.layer.js]\n */\nclass CausalNetLayers extends platform.mixWith(BaseTensor, \n    [ DenseMixins, ConvolutionalMixins ] ){\n    constructor(){\n        super();\n        this.layerNames = [];\n    }\n    nameGenerator(layerType){\n        const layerIdx = this.layerNames.length; \n        let newName = layerType + '/' + layerIdx;\n        this.layerNames.push(newName);\n        return newName;\n    }\n\n    custom({Net, Parameters={}, name=null}){\n        if(!name){\n            name = this.nameGenerator('custom');\n        }\n        return { Name: name, Type: 'Layer', Config: {name}, Parameters, Net };\n    }\n}\n\nexport default new CausalNetLayers();",
     "static": true,
     "longname": "/home/huynhnguyen/github/causality/packages/causality-layer/src/CausalNetLayers/causalNetLayers.js",
     "access": "public",
@@ -3563,6 +3563,39 @@
   },
   {
     "__docId__": 171,
+    "kind": "method",
+    "name": "custom",
+    "memberof": "packages/causality-layer/src/CausalNetLayers/causalNetLayers.js~CausalNetLayers",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "packages/causality-layer/src/CausalNetLayers/causalNetLayers.js~CausalNetLayers#custom",
+    "access": "public",
+    "description": null,
+    "lineNumber": 26,
+    "undocument": true,
+    "params": [
+      {
+        "name": "objectPattern",
+        "types": [
+          "{\"Net\": *, \"Parameters\": *, \"name\": *}"
+        ],
+        "defaultRaw": {
+          "Net": null,
+          "Parameters": null,
+          "name": null
+        },
+        "defaultValue": "{\"Net\":null,\"Parameters\":null,\"name\":null}"
+      }
+    ],
+    "return": {
+      "types": [
+        "{\"Name\": *, \"Type\": string, \"Config\": *, \"Parameters\": *, \"Net\": *}"
+      ]
+    }
+  },
+  {
+    "__docId__": 172,
     "kind": "variable",
     "name": "causalNetLayers",
     "memberof": "packages/causality-layer/src/CausalNetLayers/causalNetLayers.js",
@@ -3573,7 +3606,7 @@
     "importPath": "causal-net/packages/causality-layer/src/CausalNetLayers/causalNetLayers.js",
     "importStyle": "causalNetLayers",
     "description": null,
-    "lineNumber": 27,
+    "lineNumber": 34,
     "undocument": true,
     "type": {
       "types": [
@@ -3582,7 +3615,7 @@
     }
   },
   {
-    "__docId__": 172,
+    "__docId__": 173,
     "kind": "file",
     "name": "packages/causality-layer/src/CausalNetLayers/convolution.mixins.js",
     "content": "const ConvolutionMixins = (PipelineClass)=> class extends PipelineClass{\n    /**\n     * Convolutional layer\n     * @param {Number} inputSize - size of net input\n     * @param {Array} kernelSize - size of net output\n     * @param {String|Function} activator - activator function can be customed or get from built-in by string name\n     * @param {String} name - layer name, default by null\n     * @returns { Object } layer\n     */\n    convolution({ kernelSize, filters, \n                  strides=1, padding='same',\n                  dilations=[1,1], flatten=false, \n                  activator='sigmoid', name=null}){\n        if(!name){\n            name = this.nameGenerator('convolution');\n        }\n        const FConv = this.T.conv2d;\n        const shapeType = 'NHWC';\n        return { \n            Name: name, Type: 'Layer',\n            Config: {kernelSize, filters, strides, padding, dilations, flatten, activator, name, shapeType},\n            Parameters: { Kernel: [...kernelSize, ...filters] },\n            Net: (value, params)=>{\n                    let trace = {};\n                    let { Kernel } = params;\n                    let result = FConv(value, Kernel, strides, padding, shapeType, dilations);\n                    if(typeof activator === \"string\"){\n                        result = result[activator]();\n                    }\n                    else{\n                        result = activator(result);\n                    }  \n                    if(flatten){\n                        const [B, W, H, C] = result.shape;\n                        result = result.reshape([B, -1]);\n                    }\n                    return { result, trace };\n                }\n            };\n    }\n};\nexport default ConvolutionMixins;",
@@ -3593,7 +3626,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 173,
+    "__docId__": 174,
     "kind": "class",
     "name": "ConvolutionMixins",
     "memberof": "packages/causality-layer/src/CausalNetLayers/convolution.mixins.js",
@@ -3612,7 +3645,7 @@
     ]
   },
   {
-    "__docId__": 174,
+    "__docId__": 175,
     "kind": "method",
     "name": "convolution",
     "memberof": "packages/causality-layer/src/CausalNetLayers/convolution.mixins.js~ConvolutionMixins",
@@ -3682,7 +3715,7 @@
     }
   },
   {
-    "__docId__": 175,
+    "__docId__": 176,
     "kind": "file",
     "name": "packages/causality-layer/src/CausalNetLayers/dense.mixins.js",
     "content": "const DenseLayerMixins = (PipelineClass)=> class extends PipelineClass{\n    /**\n     * Simple dense layer\n     * @param {Number} inputSize - size of net input\n     * @param {Number} outputSize - size of net output\n     * @param {String|Function} activator - activator function can be customed or get from built-in by string name\n     * @param {String} name - layer name, default by null\n     * @returns { Object } layer\n     */\n    dense({inputSize, outputSize, activator='sigmoid', name=null}){\n        if(!name){\n            name = this.nameGenerator('dense');\n        }\n        return { \n            Name: name, Type: 'Layer',\n            Config: {inputSize, outputSize, activator, name},\n            Parameters: { Weight: [inputSize, outputSize], Bias: [outputSize] },\n            Net: (value, params)=>{\n                    let trace = {};\n                    let {Weight, Bias} = params;\n                    let result = value.dot(Weight).add(Bias);\n                    \n                    if(typeof activator === \"string\"){\n                        result = result[activator]();\n                    }\n                    else{\n                        result = activator(result);\n                    }   \n                    return { result, trace };\n                }\n            };\n    }\n};\nexport default DenseLayerMixins;",
@@ -3693,7 +3726,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 176,
+    "__docId__": 177,
     "kind": "class",
     "name": "DenseLayerMixins",
     "memberof": "packages/causality-layer/src/CausalNetLayers/dense.mixins.js",
@@ -3712,7 +3745,7 @@
     ]
   },
   {
-    "__docId__": 177,
+    "__docId__": 178,
     "kind": "method",
     "name": "dense",
     "memberof": "packages/causality-layer/src/CausalNetLayers/dense.mixins.js~DenseLayerMixins",
@@ -3782,7 +3815,7 @@
     }
   },
   {
-    "__docId__": 178,
+    "__docId__": 179,
     "kind": "file",
     "name": "packages/causality-layer/src/CausalNetLayers/index.js",
     "content": "export { default as causalNetLayers } from './causalNetLayers';",
@@ -3793,7 +3826,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 179,
+    "__docId__": 180,
     "kind": "file",
     "name": "packages/causality-layer/src/CausalNetLayers/recurrent.mixins.js",
     "content": "",
@@ -3804,7 +3837,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 180,
+    "__docId__": 181,
     "kind": "file",
     "name": "packages/causality-layer/src/CausalNetParameters/causalNetParameters.js",
     "content": "import { Tensor as BaseTensor } from 'causal-net.core';\nimport { platform } from 'causal-net.utils';\nimport { StorageMixins, indexDBStorage } from 'causal-net.storage';\nimport { default as ParameterMixins } from './parameter.mixins';\nimport { default as parameterfunctor } from './parameterFunctor';\n/**\n * This class is a standard implementation for model parameters which can be accessed via **causalNetParameters** instance\n * { mixWith: [StorageMixins, ParameterMixins] }\n * @class CausalNetParameters\n * @extends BaseTensor\n * @example\n * [EXAMPLE ../example/parameters.babel.js]\n */\nclass CausalNetParameters extends platform.mixWith(BaseTensor, [StorageMixins, ParameterMixins] ){\n    constructor(storage, parameterfunctor){\n        super();\n        this.parameters = null;\n        this.Storage = storage;\n        this.F = parameterfunctor;\n        this.R = this.F.CoreFunctor;\n    }\n}   \n\nexport default new CausalNetParameters(indexDBStorage, parameterfunctor);",
@@ -3815,7 +3848,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 181,
+    "__docId__": 182,
     "kind": "class",
     "name": "CausalNetParameters",
     "memberof": "packages/causality-layer/src/CausalNetParameters/causalNetParameters.js",
@@ -3843,7 +3876,7 @@
     ]
   },
   {
-    "__docId__": 182,
+    "__docId__": 183,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "packages/causality-layer/src/CausalNetParameters/causalNetParameters.js~CausalNetParameters",
@@ -3857,7 +3890,7 @@
     "undocument": true
   },
   {
-    "__docId__": 183,
+    "__docId__": 184,
     "kind": "member",
     "name": "parameters",
     "memberof": "packages/causality-layer/src/CausalNetParameters/causalNetParameters.js~CausalNetParameters",
@@ -3874,7 +3907,7 @@
     }
   },
   {
-    "__docId__": 184,
+    "__docId__": 185,
     "kind": "member",
     "name": "Storage",
     "memberof": "packages/causality-layer/src/CausalNetParameters/causalNetParameters.js~CausalNetParameters",
@@ -3891,7 +3924,7 @@
     }
   },
   {
-    "__docId__": 185,
+    "__docId__": 186,
     "kind": "member",
     "name": "F",
     "memberof": "packages/causality-layer/src/CausalNetParameters/causalNetParameters.js~CausalNetParameters",
@@ -3908,7 +3941,7 @@
     }
   },
   {
-    "__docId__": 186,
+    "__docId__": 187,
     "kind": "member",
     "name": "R",
     "memberof": "packages/causality-layer/src/CausalNetParameters/causalNetParameters.js~CausalNetParameters",
@@ -3925,7 +3958,7 @@
     }
   },
   {
-    "__docId__": 187,
+    "__docId__": 188,
     "kind": "variable",
     "name": "causalNetParameters",
     "memberof": "packages/causality-layer/src/CausalNetParameters/causalNetParameters.js",
@@ -3945,7 +3978,7 @@
     }
   },
   {
-    "__docId__": 188,
+    "__docId__": 189,
     "kind": "file",
     "name": "packages/causality-layer/src/CausalNetParameters/index.js",
     "content": "export { default as causalNetParameters } from './causalNetParameters';\nexport { default as ParameterMixins } from './parameter.mixins';\nexport { default as ParameterFunctorMixins } from './parameterFunctor.mixins';",
@@ -3956,7 +3989,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 189,
+    "__docId__": 190,
     "kind": "file",
     "name": "packages/causality-layer/src/CausalNetParameters/parameter.mixins.js",
     "content": "const ParameterMixins = (BaseParameterClass)=> class extends BaseParameterClass{ \n    \n    get PredictParameters(){\n        if(!this.parameters || !this.parameters.Predict){\n            throw Error('parameters is not set');\n        }\n        return this.parameters.Predict;\n    }\n    \n    get EncodeParameters(){\n        if(!this.parameters || !this.parameters.Encode){\n            throw Error('parameters is not set');\n        }\n        return this.parameters.Encode;\n    }\n    \n    get DecodeParameters(){\n        if(!this.parameters || !this.parameters.Decode){\n            throw Error('parameters is not set');\n        }\n        return this.parameters.Decode;\n    }\n    \n    set PredictParameters(predictParameters){\n        this.parameters = (this.parameters)? this.parameters: {};\n        this.parameters.Predict = predictParameters;\n    }\n    \n    set EncodeParameters(encodeParameters){\n        this.parameters = (this.parameters)? this.parameters: {};\n        this.parameters.Encode = encodeParameters;\n    }\n    \n    set DecodeParameters(decodeParameters){\n        this.parameters = (this.parameters)? this.parameters: {};\n        this.parameters.Decode = decodeParameters;\n    }\n\n    set ParameterSizes(parameterSizes){\n        this.parameterSizes = parameterSizes;\n    }\n\n    get ParameterSizes(){\n        if(!this.parameterSizes){\n            throw Error('parameterSizes is not set');\n        }\n        return this.parameterSizes;\n    }\n    \n    get SaveModelDir(){\n        return 'saveModel/';\n    }\n    \n    exportParameters(){\n        if(!this.parameters){\n            throw Error('parameter is not set');\n        }\n        return (async ()=>{\n            const Fn = async (param)=>(Array.from(await param.data()));\n            let params = await this.extractParamFromTensorDict(this.parameters, Fn);\n            return params;\n        })();\n    }\n\n    \n    async extractParamFromTensorDict(params, fn){\n        const R = this.R;\n        const Traveller = async (params, fn)=>{\n            if(this.isTensor(params)){\n                return await fn(params);\n            }\n            else{\n                let kVals = R.toPairs(params);\n                let res = {};\n                for(let [k, val] of kVals){\n                    res[k] = await Traveller(val, fn); \n                }\n                return res;\n            }\n        };\n        return await Traveller(params, fn);\n    }\n    \n    async parametersSummary(){\n        if(!this.parameters){\n            throw Error('parameter must be set');\n        }\n        const Fn = async (param)=>Array.from(await param.mean().data());\n        return await this.extractParamFromTensorDict(this.parameters, Fn);\n    }\n    \n    initParamSizesByLayers(layers){\n        const R = this.R, T = this.T, F = this.F;\n        const GetParamSize = R.compose(R.fromPairs, R.map(p=>[p.Name, p.Parameters]));\n        const PredictSize = GetParamSize(F.getIn(['Predict'], layers, []));\n        const EncodeSize  = GetParamSize(F.getIn(['Encode'], layers, []));\n        const DecodeSize  = GetParamSize(F.getIn(['Decode'], layers, [])); \n        this.ParameterSizes = {PredictSize, EncodeSize, DecodeSize};\n    }\n\n    importParameters(paramObject){\n        const T = this.T, F = this.F;\n        let predictParamObject = F.getIn(['Predict'], paramObject, {});\n        let encodeParamObject  = F.getIn(['Encode'], paramObject, {});\n        let decodeParamObject  = F.getIn(['Decode'], paramObject, {});\n        const { PredictSize, EncodeSize, DecodeSize } = this.ParameterSizes;\n        const SetOrInit = ( initPredict, paramObject )=>{\n                    return F.parameterMapWithKey((keys, paramSize)=>{\n                        let paramValue = this.F.getIn(keys, paramObject, null);\n                        if(paramValue === null){\n                            return T.variable(T.randomNormal(paramSize).asType('float32'));\n                        }\n                        else{\n                            return T.variable(T.tensor(paramValue, paramSize, 'float32'));\n                        }                        \n                    }, initPredict);\n                };\n        this.PredictParameters = SetOrInit( PredictSize, predictParamObject );\n        this.EncodeParameters  = SetOrInit( EncodeSize, encodeParamObject );\n        this.DecodeParameters  = SetOrInit( DecodeSize, decodeParamObject ); \n    }\n\n    InitParameters(paramObject={}){\n        return (layers)=>{\n            return this.setOrInitParams(layers, paramObject);\n        };\n    }\n\n    setOrInitParams(layers, paramObject){\n        this.initParamSizesByLayers(layers);\n        this.importParameters(paramObject);\n        return this;\n    }\n\n    async getSavedParamList(){\n        const Storage = this.Storage, SaveDir = this.SaveModelDir;\n        let fileList = await Storage.getFileList(SaveDir);\n        return fileList.map(fileName=>fileName.replace(SaveDir,''));\n    }\n\n    async saveParams(fileName){\n        const SaveDir = this.SaveModelDir;\n        const Storage = this.Storage;\n        let params = await this.exportParameters();\n        await Storage.writeFile(SaveDir + fileName, JSON.stringify(params));\n        return params;\n    }\n    async loadParams(fileName){\n        const Storage = this.Storage, SaveDir = this.SaveModelDir;\n        let strParams = await Storage.readFile(SaveDir+fileName);\n        let params = JSON.parse(strParams);\n        this.importParameters(params);\n        return this;\n    }\n};\n\nexport default ParameterMixins;",
@@ -3967,7 +4000,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 190,
+    "__docId__": 191,
     "kind": "class",
     "name": "ParameterMixins",
     "memberof": "packages/causality-layer/src/CausalNetParameters/parameter.mixins.js",
@@ -3986,7 +4019,7 @@
     ]
   },
   {
-    "__docId__": 191,
+    "__docId__": 192,
     "kind": "get",
     "name": "PredictParameters",
     "memberof": "packages/causality-layer/src/CausalNetParameters/parameter.mixins.js~ParameterMixins",
@@ -4005,7 +4038,7 @@
     }
   },
   {
-    "__docId__": 192,
+    "__docId__": 193,
     "kind": "get",
     "name": "EncodeParameters",
     "memberof": "packages/causality-layer/src/CausalNetParameters/parameter.mixins.js~ParameterMixins",
@@ -4024,7 +4057,7 @@
     }
   },
   {
-    "__docId__": 193,
+    "__docId__": 194,
     "kind": "get",
     "name": "DecodeParameters",
     "memberof": "packages/causality-layer/src/CausalNetParameters/parameter.mixins.js~ParameterMixins",
@@ -4043,7 +4076,7 @@
     }
   },
   {
-    "__docId__": 194,
+    "__docId__": 195,
     "kind": "set",
     "name": "PredictParameters",
     "memberof": "packages/causality-layer/src/CausalNetParameters/parameter.mixins.js~ParameterMixins",
@@ -4057,7 +4090,7 @@
     "undocument": true
   },
   {
-    "__docId__": 195,
+    "__docId__": 196,
     "kind": "member",
     "name": "parameters",
     "memberof": "packages/causality-layer/src/CausalNetParameters/parameter.mixins.js~ParameterMixins",
@@ -4074,7 +4107,7 @@
     }
   },
   {
-    "__docId__": 196,
+    "__docId__": 197,
     "kind": "set",
     "name": "EncodeParameters",
     "memberof": "packages/causality-layer/src/CausalNetParameters/parameter.mixins.js~ParameterMixins",
@@ -4088,7 +4121,7 @@
     "undocument": true
   },
   {
-    "__docId__": 198,
+    "__docId__": 199,
     "kind": "set",
     "name": "DecodeParameters",
     "memberof": "packages/causality-layer/src/CausalNetParameters/parameter.mixins.js~ParameterMixins",
@@ -4102,7 +4135,7 @@
     "undocument": true
   },
   {
-    "__docId__": 200,
+    "__docId__": 201,
     "kind": "set",
     "name": "ParameterSizes",
     "memberof": "packages/causality-layer/src/CausalNetParameters/parameter.mixins.js~ParameterMixins",
@@ -4116,7 +4149,7 @@
     "undocument": true
   },
   {
-    "__docId__": 201,
+    "__docId__": 202,
     "kind": "member",
     "name": "parameterSizes",
     "memberof": "packages/causality-layer/src/CausalNetParameters/parameter.mixins.js~ParameterMixins",
@@ -4133,7 +4166,7 @@
     }
   },
   {
-    "__docId__": 202,
+    "__docId__": 203,
     "kind": "get",
     "name": "ParameterSizes",
     "memberof": "packages/causality-layer/src/CausalNetParameters/parameter.mixins.js~ParameterMixins",
@@ -4152,7 +4185,7 @@
     }
   },
   {
-    "__docId__": 203,
+    "__docId__": 204,
     "kind": "get",
     "name": "SaveModelDir",
     "memberof": "packages/causality-layer/src/CausalNetParameters/parameter.mixins.js~ParameterMixins",
@@ -4171,7 +4204,7 @@
     }
   },
   {
-    "__docId__": 204,
+    "__docId__": 205,
     "kind": "method",
     "name": "exportParameters",
     "memberof": "packages/causality-layer/src/CausalNetParameters/parameter.mixins.js~ParameterMixins",
@@ -4191,7 +4224,7 @@
     }
   },
   {
-    "__docId__": 205,
+    "__docId__": 206,
     "kind": "method",
     "name": "extractParamFromTensorDict",
     "memberof": "packages/causality-layer/src/CausalNetParameters/parameter.mixins.js~ParameterMixins",
@@ -4224,7 +4257,7 @@
     }
   },
   {
-    "__docId__": 206,
+    "__docId__": 207,
     "kind": "method",
     "name": "parametersSummary",
     "memberof": "packages/causality-layer/src/CausalNetParameters/parameter.mixins.js~ParameterMixins",
@@ -4244,7 +4277,7 @@
     }
   },
   {
-    "__docId__": 207,
+    "__docId__": 208,
     "kind": "method",
     "name": "initParamSizesByLayers",
     "memberof": "packages/causality-layer/src/CausalNetParameters/parameter.mixins.js~ParameterMixins",
@@ -4267,7 +4300,7 @@
     "return": null
   },
   {
-    "__docId__": 209,
+    "__docId__": 210,
     "kind": "method",
     "name": "importParameters",
     "memberof": "packages/causality-layer/src/CausalNetParameters/parameter.mixins.js~ParameterMixins",
@@ -4290,7 +4323,7 @@
     "return": null
   },
   {
-    "__docId__": 213,
+    "__docId__": 214,
     "kind": "method",
     "name": "InitParameters",
     "memberof": "packages/causality-layer/src/CausalNetParameters/parameter.mixins.js~ParameterMixins",
@@ -4320,7 +4353,7 @@
     }
   },
   {
-    "__docId__": 214,
+    "__docId__": 215,
     "kind": "method",
     "name": "setOrInitParams",
     "memberof": "packages/causality-layer/src/CausalNetParameters/parameter.mixins.js~ParameterMixins",
@@ -4353,7 +4386,7 @@
     }
   },
   {
-    "__docId__": 215,
+    "__docId__": 216,
     "kind": "method",
     "name": "getSavedParamList",
     "memberof": "packages/causality-layer/src/CausalNetParameters/parameter.mixins.js~ParameterMixins",
@@ -4373,7 +4406,7 @@
     }
   },
   {
-    "__docId__": 216,
+    "__docId__": 217,
     "kind": "method",
     "name": "saveParams",
     "memberof": "packages/causality-layer/src/CausalNetParameters/parameter.mixins.js~ParameterMixins",
@@ -4400,7 +4433,7 @@
     }
   },
   {
-    "__docId__": 217,
+    "__docId__": 218,
     "kind": "method",
     "name": "loadParams",
     "memberof": "packages/causality-layer/src/CausalNetParameters/parameter.mixins.js~ParameterMixins",
@@ -4427,7 +4460,7 @@
     }
   },
   {
-    "__docId__": 218,
+    "__docId__": 219,
     "kind": "file",
     "name": "packages/causality-layer/src/CausalNetParameters/parameterFunctor.js",
     "content": "import {Functor as BaseFunctor} from 'causal-net.core';\nimport {platform} from 'causal-net.utils';\nimport {default as ParameterFunctorMixins } from './parameterFunctor.mixins';\n\nclass ParameterFunctor extends platform.mixWith(BaseFunctor, [ ParameterFunctorMixins ] ){\n    constructor(){\n        super();\n    }\n}\n\nexport default new ParameterFunctor();",
@@ -4438,7 +4471,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 219,
+    "__docId__": 220,
     "kind": "class",
     "name": "ParameterFunctor",
     "memberof": "packages/causality-layer/src/CausalNetParameters/parameterFunctor.js",
@@ -4456,7 +4489,7 @@
     "expressionExtends": "platform.mixWith(BaseFunctor, [ ParameterFunctorMixins ] )"
   },
   {
-    "__docId__": 220,
+    "__docId__": 221,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "packages/causality-layer/src/CausalNetParameters/parameterFunctor.js~ParameterFunctor",
@@ -4470,7 +4503,7 @@
     "undocument": true
   },
   {
-    "__docId__": 221,
+    "__docId__": 222,
     "kind": "variable",
     "name": "parameterFunctor",
     "memberof": "packages/causality-layer/src/CausalNetParameters/parameterFunctor.js",
@@ -4490,7 +4523,7 @@
     }
   },
   {
-    "__docId__": 222,
+    "__docId__": 223,
     "kind": "file",
     "name": "packages/causality-layer/src/CausalNetParameters/parameterFunctor.mixins.js",
     "content": "const ParameterFunctorMixins = (FunctorClass)=> class extends FunctorClass{ \n    isParameter(val){\n        const R = this.R;\n        return R.ifElse(R.is(Array), R.all(R.is(Number)), R.always(false))(val);\n    }\n    parameterMapWithKey(fn, parameterObject){\n        const R = this.R;\n        \n        const Res = (keys, subObject) => R.compose(R.fromPairs, \n                        R.map(([key, subObject])=>{\n                            if(this.isParameter(subObject)){\n                                return [key, fn([...keys, key], subObject)];\n                            }\n                            else{\n                                if(R.is(Object, subObject)){\n                                    return [key, Res([...keys, key], subObject)];\n                                }\n                                else{\n                                    return [key, subObject];\n                                }\n                            }\n                        }), R.toPairs)(subObject);\n        return Res([], parameterObject);\n    }        \n};\n\nexport default ParameterFunctorMixins;",
@@ -4501,7 +4534,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 223,
+    "__docId__": 224,
     "kind": "class",
     "name": "ParameterFunctorMixins",
     "memberof": "packages/causality-layer/src/CausalNetParameters/parameterFunctor.mixins.js",
@@ -4520,7 +4553,7 @@
     ]
   },
   {
-    "__docId__": 224,
+    "__docId__": 225,
     "kind": "method",
     "name": "isParameter",
     "memberof": "packages/causality-layer/src/CausalNetParameters/parameterFunctor.mixins.js~ParameterFunctorMixins",
@@ -4547,7 +4580,7 @@
     }
   },
   {
-    "__docId__": 225,
+    "__docId__": 226,
     "kind": "method",
     "name": "parameterMapWithKey",
     "memberof": "packages/causality-layer/src/CausalNetParameters/parameterFunctor.mixins.js~ParameterFunctorMixins",
@@ -4580,7 +4613,7 @@
     }
   },
   {
-    "__docId__": 226,
+    "__docId__": 227,
     "kind": "file",
     "name": "packages/causality-layer/src/CausalNetRunner/causalNetRunner.js",
     "content": "import { Tensor as BaseTensor } from 'causal-net.core';\nimport { platform } from 'causal-net.utils';\nimport { default as RunnerMixins } from './runner.mixins';\n/**\n * This CausalNetRunner class provide net excecutor which is provided pipeline instance at **LayerRunner** attribute.\n * { mixWith: [ RunnerMixins ] }\n * @class CausalNetRunner\n * @extends BaseTensor\n * @example\n * [EXAMPLE ../examples/runner.mixins.babel.js]\n */\nclass CausalNetRunner extends platform.mixWith(BaseTensor, [ RunnerMixins ] ){\n    constructor(){\n        super();\n    }\n}\n\nexport default new CausalNetRunner();",
@@ -4591,7 +4624,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 227,
+    "__docId__": 228,
     "kind": "class",
     "name": "CausalNetRunner",
     "memberof": "packages/causality-layer/src/CausalNetRunner/causalNetRunner.js",
@@ -4619,7 +4652,7 @@
     ]
   },
   {
-    "__docId__": 228,
+    "__docId__": 229,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "packages/causality-layer/src/CausalNetRunner/causalNetRunner.js~CausalNetRunner",
@@ -4633,7 +4666,7 @@
     "undocument": true
   },
   {
-    "__docId__": 229,
+    "__docId__": 230,
     "kind": "variable",
     "name": "causalNetRunner",
     "memberof": "packages/causality-layer/src/CausalNetRunner/causalNetRunner.js",
@@ -4653,7 +4686,7 @@
     }
   },
   {
-    "__docId__": 230,
+    "__docId__": 231,
     "kind": "file",
     "name": "packages/causality-layer/src/CausalNetRunner/index.js",
     "content": "export { default as causalNetRunner } from './causalNetRunner';\nexport { default as RunnerMixins } from './runner.mixins';",
@@ -4664,10 +4697,10 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 231,
+    "__docId__": 232,
     "kind": "file",
     "name": "packages/causality-layer/src/CausalNetRunner/runner.mixins.js",
-    "content": "/**\n * This RunnerMixins class provide methods for runner class.\n * @class RunnerMixins\n * @extends BaseRunnerClass\n */\nconst RunnerMixins = ( BaseRunnerClass )=> class extends BaseRunnerClass{\n    set NetParameters(parameters){\n        this.netParameters = parameters;\n    }\n    set NetLayers(netLayers){\n        this.netLayers = netLayers;\n    }\n    get NetParameters(){\n        if(!this.netParameters){\n            throw Error('netParameters is not set');\n        }\n        return this.netParameters;\n    }\n    get NetLayers(){\n        if(!this.netLayers){\n            throw Error('netLayers is not set');\n        }\n        return this.netLayers;\n    }\n    runOpFlow(value, flow, parameters){\n        const R = this.R;\n        const OpsRunner = R.addIndex(R.reduce)(R.__,{result: value, trace: {}}, flow);\n        var {result, trace} = OpsRunner(({result, trace}, node, idx)=>{\n            if(node.Parameter){\n                let params = parameters[node.Parameter];\n                result = result[node.Op](params, ...node.Args);\n            }\n            else{\n                result = result[node.Op](...node.Args);    \n            };\n            trace[idx] = result.shape;\n            return {result, trace};\n        });\n        return {result, trace};\n    }\n\n    runOpLayer(value, net, parameters){\n        let { result, trace } = net(value, parameters);\n        return {result, trace};\n    }\n    runLayer(value, layerConfigure, layerParameters){\n        const {Name, Type, Flow, Net} = layerConfigure;\n        if(Type === 'Tensor'){\n            let {result, trace} = this.runOpFlow(value, Flow, layerParameters);\n            return {[Name]: result, trace};\n        }   \n        else if(Type === 'Layer'){\n            let {result, trace} = this.runOpLayer(value, Net, layerParameters);\n            return {[Name]: result, trace};\n        }   \n        else{\n            throw Error('type must be either Layer or Tensor');\n        }\n    }\n\n    tracing(traces, name, trace){\n        if(traces){\n            traces.push({[name]: trace});\n        }\n    }\n    run(layers, samples, parameters, traces=null){\n        let pipeValue = {PipeInput: samples}, lastLayer = 'PipeInput';\n        for(let layer of layers){\n            let layerOutput = this.runLayer(pipeValue[lastLayer], layer, parameters[layer.Name]);\n            pipeValue[layer.Name] = layerOutput[layer.Name];\n            lastLayer = layer.Name;\n            this.tracing(traces, layer.Name, layerOutput.trace);\n        }\n        if(traces){\n            this.logger.debug({traces});\n        }\n        return pipeValue[lastLayer];\n    }\n\n    get Predictor(){\n        let predictLayers = this.NetLayers.Predict;\n        const PredictParametersLenses = ()=>this.NetParameters.PredictParameters;\n        return (samples)=>{\n            let predictParameters = PredictParametersLenses();\n            return this.run(predictLayers, samples, predictParameters);\n        };\n    }\n    get Encoder(){\n        let encodeLayers = this.NetLayers.Encode;\n        const EncodeParametersLenses = ()=>this.NetParameters.EncodeParameters;\n        return (samples)=>{\n            let encodeParameters = EncodeParametersLenses();\n            return this.run(encodeLayers, samples, encodeParameters);\n        };\n    }\n    get Decoder(){\n        let decodeLayers = this.NetLayers.Decode;\n        const DecodeParametersLenses = ()=>this.NetParameters.EncodeParameters;\n        return (samples)=>{\n            let decodeParameters = DecodeParametersLenses();\n            return this.run(decodeLayers, samples, decodeParameters);\n        };\n    }\n};\n\nexport default RunnerMixins;\n",
+    "content": "/**\n * This RunnerMixins class provide methods for runner class.\n * @class RunnerMixins\n * @extends BaseRunnerClass\n */\nconst RunnerMixins = ( BaseRunnerClass )=> class extends BaseRunnerClass{\n    set NetParameters(parameters){\n        this.netParameters = parameters;\n    }\n    set NetLayers(netLayers){\n        this.netLayers = netLayers;\n    }\n    get NetParameters(){\n        if(!this.netParameters){\n            throw Error('netParameters is not set');\n        }\n        return this.netParameters;\n    }\n    get NetLayers(){\n        if(!this.netLayers){\n            throw Error('netLayers is not set');\n        }\n        return this.netLayers;\n    }\n    \n\n    runLayer(value, net, parameters){\n        \n        return {result, trace};\n    }\n    runLayer(value, layerConfigure, layerParameters){\n        const {Name, Type, Flow, Net} = layerConfigure;\n        if(Type === 'Tensor'){\n            let result = Flow(value);\n            return {[Name]: result, trace:{}};\n        }   \n        else if(Type === 'Layer'){\n            let { result, trace } = Net(value, layerParameters);\n            return {[Name]: result, trace};\n        }   \n        else{\n            throw Error('type must be either Layer or Tensor');\n        }\n    }\n\n    tracing(traces, name, trace){\n        if(traces){\n            traces.push({[name]: trace});\n        }\n    }\n    run(layers, samples, parameters, traces=null){\n        let pipeValue = {PipeInput: samples}, lastLayer = 'PipeInput';\n        for(let layer of layers){\n            let layerOutput = this.runLayer(pipeValue[lastLayer], layer, parameters[layer.Name]);\n            pipeValue[layer.Name] = layerOutput[layer.Name];\n            lastLayer = layer.Name;\n            this.tracing(traces, layer.Name, layerOutput.trace);\n        }\n        if(traces){\n            this.logger.debug({traces});\n        }\n        return pipeValue[lastLayer];\n    }\n\n    get Predictor(){\n        let predictLayers = this.NetLayers.Predict;\n        const PredictParametersLenses = ()=>this.NetParameters.PredictParameters;\n        return (samples)=>{\n            let predictParameters = PredictParametersLenses();\n            return this.run(predictLayers, samples, predictParameters);\n        };\n    }\n    get Encoder(){\n        let encodeLayers = this.NetLayers.Encode;\n        const EncodeParametersLenses = ()=>this.NetParameters.EncodeParameters;\n        return (samples)=>{\n            let encodeParameters = EncodeParametersLenses();\n            return this.run(encodeLayers, samples, encodeParameters);\n        };\n    }\n    get Decoder(){\n        let decodeLayers = this.NetLayers.Decode;\n        const DecodeParametersLenses = ()=>this.NetParameters.EncodeParameters;\n        return (samples)=>{\n            let decodeParameters = DecodeParametersLenses();\n            return this.run(decodeLayers, samples, decodeParameters);\n        };\n    }\n};\n\nexport default RunnerMixins;\n",
     "static": true,
     "longname": "/home/huynhnguyen/github/causality/packages/causality-layer/src/CausalNetRunner/runner.mixins.js",
     "access": "public",
@@ -4675,7 +4708,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 232,
+    "__docId__": 233,
     "kind": "class",
     "name": "RunnerMixins",
     "memberof": "packages/causality-layer/src/CausalNetRunner/runner.mixins.js",
@@ -4699,7 +4732,7 @@
     ]
   },
   {
-    "__docId__": 233,
+    "__docId__": 234,
     "kind": "set",
     "name": "NetParameters",
     "memberof": "packages/causality-layer/src/CausalNetRunner/runner.mixins.js~RunnerMixins",
@@ -4713,7 +4746,7 @@
     "undocument": true
   },
   {
-    "__docId__": 234,
+    "__docId__": 235,
     "kind": "member",
     "name": "netParameters",
     "memberof": "packages/causality-layer/src/CausalNetRunner/runner.mixins.js~RunnerMixins",
@@ -4730,7 +4763,7 @@
     }
   },
   {
-    "__docId__": 235,
+    "__docId__": 236,
     "kind": "set",
     "name": "NetLayers",
     "memberof": "packages/causality-layer/src/CausalNetRunner/runner.mixins.js~RunnerMixins",
@@ -4744,7 +4777,7 @@
     "undocument": true
   },
   {
-    "__docId__": 236,
+    "__docId__": 237,
     "kind": "member",
     "name": "netLayers",
     "memberof": "packages/causality-layer/src/CausalNetRunner/runner.mixins.js~RunnerMixins",
@@ -4761,7 +4794,7 @@
     }
   },
   {
-    "__docId__": 237,
+    "__docId__": 238,
     "kind": "get",
     "name": "NetParameters",
     "memberof": "packages/causality-layer/src/CausalNetRunner/runner.mixins.js~RunnerMixins",
@@ -4780,7 +4813,7 @@
     }
   },
   {
-    "__docId__": 238,
+    "__docId__": 239,
     "kind": "get",
     "name": "NetLayers",
     "memberof": "packages/causality-layer/src/CausalNetRunner/runner.mixins.js~RunnerMixins",
@@ -4799,56 +4832,17 @@
     }
   },
   {
-    "__docId__": 239,
-    "kind": "method",
-    "name": "runOpFlow",
-    "memberof": "packages/causality-layer/src/CausalNetRunner/runner.mixins.js~RunnerMixins",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "packages/causality-layer/src/CausalNetRunner/runner.mixins.js~RunnerMixins#runOpFlow",
-    "access": "public",
-    "description": null,
-    "lineNumber": 25,
-    "undocument": true,
-    "params": [
-      {
-        "name": "value",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "flow",
-        "types": [
-          "*"
-        ]
-      },
-      {
-        "name": "parameters",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "{\"result\": *, \"trace\": *}"
-      ]
-    }
-  },
-  {
     "__docId__": 240,
     "kind": "method",
-    "name": "runOpLayer",
+    "name": "runLayer",
     "memberof": "packages/causality-layer/src/CausalNetRunner/runner.mixins.js~RunnerMixins",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "packages/causality-layer/src/CausalNetRunner/runner.mixins.js~RunnerMixins#runOpLayer",
+    "longname": "packages/causality-layer/src/CausalNetRunner/runner.mixins.js~RunnerMixins#runLayer",
     "access": "public",
     "description": null,
-    "lineNumber": 42,
+    "lineNumber": 27,
     "undocument": true,
     "params": [
       {
@@ -4887,7 +4881,7 @@
     "longname": "packages/causality-layer/src/CausalNetRunner/runner.mixins.js~RunnerMixins#runLayer",
     "access": "public",
     "description": null,
-    "lineNumber": 46,
+    "lineNumber": 31,
     "undocument": true,
     "params": [
       {
@@ -4926,7 +4920,7 @@
     "longname": "packages/causality-layer/src/CausalNetRunner/runner.mixins.js~RunnerMixins#tracing",
     "access": "public",
     "description": null,
-    "lineNumber": 61,
+    "lineNumber": 46,
     "undocument": true,
     "params": [
       {
@@ -4961,7 +4955,7 @@
     "longname": "packages/causality-layer/src/CausalNetRunner/runner.mixins.js~RunnerMixins#run",
     "access": "public",
     "description": null,
-    "lineNumber": 66,
+    "lineNumber": 51,
     "undocument": true,
     "params": [
       {
@@ -5008,7 +5002,7 @@
     "longname": "packages/causality-layer/src/CausalNetRunner/runner.mixins.js~RunnerMixins#Predictor",
     "access": "public",
     "description": null,
-    "lineNumber": 80,
+    "lineNumber": 65,
     "undocument": true,
     "type": {
       "types": [
@@ -5027,7 +5021,7 @@
     "longname": "packages/causality-layer/src/CausalNetRunner/runner.mixins.js~RunnerMixins#Encoder",
     "access": "public",
     "description": null,
-    "lineNumber": 88,
+    "lineNumber": 73,
     "undocument": true,
     "type": {
       "types": [
@@ -5046,7 +5040,7 @@
     "longname": "packages/causality-layer/src/CausalNetRunner/runner.mixins.js~RunnerMixins#Decoder",
     "access": "public",
     "description": null,
-    "lineNumber": 96,
+    "lineNumber": 81,
     "undocument": true,
     "type": {
       "types": [
@@ -5089,9 +5083,9 @@
     "importStyle": "LayerRunnerMixins",
     "description": "This mixin class provide attributes: **ParameterInitializer**, **LayerRunner**, \nand handle **Net** setting of pipelineConfig ",
     "examples": [
-      "import { causalNetParameters, causalNetLayers, causalNetRunner, LayerRunnerMixins  } from 'causal-net.layer';\nimport { causalNetCore } from 'causal-net.core';\nimport { platform } from 'causal-net.utils';\nimport { Tensor } from 'causal-net.core';\nimport { termLogger } from 'causal-net.log';\nconst PipeLineConfigure = {\n    Net: { \n            Parameters: causalNetParameters.InitParameters(),\n            Layers: { \n                Predict: [  causalNetLayers.dense(4, 3), \n                            causalNetLayers.dense(3, 2)], \n                Encode: [ causalNetLayers.dense(4, 2) ], \n                Decode: [ causalNetLayers.dense(4, 2) ] \n            }\n    }\n}\nclass SimplePipeline extends platform.mixWith(Tensor, [ LayerRunnerMixins ]){\n    constructor(layerRunner, logger){\n        super();\n        this.logger = logger;\n        this.LayerRunner = layerRunner;\n    }\n}\nconst T = causalNetCore.CoreTensor;\n(async ()=>{\n    let pipeline = new SimplePipeline(causalNetRunner, termLogger);\n    pipeline.setByConfig(PipeLineConfigure);\n    const { Predictor, Encoder, Decoder } = pipeline.LayerRunner;\n    console.log({ Predictor, Encoder, Decoder });   \n})().catch(err=>{\n    console.error({err});\n});"
+      "import { causalNetParameters, causalNetLayers, causalNetRunner, LayerRunnerMixins  } from 'causal-net.layer';\nimport { causalNetCore } from 'causal-net.core';\nimport { platform } from 'causal-net.utils';\nimport { Tensor } from 'causal-net.core';\nimport { termLogger } from 'causal-net.log';\nconst PipeLineConfigure = {\n    Net: { \n            Parameters: causalNetParameters.InitParameters(),\n            Layers: { \n                Predict: [  causalNetLayers.dense({inputSize:4,outputSize:2}) ], \n                Encode: [ causalNetLayers.dense({inputSize:4,outputSize:2}) ], \n                Decode: [ causalNetLayers.dense({inputSize:4,outputSize:2}) ] \n            }\n    }\n}\nclass SimplePipeline extends platform.mixWith(Tensor, [ LayerRunnerMixins ]){\n    constructor(layerRunner, logger){\n        super();\n        this.logger = logger;\n        this.LayerRunner = layerRunner;\n    }\n}\nconst T = causalNetCore.CoreTensor;\n(async ()=>{\n    let pipeline = new SimplePipeline(causalNetRunner, termLogger);\n    pipeline.setByConfig(PipeLineConfigure);\n    const { Predictor, Encoder, Decoder } = pipeline.LayerRunner;\n    console.log({ Predictor, Encoder, Decoder });   \n})().catch(err=>{\n    console.error({err});\n});"
     ],
-    "lineNumber": 40,
+    "lineNumber": 39,
     "unknown": [
       {
         "tagName": "@class",
@@ -5114,7 +5108,7 @@
     "longname": "packages/causality-layer/src/layerRunner.mixins.js~LayerRunnerMixins#saveParams",
     "access": "public",
     "description": null,
-    "lineNumber": 41,
+    "lineNumber": 40,
     "undocument": true,
     "params": [
       {
@@ -5141,7 +5135,7 @@
     "longname": "packages/causality-layer/src/layerRunner.mixins.js~LayerRunnerMixins#loadParams",
     "access": "public",
     "description": null,
-    "lineNumber": 45,
+    "lineNumber": 44,
     "undocument": true,
     "params": [
       {
@@ -5168,7 +5162,7 @@
     "longname": "packages/causality-layer/src/layerRunner.mixins.js~LayerRunnerMixins#getSavedParamList",
     "access": "public",
     "description": null,
-    "lineNumber": 50,
+    "lineNumber": 49,
     "undocument": true,
     "params": [],
     "return": {
@@ -5188,7 +5182,7 @@
     "longname": "packages/causality-layer/src/layerRunner.mixins.js~LayerRunnerMixins#ParameterInitializer",
     "access": "public",
     "description": null,
-    "lineNumber": 54,
+    "lineNumber": 53,
     "undocument": true,
     "type": {
       "types": [
@@ -5207,7 +5201,7 @@
     "longname": "packages/causality-layer/src/layerRunner.mixins.js~LayerRunnerMixins#ParameterInitializer",
     "access": "public",
     "description": null,
-    "lineNumber": 61,
+    "lineNumber": 60,
     "undocument": true
   },
   {
@@ -5219,7 +5213,7 @@
     "longname": "packages/causality-layer/src/layerRunner.mixins.js~LayerRunnerMixins#parameterInitializer",
     "access": "public",
     "description": null,
-    "lineNumber": 62,
+    "lineNumber": 61,
     "undocument": true,
     "type": {
       "types": [
@@ -5238,7 +5232,7 @@
     "longname": "packages/causality-layer/src/layerRunner.mixins.js~LayerRunnerMixins#setByConfig",
     "access": "public",
     "description": null,
-    "lineNumber": 66,
+    "lineNumber": 65,
     "undocument": true,
     "params": [
       {
@@ -5261,7 +5255,7 @@
     "longname": "packages/causality-layer/src/layerRunner.mixins.js~LayerRunnerMixins#LayerRunner",
     "access": "public",
     "description": null,
-    "lineNumber": 79,
+    "lineNumber": 78,
     "undocument": true
   },
   {
@@ -5273,7 +5267,7 @@
     "longname": "packages/causality-layer/src/layerRunner.mixins.js~LayerRunnerMixins#layerRunner",
     "access": "public",
     "description": null,
-    "lineNumber": 80,
+    "lineNumber": 79,
     "undocument": true,
     "type": {
       "types": [
@@ -5292,7 +5286,7 @@
     "longname": "packages/causality-layer/src/layerRunner.mixins.js~LayerRunnerMixins#LayerRunner",
     "access": "public",
     "description": null,
-    "lineNumber": 82,
+    "lineNumber": 81,
     "undocument": true,
     "type": {
       "types": [
@@ -17164,7 +17158,7 @@
     "kind": "manual",
     "longname": "/home/huynhnguyen/github/causality/causal-doc/overview/packages.md",
     "name": "./causal-doc/overview/packages.md",
-    "content": "![Photo by Iker Urteaga on Unsplash](./asset/iker-urteaga-246955-unsplash.jpg)\n\n# Monorepo\n\nCausality provides sub-package plugins for build up pipeline as follows:\n\nCausality intensively uses [mixin](https://en.wikipedia.org/wiki/Mixin) for composing class. Mixins allow constructing elastic class that imports just enough methods for target usages. We try to mitigate redundant methods and reduce bundle size. The main mixins for building a pipeline class can be found at the `/src/` folder which pre-built `CausalNet` pipeline ready to use (check tutorials session). Advance mixins \nare seperated into different sub-packages under the `/packages/` folder. Each sub-package exports at most one mixin for building pipeline, For example, causality-optimizer provide trainerMixins for optimizing parameters.\n\n## Project module view\n![overview](./asset/block_diagram.png)\n\n## causal-net.core \nThis package provides:\n\n### causalNetCore\n\nAllow acess to core functor and core tensor instance.\n\n```javascript\nimport { causalNetCore } from 'causal-net.core';\nconsole.log(causalNetCore.CoreTensor);\nconsole.log(causalNetCore.CoreFunctor);\n\n```\n\n[Run code](./asset/examples/core.babel.js)\n\n### Tensor\n\nPrimitive class for composing Tensor based class. This class is based on [tensorflowjs](https://js.tensorflow.org/)\n\n```javascript\nimport { Tensor, causalNetCore } from 'causal-net.core';\nlet tensor = new Tensor();\nlet T = causalNetCore.CoreTensor;\nlet ta = T.tensor([1, 2]);\nconsole.log(tensor.isTensor(ta));\nconsole.log(tensor.isTensor([1,2,3]));\n```\n\n[Run code](./asset/examples/tensor.babel.js)\n\n### Functor\n\nPrimitive class for composing Functor based class. This class is based on [Ramda](https://ramdajs.com/)\n\n```javascript\nimport { Functor } from 'causal-net.core';\n\n(async ()=>{\n    let functor = new Functor();\n    console.log(functor.range(10));\n    console.log(functor.zeros(10));\n    console.log(functor.ones(10));\n})();\n```\n\n[Run code](./asset/examples/functor.babel.js)\n\n### Store\n\nPrimivtive class for composing Store base class. This class is based on [levelup](https://www.npmjs.com/package/levelup)\n\n### Event\n\nPrimivtive class for composing Event base class. This class is extended from [EventEmitter](https://nodejs.org/api/events.html)\n\n```javascript\nimport { Event } from 'causal-net.core';\n\n(async ()=>{\n    let eventA = new Event();\n    let eventB = new Event();    \n    eventA.on('data', (data)=>{\n        console.log({'event handler': data});\n        return 'this is done';\n    })\n    console.log(await eventA.emit('data', [1,2,3]));\n    console.log('send event');\n    eventB.pipe(eventA);\n    console.log(await eventB.emit('data', ['1,2,3']));\n})();\n\n```\n\n[Run code](./asset/examples/event.babel.js)\n\n## causal-net.datasets \nThis package provides:\n\n### CausalNetDataSource\n\nThis class is a standard implementation for pipeline Source which can be accessed via **causalNetDataSource** instance.\n\n\n```javascript\nimport { causalNetDataSource } from 'causal-net.datasets';\n\n(async ()=>{\n    let description = await causalNetDataSource.connect('../../datasets/MNIST_dataset_NoSplit/');\n    console.log( description );\n    console.log( causalNetDataSource.SampleSize );\n    console.log( causalNetDataSource.chunkSelect(1) );\n    const SampleReader = causalNetDataSource.SampleReader;\n    const LabelReader = causalNetDataSource.LabelReader;\n    for(let { Sample, Label, ChunkName } of causalNetDataSource.chunkSelect(1) ){\n        let sampleData = await SampleReader(Sample);\n        let labelData = await LabelReader(Label);\n        console.log({ ChunkName, \n                      [Sample]: sampleData.length, \n                      [Label]: labelData.length });\n    }\n    let readreport = await causalNetDataSource.read();\n    console.log({ readreport });\n})().catch(console.error);\n```\n\n[Run code](./asset/examples/causalNetDataSource.js)\n\n### DatasetMixins\n\nThis mixin class provides attibutea: **DataSourceReader** , methods: **reading** and handle Source setting in pipelineConfig\n\n\n```javascript\nimport { causalNetDataSource, DataSourceMixins } from 'causal-net.datasets';\nimport { PreprocessingMixins,\n    causalNetPreprocessingStream } from 'causal-net.preprocessing';\nimport { causalNetCore, Functor as BaseFunctor } from 'causal-net.core';\nimport { termLogger, LoggerMixins } from 'causal-net.log';\nimport { platform } from 'causal-net.utils';\n\nconst R = causalNetCore.CoreFunctor;\nconst sampleTransformer = (chunkSamples) => { \n    console.log({chunkSamples: chunkSamples.length});\n    return chunkSamples;\n};\nconst labelTransformer = (chunkLabels) => {\n    console.log({chunkLabel: chunkLabels.length});\n    return chunkLabels;\n}\n\nconst PipeLineConfigure = {\n    Dataset: {\n        Source: causalNetDataSource,\n        Preprocessing: {\n            SampleTransformer: sampleTransformer,\n            LabelTransformer: labelTransformer\n        }\n    }\n};\n\n\nclass SimpleDataset extends platform.mixWith(BaseFunctor, \n    [   PreprocessingMixins,\n        DataSourceMixins,\n        LoggerMixins ]){\n    constructor( preprocessing, logger ){\n        super();\n        this.Preprocessing = preprocessing;\n        this.Logger = logger;\n    }\n}\n(async ()=>{\n    await causalNetDataSource.connect('../../datasets/MNIST_dataset_NoSplit/');\n    let dataset = new SimpleDataset( causalNetPreprocessingStream, termLogger );\n    dataset.setByConfig(PipeLineConfigure);\n    dataset.DataSourceReader.chunkSelect(1);\n    console.log( await dataset.read() );\n})().catch(console.error);\n\n\n\n```\n\n[Run code](./asset/examples/dataset.mixins.babel.js)\n\n## causal-net.deployment \n\nThis package provides:\n\n### causalNetDeployment\n\nThe implementation for event-based model deployment which is supplied to pipeline class instance as **Deployment** attribute. Pipeline class must be mixed with DeploymentMixins.\n\n\n```javascript\nimport { causalNetDeployment } from 'causal-net.deployment';\n\n(async ()=>{\n    var emitCounter = 0;\n    causalNetDeployment.Emitter = async ()=>{\n        \n        return new Promise((resolve, reject)=>{\n            setTimeout(()=>{\n                let data = (emitCounter < 3)?{Predict: [0,1,2,3]}:null;\n                emitCounter += 1;\n                console.log({ emitter: data});\n                resolve(data);\n            }, 1000);\n        });\n    };\n    causalNetDeployment.Listener = async (data)=>{\n        console.log({listener: data});\n    };\n    causalNetDeployment.Inferencer = (data)=>{\n        console.log({'inferencer': data});  \n        return data;\n    };\n    console.log(await causalNetDeployment.deploy());\n})().catch(console.error);\n```\n\n[Run code](./asset/examples/causalNetDeployment.babel.js)\n\n### DeploymentMixins\n\nThis mixin class provides attributes: **Deployment**, **Inferencer**, and handle Deployment setting of pipelineConfig.\n\n```javascript\nimport { causalNetSGDOptimizer, TrainerMixins, EvaluatorMixins } from 'causal-net.optimizers';\nimport { causalNetModels, ModelMixins } from 'causal-net.models';\nimport { causalNetParameters, causalNetLayers, causalNetRunner, LayerRunnerMixins } from 'causal-net.layer';\nimport { causalNetCore, Functor, Tensor } from 'causal-net.core';\nimport { platform } from 'causal-net.utils';\nimport { causalNetDeployment, DeploymentMixins } from 'causal-net.deployment';\nimport { termLogger, LoggerMixins } from 'causal-net.log';\n\nclass SimplePipeline extends platform.mixWith(Tensor, [ \n        LayerRunnerMixins, \n        ModelMixins, \n        EvaluatorMixins,\n        TrainerMixins, \n        LoggerMixins,\n        DeploymentMixins ]){\n    constructor( netRunner, functor, logger, deployment){\n        super();\n        this.F = functor;\n        this.LayerRunner = netRunner;\n        this.Logger = logger;\n        this.Deployment = deployment;\n    }\n}\nconst T = causalNetCore.CoreTensor;\nconst F = new Functor();\nconst DummyData = (batchSize)=>{\n    let samples = [ [0,1,2,3], \n                    [0,1,2,3], \n                    [0,1,2,3] ];\n    let labels  = [ [1,0], \n                    [1,0], \n                    [1,0] ];\n    return [{samples, labels}];\n}\nconsole.log(F.range(10));\nconsole.log(F.enumerate([0,1,2,3,4]));\nconsole.log(DummyData(1));\n(async ()=>{\n    let emitCounter = 0;\n    const PipeLineConfigure = {\n        Dataset: {\n            TrainDataGenerator: DummyData,\n            TestDataGenerator: DummyData\n        },\n        Net: { \n                Parameters: causalNetParameters.InitParameters(),\n                Layers: { \n                    Predict: [  causalNetLayers.dense(4, 3), \n                                causalNetLayers.dense(3, 2)]\n                },\n                Model: causalNetModels.classification(2),\n                Optimizer: causalNetSGDOptimizer.adam({learningRate: 0.01})\n        },\n        Deployment: {\n            Emitter: async ()=>{\n                return new Promise((resolve, reject)=>{\n                    setTimeout(()=>{\n                        let data = (emitCounter < 3)?{Predict: [0,1,2,3]}:null;\n                        emitCounter += 1;\n                        console.log({ emitter: data});\n                        resolve(data);\n                    }, 1000);\n                });\n            },\n            Listener: async (infer)=>{\n                console.log({ Listener: infer});\n            }\n        }\n    };\n\n    let pipeline = new SimplePipeline( causalNetRunner, F, termLogger, causalNetDeployment);\n    pipeline.setByConfig(PipeLineConfigure);\n    let predictInfer = pipeline.PredictModel( T.tensor([[1,2,3,4]]) );\n    predictInfer.print();\n    pipeline.deploy().then(res=>console.log(res));\n    console.log(await pipeline.train(100, 1));\n})().catch(err=>{\n    console.error({err});\n});\n```\n\n[Run code](./asset/examples/deployment.mixins.babel.js)\n\n## causal-net.layer\n\nThis module provides:\n\n### CausalNetLayers\n\nThis class provides common used layers which can be accessed via **causalNetLayers** instance.\n\n\n```javascript\nimport { causalNetLayers } from 'causal-net.layer';\nlet denseLayer = causalNetLayers.dense({inputSize:3,outputSize:2});\nconsole.log({denseLayer: denseLayer.Config});\n\n```\n\n[Run code](./asset/examples/dense.layer.js)\n\n### CausalNetParameters\n\nThis class is a standard implementation for model parameters which can be accessed via **causalNetParameters** instance\n\n\n```javascript\nimport { causalNetParameters } from 'causal-net.layer';\nimport { causalNetLayers } from 'causal-net.layer';\n(async ()=>{\n    const Layers = { \n                    Predict: [  causalNetLayers.dense(4, 3), \n                                 causalNetLayers.dense(3, 2)], \n                    Encode: [ causalNetLayers.dense(4, 2) ], \n                    Decode: [ causalNetLayers.dense(4, 2) ] \n            };\n    const Parameters = {};\n    console.log(causalNetParameters.InitParameters(Parameters)(Layers));\n    console.log(await causalNetParameters.exportParameters());\n    console.log(await causalNetParameters.saveParams('save0'));\n    console.log(await causalNetParameters.getSavedParamList());\n    console.log(await causalNetParameters.loadParams('save0'));\n})();\n```\n\n[Run code](./asset/examples/parameters.babel.js)\n\n### CausalNetRunner\n\nThis CausalNetRunner class provide a standard net excecutor which is provided pipeline instance at **LayerRunner** attribute.\n\n\n```javascript\nimport { causalNetParameters, causalNetLayers, causalNetRunner } from 'causal-net.layer';\nimport { causalNetCore } from 'causal-net.core';\n\n(async ()=>{\n    const T = causalNetCore.CoreTensor;\n\n    const Net = { \n                    Parameters: { Predict: null, Encode: null, Decode: null },\n                    Layers: { \n                        Predict: [  causalNetLayers.dense(4, 3), \n                                    causalNetLayers.dense(3, 2)], \n                        Encode: [ causalNetLayers.dense(4, 2) ], \n                        Decode: [ causalNetLayers.dense(4, 2) ] \n                    }\n                };\n    console.log(causalNetParameters.setOrInitParams(Net.Layers, Net.Parameters));\n    causalNetRunner.NetLayers = Net.Layers;\n    causalNetRunner.NetParameters = causalNetParameters;\n    let predictLayer = causalNetRunner.run(Net.Layers.Predict, T.tensor([[1,2,3,4]]), \n                            causalNetParameters.PredictParameters);\n    predictLayer.print();\n    const PredictRunner = causalNetRunner.Predictor;\n    console.log(PredictRunner);\n    predictLayer = PredictRunner(T.tensor([[1,2,3,4]]));\n    predictLayer.print();\n    let encodeLayer = causalNetRunner.run(Net.Layers.Encode, T.tensor([[1,2,3,4]]), \n                            causalNetParameters.EncodeParameters);\n    encodeLayer.print();\n    const EncodeRunner = causalNetRunner.Encoder;\n    encodeLayer = EncodeRunner( T.tensor([[1,2,3,4]]) );\n    encodeLayer.print();\n    let decodeLayer = causalNetRunner.run(Net.Layers.Decode, T.tensor([[1,2,3,4]]), \n                            causalNetParameters.DecodeParameters);\n    decodeLayer.print();\n    const DecodeRunner = causalNetRunner.Decoder;\n    decodeLayer = DecodeRunner( T.tensor([[1,2,3,4]]) );\n    decodeLayer.print();\n})();\n\n```\n\n[Run code](./asset/examples/runner.babel.js)\n\n### LayerRunnerMixins\n\nThis mixin class provide attributes: **ParameterInitializer**, **LayerRunner**, and handle **Net** setting of pipelineConfig.\n\n\n```javascript\nimport { causalNetParameters, causalNetLayers, causalNetRunner, LayerRunnerMixins  } from 'causal-net.layer';\nimport { causalNetCore } from 'causal-net.core';\nimport { platform } from 'causal-net.utils';\nimport { Tensor } from 'causal-net.core';\nimport { termLogger } from 'causal-net.log';\nconst PipeLineConfigure = {\n    Net: { \n            Parameters: causalNetParameters.InitParameters(),\n            Layers: { \n                Predict: [  causalNetLayers.dense(4, 3), \n                            causalNetLayers.dense(3, 2)], \n                Encode: [ causalNetLayers.dense(4, 2) ], \n                Decode: [ causalNetLayers.dense(4, 2) ] \n            }\n    }\n}\nclass SimplePipeline extends platform.mixWith(Tensor, [ LayerRunnerMixins ]){\n    constructor(layerRunner, logger){\n        super();\n        this.logger = logger;\n        this.LayerRunner = layerRunner;\n    }\n}\nconst T = causalNetCore.CoreTensor;\n(async ()=>{\n    let pipeline = new SimplePipeline(causalNetRunner, termLogger);\n    pipeline.setByConfig(PipeLineConfigure);\n    const { Predictor, Encoder, Decoder } = pipeline.LayerRunner;\n    console.log({ Predictor, Encoder, Decoder });   \n})().catch(err=>{\n    console.error({err});\n});\n```\n\n[Run code](./asset/examples/layerRunner.mixins.babel.js)\n\n## causal-net.log \n\nThis module provides:\n\n### TermLogger \n\nThis class is isomomorphic logger which can be accessed via **termLogger**.\n\n\n```javascript\nimport { termLogger } from 'causal-net.log';\n\ntermLogger.log('this is text');\ntermLogger.log({'name':'this is text'});\n\ntermLogger.log({'father':{'name':'this is text','alias':'this is another text'}});\ntermLogger.log({'father':{'name':{sub:'this is text'},'alias':'this is another text'}});\ntermLogger.log({'array':[0,1,2,3,4]});\ntermLogger.log({'array':[{a:0}, {b:1}, {c:2},  {d:4},  {e:6}]});\n\ntermLogger.Level = 'debug';\nconsole.log(termLogger.Level);\ntermLogger.log({'not to show': true});\ntermLogger.Level = 'log';\nconsole.log(termLogger.Level);\n\ntermLogger.progressBegin(5);\nfor(let i of [1,2,3,4,5]){\n    termLogger.progressUpdate({current: i});\n}\ntermLogger.progressEnd();\n\ntermLogger.groupBegin('group A');\ntermLogger.groupBegin('group B');\ntermLogger.groupBegin('group C');\ntermLogger.groupEnd();\ntermLogger.groupEnd();\ntermLogger.groupEnd();\n\n\n```\n\n[Run code](./asset/examples/log.babel.js)\n\nUsing builtin plot (vivid)\n\n```javascript\nimport { termLogger, vivid } from 'causal-net.log';\n(async ()=>{\n    termLogger.connect();\n    termLogger.groupBegin('this is log');\n    termLogger.log('this is log');\n    let plotData = {\n                type: 'scatter',\n                data: {\n                    'X': [[0,0],[1,0],[0,1]],\n                    'Y': [[-1,-1],[-1,0],[0,-1]],\n                }, \n                'xRange': [-2,2],\n                'yRange': [-2,2],\n                'xLabel': 'may be x',\n                'yLabel': 'y unit',\n                'title': 'test', \n                style: { \"body\": {\"font\": \"11px\"} } };\n    let plotId = termLogger.plot(plotData);\n    await termLogger.show({plotId});\n    const makeImageData = (offset, width=28, height=28)=>{\n        let imageData = [];\n        for (var x=0; x<width; x++) {\n            for (var y=0; y<height; y++) {\n                var pixelindex = (y * width + x) * 4;\n                // Generate a xor pattern with some random noise\n                var red = ((x+offset) % 256) ^ ((y+offset) % 256);\n                var green = ((2*x+offset) % 256) ^ ((2*y+offset) % 256);\n                var blue = 50 + Math.floor(Math.random()*100);\n                // Rotate the colors\n                blue = (blue + offset) % 256;\n                // Set the pixel data\n                imageData[pixelindex] = red;     // Red\n                imageData[pixelindex+1] = green; // Green\n                imageData[pixelindex+2] = blue;  // Blue\n                imageData[pixelindex+3] = 255;   // Alpha\n            }\n        }\n        return imageData;\n    };\n    let data = makeImageData(0);\n    plotId = termLogger.plot({type: 'png', data, width:28, height:28, title:'test2'});\n    await termLogger.show({plotId});\n    \n    plotData = {\n        type: 'line',\n        data: {\n            'X': [1,2,4,6],\n            'y': [3,4,5,6]\n        }, \n        'xRange': [-2,2],\n        'yRange': [-2,2],\n        'xLabel': 'x unit',\n        'yLabel': 'y unit',\n        'title': 'test3', \n        style: { \"body\": {\"font\": \"11px\"} } };\n    plotId = termLogger.plot(plotData);\n    await termLogger.show({plotId});\n    termLogger.groupEnd('this is log');\n})();\n```\n\n[Run code](./asset/examples/plot.babel.js)\n\n### Vivid \n\nThis class is provide common used plots which can be accessed via **vivid**.\n\nLine chart\n\n```javascript\nimport { vivid } from 'causal-net.log';\n(async ()=>{\n    let plotData = {\n        type: 'line',\n        data: {\n            'X': [1,2,4,6],\n            'y': [3,4,5,6]\n        }, \n        'xRange': [-2,2],\n        'yRange': [-2,2],\n        'xLabel': 'x unit',\n        'yLabel': 'y unit',\n        'title': 'test3', \n        style: { \"body\": {\"font\": \"11px\"} } };\n    let plotId = vivid.line(plotData);\n    await vivid.show({plotId});\n    termLogger.groupEnd('this is log');\n})();\n```\n\n[Run code](./asset/examples/vivid.line.babel.js)\n\nScatter chart\n\n```javascript\nimport { vivid } from 'causal-net.log';\n(async ()=>{\n    let plotData = {\n                type: 'scatter',\n                data: {\n                    'X': [[0,0],[1,0],[0,1]],\n                    'Y': [[-1,-1],[-1,0],[0,-1]],\n                }, \n                'xRange': [-2,2],\n                'yRange': [-2,2],\n                'xLabel': 'may be x',\n                'yLabel': 'y unit',\n                'title': 'test', \n                style: { \"body\": {\"font\": \"11px\"} } };\n    let plotId = vivid.scatter(plotData);\n    await vivid.show({plotId});\n})();\n```\n\n[Run code](./asset/examples/vivid.scatter.babel.js)\n\nPNG \n\n```javascript\nimport { vivid } from 'causal-net.log';\n(async ()=>{\n    const makeImageData = (offset, width=28, height=28)=>{\n        let imageData = [];\n        for (var x=0; x<width; x++) {\n            for (var y=0; y<height; y++) {\n                var pixelindex = (y * width + x) * 4;\n                // Generate a xor pattern with some random noise\n                var red = ((x+offset) % 256) ^ ((y+offset) % 256);\n                var green = ((2*x+offset) % 256) ^ ((2*y+offset) % 256);\n                var blue = 50 + Math.floor(Math.random()*100);\n                // Rotate the colors\n                blue = (blue + offset) % 256;\n                // Set the pixel data\n                imageData[pixelindex] = red;     // Red\n                imageData[pixelindex+1] = green; // Green\n                imageData[pixelindex+2] = blue;  // Blue\n                imageData[pixelindex+3] = 255;   // Alpha\n            }\n        }\n        return imageData;\n    };\n    let data = makeImageData(0);\n    let plotId = vivid.png({type: 'png', data, width:28, height:28, title:'test2'});\n    await vivid.show({plotId});\n})();\n```\n\n[Run code](./asset/examples/vivid.png.babel.js)\n\n### LoggerMixins\n\nThis Mixins class provides attributes: **Logger**.\n\n\n```javascript\nimport { LoggerMixins, termLogger, BaseLogger } from 'causal-net.log';\nimport { platform } from 'causal-net.utils';\nimport { Tensor } from 'causal-net.core';\n\nclass SimplePipeline extends platform.mixWith(Tensor, [LoggerMixins]){\n    constructor(){\n        super();\n        this.Logger = termLogger;\n    }\n}\nlet pipeline = new SimplePipeline();\nconsole.log(pipeline.Logger instanceof BaseLogger);\n```\n\n[Run code](./asset/examples/logger.mixins.babel.js)\n\n## causal-net.preprocessing \n\nThis module provide  standard preprocessing instances for image/text data and preprocessing mixins for pipeline\n\n### nlpPreprocessing\nProvide methods for text processing: tokenize, filter, count word frequency.\n\n### imagePreprocessing \nProvide method for image processing: split, transform color\n\n### PreprocessingMixins\nMixins for mix with Pipeline class or dataset class.\n\n## causal-net.representation\n\nThis module provides:\n\n### CausalNetEmbedding \n\nThis class provide standard implements for text to vecs transformation. Which can be accessed via causalNetEmbedding\n\nNode\n\n```javascript\nimport { causalNetEmbedding } from 'causal-net.representation';\nimport { termLogger } from 'causal-net.log';\n(async ()=>{\n    const configLink = '../../datasets/WordVec_EN/';\n    await causalNetEmbedding.connect(configLink, true);\n    //first time transform will find on storage cache\n    let vecs = await causalNetEmbedding.transform(['this', 'is', 'test']);\n    for(let vec of vecs){\n        termLogger.log({ vec });\n    }\n    //second time transform will find on memory cache\n    vecs = await causalNetEmbedding.transform(['this', 'is', 'test']);\n    for(let vec of vecs){\n        termLogger.log({ vec });\n    }\n    //return the tensor representing sentence\n    let sentVec = await causalNetEmbedding.sentenceEncode([ ['this', 'is', 'test'] ]);\n    sentVec.print();\n})().catch(err=>{\n    console.error(err);\n});\n```\n\n[Run code](./asset/examples/causalNetEmbedding.babel.node.js)\n\n### UniversalEmbedding\n\nThis class provide standard implements for text to vecs transformation into single vector based on [use](https://github.com/tensorflow/tfjs-models/tree/master/universal-sentence-encoder) which can be accesed via universalEmbedding\n\n\n```javascript\nimport { universalEmbedding } from 'causal-net.representation';\nimport { termLogger } from 'causal-net.log';\nimport { tokenizer } from 'causal-net.preprocessing';\n(async ()=>{\n    const BaseModelServer = 'http://0.0.0.0:8080/models/';\n    termLogger.groupBegin('load model');\n    await tokenizer.connect(BaseModelServer + 'use/vocab.json');\n    await universalEmbedding.connect(BaseModelServer + '/use/tensorflowjs_model.json');\n    termLogger.log('load finish');\n    const asEncode = true;\n    let tokens = [tokenizer.tokenize('dog', asEncode),\n                  tokenizer.tokenize('cat', asEncode)]; \n    termLogger.log({tokens});\n    let sentVec = await universalEmbedding.sentenceEncode(tokens);\n    sentVec.print();\n    let score = await universalEmbedding.encodeMatching(tokens[0], tokens[1]);\n    score.print();\n    termLogger.groupEnd();\n})().catch(console.err);        \n```\n\n[Run code](./asset/examples/universalEmbedding.babel.js)\n\n### RepresentationMixins\n\nThis mixin class provides attributes: **Prepresentation**.\n\n\n```javascript\nimport { RepresentationMixins, causalNetEmbedding } from 'causal-net.representation';\nimport { platform } from 'causal-net.utils';\nimport { Tensor } from 'causal-net.core';\nconst PipeLineConfigure = {\n    Representation: {\n        Embedding: causalNetEmbedding,\n        EmbeddingConfig: '../../datasets/WordVec_EN/',\n    }\n}\nclass SimplePipeline extends platform.mixWith(Tensor, [RepresentationMixins]){\n    constructor(configure){\n        super();\n        this.setRepresentationByConfig(configure);\n    }\n}\nlet pipeline = new SimplePipeline(PipeLineConfigure);\npipeline.connect();\nconsole.log(pipeline.Representation);\n```\n\n[Run code](./asset/examples/embeddingMixins.babel.node.js)\n\n\n## causal-net.sampling \n\nThis causal-net.sampling is a sub-module for [causality](https://red-gold.github.io/causality-docs/) project.\nThis module provide sampling instance and sampling mixins\n\n### CausalNetSampling \n\nThis class provide common used sampling methods which can be accessed via **causalNetSampling** instance.\n\n\n```javascript\nimport { causalNetSampling } from 'causal-net.sampling';\nimport {termLogger as Logger} from 'causal-net.log';\nlet numSamples = 4;\nlet idSize = 10;//id list: [0,1,2,3,4,5,6,7,8,9]\nLogger.log(causalNetSampling.subSampling(numSamples, idSize));\n\nnumSamples = 4;\nlet positiveSampleId = [0, 1];\n//ids: [0, 1, 2, 3];\nlet probIds = [0.9, 0.9, 0.3, 0.7];\nlet samples = causalNetSampling.negSampling(numSamples, positiveSampleId, probIds);\ntermLogger.log({ samples });\n```\n\n[Run code](./asset/examples/causalNetSampling.babel.js)\n\n### SamplingMixins\n\nThis mixin class provide attributes: **Sampling**.\n\n\n```javascript\nimport { SamplingMixins, causalNetSampling } from 'causal-net.sampling';\nimport { Platform } from 'causal-net.utils';\nimport { Tensor, Function } from 'causal-net.core';\nconsole.log(causalNetSampling instanceof Function);\nclass SimplePipeline extends Platform.mixWith(Tensor, [SamplingMixins]){\n    constructor(){\n        super();\n        this.Sampling = causalNetSampling;\n    }\n}\nlet pipeline = new SimplePipeline();\nconsole.log(pipeline.Sampling);\n```\n\n[Run code](./asset/examples/sampling.mixins.babel.js)\n\n## causal-net.models \n\n### CausalNetModels\n\nThis class provides common used models which can be accessed via **causalNetModels** instance.\n\n- Classification models\n\n```javascript\nimport { SingleLabelClassification } from 'causal-net.models';\nimport { causalNetCore } from 'causal-net.core';\nlet model = new SingleLabelClassification(2);\nlet T = causalNetCore.CoreTensor;\nlet inputs = T.tensor([[0.1, 0.2]], [1, 2], 'float32');\nlet labels = T.tensor([[0, 1]], [1, 2], 'float32');\nmodel.LayerRunner = { Predictor: (input)=>input};\nmodel.Fit(inputs).print();\nmodel.Loss(inputs, labels).print();\nmodel.Predict(inputs).print();\nmodel.OneHotPredict(inputs).print();\n\n```\n\n[Run code](./asset/examples/singleLabelClassification.babel.js)\n\n### ModelMixins\n\nThis mixin class provides attributes: **Model**, **LossModel**, **FitModel**, **OneHotPredictModel**, **PredictModel** and handle **Model** setting of pipelineConfig.Net.\n\n\n```javascript\nimport { causalNetModels, ModelMixins } from 'causal-net.models';\nimport { causalNetParameters, causalNetLayers, causalNetRunner, LayerRunnerMixins } from 'causal-net.layer';\nimport { causalNetCore } from 'causal-net.core';\nimport { platform } from 'causal-net.utils';\nimport { Tensor } from 'causal-net.core';\nimport { termLogger, LoggerMixins } from 'causal-net.log';\n\nclass SimplePipeline extends platform.mixWith(Tensor, [LayerRunnerMixins, ModelMixins, LoggerMixins]){\n    constructor(netRunner, logger){\n        super();\n        this.Logger = logger;\n        this.LayerRunner = netRunner;\n    }\n}\n                  \n    \nconst T = causalNetCore.CoreTensor;\n(async ()=>{\n    let convLayer = causalNetLayers.convolution({kernelSize:[2,2], filters:[1,2], flatten:true} );\n    let denseLayer = causalNetLayers.dense({inputSize:24,outputSize:2});\n    const PipeLineConfigure = {\n        Net: { \n                Parameters: causalNetParameters.InitParameters(),\n                Layers: { \n                    Predict: [  convLayer, denseLayer], \n                    Encode: [ causalNetLayers.dense({inputSize:24,outputSize:2}) ], \n                    Decode: [ causalNetLayers.dense({inputSize:24,outputSize:2}) ] \n                },\n                Model: causalNetModels.classification(2)\n        }\n    };\n\n    let pipeline = new SimplePipeline( causalNetRunner, termLogger);\n    pipeline.setByConfig(PipeLineConfigure);\n    \n    let inputTensor = T.tensor([  [1,2,3,4],\n                                  [1,2,3,4],\n                                  [1,2,3,4] ]).reshape([1,3,4,1]);\n    let modelOneHotPredict = pipeline.OneHotPredictModel(inputTensor);\n    modelOneHotPredict.print();\n    let fit = pipeline.FitModel(inputTensor);\n    fit.print();\n    let modelLoss = pipeline.LossModel(inputTensor, \n                             T.tensor([[0, 1]]).asType('float32'));\n    modelLoss.print();\n})().catch(err=>{\n    console.error({err});\n});\n```\n\n[Run code](./asset/examples/model.mixins.babel.js)\n\n\n\n\n## causal-net.optimizers\nThis causal-net.optimizer provides: \n\n### CausalNetSGDOptimizer\n\nThis class provides optimizing methods which can be accessed via **causalNetSGDOptimizer** instance.\n\n\n```javascript\nimport { causalNetCore } from \"causal-net.core\";\nimport { causalNetSGDOptimizer } from 'causal-net.optimizers';\n\nvar adam = causalNetSGDOptimizer.adam({learningRate: 0.01});\n\nconst T = causalNetCore.CoreTensor;\nvar a = T.variable(T.tensor([1,2,3,4]).reshape([2,2])); \nvar b = T.tensor([2,3,4,5]).reshape([2,2]);\nconst FitFn = ()=>{\n    return a.mul(b).mean();\n};\nconsole.log( adam.fit(FitFn) );\na.print();\nb.print();\n```\n\n[Run code](./asset/examples/causalNetSGDOptimizers.babel.js)\n\n### TrainerMixins\n\nThis mixin class provides attributes: **Optimizer**, **Trainer**, **TrainDataGenerator**, methods **train**, handle **Optimizer** setting of pipelineConfig.Net and **TrainDataGenerator** setting of pipelineConfig.Dataset.\n\n```javascript\nimport { causalNetSGDOptimizer, TrainerMixins, EvaluatorMixins } from 'causal-net.optimizers';\nimport { causalNetModels, ModelMixins } from 'causal-net.models';\nimport { causalNetParameters, causalNetLayers, causalNetRunner, LayerRunnerMixins } from 'causal-net.layer';\nimport { causalNetCore, Functor } from 'causal-net.core';\nimport { platform } from 'causal-net.utils';\nimport { Tensor } from 'causal-net.core';\nimport { termLogger, LoggerMixins } from 'causal-net.log';\n\nclass SimplePipeline extends platform.mixWith(Tensor, [ \n        LayerRunnerMixins, \n        ModelMixins, \n        EvaluatorMixins,\n        LoggerMixins,\n        TrainerMixins]){\n    constructor( netRunner, functor, logger){\n        super();\n        this.F = functor;\n        this.LayerRunner = netRunner;\n        this.Logger = logger;\n    }\n}\nconst T = causalNetCore.CoreTensor;\nconst R = causalNetCore.CoreFunctor;\nconst F = new Functor();\nconst DummyData = (batchSize)=>{\n    let samples = [  [[0], [1], [2], [3]], \n                     [[0], [1], [2], [3]], \n                     [[0], [1], [2], [3]] ];\n    let labels  = [ [0,1] ];\n    return [{samples, labels}];\n}\nconsole.log(DummyData(1));\n(async ()=>{\n    let convLayer = causalNetLayers.convolution({ kernelSize: [2, 2], \n                                                  filters: [1, 2], \n                                                  flatten: true } );\n    let denseLayer = causalNetLayers.dense({ inputSize: 8, outputSize: 2 });\n    const PipeLineConfigure = {\n        Dataset: {\n            TrainDataGenerator: DummyData,\n            TestDataGenerator: DummyData,\n        },\n        Net: { \n                Parameters: causalNetParameters.InitParameters(),\n                Layers: { Predict: [ convLayer, denseLayer ] },\n                Model: causalNetModels.classification(2),\n                Optimizer: causalNetSGDOptimizer.adam({learningRate: 0.01})\n        }\n    };\n\n    let pipeline = new SimplePipeline( causalNetRunner, F, termLogger);\n    pipeline.setByConfig(PipeLineConfigure);\n    const NumEpochs = 10, BatchSize = 1;\n    console.log(await pipeline.train(NumEpochs, BatchSize));\n    console.log(await pipeline.test());\n})();\n\n\n\n```\n\n[Run code](./asset/examples/trainer.mixins.babel.js)\n\n### EvaluatorMixins\n\nThis mixin class provides methods: **test** and handle **TestDataGenerator** setting of pipelineConfig.Dataset.\n\n## causal-net.memcache \n\n### memDownCache\n\nThis class a implementation for memory caching on top of [memdown](https://www.npmjs.com/package/memdown) which can be accessed via **memDownCache**.\n\n\n```javascript\nimport {memDownCache} from 'causal-net.memcache';\nimport {termLogger} from 'causal-net.log';\n\n(async ()=>{\n    await memDownCache.setItem(123, '1223adfa');\n    termLogger.log({getItem: await memDownCache.getItem(123)});\n})();\n\n```\n\n[Run code](./asset/examples/memDownCache.babel.js)\n\n### MemCacheMixins\n\nThis mixins class provides attributes: **MemCache**.\n\n\n```javascript\nimport {memDownCache, MemCacheMixins} from 'causal-net.memcache';\nimport {termLogger} from 'causal-net.log';\n\nimport { platform } from 'causal-net.utils';\nimport { Tensor, Store } from 'causal-net.core';\n\nclass SimplePipeline extends platform.mixWith(Tensor, [MemCacheMixins]){\n    constructor(){\n        super();\n        this.MemCache = memDownCache;\n    }\n}\nlet pipeline = new SimplePipeline();\ntermLogger.log(pipeline.MemCache instanceof Store);\n```\n\n[Run code](./asset/examples/memCache.mixins.babel.js)\n\n\n## causal-net.storage \n\nThis module provides:\n\n### indexDBStorage \n\nThe isomorphic high performance key-value storage based on indexDB.\n\n\n```javascript\nimport { indexDBStorage } from 'causal-net.storage';\n(async ()=>{\n    await indexDBStorage.writeFile('/temp','12345');\n    let content  = await indexDBStorage.readFile('/temp');\n    console.log({content});\n    \n    //get file list\n    let listFiles = await indexDBStorage.getFileList('/');\n    console.log({listFiles});\n    \n    //fetch png image and save pixel data into file\n    const url = 'https://avatars3.githubusercontent.com/u/43268620?s=200&v=4';\n    await indexDBStorage.fetchPNGFile(url, 'icon');\n    const pixelArray = await indexDBStorage.readPNGFile('icon');\n    console.log({ pixelArray });\n\n    let ops = [\n        { type: 'put', key: 'temp', value: '123445' },\n        { type: 'del', key: 'temp' }];\n    //batch does not support 'get' type\n    let batchResult = await indexDBStorage.batch(ops);\n    console.log({batchResult});\n})().catch(err=>{\n    console.error(err);\n});\n\n```\n\n[Run code](./asset/examples/storage.babel.js)\n\n### StorageMixins\n\nThis mixins class provides **Storage** attribute.\n\n\n```javascript\nimport { StorageMixins, indexDBStorage } from 'causal-net.storage';\nimport { platform } from 'causal-net.utils';\nimport { Tensor, Store } from 'causal-net.core';\n\nclass SimplePipeline extends platform.mixWith(Tensor, [StorageMixins]){\n    constructor(storage){\n        super();\n        this.Storage = storage;\n    }\n}\nlet pipeline = new SimplePipeline(indexDBStorage);\nconsole.log(pipeline.Storage instanceof Store);\n```\n\n[Run code](./asset/examples/storage.mixins.babel.js)\n\n\n## causal-net.utils  \n\nThis module provides:\n\n### Platform \n\nThis class provides enhanced isomorphic mixins with corresponding platform (node|web) which can be access via **platform**.\n\n```javascript\nimport { assert } from 'causal-net.utils';\nassert.seemMatchSample([2,2,3], [1,2,3], 'validate sample');\nassert.seemMatchSample('sample text', 'pattern text', 'validate sample');\nassert.seemMatchSample( { 'text' : 'pattern text 1', 'number' : 1123 }, \n                        { 'text' : 'pattern text', 'number' : 1123 } , 'validate sample');\ntry{\n    assert.seemMatchSample(['2',2,3], [1,2,3], 'validate sample');\n}\ncatch(err){\n    //error due to mismatch schema\n    console.log(err.message);\n};\nclass A{};\nlet a = new A();\nassert.beInstanceOf(a, A);\ntry{\n    assert.beInstanceOf('1', A);\n}\ncatch(err){\n    console.log(err.message);\n}\n\n```\n\n[Run code](./asset/examples/assert.babel.js)\n\n### Fetch \n\nThis class provides isomorphic fetch which can be accessed via **fetch**.\n\n\n```javascript\nimport {fetch, Stream, PNGUtils} from 'causal-net.utils';\n(async ()=>{\n    let link = 'https://avatars3.githubusercontent.com/u/43268620?s=200&v=4';\n    let content = await fetch.fetchData(link);\n    console.log({'content length': content.length});\n});\n\n\n```\n\n[Run code](./asset/examples/fetch.babel.js)\n\n### PNG \n\nThis class provides isomorphic PNG parser which can be accessed via **pngUtils**.\n\nWeb/Node:\n\n```javascript\nimport { pngUtils } from 'causal-net.utils';\n(async ()=>{\n    const link = 'https://avatars3.githubusercontent.com/u/43268620?s=200&v=4';\n    let fetchedData = await pngUtils.fetchPNG(link);\n    console.log(fetchedData.length);\n})();\n```\n\n[Run code](./asset/examples/png.babel.js)\n\nNode:\n\n```javascript\nimport { pngUtils } from 'causal-net.utils';\n(async ()=>{\n    let data = await pngUtils.readPNG('../../datasets/icon.png');\n    console.log(data.length);\n    pngUtils.writePNG(data, [200, 200, 4], './out.png');\n})();\n\n```\n\n[Run code](./asset/examples/png.babel.node.js)\n\n### CSV \n\nThis class provides isomorphic CSV parser which can be accessed via **csvUtils**.\n\nNode:\n\n```javascript\nimport { csvUtils } from 'causal-net.utils';\n(async ()=>{\n    let data = await csvUtils.readCSV('./credict.csv');\n    console.log(data);\n    let headers = Object.keys(data[0]);\n    await csvUtils.writeCSV(headers, data, './output.csv');\n    data = await csvUtils.readCSV('./output.csv');\n    console.log(data);\n    // console.log(await csvUtils.chunkCSV('./output.csv',3,'./chunk-{}.csv'));\n    // const csvlink = 'https://media.githubusercontent.com/media/red-gold/causality/master/datasets/credict.csv';\n    // data = await csvUtils.fetchCSV(csvlink);\n    // console.log(data);\n    // data = [{'a':'a','text':'\"this is text\\n,;\"'}];\n    // await csvUtils.writeCSV(['a','text'], data, './output.csv');\n    // console.log(await csvUtils.readCSV('./output.csv'));\n})();\n\n```\n\n[Run code](./asset/examples/csv.babel.node.js)\n\n### Stream \n\nThis class provides isomorphic Stream with Readable, Writeable, Duplex which can be accessed via **stream**.\n\n\n```javascript\nimport { stream } from 'causal-net.utils';\n\nlet reader = stream.makeReadable();\n    \nconst TranformFn = (chunkData, chunkEncoding, afterTransformFn) =>{\n    chunkData.x = (chunkData.x+1.5);\n    let event = null;\n    afterTransformFn(event, chunkData);\n};\nlet transformer = stream.makeTransform(TranformFn);\n    \nconst WriteFn = (chunkData, chunkEncoding, callback) =>{\n    console.log({chunkData});\n    callback();\n};\nlet writer = stream.makeWritable(WriteFn);\n    \nreader.pipe(transformer).pipe(writer);\n//write random int for every 100 ms    \nsetInterval(() => {\n    reader.push({ x: Math.random() });\n}, 100);\n\n```\n\n[Run code](./asset/examples/stream.babel.js)\n\n### Assert \n\nThis class provides enhanced isomorphic assert with schema learnt from example which can be accessed via **assert**.\n\n\n```javascript\nimport { assert } from 'causal-net.utils';\nassert.seemMatchSample([2,2,3], [1,2,3], 'validate sample');\nassert.seemMatchSample('sample text', 'pattern text', 'validate sample');\nassert.seemMatchSample( { 'text' : 'pattern text 1', 'number' : 1123 }, \n                        { 'text' : 'pattern text', 'number' : 1123 } , 'validate sample');\ntry{\n    assert.seemMatchSample(['2',2,3], [1,2,3], 'validate sample');\n}\ncatch(err){\n    //error due to mismatch schema\n    console.log(err.message);\n};\nclass A{};\nlet a = new A();\nassert.beInstanceOf(a, A);\ntry{\n    assert.beInstanceOf('1', A);\n}\ncatch(err){\n    console.log(err.message);\n}\n\n```\n\n[Run code](./asset/examples/assert.babel.js)\n\n\n\n",
+    "content": "![Photo by Iker Urteaga on Unsplash](./asset/iker-urteaga-246955-unsplash.jpg)\n\n# Monorepo\n\nCausality provides sub-package plugins for build up pipeline as follows:\n\nCausality intensively uses [mixin](https://en.wikipedia.org/wiki/Mixin) for composing class. Mixins allow constructing elastic class that imports just enough methods for target usages. We try to mitigate redundant methods and reduce bundle size. The main mixins for building a pipeline class can be found at the `/src/` folder which pre-built `CausalNet` pipeline ready to use (check tutorials session). Advance mixins \nare seperated into different sub-packages under the `/packages/` folder. Each sub-package exports at most one mixin for building pipeline, For example, causality-optimizer provide trainerMixins for optimizing parameters.\n\n## Project module view\n![overview](./asset/block_diagram.png)\n\n## causal-net.core \nThis package provides:\n\n### causalNetCore\n\nAllow acess to core functor and core tensor instance.\n\n```javascript\nimport { causalNetCore } from 'causal-net.core';\nconsole.log(causalNetCore.CoreTensor);\nconsole.log(causalNetCore.CoreFunctor);\n\n```\n\n[Run code](./asset/examples/core.babel.js)\n\n### Tensor\n\nPrimitive class for composing Tensor based class. This class is based on [tensorflowjs](https://js.tensorflow.org/)\n\n```javascript\nimport { Tensor, causalNetCore } from 'causal-net.core';\nlet tensor = new Tensor();\nlet T = causalNetCore.CoreTensor;\nlet ta = T.tensor([1, 2]);\nconsole.log(tensor.isTensor(ta));\nconsole.log(tensor.isTensor([1,2,3]));\n```\n\n[Run code](./asset/examples/tensor.babel.js)\n\n### Functor\n\nPrimitive class for composing Functor based class. This class is based on [Ramda](https://ramdajs.com/)\n\n```javascript\nimport { Functor } from 'causal-net.core';\n\n(async ()=>{\n    let functor = new Functor();\n    console.log(functor.range(10));\n    console.log(functor.zeros(10));\n    console.log(functor.ones(10));\n})();\n```\n\n[Run code](./asset/examples/functor.babel.js)\n\n### Store\n\nPrimivtive class for composing Store base class. This class is based on [levelup](https://www.npmjs.com/package/levelup)\n\n### Event\n\nPrimivtive class for composing Event base class. This class is extended from [EventEmitter](https://nodejs.org/api/events.html)\n\n```javascript\nimport { Event } from 'causal-net.core';\n\n(async ()=>{\n    let eventA = new Event();\n    let eventB = new Event();    \n    eventA.on('data', (data)=>{\n        console.log({'event handler': data});\n        return 'this is done';\n    })\n    console.log(await eventA.emit('data', [1,2,3]));\n    console.log('send event');\n    eventB.pipe(eventA);\n    console.log(await eventB.emit('data', ['1,2,3']));\n})();\n\n```\n\n[Run code](./asset/examples/event.babel.js)\n\n## causal-net.datasets \nThis package provides:\n\n### CausalNetDataSource\n\nThis class is a standard implementation for pipeline Source which can be accessed via **causalNetDataSource** instance.\n\n\n```javascript\nimport { causalNetDataSource } from 'causal-net.datasets';\n\n(async ()=>{\n    let description = await causalNetDataSource.connect('../../datasets/MNIST_dataset_NoSplit/');\n    console.log( description );\n    console.log( causalNetDataSource.SampleSize );\n    console.log( causalNetDataSource.chunkSelect(1) );\n    const SampleReader = causalNetDataSource.SampleReader;\n    const LabelReader = causalNetDataSource.LabelReader;\n    for(let { Sample, Label, ChunkName } of causalNetDataSource.chunkSelect(1) ){\n        let sampleData = await SampleReader(Sample);\n        let labelData = await LabelReader(Label);\n        console.log({ ChunkName, \n                      [Sample]: sampleData.length, \n                      [Label]: labelData.length });\n    }\n    let readreport = await causalNetDataSource.read();\n    console.log({ readreport });\n})().catch(console.error);\n```\n\n[Run code](./asset/examples/causalNetDataSource.js)\n\n### DatasetMixins\n\nThis mixin class provides attibutea: **DataSourceReader** , methods: **reading** and handle Source setting in pipelineConfig\n\n\n```javascript\nimport { causalNetDataSource, DataSourceMixins } from 'causal-net.datasets';\nimport { PreprocessingMixins,\n    causalNetPreprocessingStream } from 'causal-net.preprocessing';\nimport { causalNetCore, Functor as BaseFunctor } from 'causal-net.core';\nimport { termLogger, LoggerMixins } from 'causal-net.log';\nimport { platform } from 'causal-net.utils';\n\nconst R = causalNetCore.CoreFunctor;\nconst sampleTransformer = (chunkSamples) => { \n    console.log({chunkSamples: chunkSamples.length});\n    return chunkSamples;\n};\nconst labelTransformer = (chunkLabels) => {\n    console.log({chunkLabel: chunkLabels.length});\n    return chunkLabels;\n}\n\nconst PipeLineConfigure = {\n    Dataset: {\n        Source: causalNetDataSource,\n        Preprocessing: {\n            SampleTransformer: sampleTransformer,\n            LabelTransformer: labelTransformer\n        }\n    }\n};\n\n\nclass SimpleDataset extends platform.mixWith(BaseFunctor, \n    [   PreprocessingMixins,\n        DataSourceMixins,\n        LoggerMixins ]){\n    constructor( preprocessing, logger ){\n        super();\n        this.Preprocessing = preprocessing;\n        this.Logger = logger;\n    }\n}\n(async ()=>{\n    await causalNetDataSource.connect('../../datasets/MNIST_dataset_NoSplit/');\n    let dataset = new SimpleDataset( causalNetPreprocessingStream, termLogger );\n    dataset.setByConfig(PipeLineConfigure);\n    dataset.DataSourceReader.chunkSelect(1);\n    console.log( await dataset.read() );\n})().catch(console.error);\n\n\n\n```\n\n[Run code](./asset/examples/dataset.mixins.babel.js)\n\n## causal-net.deployment \n\nThis package provides:\n\n### causalNetDeployment\n\nThe implementation for event-based model deployment which is supplied to pipeline class instance as **Deployment** attribute. Pipeline class must be mixed with DeploymentMixins.\n\n\n```javascript\nimport { causalNetDeployment } from 'causal-net.deployment';\n\n(async ()=>{\n    var emitCounter = 0;\n    causalNetDeployment.Emitter = async ()=>{\n        \n        return new Promise((resolve, reject)=>{\n            setTimeout(()=>{\n                let data = (emitCounter < 3)?{Predict: [0,1,2,3]}:null;\n                emitCounter += 1;\n                console.log({ emitter: data});\n                resolve(data);\n            }, 1000);\n        });\n    };\n    causalNetDeployment.Listener = async (data)=>{\n        console.log({listener: data});\n    };\n    causalNetDeployment.Inferencer = (data)=>{\n        console.log({'inferencer': data});  \n        return data;\n    };\n    console.log(await causalNetDeployment.deploy());\n})().catch(console.error);\n```\n\n[Run code](./asset/examples/causalNetDeployment.babel.js)\n\n### DeploymentMixins\n\nThis mixin class provides attributes: **Deployment**, **Inferencer**, and handle Deployment setting of pipelineConfig.\n\n```javascript\nimport { causalNetSGDOptimizer, TrainerMixins, EvaluatorMixins } from 'causal-net.optimizers';\nimport { causalNetModels, ModelMixins } from 'causal-net.models';\nimport { causalNetParameters, causalNetLayers, causalNetRunner, LayerRunnerMixins } from 'causal-net.layer';\nimport { causalNetCore, Functor, Tensor } from 'causal-net.core';\nimport { platform } from 'causal-net.utils';\nimport { causalNetDeployment, DeploymentMixins } from 'causal-net.deployment';\nimport { termLogger, LoggerMixins } from 'causal-net.log';\n\nclass SimplePipeline extends platform.mixWith(Tensor, [ \n        LayerRunnerMixins, \n        ModelMixins, \n        EvaluatorMixins,\n        TrainerMixins, \n        LoggerMixins,\n        DeploymentMixins ]){\n    constructor( netRunner, functor, logger, deployment){\n        super();\n        this.F = functor;\n        this.LayerRunner = netRunner;\n        this.Logger = logger;\n        this.Deployment = deployment;\n    }\n}\nconst T = causalNetCore.CoreTensor;\nconst F = new Functor();\nconst DummyData = (batchSize)=>{\n    let samples = [ [0,1,2,3], \n                    [0,1,2,3], \n                    [0,1,2,3] ];\n    let labels  = [ [1,0], \n                    [1,0], \n                    [1,0] ];\n    return [{samples, labels}];\n}\nconsole.log(F.range(10));\nconsole.log(F.enumerate([0,1,2,3,4]));\nconsole.log(DummyData(1));\n(async ()=>{\n    let emitCounter = 0;\n    const PipeLineConfigure = {\n        Dataset: {\n            TrainDataGenerator: DummyData,\n            TestDataGenerator: DummyData\n        },\n        Net: { \n                Parameters: causalNetParameters.InitParameters(),\n                Layers: { \n                    Predict: [  causalNetLayers.dense(4, 3), \n                                causalNetLayers.dense(3, 2)]\n                },\n                Model: causalNetModels.classification(2),\n                Optimizer: causalNetSGDOptimizer.adam({learningRate: 0.01})\n        },\n        Deployment: {\n            Emitter: async ()=>{\n                return new Promise((resolve, reject)=>{\n                    setTimeout(()=>{\n                        let data = (emitCounter < 3)?{Predict: [0,1,2,3]}:null;\n                        emitCounter += 1;\n                        console.log({ emitter: data});\n                        resolve(data);\n                    }, 1000);\n                });\n            },\n            Listener: async (infer)=>{\n                console.log({ Listener: infer});\n            }\n        }\n    };\n\n    let pipeline = new SimplePipeline( causalNetRunner, F, termLogger, causalNetDeployment);\n    pipeline.setByConfig(PipeLineConfigure);\n    let predictInfer = pipeline.PredictModel( T.tensor([[1,2,3,4]]) );\n    predictInfer.print();\n    pipeline.deploy().then(res=>console.log(res));\n    console.log(await pipeline.train(100, 1));\n})().catch(err=>{\n    console.error({err});\n});\n```\n\n[Run code](./asset/examples/deployment.mixins.babel.js)\n\n## causal-net.layer\n\nThis module provides:\n\n### CausalNetLayers\n\nThis class provides common used layers which can be accessed via **causalNetLayers** instance.\n\n\n```javascript\nimport { causalNetLayers } from 'causal-net.layer';\nlet denseLayer = causalNetLayers.dense({inputSize:3,outputSize:2});\nconsole.log({denseLayer: denseLayer.Config});\n\n```\n\n[Run code](./asset/examples/dense.layer.js)\n\n### CausalNetParameters\n\nThis class is a standard implementation for model parameters which can be accessed via **causalNetParameters** instance\n\n\n```javascript\nimport { causalNetParameters } from 'causal-net.layer';\nimport { causalNetLayers } from 'causal-net.layer';\n(async ()=>{\n    const Layers = { \n                    Predict: [  causalNetLayers.dense(4, 3), \n                                 causalNetLayers.dense(3, 2)], \n                    Encode: [ causalNetLayers.dense(4, 2) ], \n                    Decode: [ causalNetLayers.dense(4, 2) ] \n            };\n    const Parameters = {};\n    console.log(causalNetParameters.InitParameters(Parameters)(Layers));\n    console.log(await causalNetParameters.exportParameters());\n    console.log(await causalNetParameters.saveParams('save0'));\n    console.log(await causalNetParameters.getSavedParamList());\n    console.log(await causalNetParameters.loadParams('save0'));\n})();\n```\n\n[Run code](./asset/examples/parameters.babel.js)\n\n### CausalNetRunner\n\nThis CausalNetRunner class provide a standard net excecutor which is provided pipeline instance at **LayerRunner** attribute.\n\n\n```javascript\nimport { causalNetParameters, causalNetLayers, causalNetRunner } from 'causal-net.layer';\nimport { causalNetCore } from 'causal-net.core';\n\n(async ()=>{\n    const T = causalNetCore.CoreTensor;\n\n    const Net = { \n                    Parameters: { Predict: null, Encode: null, Decode: null },\n                    Layers: { \n                        Predict: [  causalNetLayers.dense(4, 3), \n                                    causalNetLayers.dense(3, 2)], \n                        Encode: [ causalNetLayers.dense(4, 2) ], \n                        Decode: [ causalNetLayers.dense(4, 2) ] \n                    }\n                };\n    console.log(causalNetParameters.setOrInitParams(Net.Layers, Net.Parameters));\n    causalNetRunner.NetLayers = Net.Layers;\n    causalNetRunner.NetParameters = causalNetParameters;\n    let predictLayer = causalNetRunner.run(Net.Layers.Predict, T.tensor([[1,2,3,4]]), \n                            causalNetParameters.PredictParameters);\n    predictLayer.print();\n    const PredictRunner = causalNetRunner.Predictor;\n    console.log(PredictRunner);\n    predictLayer = PredictRunner(T.tensor([[1,2,3,4]]));\n    predictLayer.print();\n    let encodeLayer = causalNetRunner.run(Net.Layers.Encode, T.tensor([[1,2,3,4]]), \n                            causalNetParameters.EncodeParameters);\n    encodeLayer.print();\n    const EncodeRunner = causalNetRunner.Encoder;\n    encodeLayer = EncodeRunner( T.tensor([[1,2,3,4]]) );\n    encodeLayer.print();\n    let decodeLayer = causalNetRunner.run(Net.Layers.Decode, T.tensor([[1,2,3,4]]), \n                            causalNetParameters.DecodeParameters);\n    decodeLayer.print();\n    const DecodeRunner = causalNetRunner.Decoder;\n    decodeLayer = DecodeRunner( T.tensor([[1,2,3,4]]) );\n    decodeLayer.print();\n})();\n\n```\n\n[Run code](./asset/examples/runner.babel.js)\n\n### LayerRunnerMixins\n\nThis mixin class provide attributes: **ParameterInitializer**, **LayerRunner**, and handle **Net** setting of pipelineConfig.\n\n\n```javascript\nimport { causalNetParameters, causalNetLayers, causalNetRunner, LayerRunnerMixins  } from 'causal-net.layer';\nimport { causalNetCore } from 'causal-net.core';\nimport { platform } from 'causal-net.utils';\nimport { Tensor } from 'causal-net.core';\nimport { termLogger } from 'causal-net.log';\nconst PipeLineConfigure = {\n    Net: { \n            Parameters: causalNetParameters.InitParameters(),\n            Layers: { \n                Predict: [  causalNetLayers.dense({inputSize:4,outputSize:2}) ], \n                Encode: [ causalNetLayers.dense({inputSize:4,outputSize:2}) ], \n                Decode: [ causalNetLayers.dense({inputSize:4,outputSize:2}) ] \n            }\n    }\n}\nclass SimplePipeline extends platform.mixWith(Tensor, [ LayerRunnerMixins ]){\n    constructor(layerRunner, logger){\n        super();\n        this.logger = logger;\n        this.LayerRunner = layerRunner;\n    }\n}\nconst T = causalNetCore.CoreTensor;\n(async ()=>{\n    let pipeline = new SimplePipeline(causalNetRunner, termLogger);\n    pipeline.setByConfig(PipeLineConfigure);\n    const { Predictor, Encoder, Decoder } = pipeline.LayerRunner;\n    console.log({ Predictor, Encoder, Decoder });   \n})().catch(err=>{\n    console.error({err});\n});\n```\n\n[Run code](./asset/examples/layerRunner.mixins.babel.js)\n\n## causal-net.log \n\nThis module provides:\n\n### TermLogger \n\nThis class is isomomorphic logger which can be accessed via **termLogger**.\n\n\n```javascript\nimport { termLogger } from 'causal-net.log';\n\ntermLogger.log('this is text');\ntermLogger.log({'name':'this is text'});\n\ntermLogger.log({'father':{'name':'this is text','alias':'this is another text'}});\ntermLogger.log({'father':{'name':{sub:'this is text'},'alias':'this is another text'}});\ntermLogger.log({'array':[0,1,2,3,4]});\ntermLogger.log({'array':[{a:0}, {b:1}, {c:2},  {d:4},  {e:6}]});\n\ntermLogger.Level = 'debug';\nconsole.log(termLogger.Level);\ntermLogger.log({'not to show': true});\ntermLogger.Level = 'log';\nconsole.log(termLogger.Level);\n\ntermLogger.progressBegin(5);\nfor(let i of [1,2,3,4,5]){\n    termLogger.progressUpdate({current: i});\n}\ntermLogger.progressEnd();\n\ntermLogger.groupBegin('group A');\ntermLogger.groupBegin('group B');\ntermLogger.groupBegin('group C');\ntermLogger.groupEnd();\ntermLogger.groupEnd();\ntermLogger.groupEnd();\n\n\n```\n\n[Run code](./asset/examples/log.babel.js)\n\nUsing builtin plot (vivid)\n\n```javascript\nimport { termLogger, vivid } from 'causal-net.log';\n(async ()=>{\n    termLogger.connect();\n    termLogger.groupBegin('this is log');\n    termLogger.log('this is log');\n    let plotData = {\n                type: 'scatter',\n                data: {\n                    'X': [[0,0],[1,0],[0,1]],\n                    'Y': [[-1,-1],[-1,0],[0,-1]],\n                }, \n                'xRange': [-2,2],\n                'yRange': [-2,2],\n                'xLabel': 'may be x',\n                'yLabel': 'y unit',\n                'title': 'test', \n                style: { \"body\": {\"font\": \"11px\"} } };\n    let plotId = termLogger.plot(plotData);\n    await termLogger.show({plotId});\n    const makeImageData = (offset, width=28, height=28)=>{\n        let imageData = [];\n        for (var x=0; x<width; x++) {\n            for (var y=0; y<height; y++) {\n                var pixelindex = (y * width + x) * 4;\n                // Generate a xor pattern with some random noise\n                var red = ((x+offset) % 256) ^ ((y+offset) % 256);\n                var green = ((2*x+offset) % 256) ^ ((2*y+offset) % 256);\n                var blue = 50 + Math.floor(Math.random()*100);\n                // Rotate the colors\n                blue = (blue + offset) % 256;\n                // Set the pixel data\n                imageData[pixelindex] = red;     // Red\n                imageData[pixelindex+1] = green; // Green\n                imageData[pixelindex+2] = blue;  // Blue\n                imageData[pixelindex+3] = 255;   // Alpha\n            }\n        }\n        return imageData;\n    };\n    let data = makeImageData(0);\n    plotId = termLogger.plot({type: 'png', data, width:28, height:28, title:'test2'});\n    await termLogger.show({plotId});\n    \n    plotData = {\n        type: 'line',\n        data: {\n            'X': [1,2,4,6],\n            'y': [3,4,5,6]\n        }, \n        'xRange': [-2,2],\n        'yRange': [-2,2],\n        'xLabel': 'x unit',\n        'yLabel': 'y unit',\n        'title': 'test3', \n        style: { \"body\": {\"font\": \"11px\"} } };\n    plotId = termLogger.plot(plotData);\n    await termLogger.show({plotId});\n    termLogger.groupEnd('this is log');\n})();\n```\n\n[Run code](./asset/examples/plot.babel.js)\n\n### Vivid \n\nThis class is provide common used plots which can be accessed via **vivid**.\n\nLine chart\n\n```javascript\nimport { vivid } from 'causal-net.log';\n(async ()=>{\n    let plotData = {\n        type: 'line',\n        data: {\n            'X': [1,2,4,6],\n            'y': [3,4,5,6]\n        }, \n        'xRange': [-2,2],\n        'yRange': [-2,2],\n        'xLabel': 'x unit',\n        'yLabel': 'y unit',\n        'title': 'test3', \n        style: { \"body\": {\"font\": \"11px\"} } };\n    let plotId = vivid.line(plotData);\n    await vivid.show({plotId});\n    termLogger.groupEnd('this is log');\n})();\n```\n\n[Run code](./asset/examples/vivid.line.babel.js)\n\nScatter chart\n\n```javascript\nimport { vivid } from 'causal-net.log';\n(async ()=>{\n    let plotData = {\n                type: 'scatter',\n                data: {\n                    'X': [[0,0],[1,0],[0,1]],\n                    'Y': [[-1,-1],[-1,0],[0,-1]],\n                }, \n                'xRange': [-2,2],\n                'yRange': [-2,2],\n                'xLabel': 'may be x',\n                'yLabel': 'y unit',\n                'title': 'test', \n                style: { \"body\": {\"font\": \"11px\"} } };\n    let plotId = vivid.scatter(plotData);\n    await vivid.show({plotId});\n})();\n```\n\n[Run code](./asset/examples/vivid.scatter.babel.js)\n\nPNG \n\n```javascript\nimport { vivid } from 'causal-net.log';\n(async ()=>{\n    const makeImageData = (offset, width=28, height=28)=>{\n        let imageData = [];\n        for (var x=0; x<width; x++) {\n            for (var y=0; y<height; y++) {\n                var pixelindex = (y * width + x) * 4;\n                // Generate a xor pattern with some random noise\n                var red = ((x+offset) % 256) ^ ((y+offset) % 256);\n                var green = ((2*x+offset) % 256) ^ ((2*y+offset) % 256);\n                var blue = 50 + Math.floor(Math.random()*100);\n                // Rotate the colors\n                blue = (blue + offset) % 256;\n                // Set the pixel data\n                imageData[pixelindex] = red;     // Red\n                imageData[pixelindex+1] = green; // Green\n                imageData[pixelindex+2] = blue;  // Blue\n                imageData[pixelindex+3] = 255;   // Alpha\n            }\n        }\n        return imageData;\n    };\n    let data = makeImageData(0);\n    let plotId = vivid.png({type: 'png', data, width:28, height:28, title:'test2'});\n    await vivid.show({plotId});\n})();\n```\n\n[Run code](./asset/examples/vivid.png.babel.js)\n\n### LoggerMixins\n\nThis Mixins class provides attributes: **Logger**.\n\n\n```javascript\nimport { LoggerMixins, termLogger, BaseLogger } from 'causal-net.log';\nimport { platform } from 'causal-net.utils';\nimport { Tensor } from 'causal-net.core';\n\nclass SimplePipeline extends platform.mixWith(Tensor, [LoggerMixins]){\n    constructor(){\n        super();\n        this.Logger = termLogger;\n    }\n}\nlet pipeline = new SimplePipeline();\nconsole.log(pipeline.Logger instanceof BaseLogger);\n```\n\n[Run code](./asset/examples/logger.mixins.babel.js)\n\n## causal-net.preprocessing \n\nThis module provide  standard preprocessing instances for image/text data and preprocessing mixins for pipeline\n\n### nlpPreprocessing\nProvide methods for text processing: tokenize, filter, count word frequency.\n\n### imagePreprocessing \nProvide method for image processing: split, transform color\n\n### PreprocessingMixins\nMixins for mix with Pipeline class or dataset class.\n\n## causal-net.representation\n\nThis module provides:\n\n### CausalNetEmbedding \n\nThis class provide standard implements for text to vecs transformation. Which can be accessed via causalNetEmbedding\n\nNode\n\n```javascript\nimport { causalNetEmbedding } from 'causal-net.representation';\nimport { termLogger } from 'causal-net.log';\n(async ()=>{\n    const configLink = '../../datasets/WordVec_EN/';\n    await causalNetEmbedding.connect(configLink, true);\n    //first time transform will find on storage cache\n    let vecs = await causalNetEmbedding.transform(['this', 'is', 'test']);\n    for(let vec of vecs){\n        termLogger.log({ vec });\n    }\n    //second time transform will find on memory cache\n    vecs = await causalNetEmbedding.transform(['this', 'is', 'test']);\n    for(let vec of vecs){\n        termLogger.log({ vec });\n    }\n    //return the tensor representing sentence\n    let sentVec = await causalNetEmbedding.sentenceEncode([ ['this', 'is', 'test'] ]);\n    sentVec.print();\n})().catch(err=>{\n    console.error(err);\n});\n```\n\n[Run code](./asset/examples/causalNetEmbedding.babel.node.js)\n\n### UniversalEmbedding\n\nThis class provide standard implements for text to vecs transformation into single vector based on [use](https://github.com/tensorflow/tfjs-models/tree/master/universal-sentence-encoder) which can be accesed via universalEmbedding\n\n\n```javascript\nimport { universalEmbedding } from 'causal-net.representation';\nimport { termLogger } from 'causal-net.log';\nimport { tokenizer } from 'causal-net.preprocessing';\n(async ()=>{\n    const BaseModelServer = 'http://0.0.0.0:8080/models/';\n    termLogger.groupBegin('load model');\n    await tokenizer.connect(BaseModelServer + 'use/vocab.json');\n    await universalEmbedding.connect(BaseModelServer + '/use/tensorflowjs_model.json');\n    termLogger.log('load finish');\n    const asEncode = true;\n    let tokens = [tokenizer.tokenize('dog', asEncode),\n                  tokenizer.tokenize('cat', asEncode)]; \n    termLogger.log({tokens});\n    let sentVec = await universalEmbedding.sentenceEncode(tokens);\n    sentVec.print();\n    let score = await universalEmbedding.encodeMatching(tokens[0], tokens[1]);\n    score.print();\n    termLogger.groupEnd();\n})().catch(console.err);        \n```\n\n[Run code](./asset/examples/universalEmbedding.babel.js)\n\n### RepresentationMixins\n\nThis mixin class provides attributes: **Prepresentation**.\n\n\n```javascript\nimport { RepresentationMixins, causalNetEmbedding } from 'causal-net.representation';\nimport { platform } from 'causal-net.utils';\nimport { Tensor } from 'causal-net.core';\nconst PipeLineConfigure = {\n    Representation: {\n        Embedding: causalNetEmbedding,\n        EmbeddingConfig: '../../datasets/WordVec_EN/',\n    }\n}\nclass SimplePipeline extends platform.mixWith(Tensor, [RepresentationMixins]){\n    constructor(configure){\n        super();\n        this.setRepresentationByConfig(configure);\n    }\n}\nlet pipeline = new SimplePipeline(PipeLineConfigure);\npipeline.connect();\nconsole.log(pipeline.Representation);\n```\n\n[Run code](./asset/examples/embeddingMixins.babel.node.js)\n\n\n## causal-net.sampling \n\nThis causal-net.sampling is a sub-module for [causality](https://red-gold.github.io/causality-docs/) project.\nThis module provide sampling instance and sampling mixins\n\n### CausalNetSampling \n\nThis class provide common used sampling methods which can be accessed via **causalNetSampling** instance.\n\n\n```javascript\nimport { causalNetSampling } from 'causal-net.sampling';\nimport {termLogger as Logger} from 'causal-net.log';\nlet numSamples = 4;\nlet idSize = 10;//id list: [0,1,2,3,4,5,6,7,8,9]\nLogger.log(causalNetSampling.subSampling(numSamples, idSize));\n\nnumSamples = 4;\nlet positiveSampleId = [0, 1];\n//ids: [0, 1, 2, 3];\nlet probIds = [0.9, 0.9, 0.3, 0.7];\nlet samples = causalNetSampling.negSampling(numSamples, positiveSampleId, probIds);\ntermLogger.log({ samples });\n```\n\n[Run code](./asset/examples/causalNetSampling.babel.js)\n\n### SamplingMixins\n\nThis mixin class provide attributes: **Sampling**.\n\n\n```javascript\nimport { SamplingMixins, causalNetSampling } from 'causal-net.sampling';\nimport { Platform } from 'causal-net.utils';\nimport { Tensor, Function } from 'causal-net.core';\nconsole.log(causalNetSampling instanceof Function);\nclass SimplePipeline extends Platform.mixWith(Tensor, [SamplingMixins]){\n    constructor(){\n        super();\n        this.Sampling = causalNetSampling;\n    }\n}\nlet pipeline = new SimplePipeline();\nconsole.log(pipeline.Sampling);\n```\n\n[Run code](./asset/examples/sampling.mixins.babel.js)\n\n## causal-net.models \n\n### CausalNetModels\n\nThis class provides common used models which can be accessed via **causalNetModels** instance.\n\n- Classification models\n\n```javascript\nimport { SingleLabelClassification } from 'causal-net.models';\nimport { causalNetCore } from 'causal-net.core';\nlet model = new SingleLabelClassification(2);\nlet T = causalNetCore.CoreTensor;\nlet inputs = T.tensor([[0.1, 0.2]], [1, 2], 'float32');\nlet labels = T.tensor([[0, 1]], [1, 2], 'float32');\nmodel.LayerRunner = { Predictor: (input)=>input};\nmodel.Fit(inputs).print();\nmodel.Loss(inputs, labels).print();\nmodel.Predict(inputs).print();\nmodel.OneHotPredict(inputs).print();\n\n```\n\n[Run code](./asset/examples/singleLabelClassification.babel.js)\n\n### ModelMixins\n\nThis mixin class provides attributes: **Model**, **LossModel**, **FitModel**, **OneHotPredictModel**, **PredictModel** and handle **Model** setting of pipelineConfig.Net.\n\n\n```javascript\nimport { causalNetModels, ModelMixins } from 'causal-net.models';\nimport { causalNetParameters, causalNetLayers, causalNetRunner, LayerRunnerMixins } from 'causal-net.layer';\nimport { causalNetCore } from 'causal-net.core';\nimport { platform } from 'causal-net.utils';\nimport { Tensor } from 'causal-net.core';\nimport { termLogger, LoggerMixins } from 'causal-net.log';\n\nclass SimplePipeline extends platform.mixWith(Tensor, [LayerRunnerMixins, ModelMixins, LoggerMixins]){\n    constructor(netRunner, logger){\n        super();\n        this.Logger = logger;\n        this.LayerRunner = netRunner;\n    }\n}\n                  \n    \nconst T = causalNetCore.CoreTensor;\n(async ()=>{\n    let convLayer = causalNetLayers.convolution({kernelSize:[2,2], filters:[1,2], flatten:true} );\n    let denseLayer = causalNetLayers.dense({inputSize:24,outputSize:2});\n    const PipeLineConfigure = {\n        Net: { \n                Parameters: causalNetParameters.InitParameters(),\n                Layers: { \n                    Predict: [  convLayer, denseLayer], \n                    Encode: [ causalNetLayers.dense({inputSize:24,outputSize:2}) ], \n                    Decode: [ causalNetLayers.dense({inputSize:24,outputSize:2}) ] \n                },\n                Model: causalNetModels.classification(2)\n        }\n    };\n\n    let pipeline = new SimplePipeline( causalNetRunner, termLogger);\n    pipeline.setByConfig(PipeLineConfigure);\n    \n    let inputTensor = T.tensor([  [1,2,3,4],\n                                  [1,2,3,4],\n                                  [1,2,3,4] ]).reshape([1,3,4,1]);\n    let modelOneHotPredict = pipeline.OneHotPredictModel(inputTensor);\n    modelOneHotPredict.print();\n    let fit = pipeline.FitModel(inputTensor);\n    fit.print();\n    let modelLoss = pipeline.LossModel(inputTensor, \n                             T.tensor([[0, 1]]).asType('float32'));\n    modelLoss.print();\n})().catch(err=>{\n    console.error({err});\n});\n```\n\n[Run code](./asset/examples/model.mixins.babel.js)\n\n\n\n\n## causal-net.optimizers\nThis causal-net.optimizer provides: \n\n### CausalNetSGDOptimizer\n\nThis class provides optimizing methods which can be accessed via **causalNetSGDOptimizer** instance.\n\n\n```javascript\nimport { causalNetCore } from \"causal-net.core\";\nimport { causalNetSGDOptimizer } from 'causal-net.optimizers';\n\nvar adam = causalNetSGDOptimizer.adam({learningRate: 0.01});\n\nconst T = causalNetCore.CoreTensor;\nvar a = T.variable(T.tensor([1,2,3,4]).reshape([2,2])); \nvar b = T.tensor([2,3,4,5]).reshape([2,2]);\nconst FitFn = ()=>{\n    return a.mul(b).mean();\n};\nconsole.log( adam.fit(FitFn) );\na.print();\nb.print();\n```\n\n[Run code](./asset/examples/causalNetSGDOptimizers.babel.js)\n\n### TrainerMixins\n\nThis mixin class provides attributes: **Optimizer**, **Trainer**, **TrainDataGenerator**, methods **train**, handle **Optimizer** setting of pipelineConfig.Net and **TrainDataGenerator** setting of pipelineConfig.Dataset.\n\n```javascript\nimport { causalNetSGDOptimizer, TrainerMixins, EvaluatorMixins } from 'causal-net.optimizers';\nimport { causalNetModels, ModelMixins } from 'causal-net.models';\nimport { causalNetParameters, causalNetLayers, causalNetRunner, LayerRunnerMixins } from 'causal-net.layer';\nimport { causalNetCore, Functor } from 'causal-net.core';\nimport { platform } from 'causal-net.utils';\nimport { Tensor } from 'causal-net.core';\nimport { termLogger, LoggerMixins } from 'causal-net.log';\n\nclass SimplePipeline extends platform.mixWith(Tensor, [ \n        LayerRunnerMixins, \n        ModelMixins, \n        EvaluatorMixins,\n        LoggerMixins,\n        TrainerMixins]){\n    constructor( netRunner, functor, logger){\n        super();\n        this.F = functor;\n        this.LayerRunner = netRunner;\n        this.Logger = logger;\n    }\n}\nconst T = causalNetCore.CoreTensor;\nconst R = causalNetCore.CoreFunctor;\nconst F = new Functor();\nconst DummyData = (batchSize)=>{\n    let samples = [  [[0], [1], [2], [3]], \n                     [[0], [1], [2], [3]], \n                     [[0], [1], [2], [3]] ];\n    let labels  = [ [0,1] ];\n    return [{samples, labels}];\n}\nconsole.log(DummyData(1));\n(async ()=>{\n    let convLayer = causalNetLayers.convolution({ kernelSize: [2, 2], \n                                                  filters: [1, 2], \n                                                  flatten: true } );\n    let denseLayer = causalNetLayers.dense({ inputSize: 8, outputSize: 2 });\n    const PipeLineConfigure = {\n        Dataset: {\n            TrainDataGenerator: DummyData,\n            TestDataGenerator: DummyData,\n        },\n        Net: { \n                Parameters: causalNetParameters.InitParameters(),\n                Layers: { Predict: [ convLayer, denseLayer ] },\n                Model: causalNetModels.classification(2),\n                Optimizer: causalNetSGDOptimizer.adam({learningRate: 0.01})\n        }\n    };\n\n    let pipeline = new SimplePipeline( causalNetRunner, F, termLogger);\n    pipeline.setByConfig(PipeLineConfigure);\n    const NumEpochs = 10, BatchSize = 1;\n    console.log(await pipeline.train(NumEpochs, BatchSize));\n    console.log(await pipeline.test());\n})();\n\n\n\n```\n\n[Run code](./asset/examples/trainer.mixins.babel.js)\n\n### EvaluatorMixins\n\nThis mixin class provides methods: **test** and handle **TestDataGenerator** setting of pipelineConfig.Dataset.\n\n## causal-net.memcache \n\n### memDownCache\n\nThis class a implementation for memory caching on top of [memdown](https://www.npmjs.com/package/memdown) which can be accessed via **memDownCache**.\n\n\n```javascript\nimport {memDownCache} from 'causal-net.memcache';\nimport {termLogger} from 'causal-net.log';\n\n(async ()=>{\n    await memDownCache.setItem(123, '1223adfa');\n    termLogger.log({getItem: await memDownCache.getItem(123)});\n})();\n\n```\n\n[Run code](./asset/examples/memDownCache.babel.js)\n\n### MemCacheMixins\n\nThis mixins class provides attributes: **MemCache**.\n\n\n```javascript\nimport {memDownCache, MemCacheMixins} from 'causal-net.memcache';\nimport {termLogger} from 'causal-net.log';\n\nimport { platform } from 'causal-net.utils';\nimport { Tensor, Store } from 'causal-net.core';\n\nclass SimplePipeline extends platform.mixWith(Tensor, [MemCacheMixins]){\n    constructor(){\n        super();\n        this.MemCache = memDownCache;\n    }\n}\nlet pipeline = new SimplePipeline();\ntermLogger.log(pipeline.MemCache instanceof Store);\n```\n\n[Run code](./asset/examples/memCache.mixins.babel.js)\n\n\n## causal-net.storage \n\nThis module provides:\n\n### indexDBStorage \n\nThe isomorphic high performance key-value storage based on indexDB.\n\n\n```javascript\nimport { indexDBStorage } from 'causal-net.storage';\n(async ()=>{\n    await indexDBStorage.writeFile('/temp','12345');\n    let content  = await indexDBStorage.readFile('/temp');\n    console.log({content});\n    \n    //get file list\n    let listFiles = await indexDBStorage.getFileList('/');\n    console.log({listFiles});\n    \n    //fetch png image and save pixel data into file\n    const url = 'https://avatars3.githubusercontent.com/u/43268620?s=200&v=4';\n    await indexDBStorage.fetchPNGFile(url, 'icon');\n    const pixelArray = await indexDBStorage.readPNGFile('icon');\n    console.log({ pixelArray });\n\n    let ops = [\n        { type: 'put', key: 'temp', value: '123445' },\n        { type: 'del', key: 'temp' }];\n    //batch does not support 'get' type\n    let batchResult = await indexDBStorage.batch(ops);\n    console.log({batchResult});\n})().catch(err=>{\n    console.error(err);\n});\n\n```\n\n[Run code](./asset/examples/storage.babel.js)\n\n### StorageMixins\n\nThis mixins class provides **Storage** attribute.\n\n\n```javascript\nimport { StorageMixins, indexDBStorage } from 'causal-net.storage';\nimport { platform } from 'causal-net.utils';\nimport { Tensor, Store } from 'causal-net.core';\n\nclass SimplePipeline extends platform.mixWith(Tensor, [StorageMixins]){\n    constructor(storage){\n        super();\n        this.Storage = storage;\n    }\n}\nlet pipeline = new SimplePipeline(indexDBStorage);\nconsole.log(pipeline.Storage instanceof Store);\n```\n\n[Run code](./asset/examples/storage.mixins.babel.js)\n\n\n## causal-net.utils  \n\nThis module provides:\n\n### Platform \n\nThis class provides enhanced isomorphic mixins with corresponding platform (node|web) which can be access via **platform**.\n\n```javascript\nimport { assert } from 'causal-net.utils';\nassert.seemMatchSample([2,2,3], [1,2,3], 'validate sample');\nassert.seemMatchSample('sample text', 'pattern text', 'validate sample');\nassert.seemMatchSample( { 'text' : 'pattern text 1', 'number' : 1123 }, \n                        { 'text' : 'pattern text', 'number' : 1123 } , 'validate sample');\ntry{\n    assert.seemMatchSample(['2',2,3], [1,2,3], 'validate sample');\n}\ncatch(err){\n    //error due to mismatch schema\n    console.log(err.message);\n};\nclass A{};\nlet a = new A();\nassert.beInstanceOf(a, A);\ntry{\n    assert.beInstanceOf('1', A);\n}\ncatch(err){\n    console.log(err.message);\n}\n\n```\n\n[Run code](./asset/examples/assert.babel.js)\n\n### Fetch \n\nThis class provides isomorphic fetch which can be accessed via **fetch**.\n\n\n```javascript\nimport {fetch, Stream, PNGUtils} from 'causal-net.utils';\n(async ()=>{\n    let link = 'https://avatars3.githubusercontent.com/u/43268620?s=200&v=4';\n    let content = await fetch.fetchData(link);\n    console.log({'content length': content.length});\n});\n\n\n```\n\n[Run code](./asset/examples/fetch.babel.js)\n\n### PNG \n\nThis class provides isomorphic PNG parser which can be accessed via **pngUtils**.\n\nWeb/Node:\n\n```javascript\nimport { pngUtils } from 'causal-net.utils';\n(async ()=>{\n    const link = 'https://avatars3.githubusercontent.com/u/43268620?s=200&v=4';\n    let fetchedData = await pngUtils.fetchPNG(link);\n    console.log(fetchedData.length);\n})();\n```\n\n[Run code](./asset/examples/png.babel.js)\n\nNode:\n\n```javascript\nimport { pngUtils } from 'causal-net.utils';\n(async ()=>{\n    let data = await pngUtils.readPNG('../../datasets/icon.png');\n    console.log(data.length);\n    pngUtils.writePNG(data, [200, 200, 4], './out.png');\n})();\n\n```\n\n[Run code](./asset/examples/png.babel.node.js)\n\n### CSV \n\nThis class provides isomorphic CSV parser which can be accessed via **csvUtils**.\n\nNode:\n\n```javascript\nimport { csvUtils } from 'causal-net.utils';\n(async ()=>{\n    let data = await csvUtils.readCSV('./credict.csv');\n    console.log(data);\n    let headers = Object.keys(data[0]);\n    await csvUtils.writeCSV(headers, data, './output.csv');\n    data = await csvUtils.readCSV('./output.csv');\n    console.log(data);\n    // console.log(await csvUtils.chunkCSV('./output.csv',3,'./chunk-{}.csv'));\n    // const csvlink = 'https://media.githubusercontent.com/media/red-gold/causality/master/datasets/credict.csv';\n    // data = await csvUtils.fetchCSV(csvlink);\n    // console.log(data);\n    // data = [{'a':'a','text':'\"this is text\\n,;\"'}];\n    // await csvUtils.writeCSV(['a','text'], data, './output.csv');\n    // console.log(await csvUtils.readCSV('./output.csv'));\n})();\n\n```\n\n[Run code](./asset/examples/csv.babel.node.js)\n\n### Stream \n\nThis class provides isomorphic Stream with Readable, Writeable, Duplex which can be accessed via **stream**.\n\n\n```javascript\nimport { stream } from 'causal-net.utils';\n\nlet reader = stream.makeReadable();\n    \nconst TranformFn = (chunkData, chunkEncoding, afterTransformFn) =>{\n    chunkData.x = (chunkData.x+1.5);\n    let event = null;\n    afterTransformFn(event, chunkData);\n};\nlet transformer = stream.makeTransform(TranformFn);\n    \nconst WriteFn = (chunkData, chunkEncoding, callback) =>{\n    console.log({chunkData});\n    callback();\n};\nlet writer = stream.makeWritable(WriteFn);\n    \nreader.pipe(transformer).pipe(writer);\n//write random int for every 100 ms    \nsetInterval(() => {\n    reader.push({ x: Math.random() });\n}, 100);\n\n```\n\n[Run code](./asset/examples/stream.babel.js)\n\n### Assert \n\nThis class provides enhanced isomorphic assert with schema learnt from example which can be accessed via **assert**.\n\n\n```javascript\nimport { assert } from 'causal-net.utils';\nassert.seemMatchSample([2,2,3], [1,2,3], 'validate sample');\nassert.seemMatchSample('sample text', 'pattern text', 'validate sample');\nassert.seemMatchSample( { 'text' : 'pattern text 1', 'number' : 1123 }, \n                        { 'text' : 'pattern text', 'number' : 1123 } , 'validate sample');\ntry{\n    assert.seemMatchSample(['2',2,3], [1,2,3], 'validate sample');\n}\ncatch(err){\n    //error due to mismatch schema\n    console.log(err.message);\n};\nclass A{};\nlet a = new A();\nassert.beInstanceOf(a, A);\ntry{\n    assert.beInstanceOf('1', A);\n}\ncatch(err){\n    console.log(err.message);\n}\n\n```\n\n[Run code](./asset/examples/assert.babel.js)\n\n\n\n",
     "static": true,
     "access": "public"
   },

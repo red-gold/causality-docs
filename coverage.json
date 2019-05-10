@@ -208,13 +208,14 @@
       ]
     },
     "packages/causality-layer/src/CausalNetLayers/causalNetLayers.js": {
-      "expectCount": 5,
+      "expectCount": 6,
       "actualCount": 1,
       "undocumentLines": [
         15,
         17,
         19,
-        27
+        26,
+        34
       ]
     },
     "packages/causality-layer/src/CausalNetLayers/convolution.mixins.js": {
@@ -298,7 +299,7 @@
       ]
     },
     "packages/causality-layer/src/CausalNetRunner/runner.mixins.js": {
-      "expectCount": 15,
+      "expectCount": 14,
       "actualCount": 1,
       "undocumentLines": [
         7,
@@ -307,30 +308,29 @@
         11,
         13,
         19,
-        25,
-        42,
+        27,
+        31,
         46,
-        61,
-        66,
-        80,
-        88,
-        96
+        51,
+        65,
+        73,
+        81
       ]
     },
     "packages/causality-layer/src/layerRunner.mixins.js": {
       "expectCount": 11,
       "actualCount": 1,
       "undocumentLines": [
-        41,
-        45,
-        50,
-        54,
+        40,
+        44,
+        49,
+        53,
+        60,
         61,
-        62,
-        66,
+        65,
+        78,
         79,
-        80,
-        82
+        81
       ]
     },
     "packages/causality-log/src/Vivid/line.chart.mixins.js": {
