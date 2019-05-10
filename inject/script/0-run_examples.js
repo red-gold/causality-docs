@@ -10,12 +10,13 @@ $.when( $.ready ).then(function() {
             fetch(Link).then(res=>res.text().then(text=>{
                 const transpileCode = transpiler(text);
                 console.log({res: text, transpile: transpileCode});
-                const Run = new Function(transpileCode);
                 //auto connect here
                 const demo_name = $(this).attr('Name');
-                console.log({demo_name});
                 termLogger.connect(demo_name);
-                Run();
+                (()=>{
+                    const Run = new Function(transpileCode);
+                    Run();
+                })();
             }));
         });
         const Link = $(this).attr("href");

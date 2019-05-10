@@ -3,25 +3,28 @@ import { causalNetParameters, causalNetLayers, causalNetRunner, LayerRunnerMixin
 import { causalNetCore } from 'causal-net.core';
 import { platform } from 'causal-net.utils';
 import { Tensor } from 'causal-net.core';
-import { termLogger } from 'causal-net.log';
+import { termLogger, LoggerMixins } from 'causal-net.log';
 
-class SimplePipeline extends platform.mixWith(Tensor, [LayerRunnerMixins, ModelMixins]){
+class SimplePipeline extends platform.mixWith(Tensor, [LayerRunnerMixins, ModelMixins, LoggerMixins]){
     constructor(netRunner, logger){
         super();
-        this.logger = logger;
+        this.Logger = logger;
         this.LayerRunner = netRunner;
     }
 }
+                  
+    
 const T = causalNetCore.CoreTensor;
 (async ()=>{
+    let convLayer = causalNetLayers.convolution({kernelSize:[2,2], filters:[1,2], flatten:true} );
+    let denseLayer = causalNetLayers.dense({inputSize:24,outputSize:2});
     const PipeLineConfigure = {
         Net: { 
                 Parameters: causalNetParameters.InitParameters(),
                 Layers: { 
-                    Predict: [  causalNetLayers.dense(4, 3), 
-                                causalNetLayers.dense(3, 2)], 
-                    Encode: [ causalNetLayers.dense(4, 2) ], 
-                    Decode: [ causalNetLayers.dense(4, 2) ] 
+                    Predict: [  convLayer, denseLayer], 
+                    Encode: [ causalNetLayers.dense({inputSize:24,outputSize:2}) ], 
+                    Decode: [ causalNetLayers.dense({inputSize:24,outputSize:2}) ] 
                 },
                 Model: causalNetModels.classification(2)
         }
@@ -29,12 +32,10 @@ const T = causalNetCore.CoreTensor;
 
     let pipeline = new SimplePipeline( causalNetRunner, termLogger);
     pipeline.setByConfig(PipeLineConfigure);
-    const { Predictor } = pipeline.LayerRunner;
-    let predictInfer = Predictor(T.tensor([[1,2,3,4]]));
-    predictInfer.print();
-    predictInfer = pipeline.PredictModel(T.tensor([[1,2,3,4]]));
-    predictInfer.print();
-    let inputTensor = T.tensor([[1,2,3,4]]).asType('float32');
+    
+    let inputTensor = T.tensor([  [1,2,3,4],
+                                  [1,2,3,4],
+                                  [1,2,3,4] ]).reshape([1,3,4,1]);
     let modelOneHotPredict = pipeline.OneHotPredictModel(inputTensor);
     modelOneHotPredict.print();
     let fit = pipeline.FitModel(inputTensor);

@@ -1,7 +1,7 @@
 {
-  "coverage": "25.71%",
-  "expectCount": 665,
-  "actualCount": 171,
+  "coverage": "25.78%",
+  "expectCount": 667,
+  "actualCount": 172,
   "files": {
     "packages/causality/src/Ensemble/ensembleDeployment.mixins.js": {
       "expectCount": 4,
@@ -211,10 +211,17 @@
       "expectCount": 5,
       "actualCount": 1,
       "undocumentLines": [
-        14,
-        16,
-        18,
-        26
+        15,
+        17,
+        19,
+        27
+      ]
+    },
+    "packages/causality-layer/src/CausalNetLayers/convolution.mixins.js": {
+      "expectCount": 2,
+      "actualCount": 1,
+      "undocumentLines": [
+        1
       ]
     },
     "packages/causality-layer/src/CausalNetLayers/dense.mixins.js": {
@@ -635,26 +642,26 @@
       "expectCount": 6,
       "actualCount": 1,
       "undocumentLines": [
-        92,
-        98,
-        99,
-        102,
-        121
+        70,
+        76,
+        77,
+        80,
+        99
       ]
     },
     "packages/causality-optimizers/src/trainer.mixins.js": {
       "expectCount": 10,
       "actualCount": 1,
       "undocumentLines": [
+        71,
+        85,
         93,
+        94,
+        97,
+        103,
+        104,
         107,
-        115,
-        116,
-        119,
-        125,
-        126,
-        129,
-        155
+        133
       ]
     },
     "packages/causality-preprocessing/src/Image/boxScaling.js": {

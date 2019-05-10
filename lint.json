@@ -213,6 +213,108 @@
     ]
   },
   {
+    "name": "ConvolutionMixins#convolution",
+    "filePath": "packages/causality-layer/src/CausalNetLayers/convolution.mixins.js",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "line": "    /**"
+      },
+      {
+        "lineNumber": 2,
+        "line": "     * Convolutional layer"
+      },
+      {
+        "lineNumber": 3,
+        "line": "     * @param {Number} inputSize - size of net input"
+      },
+      {
+        "lineNumber": 4,
+        "line": "     * @param {Array} kernelSize - size of net output"
+      },
+      {
+        "lineNumber": 5,
+        "line": "     * @param {String|Function} activator - activator function can be customed or get from built-in by string name"
+      },
+      {
+        "lineNumber": 6,
+        "line": "     * @param {String} name - layer name, default by null"
+      },
+      {
+        "lineNumber": 7,
+        "line": "     * @returns { Object } layer"
+      },
+      {
+        "lineNumber": 8,
+        "line": "     */"
+      },
+      {
+        "lineNumber": 9,
+        "line": "    convolution({ kernelSize, filters, "
+      }
+    ],
+    "codeParams": [
+      "*"
+    ],
+    "docParams": [
+      "inputSize",
+      "kernelSize",
+      "activator",
+      "name"
+    ]
+  },
+  {
+    "name": "DenseLayerMixins#dense",
+    "filePath": "packages/causality-layer/src/CausalNetLayers/dense.mixins.js",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "line": "    /**"
+      },
+      {
+        "lineNumber": 2,
+        "line": "     * Simple dense layer"
+      },
+      {
+        "lineNumber": 3,
+        "line": "     * @param {Number} inputSize - size of net input"
+      },
+      {
+        "lineNumber": 4,
+        "line": "     * @param {Number} outputSize - size of net output"
+      },
+      {
+        "lineNumber": 5,
+        "line": "     * @param {String|Function} activator - activator function can be customed or get from built-in by string name"
+      },
+      {
+        "lineNumber": 6,
+        "line": "     * @param {String} name - layer name, default by null"
+      },
+      {
+        "lineNumber": 7,
+        "line": "     * @returns { Object } layer"
+      },
+      {
+        "lineNumber": 8,
+        "line": "     */"
+      },
+      {
+        "lineNumber": 9,
+        "line": "    dense({inputSize, outputSize, activator='sigmoid', name=null}){"
+      }
+    ],
+    "codeParams": [
+      "*"
+    ],
+    "docParams": [
+      "inputSize",
+      "outputSize",
+      "activator",
+      "name"
+    ]
+  },
+  {
     "name": "MemorizingMixins#write",
     "filePath": "packages/causality-memcache/src/memorizing.mixins.js",
     "lines": [

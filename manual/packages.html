@@ -363,8 +363,8 @@ console.log(DummyData(1));
 <h2 id="causal-net-layer">causal-net.layer</h2><p>This module provides:</p>
 <h3 id="causalnetlayers">CausalNetLayers</h3><p>This class provides common used layers which can be accessed via <strong>causalNetLayers</strong> instance.</p>
 <pre><code class="lang-javascript"><code class="source-code prettyprint">import { causalNetLayers } from &apos;causal-net.layer&apos;;
-let denseLayer = causalNetLayers.dense(3, 2);
-console.log({denseLayer});
+let denseLayer = causalNetLayers.dense({inputSize:3,outputSize:2});
+console.log({denseLayer: denseLayer.Config});
 </code>
 </code></pre>
 <p><a href="./manual/./asset/examples/dense.layer.js">Run code</a></p>
@@ -775,25 +775,28 @@ import { causalNetParameters, causalNetLayers, causalNetRunner, LayerRunnerMixin
 import { causalNetCore } from &apos;causal-net.core&apos;;
 import { platform } from &apos;causal-net.utils&apos;;
 import { Tensor } from &apos;causal-net.core&apos;;
-import { termLogger } from &apos;causal-net.log&apos;;
+import { termLogger, LoggerMixins } from &apos;causal-net.log&apos;;
 
-class SimplePipeline extends platform.mixWith(Tensor, [LayerRunnerMixins, ModelMixins]){
+class SimplePipeline extends platform.mixWith(Tensor, [LayerRunnerMixins, ModelMixins, LoggerMixins]){
     constructor(netRunner, logger){
         super();
-        this.logger = logger;
+        this.Logger = logger;
         this.LayerRunner = netRunner;
     }
 }
+
+
 const T = causalNetCore.CoreTensor;
 (async ()=&gt;{
+    let convLayer = causalNetLayers.convolution({kernelSize:[2,2], filters:[1,2], flatten:true} );
+    let denseLayer = causalNetLayers.dense({inputSize:24,outputSize:2});
     const PipeLineConfigure = {
         Net: { 
                 Parameters: causalNetParameters.InitParameters(),
                 Layers: { 
-                    Predict: [  causalNetLayers.dense(4, 3), 
-                                causalNetLayers.dense(3, 2)], 
-                    Encode: [ causalNetLayers.dense(4, 2) ], 
-                    Decode: [ causalNetLayers.dense(4, 2) ] 
+                    Predict: [  convLayer, denseLayer], 
+                    Encode: [ causalNetLayers.dense({inputSize:24,outputSize:2}) ], 
+                    Decode: [ causalNetLayers.dense({inputSize:24,outputSize:2}) ] 
                 },
                 Model: causalNetModels.classification(2)
         }
@@ -801,12 +804,10 @@ const T = causalNetCore.CoreTensor;
 
     let pipeline = new SimplePipeline( causalNetRunner, termLogger);
     pipeline.setByConfig(PipeLineConfigure);
-    const { Predictor } = pipeline.LayerRunner;
-    let predictInfer = Predictor(T.tensor([[1,2,3,4]]));
-    predictInfer.print();
-    predictInfer = pipeline.PredictModel(T.tensor([[1,2,3,4]]));
-    predictInfer.print();
-    let inputTensor = T.tensor([[1,2,3,4]]).asType(&apos;float32&apos;);
+
+    let inputTensor = T.tensor([  [1,2,3,4],
+                                  [1,2,3,4],
+                                  [1,2,3,4] ]).reshape([1,3,4,1]);
     let modelOneHotPredict = pipeline.OneHotPredictModel(inputTensor);
     modelOneHotPredict.print();
     let fit = pipeline.FitModel(inputTensor);
@@ -856,25 +857,25 @@ class SimplePipeline extends platform.mixWith(Tensor, [
         super();
         this.F = functor;
         this.LayerRunner = netRunner;
-        this.Log = logger;
+        this.Logger = logger;
     }
 }
 const T = causalNetCore.CoreTensor;
 const R = causalNetCore.CoreFunctor;
 const F = new Functor();
 const DummyData = (batchSize)=&gt;{
-    let samples = [ [0,1,2,3], 
-                    [0,1,2,3], 
-                    [0,1,2,3] ];
-    let labels  = [ [0,1], 
-                    [0,1], 
-                    [0,1] ];
+    let samples = [  [[0], [1], [2], [3]], 
+                     [[0], [1], [2], [3]], 
+                     [[0], [1], [2], [3]] ];
+    let labels  = [ [0,1] ];
     return [{samples, labels}];
 }
-console.log(F.range(10));
-console.log(F.enumerate([0,1,2,3,4]));
 console.log(DummyData(1));
 (async ()=&gt;{
+    let convLayer = causalNetLayers.convolution({ kernelSize: [2, 2], 
+                                                  filters: [1, 2], 
+                                                  flatten: true } );
+    let denseLayer = causalNetLayers.dense({ inputSize: 8, outputSize: 2 });
     const PipeLineConfigure = {
         Dataset: {
             TrainDataGenerator: DummyData,
@@ -882,12 +883,7 @@ console.log(DummyData(1));
         },
         Net: { 
                 Parameters: causalNetParameters.InitParameters(),
-                Layers: { 
-                    Predict: [  causalNetLayers.dense(4, 3), 
-                                causalNetLayers.dense(3, 2)], 
-                    Encode: [ causalNetLayers.dense(4, 2) ], 
-                    Decode: [ causalNetLayers.dense(4, 2) ] 
-                },
+                Layers: { Predict: [ convLayer, denseLayer ] },
                 Model: causalNetModels.classification(2),
                 Optimizer: causalNetSGDOptimizer.adam({learningRate: 0.01})
         }
@@ -895,30 +891,13 @@ console.log(DummyData(1));
 
     let pipeline = new SimplePipeline( causalNetRunner, F, termLogger);
     pipeline.setByConfig(PipeLineConfigure);
-    const { Predictor } = pipeline.LayerRunner;
-    let predictInfer = Predictor(T.tensor([[1,2,3,4]]));
-    predictInfer.print();
-    predictInfer = pipeline.PredictModel(T.tensor([[1,2,3,4]]));
-    predictInfer.print();
-
-    let modelOneHotPredict = pipeline.OneHotPredictModel(T.tensor([[1,2,3,4]]).asType(&apos;float32&apos;));
-    modelOneHotPredict.print();
-    let fit = pipeline.FitModel(T.tensor([[1,2,3,4]]).asType(&apos;float32&apos;));
-    fit.print();
-    let modelLoss = pipeline.LossModel(T.tensor([[1,2,3,4]]).asType(&apos;float32&apos;), 
-                             T.tensor([[0, 1]]).asType(&apos;float32&apos;));
-    modelLoss.print();
-    let trainLoss = pipeline.Trainer(T.tensor([[1,2,3,4]]).asType(&apos;float32&apos;), 
-        T.tensor([[0, 1]]).asType(&apos;float32&apos;));
-    trainLoss.print();
-    trainLoss = pipeline.Trainer(T.tensor([[1,2,3,4]]).asType(&apos;float32&apos;), 
-        T.tensor([[0, 1]]).asType(&apos;float32&apos;));
-    trainLoss.print();
-    console.log(await pipeline.train(10, 1));
+    const NumEpochs = 10, BatchSize = 1;
+    console.log(await pipeline.train(NumEpochs, BatchSize));
     console.log(await pipeline.test());
-})().catch(err=&gt;{
-    console.error({err});
-});</code>
+})();
+
+
+</code>
 </code></pre>
 <p><a href="./manual/./asset/examples/trainer.mixins.babel.js">Run code</a></p>
 <h3 id="evaluatormixins">EvaluatorMixins</h3><p>This mixin class provides methods: <strong>test</strong> and handle <strong>TestDataGenerator</strong> setting of pipelineConfig.Dataset.</p>

@@ -165,8 +165,8 @@ import { termLogger } from &apos;causal-net.log&apos;;
         Net: { 
                 Parameters: causalNetParameters.InitParameters(),
                 Layers: { 
-                    Predict: [  causalNetLayers.dense(4, 3), 
-                                causalNetLayers.dense(3, 2)]
+                    Predict: [  causalNetLayers.dense({ inputSize: 4, outputSize: 3, activator: &apos;sigmoid&apos; }), 
+                                causalNetLayers.dense({ inputSize: 3, outputSize: 2, activator: &apos;sigmoid&apos; })]
                 },
                 Model: causalNetModels.classification(2),
                 Optimizer: causalNetSGDOptimizer.adam({learningRate: 0.01})
@@ -177,28 +177,27 @@ import { termLogger } from &apos;causal-net.log&apos;;
                     setTimeout(()=&gt;{
                         let data = (emitCounter &lt; 3)?{Predict: [0,1,2,3]}:null;
                         emitCounter += 1;
-                        console.log({ emitter: data});
+                        termLogger.log({ emitter: data});
                         resolve(data);
                     }, 1000);
                 });
             },
             Listener: async (infer)=&gt;{
-                console.log({ Listener: infer});
+                termLogger.log({ Listener: infer});
             }
         }
     };
     causalNet.setByConfig(PipeLineConfigure);
-    causalNet.deploy().then(deployResult=&gt;console.log({deployResult}));
-    let loss = await causalNet.train(10, 1);
+    const numEpochs=10, batchSize=3;
+    let loss = await causalNet.train(numEpochs, batchSize);
     let plotId = termLogger.plot({ type:&apos;line&apos;, data: loss, 
-                      width: 200, height: 200, 
                       xLabel: &apos;# of iter&apos;, 
                       yLabel: &apos;loss&apos;});
     await termLogger.show({plotId});
-    console.log(await causalNet.test(10));
-})().catch(err=&gt;{
-    console.error({err});
-});</code>
+    termLogger.log(await causalNet.test());
+    let deployResult = await causalNet.deploy(); 
+    termLogger.log({deployResult});
+})();</code>
 </code></pre><p><a href="./manual/./asset/examples/logisticsRegression.babel.js">Run code</a></p>
 <p>and the ensemble version</p>
 <pre><code><code class="source-code prettyprint">import { causalNetSGDOptimizer } from &apos;causal-net.optimizers&apos;;
@@ -206,7 +205,6 @@ import { causalNetModels } from &apos;causal-net.models&apos;;
 import { causalNetParameters, causalNetLayers } from &apos;causal-net.layer&apos;;
 import { causalNet } from &apos;causal-net&apos;;
 import { termLogger } from &apos;causal-net.log&apos;;
-
 
 (async ()=&gt;{
     const DummyData = (batchSize)=&gt;{
@@ -227,8 +225,8 @@ import { termLogger } from &apos;causal-net.log&apos;;
         Net: { 
                 Parameters: causalNetParameters.InitParameters(),
                 Layers: { 
-                    Predict: [  causalNetLayers.dense(4, 3), 
-                                causalNetLayers.dense(3, 2)]
+                    Predict: [  causalNetLayers.dense({ inputSize: 4, outputSize: 3, activator: &apos;sigmoid&apos; }), 
+                                causalNetLayers.dense({ inputSize: 3, outputSize: 2, activator: &apos;sigmoid&apos; })]
                 },
                 Model: causalNetModels.classification(2),
                 Optimizer: causalNetSGDOptimizer.adam({learningRate: 0.01})
@@ -237,42 +235,34 @@ import { termLogger } from &apos;causal-net.log&apos;;
             Emitter: async ()=&gt;{
                 return new Promise((resolve, reject)=&gt;{
                     setTimeout(()=&gt;{
-                        let data = (emitCounter &lt; 3)
-                                        ?{Predict: [0,1,2,3], EnsemblePredict: [0,1,2,3]}
-                                        :null;
+                        let data = (emitCounter &lt; 3)?{Predict: [0,1,2,3]}:null;
                         emitCounter += 1;
-                        console.log({ emitter: data});
+                        termLogger.log({ emitter: data});
                         resolve(data);
                     }, 1000);
                 });
             },
             Listener: async (infer)=&gt;{
-                console.log({ Listener: infer});
+                termLogger.log({ Listener: infer});
             }
         }
     };
     causalNet.setByConfig(PipeLineConfigure);
-
-    console.log(causalNet.Parameters);
     let models = [&apos;Model1&apos;, &apos;Model2&apos;, &apos;Model3&apos;];
     let losses = {};
+    const numEpochs=10, batchSize=3;
     for(let model of models){
-        let result = await causalNet.ensembleTrain(2, 1, model);
-        losses = {...losses, ...{[model]: result[model][&apos;losses&apos;]}};
+        let result = await causalNet.ensembleTrain(numEpochs, batchSize, model);
+        losses = {...losses, ...result};
     }
-    console.log({losses});
-    let plotId = termLogger.plot({ 
-                      type:&apos;line&apos;, data: losses, 
-                      width: 200, height: 200, 
+    let plotId = termLogger.plot({ type:&apos;line&apos;, data: losses, 
                       xLabel: &apos;# of iter&apos;, 
                       yLabel: &apos;loss&apos;});
     await termLogger.show({plotId});
-    console.log(await causalNet.test(10));
-    causalNet.EnsembleModels = models;
-    causalNet.deploy().then(res=&gt;console.log(res));
-})().catch(err=&gt;{
-    console.error({err});
-});</code>
+    termLogger.log(await causalNet.test());
+    let deployResult = await causalNet.deploy(); 
+    termLogger.log({deployResult});
+})();</code>
 </code></pre><p><a href="./manual/./asset/examples/ensemble.logisticRegression.babel.js">Run code</a></p>
 </div>
 </div>

@@ -156,6 +156,12 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
+    "causal-net/packages/causality-layer/src/causalnetlayers/convolution.mixins.js~convolutionmixins",
+    "class/packages/causality-layer/src/CausalNetLayers/convolution.mixins.js~ConvolutionMixins.html",
+    "<span>ConvolutionMixins</span> <span class=\"search-result-import-path\">causal-net/packages/causality-layer/src/CausalNetLayers/convolution.mixins.js</span>",
+    "class"
+  ],
+  [
     "causal-net/packages/causality-datasets/src/datasource.mixins.js~datasourcemixins",
     "class/packages/causality-datasets/src/dataSource.mixins.js~DataSourceMixins.html",
     "<span>DataSourceMixins</span> <span class=\"search-result-import-path\">causal-net/packages/causality-datasets/src/dataSource.mixins.js</span>",
@@ -1752,6 +1758,18 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "packages/causality-layer/src/causalnetlayers/convolution.mixins.js",
+    "file/packages/causality-layer/src/CausalNetLayers/convolution.mixins.js.html",
+    "packages/causality-layer/src/CausalNetLayers/convolution.mixins.js",
+    "file"
+  ],
+  [
+    "packages/causality-layer/src/causalnetlayers/convolution.mixins.js~convolutionmixins#convolution",
+    "class/packages/causality-layer/src/CausalNetLayers/convolution.mixins.js~ConvolutionMixins.html#instance-method-convolution",
+    "packages/causality-layer/src/CausalNetLayers/convolution.mixins.js~ConvolutionMixins#convolution",
+    "method"
+  ],
+  [
     "packages/causality-layer/src/causalnetlayers/dense.mixins.js",
     "file/packages/causality-layer/src/CausalNetLayers/dense.mixins.js.html",
     "packages/causality-layer/src/CausalNetLayers/dense.mixins.js",
@@ -1767,6 +1785,12 @@ window.esdocSearchIndex = [
     "packages/causality-layer/src/causalnetlayers/index.js",
     "file/packages/causality-layer/src/CausalNetLayers/index.js.html",
     "packages/causality-layer/src/CausalNetLayers/index.js",
+    "file"
+  ],
+  [
+    "packages/causality-layer/src/causalnetlayers/recurrent.mixins.js",
+    "file/packages/causality-layer/src/CausalNetLayers/recurrent.mixins.js.html",
+    "packages/causality-layer/src/CausalNetLayers/recurrent.mixins.js",
     "file"
   ],
   [
