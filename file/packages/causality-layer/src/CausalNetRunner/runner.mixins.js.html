@@ -68,6 +68,7 @@
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-layer-src-causalnetlayers">causality-layer/src/CausalNetLayers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-layer/src/CausalNetLayers/causalNetLayers.js~CausalNetLayers.html">CausalNetLayers</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-layer/src/CausalNetLayers/convolution.mixins.js~ConvolutionMixins.html">ConvolutionMixins</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-layer/src/CausalNetLayers/dense.mixins.js~DenseLayerMixins.html">DenseLayerMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-layer/src/CausalNetLayers/recurrent.mixins.js~RecurrentMixins.html">RecurrentMixins</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-causalNetLayers">causalNetLayers</a></span></span></li>
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-layer-src-causalnetparameters">causality-layer/src/CausalNetParameters</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-layer/src/CausalNetParameters/causalNetParameters.js~CausalNetParameters.html">CausalNetParameters</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-layer/src/CausalNetParameters/parameter.mixins.js~ParameterMixins.html">ParameterMixins</a></span></span></li>
@@ -215,40 +216,27 @@ const RunnerMixins = ( BaseRunnerClass )=&gt; class extends BaseRunnerClass{
     }
     
 
-    runLayer(value, net, parameters){
-        
-        return {result, trace};
-    }
     runLayer(value, layerConfigure, layerParameters){
         const {Name, Type, Flow, Net} = layerConfigure;
         if(Type === &apos;Tensor&apos;){
             let result = Flow(value);
-            return {[Name]: result, trace:{}};
+            return {[Name]: result};
         }   
         else if(Type === &apos;Layer&apos;){
-            let { result, trace } = Net(value, layerParameters);
-            return {[Name]: result, trace};
+            let result = Net(value, layerParameters);
+            return {[Name]: result};
         }   
         else{
             throw Error(&apos;type must be either Layer or Tensor&apos;);
         }
     }
 
-    tracing(traces, name, trace){
-        if(traces){
-            traces.push({[name]: trace});
-        }
-    }
-    run(layers, samples, parameters, traces=null){
+    run(layers, samples, parameters){
         let pipeValue = {PipeInput: samples}, lastLayer = &apos;PipeInput&apos;;
         for(let layer of layers){
             let layerOutput = this.runLayer(pipeValue[lastLayer], layer, parameters[layer.Name]);
             pipeValue[layer.Name] = layerOutput[layer.Name];
             lastLayer = layer.Name;
-            this.tracing(traces, layer.Name, layerOutput.trace);
-        }
-        if(traces){
-            this.logger.debug({traces});
         }
         return pipeValue[lastLayer];
     }

@@ -68,6 +68,7 @@
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-layer-src-causalnetlayers">causality-layer/src/CausalNetLayers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-layer/src/CausalNetLayers/causalNetLayers.js~CausalNetLayers.html">CausalNetLayers</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-layer/src/CausalNetLayers/convolution.mixins.js~ConvolutionMixins.html">ConvolutionMixins</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-layer/src/CausalNetLayers/dense.mixins.js~DenseLayerMixins.html">DenseLayerMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-layer/src/CausalNetLayers/recurrent.mixins.js~RecurrentMixins.html">RecurrentMixins</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-causalNetLayers">causalNetLayers</a></span></span></li>
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-layer-src-causalnetparameters">causality-layer/src/CausalNetParameters</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-layer/src/CausalNetParameters/causalNetParameters.js~CausalNetParameters.html">CausalNetParameters</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-layer/src/CausalNetParameters/parameter.mixins.js~ParameterMixins.html">ParameterMixins</a></span></span></li>
@@ -189,8 +190,49 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">packages/causality-layer/src/CausalNetLayers/recurrent.mixins.js</h1>
-<pre class="source-code line-number raw-source-code"></pre>
-<p data-ice="emptySourceCode">Sorry, this documentation does not provide source code.</p>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">const RecurrentMixins = (PipelineClass)=&gt; class extends PipelineClass{
+    /**
+     * Convolutional layer
+     * @param {Number} inputSize - size of net input
+     * @param {Array} kernelSize - size of net output
+     * @param {String|Function} activator - activator function can be customed or get from built-in by string name
+     * @param {String} name - layer name, default by null
+     * @returns { Object } layer
+     */
+    lstm({ kernelSize, filters, 
+                  strides=1, padding=&apos;same&apos;,
+                  dilations=[1,1], flatten=false, 
+                  activator=&apos;sigmoid&apos;, name=null}){
+        if(!name){
+            name = this.nameGenerator(&apos;convolution&apos;);
+        }
+        const FConv = this.T.conv2d;
+        const shapeType = &apos;NHWC&apos;;
+        return { 
+            Name: name, Type: &apos;Layer&apos;,
+            Config: {kernelSize, filters, strides, padding, dilations, flatten, activator, name, shapeType},
+            Parameters: { Kernel: [...kernelSize, ...filters] },
+            Net: (value, params)=&gt;{
+                    let trace = {};
+                    let { Kernel } = params;
+                    let result = FConv(value, Kernel, strides, padding, shapeType, dilations);
+                    if(typeof activator === &quot;string&quot;){
+                        result = result[activator]();
+                    }
+                    else{
+                        result = activator(result);
+                    }  
+                    if(flatten){
+                        const [B, W, H, C] = result.shape;
+                        result = result.reshape([B, -1]);
+                    }
+                    return { result, trace };
+                }
+            };
+    }
+};
+export default RecurrentMixins;</code></pre>
+
 </div>
 
 <footer class="footer">

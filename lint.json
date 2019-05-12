@@ -315,6 +315,57 @@
     ]
   },
   {
+    "name": "RecurrentMixins#lstm",
+    "filePath": "packages/causality-layer/src/CausalNetLayers/recurrent.mixins.js",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "line": "    /**"
+      },
+      {
+        "lineNumber": 2,
+        "line": "     * Convolutional layer"
+      },
+      {
+        "lineNumber": 3,
+        "line": "     * @param {Number} inputSize - size of net input"
+      },
+      {
+        "lineNumber": 4,
+        "line": "     * @param {Array} kernelSize - size of net output"
+      },
+      {
+        "lineNumber": 5,
+        "line": "     * @param {String|Function} activator - activator function can be customed or get from built-in by string name"
+      },
+      {
+        "lineNumber": 6,
+        "line": "     * @param {String} name - layer name, default by null"
+      },
+      {
+        "lineNumber": 7,
+        "line": "     * @returns { Object } layer"
+      },
+      {
+        "lineNumber": 8,
+        "line": "     */"
+      },
+      {
+        "lineNumber": 9,
+        "line": "    lstm({ kernelSize, filters, "
+      }
+    ],
+    "codeParams": [
+      "*"
+    ],
+    "docParams": [
+      "inputSize",
+      "kernelSize",
+      "activator",
+      "name"
+    ]
+  },
+  {
     "name": "MemorizingMixins#write",
     "filePath": "packages/causality-memcache/src/memorizing.mixins.js",
     "lines": [
